@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+	<menu id="system-menu" label="System">
+		<item label="Openbox">
+			<action name="Execute">
+				<command>obconf</command>
+				<startupnotify>
+					<enabled>yes</enabled>
+				</startupnotify>
+			</action>
+		</item>
+		<item label="Openbox Key">
+			<action name="Execute">
+				<execute>obkey</execute>
+			</action>
+		</item>
+		<item label="Openbox Menu">
+			<action name="Execute">
+				<execute>obmenu</execute>
+			</action>
+		</item>
+		<item label="Panel Configuration">
+			<action name="Execute">
+				<execute>tint2conf</execute>
+			</action>
+		</item>
+		<item label="Look and Feel">
+			<action name="Execute">
+				<execute>lxappearance</execute>
+			</action>
+		</item>
+		<separator/>
+		<menu id="system-menu-691410" label="Other Settings">
+			<item label="Disk">
+				<action name="Execute">
+					<execute>baobab</execute>
+				</action>
+			</item>
+			<item label="Display">
+				<action name="Execute">
+					<execute>lxrandr</execute>
+				</action>
+			</item>
+			<item label="Wallpaper">
+				<action name="Execute">
+					<execute>nitrogen ~/Documents/wallpapers</execute>
+				</action>
+			</item>
+			<item label="Screensaver">
+				<action name="Execute">
+					<execute>xscreensaver-demo</execute>
+				</action>
+			</item>
+			<item label="Sound">
+				<action name="Execute">
+					<execute>xfce4-mixer</execute>
+				</action>
+			</item>
+			<item label="Notifications">
+				<action name="Execute">
+					<execute>xfce4-notifyd-config</execute>
+				</action>
+			</item>
+			<item label="Clipboard">
+				<action name="Execute">
+					<execute>xfce4-clipman-settings</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="system-menu-411544" label="Configuration Files">
+			<item label="openbox menu.xml">
+				<action name="Execute">
+					<execute>subl3 ~/.config/openbox/menu.xml</execute>
+				</action>
+			</item>
+			<item label="openbox rc.xml">
+				<action name="Execute">
+					<execute>subl3 ~/.config/openbox/rc.xml</execute>
+				</action>
+			</item>
+			<item label="xinitrc">
+				<action name="Execute">
+					<execute>subl3 ~/.xinitrc</execute>
+				</action>
+			</item>
+			<item label="compton.conf">
+				<action name="Execute">
+					<execute>subl3 ~/.config/compton.conf</execute>
+				</action>
+			</item>
+			<separator/>
+			<item label="zshrc">
+				<action name="Execute">
+					<execute>subl3 ~/.zshrc</execute>
+				</action>
+			</item>
+			<item label="zshenv">
+				<action name="Execute">
+					<execute>subl3 ~/.zshenv</execute>
+				</action>
+			</item>
+			<item label="Xresources">
+				<action name="Execute">
+					<execute>subl3 ~/.Xresources</execute>
+				</action>
+			</item>
+			<item label="vimrc">
+				<action name="Execute">
+					<execute>subl3 ~/.vimrc</execute>
+				</action>
+			</item>
+			<item label="tmux.conf">
+				<action name="Execute">
+					<execute>subl3 ~/.tmux.conf</execute>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+		<item label="Reconfigure Openbox">
+			<action name="Reconfigure"/>
+		</item>
+	</menu>
+	<menu id="root-menu" label="Openbox 3">
+		<menu id="system-menu"/>
+		<separator/>
+		<item label="Log Out">
+			<action name="Exit">
+				<prompt>yes</prompt>
+			</action>
+		</item>
+		<item label="Suspend">
+			<action name="Execute">
+				<command>sudo pm-suspend</command>
+			</action>
+		</item>
+		u
+		<separator/>
+		<item label="Reboot">
+			<action name="Execute">
+				<command>sudo reboot</command>
+				<prompt>Are you sure you want to reboot?</prompt>
+			</action>
+		</item>
+		<item label="Shut Down">
+			<action name="Execute">
+				<command>sudo poweroff</command>
+				<prompt>Are you sure you want to shut down?</prompt>
+			</action>
+		</item>
+	</menu>
+</openbox_menu>

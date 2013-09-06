@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+count=10
+prompt='Execute:'
+font='Liberation Sans-16:bold'
+background_color='#222222'
+foreground_color='#777777'
+selected_background_color='#682727'
+selected_foreground_color='#FFFFFF'
+opacity=0.80
+
+dmenu_run -b -i -l $count -p $prompt -fn $font -nb $background_color -nf $foreground_color -sb $selected_background_color -sf $selected_foreground_color -o $opacity
