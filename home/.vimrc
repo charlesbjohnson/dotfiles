@@ -37,7 +37,7 @@ set encoding=utf8
 set nocompatible               " Be improved
 set mouse=a                    " Enable mouse
 let mapleader=';'
-set clipboard=unnamed          " Use OS clipboard
+set clipboard=unnamedplus      " Use OS clipboard
 set hidden                     " Quick buffer switching
 set ruler                      " Show cursor position
 
