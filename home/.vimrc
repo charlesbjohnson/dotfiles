@@ -11,6 +11,7 @@ Bundle 'gmarik/vundle'
 
 " Vundle bundles
 Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'bling/vim-airline'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'EasyMotion'
@@ -34,34 +35,36 @@ syntax on
 filetype on
 filetype plugin indent on
 set encoding=utf8
-set nocompatible               " Be improved
-set mouse=a                    " Enable mouse
-let mapleader=';'
-set clipboard=unnamedplus      " Use OS clipboard
-set hidden                     " Quick buffer switching
-set ruler                      " Show cursor position
+set nocompatible                        " Be improved
+set mouse=a                             " Enable mouse
+let mapleader='`'
+set clipboard=unnamedplus               " Use OS clipboard
+set hidden                              " Quick buffer switching
+set ruler                               " Show cursor position
 
-set formatoptions=c,q,t        " This is a sequence of letters which describes how
-                               " automatic formatting is to be done.
-                               "
-                               " letter    meaning when present in 'formatoptions'
-                               " ------    ---------------------------------------
-                               " c         Auto-wrap comments using textwidth, inserting
-                               "           the current comment leader automatically.
-                               " q         Allow formatting of comments with "gq".
-                               " t         Auto-wrap text using textwidth (does not apply
-                               "           to comments)
+set formatoptions=c,q,t                 " This is a sequence of letters which describes how
+                                        " automatic formatting is to be done.
+                                        "
+                                        " letter    meaning when present in 'formatoptions'
+                                        " ------    ---------------------------------------
+                                        " c         Auto-wrap comments using textwidth, inserting
+                                        "           the current comment leader automatically.
+                                        " q         Allow formatting of comments with "gq".
+                                        " t         Auto-wrap text using textwidth (does not apply
+                                        "           to comments)
 
 
-set showmatch                  " When a bracket is inserted, briefly jump to the matching
-                               " one. The jump is only done if the match can be seen on the
-                               " screen. The time to show the match can be set with
-                               " 'matchtime'.
+set showmatch                           " When a bracket is inserted, briefly jump to the matching
+                                        " one. The jump is only done if the match can be seen on the
+                                        " screen. The time to show the match can be set with
+                                        " 'matchtime'.
 
-set wildmode=longest:full,full " Tab completion for vim commands
+set wildmode=longest:full,full          " Tab completion for vim commands
 set wildmenu
 set noerrorbells
 set nostartofline
+set splitbelow
+set splitright
 
 
 " Appearance settings
@@ -73,6 +76,7 @@ set background=dark
 set number                              " Line numbers
 set cursorline                          " Highlights cursor line
 set scrolloff=20                        " Keep 20 scroll lines above/below cursor
+set colorcolumn=80                      " Highlight column at 80 characters
 "set fillchars=vert:\                    " Remove ugly | in separators
 set list listchars=tab:⇥⇥,eol:↵,trail:· " Control character highlighting
 set showcmd                             " Show (partial) command in status line.
@@ -80,34 +84,33 @@ set showcmd                             " Show (partial) command in status line.
 
 " Gvim settings
 if has('gui_running')
-  " Get rid of menu icons in gvim
   set go=
-  set go=aem
+  set go=ae                             " Get rid of menu icons and toolbar in gvim
 endif
 
 
 " Tab settings
-set expandtab       " Number of spaces that a Tab counts for
-set tabstop=2       " Tab is 2 spaces
+set expandtab                           " Number of spaces that a Tab counts for
+set tabstop=2                           " Tab is 2 spaces
 set softtabstop=2
-set shiftwidth=2    " Number of spaces to use for each step of (auto)indent
+set shiftwidth=2                        " Number of spaces to use for each step of (auto)indent
 set backspace=indent,eol,start
 set autoindent
 set cindent
-set smarttab        " When on, a <Tab> in front of a line inserts blanks
-                    " according to 'shiftwidth'. 'tabstop' is used in other
-                    " places. A <BS> will delete a 'shiftwidth' worth of space
-                    " at the start of the line.
+set smarttab                            " When on, a <Tab> in front of a line inserts blanks
+                                        " according to 'shiftwidth'. 'tabstop' is used in other
+                                        " places. A <BS> will delete a 'shiftwidth' worth of space
+                                        " at the start of the line.
 
 " Searching and history settings
-set hlsearch       " When there is a previous search pattern, highlight all
-                   " its matches.
+set hlsearch                            " When there is a previous search pattern, highlight all
+                                        " its matches.
 
-set incsearch      " Increment search
-set ignorecase     " Case-insensitive search
-set smartcase      " Search becomes sensitive if caps used
-set nobackup       " Don't keep backups
-set noswapfile     " Don't create a swap file
+set incsearch                           " Increment search
+set ignorecase                          " Case-insensitive search
+set smartcase                           " Search becomes sensitive if caps used
+set nobackup                            " Don't keep backups
+set noswapfile                          " Don't create a swap file
 
 
 " Key bindings
@@ -121,27 +124,35 @@ endfunction
 
 noremap <leader>ss :call StripWhitespace()<CR>
 
-noremap <leader>j ddp  " Move line down
-noremap <leader>k ddkP " Move line up
+" Move line down
+noremap <leader>j ddp
+" Move line up
+noremap <leader>k ddkP
 
 noremap <leader>t :tabnew<CR>
 noremap <leader>T :tabclose<CR>
 noremap <leader>n :tabnext<CR>
 noremap <leader>N :tabprevious<CR>
 
+" Indent/unindent
+noremap <tab> >>
+noremap <S-tab> <<
+
+" Switch between splits more easily
+noremap <C-j> <C-w><C-j>
+noremap <C-k> <C-w><C-k>
+noremap <C-h> <C-w><C-h>
+noremap <C-l> <C-w><C-l>
+
 
 " Plugin settings
-"
+
+
 " NERDTree
-" open on the right side
 let g:NERDTreeWinPos = "right"
-" open a NERDTree automatically when vim starts up
- autocmd vimenter * NERDTree
-" open a NERDTree automatically when vim starts up if no files were specified
-"autocmd vimenter * if !argc() | NERDTree | endif
-" map a specific key or shortcut to open NERDTree
 noremap <leader>o :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let g:nerdtree_tabs_open_on_console_startup = 1
 
 " Indent guides
 let indent_guides_enable_on_vim_startup = 1
@@ -152,13 +163,9 @@ let g:indent_guides_guide_size = 1
 let g:EasyMotion_leader_key = 'z'
 
 " Ctrlp
-let g:ctrlp_map = '<c-p>'
+let g:ctrlp_map = '<leader>p'
 let g:ctrlp_cmd = 'CtrlP'
 
 " Airline
 let g:airline_powerline_fonts = 1
-
-" NERDCommenter
-map mc <plug>NERDCommenterComment
-map mC <plug>NERDCommenterUncomment
 
