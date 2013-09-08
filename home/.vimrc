@@ -13,31 +13,31 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'bling/vim-airline'
+Bundle 'airblade/vim-gitgutter'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'EasyMotion'
 Bundle 'ctrlp.vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'Indent-Guides'
-Bundle 'scrooloose/syntastic'
 Bundle 'chriskempson/base16-vim'
+Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'bufkill.vim'
 Bundle 'Rename2'
 Bundle 'AutoClose'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
-Bundle 'airblade/vim-gitgutter'
 Bundle 'ruby.vim'
 Bundle 'rails.vim'
 
 
 " General Settings
 syntax on
-filetype on
 filetype plugin indent on
 set encoding=utf8
 set nocompatible                        " Be improved
 set mouse=a                             " Enable mouse
-let mapleader='`'
+let mapleader=' '
 set clipboard=unnamedplus               " Use OS clipboard
 set hidden                              " Quick buffer switching
 set ruler                               " Show cursor position
@@ -77,15 +77,14 @@ set number                              " Line numbers
 set cursorline                          " Highlights cursor line
 set scrolloff=20                        " Keep 20 scroll lines above/below cursor
 set colorcolumn=80                      " Highlight column at 80 characters
-"set fillchars=vert:\                    " Remove ugly | in separators
 set list listchars=tab:⇥⇥,eol:↵,trail:· " Control character highlighting
 set showcmd                             " Show (partial) command in status line.
 
 
 " Gvim settings
 if has('gui_running')
-  set go=
-  set go=ae                             " Get rid of menu icons and toolbar in gvim
+  set go=                               " Get rid of menu icons, toolbar, etc
+  set go=ai                             " Use console-style tabs and include icon
 endif
 
 
@@ -113,7 +112,7 @@ set nobackup                            " Don't keep backups
 set noswapfile                          " Don't create a swap file
 
 
-" Key bindings
+" Functions
 function! StripWhitespace()
     let save_cursor = getpos(".")
     let old_query = getreg('/')
@@ -122,6 +121,8 @@ function! StripWhitespace()
     call setreg('/', old_query)
 endfunction
 
+
+" Key bindings
 noremap <leader>ss :call StripWhitespace()<CR>
 
 " Move line down
@@ -129,6 +130,13 @@ noremap <leader>j ddp
 " Move line up
 noremap <leader>k ddkP
 
+" Buffers
+noremap <leader>b :enew<CR>
+noremap <leader>B :BD<CR>
+noremap <leader>p :bn<CR>
+noremap <leader>P :bp<CR>
+
+" Tabs
 noremap <leader>t :tabnew<CR>
 noremap <leader>T :tabclose<CR>
 noremap <leader>n :tabnext<CR>
@@ -156,16 +164,17 @@ let g:nerdtree_tabs_open_on_console_startup = 1
 
 " Indent guides
 let indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 1
+let g:indent_guides_guide_size = 2
 
 " EasyMotion
-let g:EasyMotion_leader_key = 'z'
+let g:EasyMotion_leader_key = '<leader>g'
 
 " Ctrlp
-let g:ctrlp_map = '<leader>p'
+let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " Airline
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
