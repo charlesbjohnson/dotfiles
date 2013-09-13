@@ -11,23 +11,11 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
+xscreensaver -no-splash &
+
 # exec gnome-session
 # exec startkde
 # exec startxfce4
 # ...or the Window Manager of your choice
-
-export DE=gnome # For file associations (particularly Dropbox->Open folder)
-
-[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
-syndaemon -k -i 1 -d &
-nitrogen --restore &
-compton --config ~/.config/compton.conf -b
-tint2 &
-xfce4-volumed
-volumeicon &
-xfce4-clipman &
-xscreensaver -no-splash &
-redshift -l 41.0:-73.6 &
-thunar --daemon &
 
 exec dbus-launch openbox-session

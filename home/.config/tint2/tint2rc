@@ -5,26 +5,20 @@
 # Background definitions
 # ID 1
 rounded = 0
-border_width = 1
-background_color = #511311 100
-border_color = #730A07 100
+border_width = 2
+background_color = #511311 60
+border_color = #730A07 60
 
 # ID 2
-rounded = 0
-border_width = 0
-background_color = #000000 100
-border_color = #FFFFFF 0
-
-# ID 3
 rounded = 0
 border_width = 0
 background_color = #211E1D 100
 border_color = #222222 0
 
-# ID 4
+# ID 3
 rounded = 0
 border_width = 0
-background_color = #692727 100
+background_color = #692727 60
 border_color = #FFFFFF 0
 
 # Panel
@@ -58,9 +52,9 @@ task_text = 1
 task_centered = 1
 task_maximum_size = 0 32
 task_padding = 5 1
-task_background_id = 3
-task_active_background_id = 4
-task_urgent_background_id = 4
+task_background_id = 2
+task_active_background_id = 3
+task_urgent_background_id = 0
 task_iconified_background_id = 0
 
 # Task Icons
@@ -81,7 +75,7 @@ font_shadow = 0
 systray = 1
 systray_padding = 5 5 5
 systray_sort = ascending
-systray_background_id = 4
+systray_background_id = 3
 systray_icon_size = 18
 systray_icon_asb = 100 -90 -15
 
@@ -90,10 +84,10 @@ time1_format = %I:%M
 time1_font = Liberation Sans Bold 20
 time2_format = %b %d
 time2_font = Liberation Sans Bold 8
-clock_font_color = #FFFFFF 40
+clock_font_color = #211E1D 100
 clock_tooltip = %A %d %B
 clock_padding = 4 2
-clock_background_id = 4
+clock_background_id = 3
 clock_lclick_command = gsimplecal
 clock_rclick_command = alarm-clock
 
@@ -102,7 +96,7 @@ tooltip = 1
 tooltip_padding = 5 5
 tooltip_show_timeout = 0.7
 tooltip_hide_timeout = 0.3
-tooltip_background_id = 3
+tooltip_background_id = 2
 tooltip_font = Liberation Mono Bold 12
 tooltip_font_color = #565656 100
 
@@ -117,10 +111,10 @@ battery = 1
 battery_low_status = 15
 battery_low_cmd = notify-send "battery low"
 battery_hide = 0
-bat1_font = Liberation Sans 10
-bat2_font = Liberation Sans 8
-battery_font_color = #FFFFFF 40
+bat1_font = Liberation Sans Bold 8
+bat2_font = Liberation Sans Bold 8
+battery_font_color = #211E1D 100
 battery_padding = 4 2
-battery_background_id = 4
+battery_background_id = 3
 
 # End of config

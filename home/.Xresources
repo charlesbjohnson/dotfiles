@@ -2,14 +2,12 @@
 #include "/home/charlie/.termcolor/shell-x"
 
 ! URxvt
-
 URxvt.termName:         rxvt-256color
 URxvt.font:             xft:Liberation Mono:regular:size=10, xft:Liberation Mono For Powerline:regular:size=10
 URxvt.iconFile:         /usr/share/icons/AwOkenDark/clear/48x48/apps/xterm-color_48x48.png
 URxvt.cursorBlink:      true
 URxvt.pointerBlank:     true
 URxvt.scrollBar:        false
-URxvt.borderLess:       true
 URxvt.saveLines:        10000
 URxvt.scrollWithBuffer: true
 URxvt.loginShell:       true

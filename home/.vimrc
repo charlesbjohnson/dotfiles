@@ -83,8 +83,8 @@ set showcmd                             " Show (partial) command in status line.
 
 " Gvim settings
 if has('gui_running')
-  set go=                               " Get rid of menu icons, toolbar, etc
-  set go=ai                             " Use console-style tabs and include icon
+  set guioptions=                       " Get rid of menu icons, toolbar, etc
+  set guioptions=ai                     " Use console-style tabs and include icon
 endif
 
 
@@ -166,6 +166,7 @@ let g:nerdtree_tabs_open_on_console_startup = 1
 let indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 1
 let g:indent_guides_guide_size = 2
+let g:indent_guides_exclude_filetypes = ['nerdtree']
 
 " EasyMotion
 let g:EasyMotion_leader_key = '<leader>g'

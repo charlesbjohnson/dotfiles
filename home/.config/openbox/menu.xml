@@ -83,6 +83,16 @@
 					<execute>subl3 ~/.xinitrc</execute>
 				</action>
 			</item>
+			<item label="openbox autostart">
+				<action name="Execute">
+					<execute>subl3 ~/.config/openbox/autostart</execute>
+				</action>
+			</item>
+			<item label="tint2rc">
+				<action name="Execute">
+					<execute>subl3 ~/.config/tint2/tint2rc</execute>
+				</action>
+			</item>
 			<item label="compton.conf">
 				<action name="Execute">
 					<execute>subl3 ~/.config/compton.conf</execute>
