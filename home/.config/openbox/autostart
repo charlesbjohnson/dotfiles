@@ -17,7 +17,6 @@
 #xfce-mcs-manager &
 #
 #
-[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 syndaemon -k -i 1 -d &
 nitrogen --restore &
 compton --config ~/.config/compton.conf -b

@@ -3,7 +3,7 @@
 
 ! URxvt
 URxvt.termName:         rxvt-256color
-URxvt.font:             xft:Liberation Mono:regular:size=10, xft:Liberation Mono For Powerline:regular:size=10
+URxvt.font:             xft:Liberation Mono:Regular:size=10, xft:Liberation Mono For Powerline:Regular:size=10
 URxvt.iconFile:         /usr/share/icons/AwOkenDark/clear/48x48/apps/xterm-color_48x48.png
 URxvt.cursorBlink:      true
 URxvt.pointerBlank:     true

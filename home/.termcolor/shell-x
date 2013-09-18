@@ -1,0 +1,4 @@
+! Currently just using the bg/fg and using termcolor-shell for the rest
+!Background / Foreground
+*background: #1d1f21
+*foreground: #ddccbb
