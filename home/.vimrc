@@ -162,7 +162,7 @@ noremap <leader>o :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let g:nerdtree_tabs_open_on_console_startup = 1
 
-" Indent guides
+" Indent Guides
 let indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 1
 let g:indent_guides_guide_size = 2
@@ -175,7 +175,10 @@ let g:EasyMotion_leader_key = '<leader>g'
 let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-" Airline
+" airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
+" git-gutter
+let g:gitgutter_eager = 0
+let g:gitgutter_realtime = 0
