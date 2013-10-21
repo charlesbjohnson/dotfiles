@@ -1,23 +1,101 @@
-#!/bin/bash
+#!/bin/env ruby
 
-wallpaper=~/wallpapers/snow_foliage.jpg
-toggle_dual_display="xrandr --output HDMI1 --mode 1920x1200 --left-of VGA1 --output VGA1 --mode 1920x1200 --output LVDS1 --off"
-toggle_laptop_display="xrandr --output LVDS1 --mode 1600x900 --output HDMI1 --off --output VGA1 --off"
+DISPLAY_REGEX    = /([A-Z\d]+)/
+RESOLUTION_REGEX = /([\d]+x[\d]+)/
+SETTINGS_REGEX   = /([A-Z\d]+).*?([\d]+x[\d]+)\+([\d]+)\+([\d]+)/
 
-feh --bg-scale $wallpaper
+def disconnected_displays_to_disable
+  `xrandr | grep ' disconnected [^\(]'`
+    .lines
+    .flat_map { |l| l.match(DISPLAY_REGEX).captures }
+end
 
-available_displays=$(xrandr -q | grep "\bconnected" -c)
-if [ $available_displays -eq 1 ]
-then
-  exit
-fi
+def connected_displays
+  names = `xrandr | grep ' connected'`
+            .lines
+            .flat_map { |l| l.match(DISPLAY_REGEX).captures }
+  resolutions = `xrandr | awk "/ connected/{getline; print};"`
+                  .lines
+                  .flat_map { |l| l.match(RESOLUTION_REGEX).captures }
+  resolutions.zip(names)
+end
 
-active_displays=$(xrandr -q | grep "*" -B 1 -c)
-if [ $active_displays -eq 1 ]
-then
-  eval ${toggle_dual_display}
-else
-  eval ${toggle_laptop_display}
-fi
+# I don't actually know what a and b specifically mean
+# in xrandr, but I can use them to determine which screen
+# is the extended one
+def order(_, b)
+  b.to_i.zero? ? :left : :right
+end
 
-feh --bg-scale $wallpaper
+def current
+  output = `xrandr | grep ' connected [^(]'`.lines
+  settings = output.map { |l| l.match(SETTINGS_REGEX).captures.reverse }
+  settings.map { |s| s.last(2) << order(*s.first(2)) }
+end
+
+def laptop?(settings)
+  settings.size == 1 && settings.first[1] == 'LVDS1'
+end
+
+def disable_displays_command(settings)
+  results = settings.map { |_, name| "--output #{name} --off" }
+  results.unshift('xrandr').join(' ') unless results.empty?
+end
+
+def enable_displays_command(settings)
+  return nil if settings.size == 1
+  order, from = settings.last[2], settings.first[1]
+  order_command = "--#{order}-of #{from}"
+
+  settings.map { |s| "--output #{s[1]} --auto" }
+          .push(order_command)
+          .unshift('xrandr')
+          .join(' ')
+end
+
+def enable_laptop_display_command(settings)
+  command = disable_displays_command(settings)
+  command.gsub(/ --output LVDS1 --off/, '') << ' --output LVDS1 --auto'
+end
+
+def reorder(settings)
+  reordered = settings.dup
+  first, second = reordered.first, reordered.last
+  first[-1], second[-1] = second.last, first.last
+
+  reordered
+end
+
+def cycle_displays_command(new_settings)
+  current_settings = current
+
+  if laptop?(current_settings)
+    enable_displays_command(new_settings)
+  elsif current_settings.sort == new_settings.sort
+    reordered = reorder(new_settings)
+    enable_displays_command(reordered)
+  else
+    enable_laptop_display_command(current_settings)
+  end
+end
+
+def run!
+  displays = connected_displays
+
+  if displays.size > 1
+    to_enable = displays.sort.reverse.first(2)
+    to_disable = disconnected_displays_to_disable + (displays - to_enable)
+
+    enabled_settings = to_enable.zip(%i[left right]).map(&:flatten)
+
+    disable_command = disable_displays_command(to_disable)
+    cycle_command = cycle_displays_command(enabled_settings)
+
+    `#{disable_command}` if disable_command
+    `#{cycle_command}` if cycle_command
+  end
+
+  `feh --bg-scale ~/wallpapers/current_wallpaper`
+end
+
+run!
