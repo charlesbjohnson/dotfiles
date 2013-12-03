@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
     <strength>10</strength>
@@ -454,7 +455,7 @@
         <action name="Move"/>
       </mousebind>
       <mousebind action="DoubleClick" button="Left">
-        <action name="ToggleMaximize" xmlns="http://openbox.org/3.4/rc"/>
+        <action xmlns="http://openbox.org/3.4/rc" name="ToggleMaximize"/>
       </mousebind>
       <mousebind action="Click" button="Up">
         <action name="if">
@@ -813,45 +814,37 @@
   # end of the example
 -->
     <application class="URxvt">
-        <decor>no</decor>
+      <decor>no</decor>
     </application>
-
     <application class="Gvim">
-        <decor>no</decor>
-        <maximized>true</maximized>
+      <decor>no</decor>
+      <maximized>true</maximized>
     </application>
-
     <application class="Subl3">
-        <decor>no</decor>
-        <maximized>true</maximized>
+      <decor>no</decor>
+      <maximized>true</maximized>
     </application>
-
     <application class="sublime-text">
-        <decor>no</decor>
-        <maximized>true</maximized>
+      <decor>no</decor>
+      <maximized>true</maximized>
     </application>
-
+    <application class="Brackets">
+      <decor>no</decor>
+      <maximized>true</maximized>
+    </application>
     <application class="Firefox">
-        <decor>no</decor>
-        <maximized>true</maximized>
-        <desktop>1</desktop>
+      <decor>no</decor>
     </application>
-
     <application class="Chromium">
-        <decor>no</decor>
-        <maximized>true</maximized>
-        <desktop>2</desktop>
+      <decor>no</decor>
     </application>
-
     <application class="Thunderbird">
-        <maximized>true</maximized>
-        <desktop>2</desktop>
+      <maximized>true</maximized>
+      <desktop>2</desktop>
     </application>
-
     <application class="Spotify">
-        <maximized>true</maximized>
-        <desktop>2</desktop>
+      <maximized>true</maximized>
+      <desktop>2</desktop>
     </application>
-
   </applications>
 </openbox_config>

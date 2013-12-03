@@ -108,6 +108,7 @@ set hlsearch                            " When there is a previous search patter
 set incsearch                           " Increment search
 set ignorecase                          " Case-insensitive search
 set smartcase                           " Search becomes sensitive if caps used
+set nowritebackup                       " No backup files while editing
 set nobackup                            " Don't keep backups
 set noswapfile                          " Don't create a swap file
 
