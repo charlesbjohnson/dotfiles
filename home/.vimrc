@@ -4,31 +4,10 @@
 " set fileencodings=ucs-bom,utf-8,cp936,big5,euc-jp,euc-kr,gb18030,latin1
 
 
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-Bundle 'gmarik/vundle'
-
-
-" Vundle bundles
-Bundle 'scrooloose/nerdtree'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'bling/vim-airline'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'EasyMotion'
-Bundle 'ctrlp.vim'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'Indent-Guides'
-Bundle 'chriskempson/base16-vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'bufkill.vim'
-Bundle 'Rename2'
-Bundle 'AutoClose'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-fugitive'
-Bundle 'ruby.vim'
-Bundle 'rails.vim'
+" Plugins
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+endif
 
 
 " General Settings
@@ -101,6 +80,7 @@ set smarttab                            " When on, a <Tab> in front of a line in
                                         " places. A <BS> will delete a 'shiftwidth' worth of space
                                         " at the start of the line.
 
+
 " Searching and history settings
 set hlsearch                            " When there is a previous search pattern, highlight all
                                         " its matches.
@@ -156,7 +136,6 @@ noremap <C-l> <C-w><C-l>
 
 " Plugin settings
 
-
 " NERDTree
 let g:NERDTreeWinPos = "right"
 noremap <leader>o :NERDTreeToggle<CR>
@@ -183,3 +162,28 @@ let g:airline#extensions#tabline#enabled = 1
 " git-gutter
 let g:gitgutter_eager = 0
 let g:gitgutter_realtime = 0
+
+" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
+
+" Index ctags from any project, including those outside Rails
+map <Leader>ct :!ctags -R .<CR>
+
+" configure syntastic syntax checking to check on open as well as save
+let g:syntastic_check_on_open=1
+
+" Tagbar
+noremap <leader>O :TagbarToggle<CR>
+let g:tagbar_left=1
+let g:tagbar_autofocus=1
+let g:tagbar_autoclose=1
+let g:tagbar_width=30
