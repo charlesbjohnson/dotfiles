@@ -1,5 +1,12 @@
+[push]
+  default = current
+[core]
+  excludesfile = ~/.gitignore
+  autocrlf = input
+[commit]
+  template = ~/.gitmessage
 [user]
-	email = mail@cbjohnson.info
-	name = Charles B Johnson
+  email = mail@cbjohnson.info
+  name = Charles B Johnson
 [color]
-	ui = true
+ ui = true

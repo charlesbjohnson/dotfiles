@@ -29,3 +29,4 @@ netmon &
 redshift -l 41.0:-73.6 &
 thunar --daemon &
 /usr/share/aarchup/aarchstartup.sh
+setxkbmap -option caps:escape &

@@ -82,7 +82,7 @@ set smarttab                            " When on, a <Tab> in front of a line in
 
 
 " Searching and history settings
-set hlsearch                            " When there is a previous search pattern, highlight all
+set nohlsearch                          " When there is a previous search pattern, don't highlight all
                                         " its matches.
 
 set incsearch                           " Increment search
@@ -104,28 +104,32 @@ endfunction
 
 
 " Key bindings
-noremap <leader>ss :call StripWhitespace()<CR>
+inoremap <M-Space> <Esc>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>sw :call StripWhitespace()<CR>
 
-" Move line down
-noremap <leader>j ddp
-" Move line up
-noremap <leader>k ddkP
+" Move line up/down
+nnoremap <leader>j ddp
+nnoremap <leader>k ddkP
 
-" Buffers
-noremap <leader>b :enew<CR>
-noremap <leader>B :BD<CR>
-noremap <leader>p :bn<CR>
-noremap <leader>P :bp<CR>
+" Buffers (creation, deletion, cycling) and delete all buffers
+nnoremap <leader>b :enew<CR>
+nnoremap <leader>BB :Bdelete<CR>
+nnoremap <leader>BD :bufdo :Bdelete<CR>
+nnoremap <leader>l :bn<CR>
+nnoremap <leader>h :bp<CR>
 
-" Tabs
-noremap <leader>t :tabnew<CR>
-noremap <leader>T :tabclose<CR>
-noremap <leader>n :tabnext<CR>
-noremap <leader>N :tabprevious<CR>
+" Tabs (creation, deletion, cycling)
+nnoremap <leader>t :tabnew<CR>
+nnoremap <leader>T :tabclose<CR>
+nnoremap <leader>L :tabnext<CR>
+nnoremap <leader>H :tabprevious<CR>
 
-" Indent/unindent
-noremap <tab> >>
-noremap <S-tab> <<
+" Consistent indent/unindent across all modes
+nnoremap <C-t> >>
+nnoremap <C-d> <<
+vnoremap <C-t> >gv
+vnoremap <C-d> <gv
 
 " Switch between splits more easily
 noremap <C-j> <C-w><C-j>
@@ -133,13 +137,16 @@ noremap <C-k> <C-w><C-k>
 noremap <C-h> <C-w><C-h>
 noremap <C-l> <C-w><C-l>
 
+" Ctags
+noremap <leader>[ :pop<CR>
+noremap <leader>] <C-]>
 
 " Plugin settings
 
 " NERDTree
 let g:NERDTreeWinPos = "right"
 noremap <leader>o :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let g:nerdtree_tabs_open_on_console_startup = 1
 
 " Indent Guides
@@ -154,8 +161,10 @@ let g:EasyMotion_leader_key = '<leader>g'
 " Ctrlp
 let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_extensions = ['tag']
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.ctags
 
-" airline
+" vim-airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
@@ -163,27 +172,34 @@ let g:airline#extensions#tabline#enabled = 1
 let g:gitgutter_eager = 0
 let g:gitgutter_realtime = 0
 
-" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+" Ag
 if executable('ag')
-  " Use Ag over Grep
   set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
 
-" Index ctags from any project, including those outside Rails
-map <Leader>ct :!ctags -R .<CR>
+" easytags
+set tags=./.ctags;
+let g:easy_tags_auto_update = 0
+let g:easytags_updatetime_warn = 0
+let g:easytags_dynamic_files = 2
+nnoremap <leader>ct :UpdateTags -f .ctags -R .<CR>
+autocmd BufEnter * if isdirectory('.git') | let g:easytags_auto_update = 1 | endif
 
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
 
 " Tagbar
 noremap <leader>O :TagbarToggle<CR>
-let g:tagbar_left=1
-let g:tagbar_autofocus=1
-let g:tagbar_autoclose=1
-let g:tagbar_width=30
+let g:tagbar_left = 1
+let g:tagbar_autofocus = 1
+let g:tagbar_autoclose = 1
+let g:tagbar_width = 25
+
+" vim-rspec
+noremap <leader>rs :call RunNearestSpec()<CR>
+let g:rspec_command = "zeus rspec {spec}"
+
+" emmet.vim
+nmap <leader><CR> <C-y>,
