@@ -132,20 +132,20 @@ vnoremap <C-t> >gv
 vnoremap <C-d> <gv
 
 " Switch between splits more easily
-noremap <C-j> <C-w><C-j>
-noremap <C-k> <C-w><C-k>
-noremap <C-h> <C-w><C-h>
-noremap <C-l> <C-w><C-l>
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-h> <C-w><C-h>
+nnoremap <C-l> <C-w><C-l>
 
 " Ctags
-noremap <leader>[ :pop<CR>
-noremap <leader>] <C-]>
+nnoremap <leader>[ :pop<CR>
+nnoremap <leader>] <C-]>
 
 " Plugin settings
 
 " NERDTree
 let g:NERDTreeWinPos = "right"
-noremap <leader>o :NERDTreeToggle<CR>
+nnoremap <leader>o :NERDTreeToggle<CR>
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let g:nerdtree_tabs_open_on_console_startup = 1
 
@@ -184,22 +184,23 @@ set tags=./.ctags;
 let g:easy_tags_auto_update = 0
 let g:easytags_updatetime_warn = 0
 let g:easytags_dynamic_files = 2
-nnoremap <leader>ct :UpdateTags -f .ctags -R .<CR>
+nnoremap <leader>ct :!ctags -f .ctags -R .<CR>
 autocmd BufEnter * if isdirectory('.git') | let g:easytags_auto_update = 1 | endif
 
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
 
 " Tagbar
-noremap <leader>O :TagbarToggle<CR>
+nnoremap <leader>O :TagbarToggle<CR>
 let g:tagbar_left = 1
 let g:tagbar_autofocus = 1
 let g:tagbar_autoclose = 1
 let g:tagbar_width = 25
 
 " vim-rspec
-noremap <leader>rs :call RunNearestSpec()<CR>
-let g:rspec_command = "zeus rspec {spec}"
+nnoremap <leader>rs :call RunNearestSpec()<CR>
+nnoremap <Leader>rf :call RunCurrentSpecFile()<CR>
+let g:rspec_command = "Dispatch zeus rspec {spec}"
 
 " emmet.vim
 nmap <leader><CR> <C-y>,
