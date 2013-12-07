@@ -1,4 +1,5 @@
 ! Colors
+! Use base16 colors in terminal vim
 #include "/home/charlie/.termcolor/base16-default"
 
 ! URxvt
