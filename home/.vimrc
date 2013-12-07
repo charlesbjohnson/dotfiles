@@ -144,7 +144,6 @@ nnoremap <leader>] <C-]>
 " Plugin settings
 
 " NERDTree
-let g:NERDTreeWinPos = "right"
 nnoremap <leader>o :NERDTreeToggle<CR>
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let g:nerdtree_tabs_open_on_console_startup = 1
@@ -192,7 +191,6 @@ let g:syntastic_check_on_open=1
 
 " Tagbar
 nnoremap <leader>O :TagbarToggle<CR>
-let g:tagbar_left = 1
 let g:tagbar_autofocus = 1
 let g:tagbar_autoclose = 1
 let g:tagbar_width = 25
@@ -204,3 +202,8 @@ let g:rspec_command = "Dispatch zeus rspec {spec}"
 
 " emmet.vim
 nmap <leader><CR> <C-y>,
+
+" togglelist
+let g:toggle_list_no_mappings = 1
+nnoremap <leader>P :call ToggleLocationList()<CR>
+nnoremap <leader>p :call ToggleQuickfixList()<CR>
