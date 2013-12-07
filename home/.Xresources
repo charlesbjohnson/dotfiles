@@ -1,5 +1,5 @@
 ! Colors
-#include "/home/charlie/.termcolor/shell-x"
+#include "/home/charlie/.termcolor/base16-default"
 
 ! URxvt
 URxvt.termName:         rxvt-256color

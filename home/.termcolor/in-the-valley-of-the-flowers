@@ -1,0 +1,37 @@
+!In the valley of the flowers by Kodiak
+
+!Background / Foreground
+*background: #1d1f21
+*foreground: #ddccbb
+
+!Black / Light black
+*color0: #222222
+*color8: #666666
+
+!Red / Light red
+*color1:  #cc4747
+*color9:  #bf5858
+
+!Green / Light green
+*color2:  #a0cf5d
+*color10: #b8d68c
+
+!Yellow / Light yellow
+*color3:  #e0a524
+*color11: #edB85c
+
+!Blue / Light blue
+*color4:  #4194d9
+*color12: #60aae6
+
+!Purple / Light purple
+*color5:  #cc2f6e
+*color13: #db588c
+
+!Cyan / Light cyan
+*color6:  #6d878d
+*color14:  #42717b
+
+!White / Light white...?
+*color7:  #dedede
+*color15: #f2f2f2
