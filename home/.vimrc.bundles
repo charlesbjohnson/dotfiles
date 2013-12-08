@@ -10,7 +10,6 @@ Bundle 'gmarik/vundle'
 " Appearance
 Bundle 'chriskempson/base16-vim'
 Bundle 'scrooloose/nerdtree'
-Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'majutsushi/tagbar'
 Bundle 'milkypostman/vim-togglelist'
 Bundle 'bling/vim-airline'
