@@ -19,6 +19,8 @@ Bundle 'henrik/vim-indexed-search'
 
 " Utility
 Bundle 'Valloric/YouCompleteMe'
+"Bundle 'SirVer/ultisnips'
+"Bundle 'honza/vim-snippets'
 Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/ctags.vim'
 Bundle 'xolox/vim-misc'
@@ -52,6 +54,7 @@ Bundle 'thoughtbot/vim-rspec'
 
 " JavaScript
 "Bundle 'marijnh/tern_for_vim'
+Bundle 'mustache/vim-mustache-handlebars'
 "Bundle 'kchmck/vim-coffee-script'
 
 filetype on

@@ -1,7 +1,9 @@
 ".vimrc
 " See: http://vimdoc.sourceforge.net/htmldoc/options.html for details
+
+
 " For multi-byte character support (CJK support, for example):
-" set fileencodings=ucs-bom,utf-8,cp936,big5,euc-jp,euc-kr,gb18030,latin1
+set fileencodings=ucs-bom,utf-8,cp936,big5,euc-jp,euc-kr,gb18030,latin1
 
 
 " Plugins
@@ -93,6 +95,10 @@ set nobackup                            " Don't keep backups
 set noswapfile                          " Don't create a swap file
 
 
+" detect sass as css
+autocmd BufNewFile,BufRead *.scss             set ft=scss.css
+
+
 " Functions
 function! StripWhitespace()
     let save_cursor = getpos(".")
@@ -149,7 +155,7 @@ autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 let g:nerdtree_tabs_open_on_console_startup = 1
 
 " Indent Guides
-let indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 1
 let g:indent_guides_guide_size = 2
 let g:indent_guides_exclude_filetypes = ['nerdtree']
