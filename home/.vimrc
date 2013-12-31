@@ -57,6 +57,7 @@ set background=dark
 set number                              " Line numbers
 set cursorline                          " Highlights cursor line
 set scrolloff=20                        " Keep 20 scroll lines above/below cursor
+set nowrap                              " Disable displaying lines as wrapped
 set colorcolumn=80                      " Highlight column at 80 characters
 set list listchars=tab:⇥⇥,eol:↵,trail:· " Control character highlighting
 set showcmd                             " Show (partial) command in status line.
@@ -96,7 +97,7 @@ set noswapfile                          " Don't create a swap file
 
 
 " detect sass as css
-autocmd BufNewFile,BufRead *.scss             set ft=scss.css
+autocmd BufNewFile,BufRead *.scss set ft=scss.css
 
 
 " Functions

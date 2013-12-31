@@ -270,7 +270,7 @@
     </keybind>
     <keybind key="S-W-t">
       <action name="Execute">
-        <command>~/bin/tmux_term</command>
+        <command>urxvt -e zsh -c tmux -2</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
