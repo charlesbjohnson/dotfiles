@@ -4,7 +4,7 @@
 
 ! URxvt
 URxvt.termName:         rxvt-256color
-URxvt.font:             xft:Liberation Mono:Regular:size=10, xft:Liberation Mono For Powerline:Regular:size=10
+URxvt.font:             xft:Liberation Mono for Powerline:Regular:size=10
 URxvt.iconFile:         /usr/share/icons/AwOkenDark/clear/48x48/apps/xterm-color_48x48.png
 URxvt.cursorBlink:      true
 URxvt.pointerBlank:     true
@@ -13,7 +13,7 @@ URxvt.saveLines:        10000
 URxvt.scrollWithBuffer: true
 URxvt.loginShell:       true
 
-URxvt.perl-ext-common:      default,keyboard-select,url-select,clipboard,vtwheel,font-size
+URxvt.perl-ext-common:      default,keyboard-select,url-select,clipboard,vtwheel,font-size,fullscreen
 
 URxvt.keysym.M-Escape:      perl:keyboard-select:activate
 URxvt.keysm.M-s:            perl:keyboard-select:search
@@ -31,3 +31,5 @@ URxvt.keysym.C-equal:       perl:font-size:increase
 URxvt.keysym.C-minus:       perl:font-size:decrease
 URxvt.keysym.C-plus:        perl:font-size:incglobal
 URxvt.keysym.C-underscoren: perl:font-size:decglobal
+
+URxvt.keysym.F11:           perl:fullscreen:switch
