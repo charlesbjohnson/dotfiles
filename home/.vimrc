@@ -1,4 +1,4 @@
-".vimrc
+" .vimrc
 " See: http://vimdoc.sourceforge.net/htmldoc/options.html for details
 
 
@@ -67,6 +67,7 @@ set showcmd                             " Show (partial) command in status line.
 if has('gui_running')
   set guioptions=                       " Get rid of menu icons, toolbar, etc
   set guioptions=ai                     " Use console-style tabs and include icon
+  set guifont=Liberation\ Mono\ for\ Powerline
 endif
 
 
@@ -96,41 +97,43 @@ set nobackup                            " Don't keep backups
 set noswapfile                          " Don't create a swap file
 
 
+" Filetypes
+"
 " detect sass as css
 autocmd BufNewFile,BufRead *.scss set ft=scss.css
 
 
 " Functions
 function! StripWhitespace()
-    let save_cursor = getpos(".")
-    let old_query = getreg('/')
-    :%s/\s\+$//e
-    call setpos('.', save_cursor)
-    call setreg('/', old_query)
+  let save_cursor = getpos(".")
+  let old_query = getreg('/')
+  :%s/\s\+$//e
+  call setpos('.', save_cursor)
+  call setreg('/', old_query)
 endfunction
 
 
 " Key bindings
 inoremap <M-Space> <Esc>
-nnoremap <leader>q :q<CR>
-nnoremap <leader>sw :call StripWhitespace()<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>sw :call StripWhitespace()<CR>
 
 " Move line up/down
-nnoremap <leader>j ddp
-nnoremap <leader>k ddkP
+nnoremap <Leader>j ddp
+nnoremap <Leader>k ddkP
 
 " Buffers (creation, deletion, cycling) and delete all buffers
-nnoremap <leader>b :enew<CR>
-nnoremap <leader>BB :Bdelete<CR>
-nnoremap <leader>BD :bufdo :Bdelete<CR>
-nnoremap <leader>l :bn<CR>
-nnoremap <leader>h :bp<CR>
+nnoremap <Leader>b :enew<CR>
+nnoremap <Leader>BB :Bdelete<CR>
+nnoremap <Leader>BD :bufdo :Bdelete<CR>
+nnoremap <Leader>l :bn<CR>
+nnoremap <Leader>h :bp<CR>
 
 " Tabs (creation, deletion, cycling)
-nnoremap <leader>t :tabnew<CR>
-nnoremap <leader>T :tabclose<CR>
-nnoremap <leader>L :tabnext<CR>
-nnoremap <leader>H :tabprevious<CR>
+nnoremap <Leader>t :tabnew<CR>
+nnoremap <Leader>T :tabclose<CR>
+nnoremap <Leader>L :tabnext<CR>
+nnoremap <Leader>H :tabprevious<CR>
 
 " Consistent indent/unindent across all modes
 nnoremap <C-t> >>
@@ -145,14 +148,20 @@ nnoremap <C-h> <C-w><C-h>
 nnoremap <C-l> <C-w><C-l>
 
 " Ctags
-nnoremap <leader>[ :pop<CR>
-nnoremap <leader>] <C-]>
+nnoremap <Leader>[ :pop<CR>
+nnoremap <Leader>] <C-]>
 
 " Plugin settings
 
 " NERDTree
-nnoremap <leader>o :NERDTreeToggle<CR>
-autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+function! QuitIfNERDTreeOnly()
+  if (winnr('$') == 1 && exists('b:NERDTreeType') && b:NERDTreeType == 'primary')
+    quit
+  endif
+endfunction
+
+nnoremap <Leader>o :NERDTreeToggle<CR>
+autocmd BufEnter * call QuitIfNERDTreeOnly()
 let g:nerdtree_tabs_open_on_console_startup = 1
 
 " Indent Guides
@@ -161,13 +170,11 @@ let g:indent_guides_start_level = 1
 let g:indent_guides_guide_size = 2
 let g:indent_guides_exclude_filetypes = ['nerdtree']
 
-" EasyMotion
-let g:EasyMotion_leader_key = '<leader>g'
-
 " Ctrlp
 let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_extensions = ['tag']
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.ctags
 
 " vim-airline
@@ -177,6 +184,10 @@ let g:airline#extensions#tabline#enabled = 1
 " git-gutter
 let g:gitgutter_eager = 0
 let g:gitgutter_realtime = 0
+nmap <Leader>gh <Plug>GitGutterNextHunk
+nmap <Leader>gH <Plug>GitGutterPrevHunk
+nmap <Leader>gA <Plug>GitGutterStageHunk
+nmap <Leader>gR <Plug>GitGutterRevertHunk
 
 " Ag
 if executable('ag')
@@ -190,27 +201,34 @@ set tags=./.ctags;
 let g:easy_tags_auto_update = 0
 let g:easytags_updatetime_warn = 0
 let g:easytags_dynamic_files = 2
-nnoremap <leader>ct :!ctags -f .ctags -R .<CR>
-autocmd BufEnter * if isdirectory('.git') | let g:easytags_auto_update = 1 | endif
+nnoremap <Leader>ct :!ctags -f .ctags -R .<CR>
+autocmd BufEnter * let g:easytags_auto_update = isdirectory('.git')
 
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
 
 " Tagbar
-nnoremap <leader>O :TagbarToggle<CR>
+nnoremap <Leader>O :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 let g:tagbar_autoclose = 1
 let g:tagbar_width = 25
 
 " vim-rspec
-nnoremap <leader>rs :call RunNearestSpec()<CR>
+nnoremap <Leader>rs :call RunNearestSpec()<CR>
 nnoremap <Leader>rf :call RunCurrentSpecFile()<CR>
 let g:rspec_command = "Dispatch zeus rspec {spec}"
 
 " emmet.vim
-nmap <leader><CR> <C-y>,
+nmap <Leader><CR> <C-y>,
 
 " togglelist
 let g:toggle_list_no_mappings = 1
-nnoremap <leader>P :call ToggleLocationList()<CR>
-nnoremap <leader>p :call ToggleQuickfixList()<CR>
+nnoremap <Leader>P :call ToggleLocationList()<CR>
+nnoremap <Leader>p :call ToggleQuickfixList()<CR>
+
+" extradite
+nmap <Leader>gd :Extradite<CR>
+
+" easy-align
+vmap <CR> <Plug>(EasyAlign)
+nmap <Leader>a <Plug>(EasyAlign)
