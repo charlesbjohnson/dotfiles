@@ -184,10 +184,7 @@ let g:airline#extensions#tabline#enabled = 1
 " git-gutter
 let g:gitgutter_eager = 0
 let g:gitgutter_realtime = 0
-nmap <Leader>gh <Plug>GitGutterNextHunk
-nmap <Leader>gH <Plug>GitGutterPrevHunk
-nmap <Leader>gA <Plug>GitGutterStageHunk
-nmap <Leader>gR <Plug>GitGutterRevertHunk
+let g:gitgutter_map_keys = 0
 
 " Ag
 if executable('ag')
