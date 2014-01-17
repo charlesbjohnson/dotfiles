@@ -98,7 +98,7 @@ set noswapfile                          " Don't create a swap file
 
 
 " Filetypes
-"
+
 " detect sass as css
 autocmd BufNewFile,BufRead *.scss set ft=scss.css
 
@@ -229,3 +229,6 @@ nmap <Leader>gd :Extradite<CR>
 " easy-align
 vmap <CR> <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
+
+" language tool
+let g:languagetool_jar = "/usr/share/languagetool/languagetool-commandline.jar"
