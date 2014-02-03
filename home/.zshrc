@@ -56,3 +56,6 @@ source /usr/bin/virtualenvwrapper.sh
 export EDITOR="vim"
 
 PATH=$PATH:$HOME/bin # User scripts/executables
+
+# Prompt for passphrase on first time ssh used
+alias ssh='eval $(keychain --eval --agents ssh -Q --quiet ~/.ssh/id_rsa) && ssh'
