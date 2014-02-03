@@ -100,7 +100,7 @@ set noswapfile                          " Don't create a swap file
 " Filetypes
 
 " detect sass as css
-autocmd BufNewFile,BufRead *.scss set ft=scss.css
+autocmd! BufNewFile,BufRead *.scss set ft=scss.css
 
 
 " Functions
@@ -232,3 +232,7 @@ nmap <Leader>a <Plug>(EasyAlign)
 
 " language tool
 let g:languagetool_jar = "/usr/share/languagetool/languagetool-commandline.jar"
+
+" ultisnips
+inoremap <C-e> <NOP>
+let g:UltiSnipsExpandTrigger='<C-e>'

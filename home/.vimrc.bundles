@@ -20,8 +20,7 @@ Bundle 'henrik/vim-indexed-search'
 
 " Utility
 Bundle 'Valloric/YouCompleteMe'
-"Bundle 'SirVer/ultisnips'
-"Bundle 'honza/vim-snippets'
+Bundle 'SirVer/ultisnips'
 Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/ctags.vim'
 Bundle 'xolox/vim-misc'
@@ -33,7 +32,7 @@ Bundle 'rking/ag.vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'scrooloose/nerdcommenter'
-"Bundle 'svermeulen/vim-easyclip'
+Bundle 'svermeulen/vim-easyclip'
 Bundle 'moll/vim-bbye'
 Bundle 'danro/rename.vim'
 Bundle 'Raimondi/delimitMate'
@@ -61,7 +60,7 @@ Bundle 'thoughtbot/vim-rspec'
 "Bundle 'tpope/vim-cucumber'
 
 " JavaScript
-"Bundle 'marijnh/tern_for_vim'
+Bundle 'marijnh/tern_for_vim'
 "Bundle 'kchmck/vim-coffee-script'
 Bundle 'mustache/vim-mustache-handlebars'
 
