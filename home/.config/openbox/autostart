@@ -17,16 +17,17 @@
 #xfce-mcs-manager &
 #
 #
-syndaemon -k -i 1 -d &
-nitrogen --restore &
-compton --config ~/.config/compton.conf -b
-tint2 &
-dropboxd
-xfce4-volumed
-volumeicon &
-xfce4-clipman &
-netmon &
-redshift -l 41.0:-73.6 &
-thunar --daemon &
-/usr/share/aarchup/aarchstartup.sh
-setxkbmap -option caps:escape &
+feh --bg-scale ~/wallpapers/current_wallpaper &
+(sleep 1s && syndaemon -k -i 1 -d) &
+(sleep 1s && compton --config ~/.config/compton.conf) &
+(sleep 1s && tint2) &
+(sleep 1s && xscreensaver -no-splash) &
+(sleep 1s && dropboxd) &
+(sleep 1s && xfce4-volumed) &
+(sleep 1s && volumeicon) &
+(sleep 1s && xfce4-clipman) &
+(sleep 1s && netmon) &
+(sleep 1s && redshift -l 41.0:-73.6) &
+(sleep 1s && thunar --daemon) &
+(sleep 1s && /usr/share/aarchup/aarchstartup.sh) &
+(sleep 1s && setxkbmap -option caps:escape) &

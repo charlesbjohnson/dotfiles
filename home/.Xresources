@@ -2,6 +2,13 @@
 ! Use base16 colors in terminal vim
 #include "/home/charlie/.termcolor/base16-default"
 
+! Xft
+Xft.dpi:                96
+Xft.antialias:          true
+Xft.rgba:               rgb
+Xft.hinting:            true
+Xft.hintstyle:          hintslight
+
 ! URxvt
 URxvt.termName:         rxvt-256color
 URxvt.font:             xft:Liberation Mono for Powerline:Regular:size=10

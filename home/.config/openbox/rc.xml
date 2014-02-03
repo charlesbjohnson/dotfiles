@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
     <strength>10</strength>
@@ -449,7 +450,7 @@
         <action name="Move"/>
       </mousebind>
       <mousebind action="DoubleClick" button="Left">
-        <action name="ToggleMaximize" xmlns="http://openbox.org/3.4/rc"/>
+        <action xmlns="http://openbox.org/3.4/rc" name="ToggleMaximize"/>
       </mousebind>
       <mousebind action="Click" button="Up">
         <action name="if">
