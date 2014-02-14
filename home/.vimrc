@@ -103,20 +103,9 @@ set noswapfile                          " Don't create a swap file
 autocmd! BufNewFile,BufRead *.scss set ft=scss.css
 
 
-" Functions
-function! StripWhitespace()
-  let save_cursor = getpos(".")
-  let old_query = getreg('/')
-  :%s/\s\+$//e
-  call setpos('.', save_cursor)
-  call setreg('/', old_query)
-endfunction
-
-
 " Key bindings
 inoremap <M-Space> <Esc>
 nnoremap <Leader>q :q<CR>
-nnoremap <Leader>sw :call StripWhitespace()<CR>
 
 " Move line up/down
 nnoremap <Leader>j ddp
@@ -162,7 +151,6 @@ endfunction
 
 nnoremap <Leader>o :NERDTreeToggle<CR>
 autocmd BufEnter * call QuitIfNERDTreeOnly()
-let g:nerdtree_tabs_open_on_console_startup = 1
 
 " Indent Guides
 let g:indent_guides_enable_on_vim_startup = 1
@@ -236,3 +224,7 @@ let g:languagetool_jar = "/usr/share/languagetool/languagetool-commandline.jar"
 " ultisnips
 inoremap <C-e> <NOP>
 let g:UltiSnipsExpandTrigger='<C-e>'
+
+" better-whitespace
+nnoremap <Leader>sw :StripWhitespace<CR>
+let g:strip_whitespace_on_save = 1
