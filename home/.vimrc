@@ -230,3 +230,8 @@ let g:UltiSnipsExpandTrigger='<C-e>'
 " better-whitespace
 nnoremap <Leader>sw :StripWhitespace<CR>
 let g:strip_whitespace_on_save = 1
+
+" easygrep
+let g:EasyGrepFilesToExclude = ".git,bower_components,node_modules,vendor,.bundle"
+let g:EasyGrepCommand = 1
+let g:EasyGrepRecursive = 1
