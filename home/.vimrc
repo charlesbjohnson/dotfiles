@@ -106,6 +106,7 @@ autocmd! BufNewFile,BufRead *.scss set ft=scss.css
 " Key bindings
 inoremap <M-Space> <Esc>
 nnoremap <Leader>q :q<CR>
+nnoremap <Leader>s :w<CR>
 
 " Move line up/down
 nnoremap <Leader>j ddp
@@ -228,7 +229,6 @@ inoremap <C-e> <NOP>
 let g:UltiSnipsExpandTrigger='<C-e>'
 
 " better-whitespace
-nnoremap <Leader>sw :StripWhitespace<CR>
 let g:strip_whitespace_on_save = 1
 
 " easygrep
