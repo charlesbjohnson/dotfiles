@@ -204,7 +204,9 @@ nnoremap <Leader>rf :call RunCurrentSpecFile()<CR>
 let g:rspec_command = "Dispatch zeus rspec {spec}"
 
 " emmet.vim
-nmap <Leader><CR> <C-y>,
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+let g:user_emmet_leader_key='<CR>'
 
 " togglelist
 let g:toggle_list_no_mappings = 1
