@@ -7,7 +7,7 @@ set fileencodings=ucs-bom,utf-8,cp936,big5,euc-jp,euc-kr,gb18030,latin1
 
 
 " Plugins
-if filereadable(expand("~/.vimrc.bundles"))
+if filereadable(expand('~/.vimrc.bundles'))
   source ~/.vimrc.bundles
 endif
 
@@ -98,9 +98,7 @@ set noswapfile                          " Don't create a swap file
 
 
 " Filetypes
-
-" detect sass as css
-autocmd! BufNewFile,BufRead *.scss set ft=scss.css
+autocmd! BufNewFile,BufRead *.tpl set ft=html syntax=mustache
 
 
 " Key bindings
@@ -202,12 +200,13 @@ let g:tagbar_width = 25
 " vim-rspec
 nnoremap <Leader>rs :call RunNearestSpec()<CR>
 nnoremap <Leader>rf :call RunCurrentSpecFile()<CR>
-let g:rspec_command = "Dispatch zeus rspec {spec}"
+let g:rspec_command = 'Dispatch zeus rspec {spec}'
 
 " emmet.vim
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
-let g:user_emmet_leader_key='<CR>'
+let g:user_emmet_mode = 'n'
+let g:user_emmet_leader_key = '<CR>'
 
 " togglelist
 let g:toggle_list_no_mappings = 1
@@ -222,7 +221,7 @@ vmap <CR> <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
 
 " language tool
-let g:languagetool_jar = "/usr/share/languagetool/languagetool-commandline.jar"
+let g:languagetool_jar = '/usr/share/languagetool/languagetool-commandline.jar'
 
 " ultisnips
 inoremap <C-e> <NOP>
@@ -232,6 +231,6 @@ let g:UltiSnipsExpandTrigger='<C-e>'
 let g:strip_whitespace_on_save = 1
 
 " easygrep
-let g:EasyGrepFilesToExclude = ".git,bower_components,node_modules,vendor,.bundle"
+let g:EasyGrepFilesToExclude = '.git,bower_components,node_modules,vendor,.bundle'
 let g:EasyGrepCommand = 1
 let g:EasyGrepRecursive = 1

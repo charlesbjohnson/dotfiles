@@ -60,6 +60,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
 Bundle 'thoughtbot/vim-rspec'
 "Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-haml'
 
 " JavaScript
 Bundle 'marijnh/tern_for_vim'
