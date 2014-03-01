@@ -2,4 +2,5 @@
 tags
 .ruby-gemset
 .ruby-version
+.ruby-env
 .tern-project
