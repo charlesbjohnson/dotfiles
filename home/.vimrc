@@ -237,3 +237,7 @@ let g:strip_whitespace_on_save = 1
 let g:EasyGrepFilesToExclude = '.git,bower_components,node_modules,vendor,.bundle'
 let g:EasyGrepCommand = 1
 let g:EasyGrepRecursive = 1
+
+" goldenview
+let g:goldenview__enable_default_mapping = 0
+nmap <silent> <C-w>v  <Plug>GoldenViewSplit
