@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
     <strength>10</strength>
@@ -253,7 +252,7 @@
     </keybind>
     <keybind key="W-r">
       <action name="Execute">
-        <command>~/bin/dmenu</command>
+        <command>~/.bin/dmenu</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>dmenu</name>
@@ -323,7 +322,7 @@
     </keybind>
     <keybind key="W-p">
       <action name="Execute">
-        <command>~/bin/toggle_display</command>
+        <command>~/.bin/toggle_display</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
@@ -331,7 +330,7 @@
     </keybind>
     <keybind key="W-semicolon">
       <action name="Execute">
-        <command>~/bin/trackpad_toggle</command>
+        <command>~/.bin/trackpad_toggle</command>
       </action>
     </keybind>
     <keybind key="C-S-Escape">
@@ -450,7 +449,7 @@
         <action name="Move"/>
       </mousebind>
       <mousebind action="DoubleClick" button="Left">
-        <action xmlns="http://openbox.org/3.4/rc" name="ToggleMaximize"/>
+        <action name="ToggleMaximize" xmlns="http://openbox.org/3.4/rc"/>
       </mousebind>
       <mousebind action="Click" button="Up">
         <action name="if">

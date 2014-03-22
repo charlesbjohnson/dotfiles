@@ -46,7 +46,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
-PATH=$PATH:$HOME/bin # User scripts/executables
+PATH=$PATH:$HOME/.bin # User scripts/executables
 
 # history vi keybindings
 bindkey -M vicmd 'k' history-substring-search-up
