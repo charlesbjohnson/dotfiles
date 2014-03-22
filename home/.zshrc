@@ -8,8 +8,8 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="cbjohnson"
 
 # Example aliases
-alias zshconfig="gvim ~/.zshrc"
-alias ohmyzsh="gvim ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -40,22 +40,29 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bundler git archlinux colored-man command-not-found extract rvm systemd vi-mode history-substring-search zsh-syntax-highlighting)
+plugins=(archlinux colored-man command-not-found extract git git-extras rbenv redis-cli systemd vi-mode zsh-syntax-highlighting history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+PATH=$PATH:$HOME/bin # User scripts/executables
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# history vi keybindings
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 
+# set up rbenv for ruby
+eval "$(rbenv init -)"
 # set up virtualenv for python (with wrapper for commands)
 export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
 
 export EDITOR="vim"
 
-PATH=$PATH:$HOME/bin # User scripts/executables
-
 # Prompt for passphrase on first time ssh used
 alias ssh='eval $(keychain --eval --agents ssh -Q --quiet ~/.ssh/id_rsa) && ssh'
+
+# Delete merged branches
+alias gbdm='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d; git remote prune origin'
+alias gds='git diff --staged'
