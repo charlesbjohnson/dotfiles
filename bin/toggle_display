@@ -95,7 +95,7 @@ def run!
     `#{cycle_command}` if cycle_command
   end
 
-  `feh --bg-scale ~/wallpapers/current_wallpaper`
+  `feh --bg-scale ~/.wallpapers/current_wallpaper`
 end
 
 run!

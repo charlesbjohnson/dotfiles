@@ -17,7 +17,7 @@
 #xfce-mcs-manager &
 #
 #
-feh --bg-scale ~/wallpapers/current_wallpaper &
+feh --bg-scale ~/.wallpapers/current_wallpaper &
 (sleep 1s && syndaemon -k -i 1 -d) &
 (sleep 1s && compton --config ~/.config/compton.conf) &
 (sleep 1s && tint2) &
