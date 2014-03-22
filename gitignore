@@ -5,3 +5,14 @@ tags
 .ruby-env
 .rbenv-vars
 .tern-project
+
+*.DS_Store
+*.sw[nop]
+.bundle
+.env
+db/*.sqlite3
+log/*.log
+rerun.txt
+tmp/**/*
+!tmp/cache/.keep
+zeus.json

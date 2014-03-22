@@ -7,10 +7,6 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="cbjohnson"
 
-# Example aliases
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
-
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -60,9 +56,5 @@ source /usr/bin/virtualenvwrapper.sh
 
 export EDITOR="vim"
 
-# Prompt for passphrase on first time ssh used
-alias ssh='eval $(keychain --eval --agents ssh -Q --quiet ~/.ssh/id_rsa) && ssh'
-
-# Delete merged branches
-alias gbdm='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d; git remote prune origin'
-alias gds='git diff --staged'
+# aliases
+[[ -f ~/.aliases ]] && source ~/.aliases
