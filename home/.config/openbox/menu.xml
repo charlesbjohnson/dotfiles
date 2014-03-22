@@ -21,7 +21,7 @@
 		</item>
 		<item label="Panel Configuration">
 			<action name="Execute">
-				<execute>tint2conf</execute>
+				<execute>tintwizard</execute>
 			</action>
 		</item>
 		<item label="Look and Feel">
