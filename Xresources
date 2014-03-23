@@ -11,7 +11,7 @@ Xft.hintstyle:          hintslight
 
 ! URxvt
 URxvt.termName:         rxvt-256color
-URxvt.font:             xft:Liberation Mono for Powerline:Regular:size=10
+URxvt.font:             xft:Meslo LG S DZ for Powerline:Regular:size=11
 URxvt.iconFile:         /usr/share/icons/AwOkenDark/clear/48x48/apps/xterm-color_48x48.png
 URxvt.cursorBlink:      true
 URxvt.pointerBlank:     true
