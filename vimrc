@@ -108,7 +108,7 @@ autocmd! BufNewFile,BufRead *.erb set ft=html syntax=eruby ft=eruby
 " Key bindings
 inoremap <M-Space> <Esc>
 nnoremap <Leader>q :q<CR>
-nnoremap <Leader>s :w<CR>
+nnoremap <Leader>w :w<CR>
 
 " Stop that stupid window from popping up
 map q: :q
@@ -253,3 +253,11 @@ nmap <silent> <C-w>v  <Plug>GoldenViewSplit
 " vim-expand-region
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
+
+" splitjoin
+nmap <Leader>K :SplitjoinSplit<CR>
+nmap <Leader>J :SplitjoinJoin<CR>
+
+" tern
+let g:tern_show_signature_in_pum = 1
+autocmd BufEnter * set completeopt-=preview

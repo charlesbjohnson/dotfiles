@@ -44,6 +44,7 @@ NeoBundle 'rking/ag.vim'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'junegunn/vim-easy-align'
+NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'svermeulen/vim-easyclip'
 NeoBundle 'moll/vim-bbye'
@@ -76,7 +77,11 @@ NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 'tpope/vim-haml'
 
 " JavaScript
-NeoBundle 'marijnh/tern_for_vim'
+NeoBundle 'marijnh/tern_for_vim', {
+  \ 'build': {
+  \    'unix': 'npm install'
+  \   }
+  \ }
 NeoBundle 'mustache/vim-mustache-handlebars'
 
 filetype plugin indent on
