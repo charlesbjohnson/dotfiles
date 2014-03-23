@@ -1,74 +1,83 @@
-set nocompatible
+if has('vim_starting')
+  set nocompatible
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
 filetype off
 
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
+call neobundle#rc(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Appearance
-Bundle 'chriskempson/base16-vim'
-Bundle 'mhinz/vim-startify'
-Bundle 'scrooloose/nerdtree'
-Bundle 'majutsushi/tagbar'
-Bundle 'zhaocai/GoldenView.vim'
-Bundle 'milkypostman/vim-togglelist'
-Bundle 'bling/vim-airline'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'ntpeters/vim-better-whitespace'
-Bundle 'henrik/vim-indexed-search'
+NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'mhinz/vim-startify'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'zhaocai/GoldenView.vim'
+NeoBundle 'milkypostman/vim-togglelist'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'edkolev/tmuxline.vim'
+NeoBundle 'airblade/vim-gitgutter'
+" NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'ntpeters/vim-better-whitespace'
+NeoBundle 'henrik/vim-indexed-search'
 
 " Utility
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'SirVer/ultisnips'
-Bundle 'scrooloose/syntastic'
-Bundle 'vim-scripts/ctags.vim'
-Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-easytags'
-Bundle 'kien/ctrlp.vim'
-Bundle 'vim-scripts/repmo.vim'
-Bundle 'justinmk/vim-sneak'
-Bundle 'dkprice/vim-easygrep'
-Bundle 'skwp/greplace.vim'
-Bundle 'rking/ag.vim'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'junegunn/vim-easy-align'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'svermeulen/vim-easyclip'
-Bundle 'moll/vim-bbye'
-Bundle 'danro/rename.vim'
-Bundle 'Raimondi/delimitMate'
-Bundle 'matchit.zip'
-Bundle 'tpope/vim-speeddating'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-dispatch'
-Bundle 'tpope/vim-fugitive'
-"Bundle 'int3/vim-extradite' Keybindings lousy
-"Bundle 'gregsexton/gitv'    Too slow
+NeoBundle 'Valloric/YouCompleteMe', {
+  \ 'build': {
+  \    'unix': './install.sh'
+  \   }
+  \ }
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'honza/vim-snippets'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'vim-scripts/ctags.vim'
+NeoBundle 'xolox/vim-misc'
+NeoBundle 'xolox/vim-easytags'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'vim-scripts/repmo.vim'
+NeoBundle 'justinmk/vim-sneak'
+NeoBundle 'dkprice/vim-easygrep'
+NeoBundle 'skwp/greplace.vim'
+NeoBundle 'rking/ag.vim'
+NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'terryma/vim-expand-region'
+NeoBundle 'junegunn/vim-easy-align'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'svermeulen/vim-easyclip'
+NeoBundle 'moll/vim-bbye'
+NeoBundle 'danro/rename.vim'
+NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'matchit.zip'
+NeoBundle 'tpope/vim-speeddating'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-dispatch'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'christoomey/vim-tmux-navigator'
+"NeoBundle 'int3/vim-extradite' Keybindings lousy
+"NeoBundle 'gregsexton/gitv'    Too slow
 
 " Writing
-Bundle 'vim-scripts/LanguageTool'
-"Bundle 'greyblake/vim-preview' Needs to disable keybindings
+NeoBundle 'vim-scripts/LanguageTool'
+"NeoBundle 'greyblake/vim-preview' Needs to disable keybindings
 
 " Web
-Bundle 'othree/html5.vim'
-Bundle 'mattn/emmet-vim'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'mattn/emmet-vim'
+"NeoBundle 'skammer/vim-css-color'
 
 " Ruby/Rails
-Bundle 'vim-ruby/vim-ruby'
-"Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-rails'
-Bundle 'thoughtbot/vim-rspec'
-"Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-haml'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'thoughtbot/vim-rspec'
+NeoBundle 'tpope/vim-haml'
 
 " JavaScript
-Bundle 'marijnh/tern_for_vim'
-"Bundle 'kchmck/vim-coffee-script'
-Bundle 'mustache/vim-mustache-handlebars'
+NeoBundle 'marijnh/tern_for_vim'
+NeoBundle 'mustache/vim-mustache-handlebars'
 
-filetype on
+filetype plugin indent on
+NeoBundleCheck

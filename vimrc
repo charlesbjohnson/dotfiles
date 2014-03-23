@@ -101,6 +101,7 @@ set noswapfile                          " Don't create a swap file
 " TODO figure out how to get surround macros for *.tpl
 autocmd! BufNewFile,BufRead *.tpl set ft=html syntax=mustache
 " To use erb surround macros (from vim-rails) in combination with emmet macros
+" TODO reconcile this with ultisnips html snippets
 autocmd! BufNewFile,BufRead *.erb set ft=html syntax=eruby ft=eruby
 
 
@@ -108,6 +109,9 @@ autocmd! BufNewFile,BufRead *.erb set ft=html syntax=eruby ft=eruby
 inoremap <M-Space> <Esc>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>s :w<CR>
+
+" Stop that stupid window from popping up
+map q: :q
 
 " Move line up/down
 nnoremap <Leader>j ddp
@@ -142,6 +146,11 @@ nnoremap <C-l> <C-w><C-l>
 nnoremap <Leader>[ :pop<CR>
 nnoremap <Leader>] <C-]>
 
+" Automatically jump to end of pasted text
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
+
 " Plugin settings
 
 " NERDTree
@@ -154,11 +163,8 @@ endfunction
 nnoremap <Leader>o :NERDTreeToggle<CR>
 autocmd BufEnter * call QuitIfNERDTreeOnly()
 
-" Indent Guides
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_start_level = 1
-let g:indent_guides_guide_size = 2
-let g:indent_guides_exclude_filetypes = ['nerdtree']
+" indent lines
+let g:indentLine_char = '┆'
 
 " Ctrlp
 let g:ctrlp_map = '<C-p>'
@@ -243,3 +249,7 @@ let g:EasyGrepRecursive = 1
 " goldenview
 let g:goldenview__enable_default_mapping = 0
 nmap <silent> <C-w>v  <Plug>GoldenViewSplit
+
+" vim-expand-region
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
