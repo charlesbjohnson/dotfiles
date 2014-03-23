@@ -171,6 +171,7 @@ nnoremap <C-b> :CtrlPBuffer<CR>
 " vim-airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='luna'
 
 " git-gutter
 let g:gitgutter_eager = 0
