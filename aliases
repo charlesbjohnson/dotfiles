@@ -1,6 +1,3 @@
-# Prompt for passphrase on first time ssh used
-alias ssh='eval $(keychain --eval --agents ssh -Q --quiet ~/.ssh/id_rsa) && ssh'
-
 # Delete merged branches
 alias gbdm='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d; git remote prune origin'
 alias gds='git diff --staged'
