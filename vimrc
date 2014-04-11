@@ -201,6 +201,7 @@ autocmd BufEnter * let g:easytags_auto_update = isdirectory('.git')
 
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
+let g:syntastic_scss_checkers = ['scss_lint']
 
 " Tagbar
 nnoremap <Leader>O :TagbarToggle<CR>
@@ -223,9 +224,6 @@ let g:user_emmet_leader_key = '<CR>'
 let g:toggle_list_no_mappings = 1
 nnoremap <Leader>P :call ToggleLocationList()<CR>
 nnoremap <Leader>p :call ToggleQuickfixList()<CR>
-
-" extradite
-nmap <Leader>gd :Extradite<CR>
 
 " easy-align
 vmap <CR> <Plug>(EasyAlign)
