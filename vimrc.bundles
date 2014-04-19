@@ -35,34 +35,26 @@ NeoBundle 'vim-scripts/ctags.vim'
 NeoBundle 'xolox/vim-misc'
 NeoBundle 'xolox/vim-easytags'
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'ivan-cukic/vim-ctrlp-switcher'
 NeoBundle 'vim-scripts/repmo.vim'
 NeoBundle 'justinmk/vim-sneak'
-NeoBundle 'dkprice/vim-easygrep'
 NeoBundle 'skwp/greplace.vim'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'junegunn/vim-easy-align'
-NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'svermeulen/vim-easyclip'
 NeoBundle 'moll/vim-bbye'
 NeoBundle 'danro/rename.vim'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'matchit.zip'
-NeoBundle 'tpope/vim-speeddating'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'christoomey/vim-tmux-navigator'
-"NeoBundle 'int3/vim-extradite' Keybindings lousy
-"NeoBundle 'gregsexton/gitv'    Too slow
-
-" Writing
-"NeoBundle 'vim-scripts/LanguageTool' languagetool directories messed
-"NeoBundle 'greyblake/vim-preview' Needs to disable keybindings
 
 " Web
 NeoBundle 'othree/html5.vim'

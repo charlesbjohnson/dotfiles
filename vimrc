@@ -136,12 +136,6 @@ nnoremap <C-d> <<
 vnoremap <C-t> >gv
 vnoremap <C-d> <gv
 
-" Switch between splits more easily
-nnoremap <C-j> <C-w><C-j>
-nnoremap <C-k> <C-w><C-k>
-nnoremap <C-h> <C-w><C-h>
-nnoremap <C-l> <C-w><C-l>
-
 " Ctags
 nnoremap <Leader>[ :pop<CR>
 nnoremap <Leader>] <C-]>
@@ -173,6 +167,7 @@ let g:ctrlp_extensions = ['tag']
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.ctags
 nnoremap <C-b> :CtrlPBuffer<CR>
+nnoremap <C-i> :CtrlPSwitch<CR>
 
 " vim-airline
 let g:airline_powerline_fonts = 1
@@ -229,20 +224,12 @@ nnoremap <Leader>p :call ToggleQuickfixList()<CR>
 vmap <CR> <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
 
-" language tool
-let g:languagetool_jar = '/usr/share/languagetool/languagetool-commandline.jar'
-
 " ultisnips
 inoremap <C-e> <NOP>
 let g:UltiSnipsExpandTrigger='<C-e>'
 
 " better-whitespace
 let g:strip_whitespace_on_save = 1
-
-" easygrep
-let g:EasyGrepFilesToExclude = '.git,bower_components,node_modules,vendor,.bundle'
-let g:EasyGrepCommand = 1
-let g:EasyGrepRecursive = 1
 
 " goldenview
 let g:goldenview__enable_default_mapping = 0
@@ -252,10 +239,30 @@ nmap <silent> <C-w>v  <Plug>GoldenViewSplit
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 
-" splitjoin
-nmap <Leader>K :SplitjoinSplit<CR>
-nmap <Leader>J :SplitjoinJoin<CR>
-
 " tern
 let g:tern_show_signature_in_pum = 1
 autocmd BufEnter * set completeopt-=preview
+
+" startify
+let g:startify_change_to_dir = 1
+let g:startify_change_to_vcs_root = 1
+let g:startify_restore_position = 1
+let g:startify_relative_path = 1
+let g:startify_custom_header = [
+\ '',
+\ '',
+\ '   ,.-.                        ,.-·.               ;.',
+\ '  /   '';\                       /    ;''\''       ;   '';:\           .·´¨'';\',
+\ '  '';    ;:''\      ,·''´'';        ;    ;:::\     ;     '';:''\      .''´     ;:''\',
+\ '  '';   ;::;     ,''  ,''''\      '';    ;::::;''    ;   ,  ''·:;  .·´,.´'';  ,''::;''',
+\ '   '';   '';::;   ,''  ,'':::''\''    ;   ;::::;    ;   ;''`.    ¨,.·´::;''  ;:::;',
+\ '   '';   ;:;  ,''  ,'':::::;''    '';  ;''::::;     ;  '';::; \*´\:::::;  ,'':::;‘',
+\ '    ;   ;:;''´ ,''::::::;''       ;  '';:::'';     '';  ,''::;   \::\;:·'';  ;:::;',
+\ '    '';   ''´ ,·'':::::;''        '';  ;::::;''    ;  '';::;     ''*´   ;'',·'':::;‘',
+\ '     ,''   ,.''\::;·´           \*´\:::;‘    \´¨\::;             \::::;',
+\ '     \`*´\:::\;               ''\::\:;''      ''\::\;             \:\;·''',
+\ '      ''\:::\;''                   `*´‘         ''´¨                ¨''',
+\ '        `*´‘',
+\ '',
+\ '',
+\ ]
