@@ -48,6 +48,10 @@ PATH=$PATH:$HOME/.bin # User scripts/executables
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
+# history regular keybindings
+bindkey '\e[A' history-substring-search-up
+bindkey '\e[B' history-substring-search-down
+
 # set up rbenv for ruby
 eval "$(rbenv init -)"
 # set up virtualenv for python (with wrapper for commands)
