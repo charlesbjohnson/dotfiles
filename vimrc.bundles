@@ -38,6 +38,7 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'ivan-cukic/vim-ctrlp-switcher'
 NeoBundle 'vim-scripts/repmo.vim'
 NeoBundle 'justinmk/vim-sneak'
+NeoBundle 'zirrostig/vim-schlepp'
 NeoBundle 'skwp/greplace.vim'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'terryma/vim-multiple-cursors'
@@ -59,7 +60,6 @@ NeoBundle 'christoomey/vim-tmux-navigator'
 " Web
 NeoBundle 'othree/html5.vim'
 NeoBundle 'mattn/emmet-vim'
-"NeoBundle 'skammer/vim-css-color' Too slow
 
 " Ruby/Rails
 NeoBundle 'vim-ruby/vim-ruby'

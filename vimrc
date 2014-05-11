@@ -113,10 +113,6 @@ nnoremap <Leader>w :w<CR>
 " Stop that stupid window from popping up
 map q: :q
 
-" Move line up/down
-nnoremap <Leader>j ddp
-nnoremap <Leader>k ddkP
-
 " Buffers (creation, deletion, cycling) and delete all buffers
 nnoremap <Leader>b :enew<CR>
 nnoremap <Leader>BB :Bdelete<CR>
@@ -223,6 +219,12 @@ nnoremap <Leader>p :call ToggleQuickfixList()<CR>
 " easy-align
 vmap <CR> <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
+
+" schlepp
+vmap <unique> <Leader>k <Plug>SchleppUp
+vmap <unique> <Leader>j <Plug>SchleppDown
+vmap <unique> <Leader>h <Plug>SchleppLeft
+vmap <unique> <Leader>l <Plug>SchleppRight
 
 " ultisnips
 inoremap <C-e> <NOP>
