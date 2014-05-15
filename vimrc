@@ -132,6 +132,9 @@ nnoremap <C-d> <<
 vnoremap <C-t> >gv
 vnoremap <C-d> <gv
 
+nnoremap H 0
+nnoremap L $
+
 " Ctags
 nnoremap <Leader>[ :pop<CR>
 nnoremap <Leader>] <C-]>
@@ -215,6 +218,9 @@ let g:user_emmet_leader_key = '<CR>'
 let g:toggle_list_no_mappings = 1
 nnoremap <Leader>P :call ToggleLocationList()<CR>
 nnoremap <Leader>p :call ToggleQuickfixList()<CR>
+
+" multiple cursors
+let g:multi_cursor_quit_key = '<C-e>'
 
 " easy-align
 vmap <CR> <Plug>(EasyAlign)
