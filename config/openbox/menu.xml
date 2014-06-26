@@ -36,16 +36,6 @@
 					<execute>baobab</execute>
 				</action>
 			</item>
-			<item label="Display">
-				<action name="Execute">
-					<execute>lxrandr</execute>
-				</action>
-			</item>
-			<item label="Wallpaper">
-				<action name="Execute">
-					<execute>nitrogen ~/Documents/wallpapers</execute>
-				</action>
-			</item>
 			<item label="Screensaver">
 				<action name="Execute">
 					<execute>xscreensaver-demo</execute>
@@ -67,64 +57,6 @@
 				</action>
 			</item>
 		</menu>
-		<menu id="system-menu-411544" label="Configuration Files">
-			<item label="openbox menu.xml">
-				<action name="Execute">
-					<execute>subl3 ~/.config/openbox/menu.xml</execute>
-				</action>
-			</item>
-			<item label="openbox rc.xml">
-				<action name="Execute">
-					<execute>subl3 ~/.config/openbox/rc.xml</execute>
-				</action>
-			</item>
-			<item label="xinitrc">
-				<action name="Execute">
-					<execute>subl3 ~/.xinitrc</execute>
-				</action>
-			</item>
-			<item label="openbox autostart">
-				<action name="Execute">
-					<execute>subl3 ~/.config/openbox/autostart</execute>
-				</action>
-			</item>
-			<item label="tint2rc">
-				<action name="Execute">
-					<execute>subl3 ~/.config/tint2/tint2rc</execute>
-				</action>
-			</item>
-			<item label="compton.conf">
-				<action name="Execute">
-					<execute>subl3 ~/.config/compton.conf</execute>
-				</action>
-			</item>
-			<separator/>
-			<item label="zshrc">
-				<action name="Execute">
-					<execute>subl3 ~/.zshrc</execute>
-				</action>
-			</item>
-			<item label="zshenv">
-				<action name="Execute">
-					<execute>subl3 ~/.zshenv</execute>
-				</action>
-			</item>
-			<item label="Xresources">
-				<action name="Execute">
-					<execute>subl3 ~/.Xresources</execute>
-				</action>
-			</item>
-			<item label="vimrc">
-				<action name="Execute">
-					<execute>subl3 ~/.vimrc</execute>
-				</action>
-			</item>
-			<item label="tmux.conf">
-				<action name="Execute">
-					<execute>subl3 ~/.tmux.conf</execute>
-				</action>
-			</item>
-		</menu>
 		<separator/>
 		<item label="Reconfigure Openbox">
 			<action name="Reconfigure"/>
@@ -138,12 +70,6 @@
 				<prompt>yes</prompt>
 			</action>
 		</item>
-		<item label="Suspend">
-			<action name="Execute">
-				<command>sudo pm-suspend</command>
-			</action>
-		</item>
-		u
 		<separator/>
 		<item label="Reboot">
 			<action name="Execute">

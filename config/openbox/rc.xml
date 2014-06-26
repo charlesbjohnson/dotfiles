@@ -294,15 +294,6 @@
         </startupnotify>
       </action>
     </keybind>
-    <keybind key="S-W-e">
-      <action name="Execute">
-        <command>gvim</command>
-        <startupnotify>
-          <enabled>yes</enabled>
-          <name>gvim</name>
-        </startupnotify>
-      </action>
-    </keybind>
     <keybind key="W-w">
       <action name="Execute">
         <command>chromium</command>
@@ -330,7 +321,7 @@
     </keybind>
     <keybind key="W-semicolon">
       <action name="Execute">
-        <command>~/.bin/trackpad_toggle</command>
+        <command>~/.bin/toggle_input</command>
       </action>
     </keybind>
     <keybind key="C-S-Escape">
@@ -822,10 +813,6 @@
       <decor>no</decor>
       <maximized>true</maximized>
     </application>
-    <application class="Brackets">
-      <decor>no</decor>
-      <maximized>true</maximized>
-    </application>
     <application class="Firefox">
       <decor>no</decor>
     </application>
@@ -834,11 +821,11 @@
     </application>
     <application class="Thunderbird">
       <maximized>true</maximized>
-      <desktop>2</desktop>
+      <desktop>3</desktop>
     </application>
     <application class="Spotify">
       <maximized>true</maximized>
-      <desktop>2</desktop>
+      <desktop>3</desktop>
     </application>
   </applications>
 </openbox_config>
