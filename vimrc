@@ -133,7 +133,9 @@ vnoremap <C-t> >gv
 vnoremap <C-d> <gv
 
 nnoremap H 0
+vnoremap H 0
 nnoremap L $
+vnoremap L $
 
 " Ctags
 nnoremap <Leader>[ :pop<CR>
@@ -185,23 +187,9 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
-" easytags
-set tags=./.ctags;
-let g:easy_tags_auto_update = 0
-let g:easytags_updatetime_warn = 0
-let g:easytags_dynamic_files = 2
-nnoremap <Leader>ct :!ctags -f .ctags -R .<CR>
-autocmd BufEnter * let g:easytags_auto_update = isdirectory('.git')
-
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
 let g:syntastic_scss_checkers = ['scss_lint']
-
-" Tagbar
-nnoremap <Leader>O :TagbarToggle<CR>
-let g:tagbar_autofocus = 1
-let g:tagbar_autoclose = 1
-let g:tagbar_width = 25
 
 " vim-rspec
 nnoremap <Leader>rs :call RunNearestSpec()<CR>
@@ -238,10 +226,6 @@ let g:UltiSnipsExpandTrigger='<C-e>'
 
 " better-whitespace
 let g:strip_whitespace_on_save = 1
-
-" goldenview
-let g:goldenview__enable_default_mapping = 0
-nmap <silent> <C-w>v  <Plug>GoldenViewSplit
 
 " vim-expand-region
 vmap v <Plug>(expand_region_expand)

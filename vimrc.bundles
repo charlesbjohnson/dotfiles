@@ -12,8 +12,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'zhaocai/GoldenView.vim'
 NeoBundle 'milkypostman/vim-togglelist'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'edkolev/tmuxline.vim'
@@ -31,9 +29,6 @@ NeoBundle 'Valloric/YouCompleteMe', {
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'vim-scripts/ctags.vim'
-NeoBundle 'xolox/vim-misc'
-NeoBundle 'xolox/vim-easytags'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'ivan-cukic/vim-ctrlp-switcher'
 NeoBundle 'vim-scripts/repmo.vim'
@@ -74,6 +69,8 @@ NeoBundle 'marijnh/tern_for_vim', {
   \   }
   \ }
 NeoBundle 'mustache/vim-mustache-handlebars'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
 
 filetype plugin indent on
 NeoBundleCheck
