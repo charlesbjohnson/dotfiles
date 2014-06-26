@@ -9,4 +9,6 @@
   email = mail@cbjohnson.info
   name = Charles B Johnson
 [color]
- ui = true
+  ui = true
+[web]
+  browser = chromium

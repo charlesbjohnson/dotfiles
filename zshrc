@@ -54,11 +54,15 @@ bindkey '\e[B' history-substring-search-down
 
 # set up rbenv for ruby
 eval "$(rbenv init -)"
+
 # set up virtualenv for python (with wrapper for commands)
 export WORKON_HOME=~/.virtualenvs
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 source /usr/bin/virtualenvwrapper.sh
+workon global
 
 export EDITOR="vim"
+export BROWSER="chromium"
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
