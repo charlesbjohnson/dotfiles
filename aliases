@@ -1,7 +1,5 @@
-# Delete merged branches
-alias gbdm='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d; git remote prune origin'
-alias gbdp='git-sweep preview'
-alias gbdc='git-sweep cleanup'
 alias gds='git diff --staged'
 
 alias todo='todo.sh'
+
+alias gulp='node --harmony `which gulp`'
