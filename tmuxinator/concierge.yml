@@ -18,6 +18,7 @@ root: ~/projects/work/concierge
 # Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
 # tmux_command: byobu
 
+pre_window: export GEM_HOME=~/.rbenv/versions/2.1.0/gemsets/concierge
 windows:
   - editor:
       layout: main-vertical
@@ -27,3 +28,7 @@ windows:
       layout: main-vertical
       panes:
         - foreman start
+  - production:
+      layout: main-vertical
+      panes:
+        - heroku run -a conciergeapp rails console
