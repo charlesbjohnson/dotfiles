@@ -1,5 +1,6 @@
-alias gds='git diff --staged'
+alias gds="git diff --staged"
 
-alias todo='todo.sh'
+alias todo="todo.sh"
 
-alias gulp='node --harmony `which gulp`'
+alias gulp="node --harmony `which gulp`"
+alias node="node --harmony"
