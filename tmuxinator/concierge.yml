@@ -18,7 +18,8 @@ root: ~/projects/work/concierge
 # Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
 # tmux_command: byobu
 
-pre_window: export GEM_HOME=~/.rbenv/versions/2.1.0/gemsets/concierge
+# Not sure why this sticks around in the new session
+pre: unset RBENV_GEMSET_ALREADY
 windows:
   - editor:
       layout: main-vertical
