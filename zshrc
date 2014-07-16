@@ -52,6 +52,8 @@ bindkey -M vicmd 'j' history-substring-search-down
 bindkey '\e[A' history-substring-search-up
 bindkey '\e[B' history-substring-search-down
 
+eval `dircolors ~/.dir_colors`
+
 # set up rbenv for ruby
 eval "$(rbenv init -)"
 
