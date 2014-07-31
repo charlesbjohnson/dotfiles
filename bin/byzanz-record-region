@@ -3,11 +3,6 @@
 # Delay before starting
 DELAY=10
 
-# Sound notification to let one know when recording is about to start (and ends)
-beep() {
-    aplay /usr/share/sounds/purple/alert.wav &
-}
-
 # Duration and output file
 if [ $# -gt 0 ]; then
     D="--duration=$@"

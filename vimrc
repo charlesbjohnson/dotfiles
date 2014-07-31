@@ -42,7 +42,7 @@ set showmatch                           " When a bracket is inserted, briefly ju
 
 set wildmode=longest:full,full          " Tab completion for vim commands
 set wildmenu
-set noerrorbells
+set visualbell t_vb=
 set nostartofline
 set splitbelow
 set splitright
