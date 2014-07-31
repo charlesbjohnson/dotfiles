@@ -10,8 +10,9 @@ Xft.hinting:            true
 Xft.hintstyle:          hintslight
 
 ! URxvt
-URxvt.termName:         rxvt-256color
+URxvt.termName:         rxvt-unicode-256color
 URxvt.font:             xft:Meslo LG S DZ for Powerline:Regular:size=11
+URxvt.letterSpace:      -1
 URxvt.iconFile:         /usr/share/icons/AwOkenDark/clear/48x48/apps/xterm-color_48x48.png
 URxvt.cursorBlink:      true
 URxvt.pointerBlank:     true
