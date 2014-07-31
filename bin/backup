@@ -27,7 +27,7 @@ case "$1" in
 esac
 
 START=$(date +%s)
-rsync -aAXv / $1 --exclude '/dev/*' --exclude '/proc/*' --exclude '/sys/*' --exclude '/tmp/*' --exclude '/run/*' --exclude '/mnt/*' --exclude '/media/*' --exclude '/lost+found' --exclude '/var/lib/pacman/sync/*' --exclude '/home/charlie/.cache/*'
+rsync -aAXv /* $1 --exclude={'/dev/*','/proc/*','/sys/*','/tmp/*','/run/*','/mnt/*','/media/*','/lost+fount','/var/lib/pacman/sync/*','/home/cbjohnson/.cache/*'}
 FINISH=$(date +%s)
 echo "total time: $(( ($FINISH-$START) / 60 )) minutes, $(( ($FINISH-$START) % 60 )) seconds"
 
