@@ -63,13 +63,14 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 source /usr/bin/virtualenvwrapper.sh
 workon global
 
+source ~/.nvm/nvm.sh
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh"
+
 export EDITOR="vim"
 export BROWSER="chromium"
 
-# aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
-# functions
 for function in ~/.zsh/functions/*; do
   source $function
 done

@@ -6,6 +6,7 @@ tags
 .rbenv-gemsets
 .rbenv-vars
 .tern-project
+.node-version
 
 *.DS_Store
 *.sw[nop]
