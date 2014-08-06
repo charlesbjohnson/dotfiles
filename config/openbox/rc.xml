@@ -269,29 +269,12 @@
         </startupnotify>
       </action>
     </keybind>
-    <keybind key="S-W-t">
-      <action name="Execute">
-        <command>urxvt -e zsh -c tmux -2</command>
-        <startupnotify>
-          <enabled>yes</enabled>
-        </startupnotify>
-      </action>
-    </keybind>
-    <keybind key="W-f">
+    <keybind key="W-e">
       <action name="Execute">
         <command>thunar</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>thunar</name>
-        </startupnotify>
-      </action>
-    </keybind>
-    <keybind key="W-e">
-      <action name="Execute">
-        <command>subl3</command>
-        <startupnotify>
-          <enabled>yes</enabled>
-          <name>sublime-text-3</name>
         </startupnotify>
       </action>
     </keybind>
@@ -318,11 +301,6 @@
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
-      </action>
-    </keybind>
-    <keybind key="W-semicolon">
-      <action name="Execute">
-        <command>~/.bin/toggle_input</command>
       </action>
     </keybind>
     <keybind key="C-S-Escape">
