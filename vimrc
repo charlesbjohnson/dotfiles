@@ -100,6 +100,7 @@ set noswapfile                          " Don't create a swap file
 " Filetypes
 " TODO figure out how to get surround macros for *.tpl
 autocmd! BufNewFile,BufRead *.tpl set ft=html syntax=mustache
+autocmd! BufNewFile,BufRead *.ejs set ft=html
 " To use erb surround macros (from vim-rails) in combination with emmet macros
 " TODO reconcile this with ultisnips html snippets
 autocmd! BufNewFile,BufRead *.erb set ft=html syntax=eruby ft=eruby
@@ -198,7 +199,7 @@ let g:rspec_command = 'Dispatch rspec {spec}'
 
 " emmet.vim
 let g:user_emmet_install_global = 0
-autocmd FileType html,erb,css EmmetInstall
+autocmd FileType html,erb,ejs,css EmmetInstall
 let g:user_emmet_mode = 'n'
 let g:user_emmet_leader_key = '<CR>'
 
