@@ -42,7 +42,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
-PATH=$PATH:$HOME/.bin # User scripts/executables
 
 # history vi keybindings
 bindkey -M vicmd 'k' history-substring-search-up
@@ -52,7 +51,7 @@ bindkey -M vicmd 'j' history-substring-search-down
 bindkey '\e[A' history-substring-search-up
 bindkey '\e[B' history-substring-search-down
 
-eval `dircolors ~/.dir_colors`
+source ~/.commonshrc
 
 # set up virtualenv for python (with wrapper for commands)
 export WORKON_HOME=~/.virtualenvs
@@ -60,22 +59,6 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 source /usr/bin/virtualenvwrapper.sh
 workon global
 
-[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh"
-
-export EDITOR="vim"
-export BROWSER="chromium"
-
-[[ -f ~/.aliases ]] && source ~/.aliases
-
 for function in ~/.zsh/functions/*; do
   source $function
 done
-
-if [[ -z "$TMUX" ]] ;then
-  ID="`tmux ls | grep -vm1 attached | cut -d: -f1`" # get the id of a deattached session
-  if [[ -z "$ID" ]] ;then # if not available create a new one
-    exec tmux new-session
-  else
-    exec tmux attach-session -t "$ID" # if available attach to it
-  fi
-fi

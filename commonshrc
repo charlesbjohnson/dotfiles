@@ -1,0 +1,19 @@
+PATH=$PATH:$HOME/.bin # User scripts/executables
+
+export EDITOR="vim"
+export BROWSER="chromium"
+eval `dircolors ~/.dir_colors`
+
+[[ -f ~/.aliases ]] && source ~/.aliases
+
+# always use tmux
+if [[ -z "$TMUX" ]] ;then
+  ID="`tmux ls | grep -vm1 attached | cut -d: -f1`"
+  if [[ -z "$ID" ]] ;then
+    exec tmux new-session
+  else
+    exec tmux attach-session -t "$ID"
+  fi
+fi
+
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh"
