@@ -7,12 +7,12 @@ eval `dircolors ~/.dir_colors`
 [[ -f ~/.aliases ]] && source ~/.aliases
 
 # always use tmux
-if [[ -z "$TMUX" ]] ;then
+if [[ -z "$TMUX" ]]; then
   ID="`tmux ls | grep -vm1 attached | cut -d: -f1`"
-  if [[ -z "$ID" ]] ;then
-    exec tmux new-session
+  if [[ -z "$ID" ]]; then
+    tmux new-session
   else
-    exec tmux attach-session -t "$ID"
+    tmux attach-session -t "$ID"
   fi
 fi
 
