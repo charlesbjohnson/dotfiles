@@ -36,7 +36,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(archlinux colored-man command-not-found extract git git-extras redis-cli ssh-agent systemd vi-mode zsh-syntax-highlighting history-substring-search)
+plugins=(archlinux catimg colored-man command-not-found extract git git-extras nvm rbenv redis-cli ssh-agent systemd vi-mode zsh-syntax-highlighting history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -54,16 +54,12 @@ bindkey '\e[B' history-substring-search-down
 
 eval `dircolors ~/.dir_colors`
 
-# set up rbenv for ruby
-eval "$(rbenv init -)"
-
 # set up virtualenv for python (with wrapper for commands)
 export WORKON_HOME=~/.virtualenvs
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 source /usr/bin/virtualenvwrapper.sh
 workon global
 
-source ~/.nvm/nvm.sh
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh"
 
 export EDITOR="vim"

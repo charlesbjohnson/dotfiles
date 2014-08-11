@@ -1,4 +1,2 @@
-alias gds="git diff --staged"
-
 alias gulp="node --harmony `which gulp`"
 alias node="node --harmony"
