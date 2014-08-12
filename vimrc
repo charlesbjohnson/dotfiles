@@ -17,6 +17,7 @@ syntax on
 filetype plugin indent on
 set encoding=utf8
 set nocompatible                        " Be improved
+set shell=zsh
 set mouse=a                             " Enable mouse
 let mapleader=' '
 set clipboard=unnamedplus               " Use OS clipboard
