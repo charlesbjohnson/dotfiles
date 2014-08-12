@@ -1,0 +1,7 @@
+PATH=$PATH:$HOME/.bin # User scripts/executables
+
+export EDITOR="vim"
+export BROWSER="chromium"
+eval `dircolors ~/.dir_colors`
+
+[[ -f ~/.aliases ]] && source ~/.aliases
