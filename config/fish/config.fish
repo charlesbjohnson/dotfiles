@@ -15,6 +15,7 @@ set fish_plugins bak gi rbenv ndenv vi-mode
 # Load oh-my-fish configuration.
 . $fish_path/oh-my-fish.fish
 
+eval sh ~/.termcolor/base16-builder/output/pantheon-terminal/base16-solarized.dark.sh
 eval sh ~/.termcolor/base16-shell/base16-solarized.dark.sh
 set PATH $HOME/.bin $PATH # User scripts/executables
 
@@ -29,8 +30,8 @@ if [ -z "$TMUX" ]
   set TERM "xterm-256color"
   set ID (tmux ls | grep -vm1 attached | cut -d: -f1)
   if [ -z "$ID" ]
-    tmux new-session
+    exec tmux new-session
   else
-    tmux attach-session -t "$ID"
+    exec tmux attach-session -t "$ID"
   end
 end
