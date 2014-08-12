@@ -1,0 +1,18 @@
+[push]
+  default = current
+[core]
+  excludesfile = ~/.gitignore
+  autocrlf = input
+[commit]
+  template = ~/.gitmessage
+[user]
+  email = mail@cbjohnson.info
+  name = Charles B Johnson
+[color]
+  ui = true
+[web]
+  browser = chromium
+[alias]
+  amend = commit --amend
+  unstage = reset HEAD --
+  staged = diff --staged
