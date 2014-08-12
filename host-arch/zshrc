@@ -1,3 +1,5 @@
+source ~/.commonshrc
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -50,8 +52,6 @@ bindkey -M vicmd 'j' history-substring-search-down
 # history regular keybindings
 bindkey '\e[A' history-substring-search-up
 bindkey '\e[B' history-substring-search-down
-
-source ~/.commonshrc
 
 # set up virtualenv for python (with wrapper for commands)
 export WORKON_HOME=~/.virtualenvs

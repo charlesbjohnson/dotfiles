@@ -1,10 +1,7 @@
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-alias ls='ls --color=auto'
-
 source ~/.commonenv
 source ~/.commonshrc
+
+alias ls='ls --color=auto'
 
 # use rbenv for ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
