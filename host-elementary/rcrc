@@ -1,0 +1,1 @@
+EXCLUDES="LICENSE.MD README.md screenshot.png restore config"

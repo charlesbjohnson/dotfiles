@@ -1,0 +1,4 @@
+source ~/.commonenv
+if [[ -z "$TMUX" ]]; then
+  TERM="xterm-256color"
+fi
