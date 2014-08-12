@@ -1,4 +1,8 @@
 source ~/.commonshrc
 
-plugins=(catimg colored-man extract git git-extras nvm rbenv vi-mode zsh-syntax-highlighting history-substring-search)
+plugins=(catimg colored-man extract git git-extras rbenv vi-mode zsh-syntax-highlighting history-substring-search)
 source ~/.common_zshrc
+
+# use ndenv for node
+export PATH="$HOME/.ndenv/bin:$PATH"
+eval "$(ndenv init -)"
