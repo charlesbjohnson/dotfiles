@@ -29,4 +29,5 @@ feh --bg-scale ~/.wallpapers/current_wallpaper &
 (sleep 1s && redshift -l 41.0:-73.6) &
 (sleep 1s && thunar --daemon) &
 (sleep 1s && /usr/share/aarchup/aarchstartup.sh) &
+(sleep 1s && dropboxd) &
 (sleep 1s && setxkbmap -option caps:escape) &

@@ -8,19 +8,19 @@
 # ID 1
 rounded = 0
 border_width = 2
-background_color = #511311 60
-border_color = #730A07 60
+background_color = #513411 60
+border_color = #AB5F1E 60
 
 # ID 2
 rounded = 0
 border_width = 0
-background_color = #211E1D 100
+background_color = #191919 100
 border_color = #222222 0
 
 # ID 3
 rounded = 0
 border_width = 0
-background_color = #692727 60
+background_color = #945323 60
 border_color = #FFFFFF 0
 
 # Panel
