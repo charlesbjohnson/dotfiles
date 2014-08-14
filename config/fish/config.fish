@@ -15,12 +15,17 @@ set fish_plugins bak gi rbenv ndenv vi-mode
 # Load oh-my-fish configuration.
 . $fish_path/oh-my-fish.fish
 
-eval sh ~/.termcolor/base16-builder/output/pantheon-terminal/base16-solarized.dark.sh
-eval sh ~/.termcolor/base16-shell/base16-solarized.dark.sh
+if [ ! $COLORED ]
+  set -x COLORED true # to avoid color blips caused by re-evaling on tmux splits
+  eval sh ~/.termcolor/base16-builder/output/pantheon-terminal/base16-solarized.dark.sh
+  eval sh ~/.termcolor/base16-shell/base16-solarized.dark.sh
+end
+
 set PATH $HOME/.bin $PATH # User scripts/executables
 
 set -x EDITOR "vim"
 set -x BROWSER "chromium"
+
 eval (dircolors ~/.dir_colors | head -n 1 | sed 's/\(LS_COLORS\)=/set -x \1 /g')
 
 [ -f ~/.aliases ]; and . ~/.aliases
