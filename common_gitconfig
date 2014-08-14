@@ -16,3 +16,7 @@
   amend = commit --amend
   unstage = reset HEAD --
   staged = diff --staged
+  lg = log --graph --stat --decorate --since={3.weeks.ago}
+  l = log --oneline --abbrev-commit --stat
+  st = status -s
+  df = diff --color-words
