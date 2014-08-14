@@ -7,6 +7,6 @@ alias ls='ls --color=auto'
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-# use nvm for nodejs
-source ~/.nvm/nvm.sh
-nvm use 0.11 > /dev/null
+# use ndenv for node
+export PATH="$HOME/.ndenv/bin:$PATH"
+eval "$(ndenv init -)"
