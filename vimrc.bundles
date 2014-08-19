@@ -29,7 +29,7 @@ NeoBundle 'Valloric/YouCompleteMe', {
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'ivan-cukic/vim-ctrlp-switcher'
 NeoBundle 'vim-scripts/repmo.vim'
 NeoBundle 'justinmk/vim-sneak'

@@ -171,6 +171,7 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.ctags
 nnoremap <C-b> :CtrlPBuffer<CR>
 nnoremap <C-i> :CtrlPSwitch<CR>
+unmap <Tab>
 
 " vim-airline
 let g:airline_powerline_fonts = 1
