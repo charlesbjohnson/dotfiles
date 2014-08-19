@@ -1,6 +1,6 @@
 source ~/.common_shrc
 
-plugins=(archlinux catimg colored-man command-not-found extract git git-extras nvm rbenv redis-cli ssh-agent systemd vi-mode zsh-syntax-highlighting history-substring-search)
+plugins=(archlinux catimg colored-man command-not-found extract git git-extras rbenv redis-cli ssh-agent systemd vi-mode zsh-syntax-highlighting history-substring-search)
 source ~/.common_zshrc
 
 # set up virtualenv for python (with wrapper for commands)
