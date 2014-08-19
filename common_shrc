@@ -1,5 +1,9 @@
 PATH=$PATH:$HOME/.bin # User scripts/executables
 
+# use nodenv for node
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
+
 export EDITOR="vim"
 export BROWSER="chromium"
 eval `dircolors ~/.dir_colors`
