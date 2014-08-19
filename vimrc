@@ -139,6 +139,13 @@ vnoremap H 0
 nnoremap L $
 vnoremap L $
 
+nnoremap <C-w>\| :vsplit<CR>
+nnoremap <C-w>_ :split<CR>
+nnoremap <C-w>j :resize -5<CR>
+nnoremap <C-w>k :resize +5<CR>
+nnoremap <C-w>h :vertical resize -5<CR>
+nnoremap <C-w>l :vertical resize +5<CR>
+
 " Ctags
 nnoremap <Leader>[ :pop<CR>
 nnoremap <Leader>] <C-]>
