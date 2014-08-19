@@ -26,9 +26,9 @@ set PATH $HOME/.bin $PATH # User scripts/executables
 set -x EDITOR "vim"
 set -x BROWSER "chromium"
 
-eval (dircolors ~/.dir_colors | head -n 1 | sed 's/\(LS_COLORS\)=/set -x \1 /g')
+source (dircolors ~/.dir_colors | head -n 1 | sed 's/\(LS_COLORS\)=/set -x \1 /g')
 
-[ -f ~/.aliases ]; and . ~/.aliases
+[ -f ~/.aliases ]; and source ~/.aliases
 
 # always use tmux
 if [ -z "$TMUX" ]
