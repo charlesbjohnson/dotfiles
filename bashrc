@@ -1,5 +1,5 @@
-source ~/.commonenv
-source ~/.commonshrc
+source ~/.common_env
+source ~/.common_shrc
 
 alias ls='ls --color=auto'
 

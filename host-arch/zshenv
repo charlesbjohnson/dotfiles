@@ -1,4 +1,4 @@
-source ~/.commonenv
+source ~/.common_env
 
 # Changes to path reflected in dmenu_run
 export PATH=$PATH:/opt/java/bin
