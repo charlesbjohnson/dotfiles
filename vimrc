@@ -157,6 +157,9 @@ nnoremap <silent> p p`]
 
 " Plugin settings
 
+" NeoBundle
+let g:neobundle#install_process_timeout = 600
+
 " NERDTree
 function! QuitIfNERDTreeOnly()
   if (winnr('$') == 1 && exists('b:NERDTreeType') && b:NERDTreeType == 'primary')
