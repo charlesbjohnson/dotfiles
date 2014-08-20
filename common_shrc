@@ -8,7 +8,7 @@ export EDITOR="vim"
 export BROWSER="chromium"
 eval `dircolors ~/.dir_colors`
 
-[[ -f ~/.aliases ]] && source ~/.aliases
+[[ -f ~/.aliases_zsh ]] && source ~/.aliases_zsh
 
 # always use tmux
 if [[ -z "$TMUX" ]]; then

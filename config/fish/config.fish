@@ -7,7 +7,7 @@ set fish_theme agnoster
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-fish/plugins/*)
 # Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
 # Example format: set fish_plugins autojump bundler
-set fish_plugins bak gi rbenv vi-mode
+set fish_plugins bak gi rbenv nodenv vi-mode
 
 # Path to your custom folder (default path is $FISH/custom)
 #set fish_custom $HOME/dotfiles/oh-my-fish
@@ -28,7 +28,7 @@ set -x BROWSER "chromium"
 
 source (dircolors ~/.dir_colors | head -n 1 | sed 's/\(LS_COLORS\)=/set -x \1 /g')
 
-[ -f ~/.aliases ]; and source ~/.aliases
+[ -f ~/.aliases_fish ]; and source ~/.aliases_fish
 
 # always use tmux
 if [ -z "$TMUX" ]

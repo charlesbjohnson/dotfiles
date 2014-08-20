@@ -1,0 +1,2 @@
+alias node="node --harmony"
+alias gulp="node (nodenv which gulp)"
