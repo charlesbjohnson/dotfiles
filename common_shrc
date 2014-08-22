@@ -11,7 +11,7 @@ eval `dircolors ~/.dir_colors`
 [[ -f ~/.aliases_zsh ]] && source ~/.aliases_zsh
 
 # always use tmux
-if [[ -z "$TMUX" ]]; then
+if [[ "$SESSION_TYPE" != remote/ssh && -z "$TMUX" ]]; then
   ID="`tmux ls | grep -vm1 attached | cut -d: -f1`"
   if [[ -z "$ID" ]]; then
     exec tmux new-session
