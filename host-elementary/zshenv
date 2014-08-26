@@ -1,5 +1,1 @@
 source ~/.common_env
-
-if [[ -z "$TMUX" ]]; then
-  TERM="xterm-256color"
-fi

@@ -1,0 +1,10 @@
+# don't do anything if non-interactive
+[[ $- != *i* ]] && return
+
+[[ -z $(echo "$TERM" | grep 256color) ]] && export TERM="xterm-256color"
+
+if [[ ! $SHELL_COLORED ]]; then
+  export SHELL_COLORED=true
+  source ~/.termcolor/base16-builder/output/pantheon-terminal/base16-solarized.dark.sh
+  source ~/.termcolor/base16-shell/base16-solarized.dark.sh
+fi
