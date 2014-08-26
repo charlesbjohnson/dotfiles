@@ -13,13 +13,9 @@ set fish_plugins bak gi rbenv nodenv vi-mode
 #set fish_custom $HOME/dotfiles/oh-my-fish
 
 # Load oh-my-fish configuration.
-. $fish_path/oh-my-fish.fish
+source $fish_path/oh-my-fish.fish
 
-if [ ! $COLORED ]
-  set -x COLORED true # to avoid color blips caused by re-evaling on tmux splits
-  eval sh ~/.termcolor/base16-builder/output/pantheon-terminal/base16-solarized.dark.sh
-  eval sh ~/.termcolor/base16-shell/base16-solarized.dark.sh
-end
+source ~/.fish_env
 
 set PATH $HOME/.bin $PATH # User scripts/executables
 
@@ -32,7 +28,6 @@ source (dircolors ~/.dir_colors | head -n 1 | sed 's/\(LS_COLORS\)=/set -x \1 /g
 
 # always use tmux
 if [ -z "$TMUX" ]
-  set TERM "xterm-256color"
   set ID (tmux ls | grep -vm1 attached | cut -d: -f1)
   if [ -z "$ID" ]
     exec tmux new-session
