@@ -47,6 +47,7 @@ set visualbell t_vb=
 set nostartofline
 set splitbelow
 set splitright
+set viminfo='100,n$HOME/.vim/files/info/viminfo
 
 
 " Appearance settings
