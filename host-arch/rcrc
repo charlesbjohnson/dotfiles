@@ -1,1 +1,1 @@
-EXCLUDES="LICENSE.md README.md screenshot.png"
+EXCLUDES="rcrc LICENSE.md README.md screenshot.png"
