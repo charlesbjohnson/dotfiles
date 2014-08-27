@@ -3,7 +3,10 @@ if [ -z (echo $TERM | grep 256color) ]
 end
 
 if [ ! $SHELL_COLORED ]
-  set -x SHELL_COLORED true
-  eval sh ~/.termcolor/base16-builder/output/pantheon-terminal/base16-solarized.dark.sh
+  if [ (ps -o comm= -p $PPID) = pantheon-termin ]
+    eval sh ~/.termcolor/base16-pantheon-terminal/base16-solarized.dark.sh
+  end
+
   eval sh ~/.termcolor/base16-shell/base16-solarized.dark.sh
+  set -x SHELL_COLORED true
 end

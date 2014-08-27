@@ -3,8 +3,11 @@
 
 [[ -z $(echo "$TERM" | grep 256color) ]] && export TERM="xterm-256color"
 
-if [[ ! $SHELL_COLORED ]]; then
-  export SHELL_COLORED=true
-  source ~/.termcolor/base16-pantheon-terminal/base16-solarized.dark.sh
+if [[ ! "$SHELL_COLORED" ]]; then
+  if [[ "$(ps -o comm= -p $PPID)" == pantheon-termin ]]; then
+    source ~/.termcolor/base16-pantheon-terminal/base16-solarized.dark.sh
+  fi
+
   source ~/.termcolor/base16-shell/base16-solarized.dark.sh
+  export SHELL_COLORED=true
 fi
