@@ -4,7 +4,9 @@
 [[ -z $(echo "$TERM" | grep 256color) ]] && export TERM="xterm-256color"
 
 if [[ ! "$SHELL_COLORED" ]]; then
-  if [[ "$(ps -o comm= -p $PPID)" == pantheon-termin ]]; then
+  local ppid="${PPID:=$(ps --pid $$ -o ppid=}"
+
+  if [[ "$(ps --pid $ppid -o comm=)" == pantheon-termin ]]; then
     source ~/.termcolor/base16-pantheon-terminal/base16-solarized.dark.sh
   fi
 
