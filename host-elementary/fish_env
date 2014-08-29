@@ -4,7 +4,7 @@ end
 
 if [ ! $SHELL_COLORED ]
   set -l ppid $PPID
-  [ -z $ppid ]; and set -l ppid (ps --pid %self -o ppid=)
+  [ -z $ppid ]; and set -l ppid (ps --pid %self -o ppid= | tr -d '[:space:]')
 
   if [ (ps -o comm= -p $ppid) = pantheon-termin ]
     eval sh ~/.termcolor/base16-pantheon-terminal/base16-solarized.dark.sh
