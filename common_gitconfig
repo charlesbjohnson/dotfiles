@@ -22,7 +22,7 @@
   br = branch
   bra = branch --all
   st = status --branch --short --untracked-files=all
-  dst = diff --staged
+  diffs = diff --staged
   am = commit --amend
   amend = commit --amend
   un = reset HEAD --
