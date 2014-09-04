@@ -6,7 +6,7 @@ eval "$(nodenv init -)"
 
 export EDITOR="vim"
 export BROWSER="chromium"
-eval `dircolors ~/.dir_colors`
+eval `dircolors ~/.termcolor/dircolors-solarized/dircolors.256dark`
 
 [[ -f ~/.aliases_zsh ]] && source ~/.aliases_zsh
 
