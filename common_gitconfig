@@ -23,9 +23,7 @@
   bra = branch --all
   st = status --branch --short --untracked-files=all
   diffs = diff --staged
-  am = commit --amend
   amend = commit --amend
-  un = reset HEAD --
   unstage = reset HEAD --
   l = log --oneline --abbrev-commit --stat
   lgr = log --graph --stat --decorate --since={3.weeks.ago}
