@@ -265,6 +265,9 @@ let g:strip_whitespace_on_save = 1
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 
+" youcompleteme
+let g:ycm_global_ycm_extra_conf = '~/.vim/files/.ycm_extra_conf.py'
+
 " tern
 let g:tern_show_signature_in_pum = 1
 autocmd BufEnter * set completeopt-=preview
