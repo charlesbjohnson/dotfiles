@@ -2,5 +2,7 @@ bower
 gulp
 grunt-cli
 http-server
+is-up
+ipify
 jshint
 json
