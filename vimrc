@@ -88,10 +88,8 @@ set smarttab                            " When on, a <Tab> in front of a line in
 
 
 " Searching and history settings
-set nohlsearch                          " When there is a previous search pattern, don't highlight all
+set hlsearch                            " When there is a previous search pattern highlight all
                                         " its matches.
-
-set incsearch                           " Increment search
 set ignorecase                          " Case-insensitive search
 set smartcase                           " Search becomes sensitive if caps used
 set nowritebackup                       " No backup files while editing
@@ -137,14 +135,15 @@ nnoremap <C-d> <<
 vnoremap <C-t> >gv
 vnoremap <C-d> <gv
 
+" Move around more quickly
 nnoremap H 0
 vnoremap H 0
 nnoremap L $
 vnoremap L $
-
 nnoremap < {
 nnoremap > }
 
+" Splits
 nnoremap <C-w>\| :vsplit<CR>
 nnoremap <C-w>_ :split<CR>
 nnoremap <C-w>j :resize -5<CR>
@@ -228,6 +227,31 @@ nnoremap <Leader>p :call ToggleQuickfixList()<CR>
 
 " multiple cursors
 let g:multi_cursor_quit_key = '<C-e>'
+
+" incsearch
+map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
+map n <Plug>(incsearch-nohl-n)
+map N <Plug>(incsearch-nohl-N)
+map * <Plug>(incsearch-nohl-*)
+map # <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
+let g:incsearch#consistent_n_direction = 1
+let g:incsearch#auto_nohlsearch = 1
+let g:incsearch#highlight = {
+\  'match' : {
+\    'group' : 'IncSearchUnderline',
+\    'priority' : '10'
+\  },
+\  'on_cursor' : {
+\    'priority' : '100'
+\  },
+\  'cursor' : {
+\    'group' : 'ErrorMsg',
+\    'priority' : '1000'
+\  }
+\}
 
 " easy-align
 vmap <CR> <Plug>(EasyAlign)
