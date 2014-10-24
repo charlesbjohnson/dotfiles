@@ -5,7 +5,7 @@ endif
 
 filetype off
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Search
@@ -89,6 +89,8 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'honza/dockerfile.vim'
 NeoBundle 'tkztmk/vim-vala'
 NeoBundle 'leafo/moonscript-vim'
+
+call neobundle#end()
 
 filetype plugin indent on
 NeoBundleCheck
