@@ -45,7 +45,7 @@ NeoBundle 'honza/vim-snippets'
 NeoBundle 'scrooloose/syntastic'
 
 " Productivity
-NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-vinegar'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'ivan-cukic/vim-ctrlp-switcher'
 NeoBundle 'terryma/vim-multiple-cursors'
@@ -79,7 +79,7 @@ NeoBundle 'marijnh/tern_for_vim', {
 \}
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'wavded/vim-stylus'
+" NeoBundle 'wavded/vim-stylus'
 
 " Webdev
 NeoBundle 'othree/html5.vim'
@@ -87,8 +87,8 @@ NeoBundle 'mattn/emmet-vim'
 
 " Experimental
 NeoBundle 'honza/dockerfile.vim'
-NeoBundle 'tkztmk/vim-vala'
-NeoBundle 'leafo/moonscript-vim'
+" NeoBundle 'tkztmk/vim-vala'
+" NeoBundle 'leafo/moonscript-vim'
 
 call neobundle#end()
 
