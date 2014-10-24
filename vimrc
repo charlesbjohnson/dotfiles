@@ -168,6 +168,9 @@ let g:neobundle#install_process_timeout = 600
 " indent lines
 let g:indentLine_char = '┆'
 
+" vimfiler
+let g:vimfiler_as_default_explorer = 1
+
 " Ctrlp
 let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -250,7 +253,6 @@ nmap <Leader>a <Plug>(EasyAlign)
 " sneak
 let g:sneak#s_next = 1
 let g:sneak#use_ic_scs = 1
-
 "replace 'f' with 1-char Sneak
 nmap f <Plug>Sneak_f
 nmap F <Plug>Sneak_F
@@ -258,7 +260,6 @@ xmap f <Plug>Sneak_f
 xmap F <Plug>Sneak_F
 omap f <Plug>Sneak_f
 omap F <Plug>Sneak_F
-
 "replace 't' with 1-char Sneak
 nmap t <Plug>Sneak_t
 nmap T <Plug>Sneak_T
