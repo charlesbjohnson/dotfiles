@@ -22,7 +22,7 @@ set PATH $HOME/.bin $PATH # User scripts/executables
 set -x EDITOR "vim"
 set -x BROWSER "chromium"
 
-eval (dircolors ~/.termcolor/dircolors-solarized/dircolors.256dark | head -n 1 | sed 's/\(LS_COLORS\)=/set -x \1 /g')
+eval (dircolors ~/.config/dircolors-solarized/dircolors.256dark | head -n 1 | sed 's/\(LS_COLORS\)=/set -x \1 /g')
 
 [ -f ~/.aliases_fish ]; and source ~/.aliases_fish
 

@@ -2,4 +2,4 @@
 [[ $- != *i* ]] && return
 
 # Use base 16 terminal colors (in tmux as well)
-source $HOME/.termcolor/base16-shell/base16-solarized.dark.sh
+source $HOME/.config/base16-shell/base16-solarized.dark.sh

@@ -1,6 +1,6 @@
 ! Colors
 ! Use base16 colors in terminal vim
-#include "/home/cbjohnson/.termcolor/base16-xresources/base16-solarized.dark.xresources"
+#include "/home/cbjohnson/.config/base16-xresources/base16-solarized.dark.xresources"
 
 ! Xft
 Xft.dpi:                96
