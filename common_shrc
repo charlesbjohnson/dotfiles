@@ -1,4 +1,4 @@
-PATH=$PATH:$HOME/.bin # User scripts/executables
+export PATH=$PATH:$HOME/.bin # User scripts/executables
 
 # use nodenv for node
 export PATH="$HOME/.nodenv/bin:$PATH"
