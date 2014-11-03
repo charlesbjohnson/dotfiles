@@ -1,0 +1,10 @@
+export CLICOLOR=YES
+
+# avoid rate limiting
+export HOMEBREW_GITHUB_API_TOKEN=12fab6eb3f6ceeab9c3feabc5168a292bba17426
+
+# use homebrew executables
+PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+
+# use GNU coreutils
+PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
