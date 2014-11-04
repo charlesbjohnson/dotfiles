@@ -5,3 +5,5 @@ fi
 
 source ~/.common_zshrc
 source ~/.common_shrc
+
+eval "$(fasd --init auto)"
