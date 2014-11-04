@@ -8,7 +8,7 @@ export EDITOR="vim"
 export BROWSER="chromium"
 eval `dircolors ~/.config/dircolors-solarized/dircolors.256dark`
 
-[[ -f ~/.aliases_zsh ]] && source ~/.aliases_zsh
+[[ -f ~/.aliases_sh ]] && source ~/.aliases_sh
 
 # always use tmux
 if [[ "$SESSION_TYPE" != remote/ssh && -z "$TMUX" ]]; then
