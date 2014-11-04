@@ -1,4 +1,7 @@
-plugins=(git git-extras vi-mode zsh-syntax-highlighting history-substring-search)
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
 
 source ~/.common_zshrc
 source ~/.common_shrc
