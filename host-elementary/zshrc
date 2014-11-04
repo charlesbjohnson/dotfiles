@@ -1,4 +1,5 @@
 source ~/.common_shrc
+source ~/.auto_tmux
 source ~/.common_zshrc
 
 plugins=(catimg colored-man extract git git-extras rbenv vi-mode zsh-syntax-highlighting history-substring-search)
