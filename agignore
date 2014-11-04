@@ -4,4 +4,4 @@ tmp
 .ctags
 vendor
 fonts
-public
+bower_components
