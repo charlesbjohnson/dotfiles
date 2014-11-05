@@ -17,7 +17,7 @@ source $fish_path/oh-my-fish.fish
 
 source ~/.fish_env
 
-set PATH $HOME/.bin $PATH # User scripts/executables
+set -x PATH $HOME/.bin $PATH # User scripts/executables
 
 set -x EDITOR "vim"
 set -x BROWSER "chromium"
@@ -28,7 +28,7 @@ eval (dircolors ~/.config/dircolors-solarized/dircolors.256dark | head -n 1 | se
 
 # always use tmux
 if [ -z "$TMUX" ]
-  set ID (tmux ls | grep -vm1 attached | cut -d: -f1)
+  set ID (tmux ls 2>/dev/null | grep -vm1 attached | cut -d: -f1)
   if [ -z "$ID" ]
     exec tmux new-session
   else
