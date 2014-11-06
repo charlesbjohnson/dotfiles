@@ -72,6 +72,11 @@ if has('gui_running')
   set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline\ 11
 endif
 
+" MacVim settings
+if has("gui_macvim")
+  set clipboard=unnamed
+endif
+
 
 " Tab settings
 set expandtab                           " Number of spaces that a Tab counts for
