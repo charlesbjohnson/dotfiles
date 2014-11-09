@@ -2,15 +2,13 @@
 [[ $- != *i* ]] && return
 
 [[ -z $(echo "$TERM" | grep 256color) ]] && export TERM="xterm-256color"
+ppid="${PPID:=$(ps --pid $$ -o ppid= | tr -d '[:space:]')}"
+if [[ "$(ps --pid $ppid -o comm=)" = pantheon-termin ]]; then
+  source ~/.config/base16-pantheon-terminal/base16-solarized.dark.sh
+fi
+unset ppid
 
 if [[ ! "$SHELL_COLORED" = 0 ]]; then
-  ppid="${PPID:=$(ps --pid $$ -o ppid= | tr -d '[:space:]')}"
-
-  if [[ "$(ps --pid $ppid -o comm=)" = pantheon-termin ]]; then
-    source ~/.config/base16-pantheon-terminal/base16-solarized.dark.sh
-  fi
-
   source ~/.config/base16-shell/base16-solarized.dark.sh
   export SHELL_COLORED=true
-  unset ppid
 fi

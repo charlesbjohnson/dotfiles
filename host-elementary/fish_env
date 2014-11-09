@@ -2,14 +2,14 @@ if [ -z (echo $TERM | grep 256color) ]
   set -x TERM xterm-256color
 end
 
+set -l ppid $PPID
+[ -z $ppid ]; and set -l ppid (ps --pid %self -o ppid= | tr -d '[:space:]')
+
+if [ (ps -o comm= -p $ppid) = pantheon-termin ]
+  eval sh ~/.config/base16-pantheon-terminal/base16-solarized.dark.sh
+end
+
 if [ ! $SHELL_COLORED ]
-  set -l ppid $PPID
-  [ -z $ppid ]; and set -l ppid (ps --pid %self -o ppid= | tr -d '[:space:]')
-
-  if [ (ps -o comm= -p $ppid) = pantheon-termin ]
-    eval sh ~/.config/base16-pantheon-terminal/base16-solarized.dark.sh
-  end
-
   eval sh ~/.config/base16-shell/base16-solarized.dark.sh
   set -x SHELL_COLORED true
 end
