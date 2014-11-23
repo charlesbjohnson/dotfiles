@@ -121,6 +121,10 @@ map q: <NOP>
 " Not gonna use Ex mode ever
 map Q <NOP>
 
+" No, I don't want the help window. Stupid fat fingers.
+map <F1> <Esc>
+imap <F1> <Esc>
+
 " Buffers (creation, deletion, cycling) and delete all buffers
 nnoremap <Leader>b :enew<CR>
 nnoremap <Leader>BB :Bdelete<CR>
@@ -130,7 +134,7 @@ nnoremap <Leader>h :bp<CR>
 
 " Tabs (creation, deletion, cycling)
 nnoremap <Leader>t :tabnew<CR>
-nnoremap <Leader>T :tabclose<CR>
+nnoremap <Leader>TT :tabclose<CR>
 nnoremap <Leader>L :tabnext<CR>
 nnoremap <Leader>H :tabprevious<CR>
 
@@ -147,6 +151,9 @@ nnoremap L $
 vnoremap L $
 nnoremap < {
 nnoremap > }
+vnoremap < {
+vnoremap > }
+
 
 " Splits
 nnoremap <C-w>\| :vsplit<CR>
@@ -254,6 +261,27 @@ let g:incsearch#highlight = {
 " easy-align
 vmap <CR> <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
+
+" splitjoin
+let g:splitjoin_split_mapping = ''
+let g:splitjoin_join_mapping = ''
+let g:splitjoin_align = 1
+let g:splitjoin_ruby_curly_braces = 0
+let g:splitjoin_ruby_trailing_comma = 0
+nnoremap <silent> J :<C-u>call <SID>try('SplitjoinJoin',  'J')<CR>
+nnoremap <silent> K :<C-u>call <SID>try('SplitjoinSplit', "r\015")<CR>
+
+function! s:try(cmd, default)
+  if exists(':' . a:cmd) && !v:count
+    let tick = b:changedtick
+    execute a:cmd
+    if tick == b:changedtick
+      execute join(['normal!', a:default])
+    endif
+  else
+    execute join(['normal! ', v:count, a:default], '')
+  endif
+endfunction
 
 " sneak
 let g:sneak#s_next = 1
