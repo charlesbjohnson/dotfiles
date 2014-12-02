@@ -24,6 +24,7 @@ zstyle ':prezto:load' pmodule \
   'gnu-utility' \
   'utility' \
   'completion' \
+  'fasd' \
   'rsync' \
   'terminal' \
   'tmux' \
