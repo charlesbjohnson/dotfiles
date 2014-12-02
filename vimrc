@@ -268,8 +268,8 @@ let g:splitjoin_join_mapping = ''
 let g:splitjoin_align = 1
 let g:splitjoin_ruby_curly_braces = 0
 let g:splitjoin_ruby_trailing_comma = 0
-nnoremap <silent> J :<C-u>call <SID>try('SplitjoinJoin',  'J')<CR>
-nnoremap <silent> K :<C-u>call <SID>try('SplitjoinSplit', "r\015")<CR>
+nnoremap <silent> <Leader>J :<C-u>call <SID>try('SplitjoinJoin',  'J')<CR>
+nnoremap <silent> <Leader>K :<C-u>call <SID>try('SplitjoinSplit', "r\015")<CR>
 
 function! s:try(cmd, default)
   if exists(':' . a:cmd) && !v:count
