@@ -14,17 +14,13 @@
   browser = chromium
 [alias]
   a = add
-  at = add --update
   c = commit
   ch = checkout
-  chb = checkout -b
   cl = clone
   br = branch
-  bra = branch --all
   st = status --branch --short --untracked-files=all
-  diffs = diff --staged
+  dfs = diff --staged
   amend = commit --amend
   unstage = reset HEAD --
   l = log --oneline --abbrev-commit --stat
   lgr = log --graph --stat --decorate --since={3.weeks.ago}
-  aliases = !git config --list | grep alias | cut -c 7-
