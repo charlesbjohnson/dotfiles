@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Keyboard Repeat
+Exec=xset r rate 150 75
+Terminal=false
+Type=Application
