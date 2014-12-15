@@ -6,3 +6,5 @@ is-up
 ipify
 jshint
 json
+nesh
+nodemon
