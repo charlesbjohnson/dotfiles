@@ -1,4 +1,3 @@
-" .vimrc
 " See: http://vimdoc.sourceforge.net/htmldoc/options.html for details
 
 
@@ -104,11 +103,12 @@ set noswapfile                          " Don't create a swap file
 
 " Filetypes
 " TODO figure out how to get surround macros for *.tpl
-autocmd! BufNewFile,BufRead *.tpl set ft=html syntax=mustache
-autocmd! BufNewFile,BufRead *.ejs set ft=html
+autocmd! BufNewFile,BufRead *.tpl set filetype=html syntax=mustache
+autocmd! BufNewFile,BufRead *.ejs set filetype=html
 " To use erb surround macros (from vim-rails) in combination with emmet macros
 " TODO reconcile this with ultisnips html snippets
-autocmd! BufNewFile,BufRead *.erb set ft=html syntax=eruby ft=eruby
+autocmd! BufNewFile,BufRead *.erb set filetype=html syntax=eruby filetype=eruby
+autocmd! BufRead,BufNewFile *.json set filetype=json
 
 
 " Key bindings

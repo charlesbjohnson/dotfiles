@@ -82,6 +82,7 @@ NeoBundle 'marijnh/tern_for_vim', {
 \}
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'elzr/vim-json'
 " NeoBundle 'wavded/vim-stylus'
 
 " Webdev
