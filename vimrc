@@ -212,7 +212,20 @@ endif
 
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
-let g:syntastic_scss_checkers = ['scss_lint']
+let g:syntastic_aggregate_errors = 1
+
+let g:syntastic_html_checkers = ['tidy']
+let g:syntastic_html_tidy_exec = '/usr/local/bin/tidy'
+
+let g:syntastic_css_checkers = ['prettycss', 'csslint', 'recess']
+let g:syntastic_css_recess_args = '--noOverqualifying --noUnderscores'
+
+"let g:syntastic_javascript_checkers = ['eslint', 'jscs']
+let g:syntastic_javascript_checkers = ['eslint']
+
+"let g:syntastic_ruby_checkers = ['rubylint', 'rubocop', 'reek']
+
+let g:syntastic_sh_checkers = ['shellcheck']
 
 " vim-rspec
 nnoremap <Leader>rs :call RunNearestSpec()<CR>

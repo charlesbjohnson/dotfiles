@@ -4,7 +4,11 @@ grunt-cli
 http-server
 is-up
 ipify
-jshint
+eslint
+jscs
+PrettyCSS
+csslint
+recess
 json
 nesh
 nodemon

@@ -7,6 +7,8 @@ tags
 .rbenv-vars
 .tern-project
 .node-version
+.eslintrc
+.jscsrc
 
 *.DS_Store
 *.sw[nop]

@@ -1,8 +1,10 @@
 bundler
 gist
-bropages
 pry
 pry-theme
 pry-byebug
 pry-stack_explorer
 tmuxinator
+ruby-lint
+rubocop
+reek
