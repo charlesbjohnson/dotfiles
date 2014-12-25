@@ -1,0 +1,4 @@
+# don't do anything if non-interactive
+[[ $- != *i* ]] && return
+
+source ~/.shenv.local

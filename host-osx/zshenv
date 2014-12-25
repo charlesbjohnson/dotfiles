@@ -1,2 +1,2 @@
-source ~/.shenv.local
+source ~/.shenv
 source ~/.profile

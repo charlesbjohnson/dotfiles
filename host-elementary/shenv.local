@@ -1,6 +1,3 @@
-# don't do anything if non-interactive
-[[ $- != *i* ]] && return
-
 [[ -z $(echo "$TERM" | grep 256color) ]] && export TERM="xterm-256color"
 ppid="${PPID:=$(ps --pid $$ -o ppid= | tr -d '[:space:]')}"
 if [[ "$(ps --pid $ppid -o comm=)" = pantheon-termin ]]; then
