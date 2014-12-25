@@ -1,5 +1,3 @@
-[include]
-  path = ~/.common_gitconfig
 [mergetool "Kaleidoscope"]
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
   trustexitcode = true
