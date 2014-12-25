@@ -1,1 +1,1 @@
-EXCLUDES="rcrc LICENSE.md README.md screenshot.png restore"
+EXCLUDES="rcrc LICENSE.md README.md bin:restore"

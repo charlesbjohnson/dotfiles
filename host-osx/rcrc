@@ -1,1 +1,1 @@
-EXCLUDES="rcrc LICENSE.md README.md screenshot.png bin:byzanz* bin:restore"
+EXCLUDES="rcrc LICENSE.md README.md bin:byzanz* bin:restore"
