@@ -22,5 +22,6 @@
   dfs = diff --staged
   amend = commit --amend
   unstage = reset HEAD --
+  undo = reset HEAD~
   l = log --oneline --abbrev-commit --stat
   lgr = log --graph --stat --decorate --since={3.weeks.ago}
