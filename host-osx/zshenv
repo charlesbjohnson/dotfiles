@@ -1,2 +1,2 @@
-source ~/.common_env
+source ~/.shenv.local
 source ~/.profile

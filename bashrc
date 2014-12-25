@@ -1,4 +1,4 @@
-source ~/.common_env
+source ~/.shenv.local
 
 # always use tmux
 if [[ "$SESSION_TYPE" != remote/ssh && -z "$TMUX" ]]; then
