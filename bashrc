@@ -10,7 +10,7 @@ if [[ "$SESSION_TYPE" != remote/ssh && -z "$TMUX" ]]; then
   fi
 fi
 
-source ~/.common_shrc
+source ~/.shrc
 alias ls='ls --color=auto'
 
 # use rbenv for ruby
