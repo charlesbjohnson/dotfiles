@@ -320,6 +320,15 @@ xmap T <Plug>Sneak_T
 omap t <Plug>Sneak_t
 omap T <Plug>Sneak_T
 
+" Interestingwords
+let g:interestingWordsDefaultMappings = 0
+" to disable the default mappings, workaround since plugin config is busted
+nnoremap <silent> <Leader>k <Plug>InterestingWords
+nnoremap <silent> <Leader>f :call InterestingWords('n')<CR>
+nnoremap <silent> <Leader>F :call UncolorAllWords()<CR>
+nnoremap <silent> n :call WordNavigation(1)<CR>
+nnoremap <silent> N :call WordNavigation(0)<CR>
+
 " Schlepp
 vmap <unique> <Leader>k <Plug>SchleppUp
 vmap <unique> <Leader>j <Plug>SchleppDown
