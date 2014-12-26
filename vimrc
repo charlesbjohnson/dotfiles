@@ -277,6 +277,9 @@ let g:incsearch#highlight = {
 \  }
 \}
 
+" Over
+nnoremap <silent> <Leader>r :OverCommandLine<CR>
+
 " Easy-align
 vmap <CR> <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)

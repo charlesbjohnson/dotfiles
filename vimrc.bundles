@@ -13,11 +13,13 @@ if filereadable(expand('~/.vimrc.bundles.local'))
   source ~/.vimrc.bundles.local
 endif
 
-" Search
+" Search & Replace
 NeoBundle 'justinmk/vim-sneak'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'haya14busa/incsearch.vim'
 NeoBundle 'vasconcelloslf/vim-interestingwords'
+NeoBundle 'osyo-manga/vim-over'
+NeoBundle 'Wolfy87/vim-enmasse'
 
 " System
 NeoBundle 'Shougo/vimproc.vim', {
@@ -56,7 +58,6 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'ivan-cukic/vim-ctrlp-switcher'
 NeoBundle 'kristijanhusak/vim-multiple-cursors'
-NeoBundle 'Wolfy87/vim-enmasse'
 NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'zirrostig/vim-schlepp'
 NeoBundle 'junegunn/vim-easy-align'
