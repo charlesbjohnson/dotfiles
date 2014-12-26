@@ -234,8 +234,8 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_sh_checkers = ['shellcheck']
 
 " Rspec
-nnoremap <Leader>rs :call RunNearestSpec()<CR>
-nnoremap <Leader>rf :call RunCurrentSpecFile()<CR>
+nnoremap <silent> <Leader>rs :call RunNearestSpec()<CR>
+nnoremap <silent> <Leader>rf :call RunCurrentSpecFile()<CR>
 let g:rspec_command = 'Dispatch rspec {spec}'
 
 " Emmet.vim
@@ -246,8 +246,8 @@ let g:user_emmet_leader_key = '<CR>'
 
 " Togglelist
 let g:toggle_list_no_mappings = 1
-nnoremap <Leader>P :call ToggleLocationList()<CR>
-nnoremap <Leader>p :call ToggleQuickfixList()<CR>
+nnoremap <silent> <Leader>P :call ToggleLocationList()<CR>
+nnoremap <silent> <Leader>p :call ToggleQuickfixList()<CR>
 
 " Multiple cursors
 let g:multi_cursor_quit_key = '<C-e>'
@@ -287,8 +287,8 @@ let g:splitjoin_join_mapping = ''
 let g:splitjoin_align = 1
 let g:splitjoin_ruby_curly_braces = 0
 let g:splitjoin_ruby_trailing_comma = 0
-nnoremap <silent> <Leader>J :<C-u>call <SID>try('SplitjoinJoin',  'J')<CR>
-nnoremap <silent> <Leader>K :<C-u>call <SID>try('SplitjoinSplit', "r\015")<CR>
+nnoremap <silent> <Leader>J :call <SID>try('SplitjoinJoin',  'J')<CR>
+nnoremap <silent> <Leader>K :call <SID>try('SplitjoinSplit', "r\015")<CR>
 
 function! s:try(cmd, default)
   if exists(':' . a:cmd) && !v:count
