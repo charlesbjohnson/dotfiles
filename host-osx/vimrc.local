@@ -1,0 +1,2 @@
+let g:syntastic_html_checkers = ['tidy']
+let g:syntastic_html_tidy_exec = '/usr/local/bin/tidy'

@@ -1,6 +1,5 @@
 " See: http://vimdoc.sourceforge.net/htmldoc/options.html for details
 
-
 " For multi-byte character support (CJK support, for example):
 set fileencodings=ucs-bom,utf-8,cp936,big5,euc-jp,euc-kr,gb18030,latin1
 
@@ -8,6 +7,12 @@ set fileencodings=ucs-bom,utf-8,cp936,big5,euc-jp,euc-kr,gb18030,latin1
 " Plugins
 if filereadable(expand('~/.vimrc.bundles'))
   source ~/.vimrc.bundles
+endif
+
+
+" Local configuration
+if filereadable(expand('~/.vimrc.local'))
+  source ~/.vimrc.local
 endif
 
 
@@ -70,6 +75,7 @@ if has('gui_running')
   set guioptions=ai                     " Use console-style tabs and include icon
   set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline\ 11
 endif
+
 
 " MacVim settings
 if has("gui_macvim")
@@ -154,7 +160,6 @@ nnoremap > }
 vnoremap < {
 vnoremap > }
 
-
 " Splits
 nnoremap <C-w>\| :vsplit<CR>
 nnoremap <C-w>_ :split<CR>
@@ -172,15 +177,16 @@ vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 
+
 " Plugin settings
 
 " NeoBundle
 let g:neobundle#install_process_timeout = 600
 
-" indent lines
+" Indent lines
 let g:indentLine_char = '┆'
 
-" vimfiler
+" Vimfiler
 let g:vimfiler_as_default_explorer = 1
 
 " Ctrlp
@@ -193,12 +199,12 @@ nnoremap <C-b> :CtrlPBuffer<CR>
 nnoremap <C-i> :CtrlPSwitch<CR>
 unmap <Tab>
 
-" vim-airline
+" Airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='luna'
 
-" git-gutter
+" Git-gutter
 let g:gitgutter_eager = 0
 let g:gitgutter_realtime = 0
 let g:gitgutter_map_keys = 0
@@ -210,43 +216,43 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+" Syntastic
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
 let g:syntastic_aggregate_errors = 1
 
-let g:syntastic_html_checkers = ['tidy']
-let g:syntastic_html_tidy_exec = '/usr/local/bin/tidy'
-
 let g:syntastic_css_checkers = ['prettycss', 'csslint', 'recess']
 let g:syntastic_css_recess_args = '--noOverqualifying --noUnderscores'
 
+" TODO make a jscs style guide
 "let g:syntastic_javascript_checkers = ['eslint', 'jscs']
 let g:syntastic_javascript_checkers = ['eslint']
 
+" TODO get these globally-installed gems working within bundler managed projects
 "let g:syntastic_ruby_checkers = ['rubylint', 'rubocop', 'reek']
 
 let g:syntastic_sh_checkers = ['shellcheck']
 
-" vim-rspec
+" Rspec
 nnoremap <Leader>rs :call RunNearestSpec()<CR>
 nnoremap <Leader>rf :call RunCurrentSpecFile()<CR>
 let g:rspec_command = 'Dispatch rspec {spec}'
 
-" emmet.vim
+" Emmet.vim
 let g:user_emmet_install_global = 0
 autocmd FileType html,erb,ejs,css EmmetInstall
 let g:user_emmet_mode = 'n'
 let g:user_emmet_leader_key = '<CR>'
 
-" togglelist
+" Togglelist
 let g:toggle_list_no_mappings = 1
 nnoremap <Leader>P :call ToggleLocationList()<CR>
 nnoremap <Leader>p :call ToggleQuickfixList()<CR>
 
-" multiple cursors
+" Multiple cursors
 let g:multi_cursor_quit_key = '<C-e>'
 
-" incsearch
+" Incsearch
 map / <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-backward)
 map n <Plug>(incsearch-nohl-n)
@@ -271,11 +277,11 @@ let g:incsearch#highlight = {
 \  }
 \}
 
-" easy-align
+" Easy-align
 vmap <CR> <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
 
-" splitjoin
+" Splitjoin
 let g:splitjoin_split_mapping = ''
 let g:splitjoin_join_mapping = ''
 let g:splitjoin_align = 1
@@ -296,7 +302,7 @@ function! s:try(cmd, default)
   endif
 endfunction
 
-" sneak
+" Sneak
 let g:sneak#s_next = 1
 let g:sneak#use_ic_scs = 1
 "replace 'f' with 1-char Sneak
@@ -314,31 +320,31 @@ xmap T <Plug>Sneak_T
 omap t <Plug>Sneak_t
 omap T <Plug>Sneak_T
 
-" schlepp
+" Schlepp
 vmap <unique> <Leader>k <Plug>SchleppUp
 vmap <unique> <Leader>j <Plug>SchleppDown
 vmap <unique> <Leader>h <Plug>SchleppLeft
 vmap <unique> <Leader>l <Plug>SchleppRight
 
-" ultisnips
+" Ultisnips
 inoremap <C-e> <NOP>
 let g:UltiSnipsExpandTrigger='<C-e>'
 
-" better-whitespace
+" Better-whitespace
 let g:strip_whitespace_on_save = 1
 
-" vim-expand-region
+" Expand-region
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 
-" youcompleteme
+" Youcompleteme
 let g:ycm_global_ycm_extra_conf = '~/.vim/files/.ycm_extra_conf.py'
 
-" tern
+" Tern
 let g:tern_show_signature_in_pum = 1
 autocmd BufEnter * set completeopt-=preview
 
-" startify
+" Startify
 let g:startify_change_to_dir = 1
 let g:startify_change_to_vcs_root = 1
 let g:startify_restore_position = 1
