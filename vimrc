@@ -339,6 +339,7 @@ vmap <C-v> <Plug>(expand_region_shrink)
 
 " Youcompleteme
 let g:ycm_global_ycm_extra_conf = '~/.vim/files/.ycm_extra_conf.py'
+let g:ycm_min_num_of_chars_for_completion = 1
 
 " Tern
 let g:tern_show_signature_in_pum = 1
