@@ -8,6 +8,11 @@ filetype off
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+" Local configuration
+if filereadable(expand('~/.vimrc.bundles.local'))
+  source ~/.vimrc.local
+endif
+
 " Search
 NeoBundle 'justinmk/vim-sneak'
 NeoBundle 'rking/ag.vim'
@@ -94,8 +99,6 @@ NeoBundleLazy 'mattn/emmet-vim', {'autoload': {'filetypes': ['html']}}
 " Experimental
 NeoBundle 'ekalinin/dockerfile.vim'
 NeoBundleLazy 'chase/vim-ansible-yaml', {'autoload': {'filetypes': ['yaml']}}
-NeoBundleLazy 'tkztmk/vim-vala', {'autoload': {'filetypes': ['vala', 'vapi']}}
-NeoBundleLazy 'leafo/moonscript-vim', {'autoload': {'filetypes': ['moon']}}
 
 call neobundle#end()
 
