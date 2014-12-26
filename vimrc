@@ -348,6 +348,25 @@ let g:strip_whitespace_on_save = 1
 " Expand-region
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
+let g:expand_region_text_objects = {
+\  'ii':  0,
+\  'ai':  0,
+\  'i_':  0,
+\  'a_':  0,
+\  'iw':  0,
+\  'iW':  0,
+\  'i"':  0,
+\  'i''': 0,
+\  'i]':  0,
+\  'a]':  0,
+\  'ib':  0,
+\  'ab':  0,
+\  'iB':  0,
+\  'aB':  0,
+\  'il':  0,
+\  'ip':  0,
+\  'ie':  0
+\}
 
 " Youcompleteme
 let g:ycm_global_ycm_extra_conf = '~/.vim/files/.ycm_extra_conf.py'
