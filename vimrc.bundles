@@ -10,7 +10,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Local configuration
 if filereadable(expand('~/.vimrc.bundles.local'))
-  source ~/.vimrc.local
+  source ~/.vimrc.bundles.local
 endif
 
 " Search
