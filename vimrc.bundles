@@ -49,7 +49,7 @@ NeoBundle 'danro/rename.vim'
 NeoBundle 'milkypostman/vim-togglelist'
 NeoBundle 'Valloric/YouCompleteMe', {
 \  'build': {
-\    'unix': './install.sh --clang-completer --system-clang'
+\    'unix': './install.sh --clang-completer'
 \  }
 \}
 NeoBundle 'SirVer/ultisnips'
