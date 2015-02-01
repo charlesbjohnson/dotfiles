@@ -105,8 +105,10 @@ NeoBundleLazy 'hail2u/vim-css3-syntax', {'autoload': {'filetypes': ['css', 'scss
 NeoBundleLazy 'ap/vim-css-color', {'autoload': {'filetypes': ['css', 'scss']}}
 
 " Experimental
+NeoBundle 'tmux-plugins/vim-tmux'
 NeoBundle 'ekalinin/dockerfile.vim'
 NeoBundleLazy 'chase/vim-ansible-yaml', {'autoload': {'filetypes': ['yaml']}}
+
 
 call neobundle#end()
 

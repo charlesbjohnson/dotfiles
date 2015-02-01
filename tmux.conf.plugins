@@ -3,6 +3,7 @@ set-option -g @tpm_plugins "    \
   tmux-plugins/tmux-yank        \
   tmux-plugins/tmux-sessionist  \
   tmux-plugins/tmux-resurrect   \
+  tmux-plugins/tmux-copycat     \
 "
 
 run-shell ~/.tmux/plugins/tpm/tpm
