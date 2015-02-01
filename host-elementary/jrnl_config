@@ -2,9 +2,7 @@
   "default_minute": 0,
   "editor": "vim",
   "journals": {
-    "default": "~/Dropbox/Apps/Day One/Journal.dayone/",
-    "projects": "~/Dropbox/journals/projects.txt",
-    "work": "~/Dropbox/journals/work.txt"
+    "default": "~/Dropbox/Apps/Day One/Journal.dayone/"
   },
   "encrypt": false,
   "timeformat": "%Y-%m-%d %H:%M",
