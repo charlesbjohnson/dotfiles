@@ -384,6 +384,8 @@ let g:expand_region_text_objects = {
 \  'aB':  0,
 \  'il':  0,
 \  'ip':  0,
+\  'ic':  0,
+\  'ac':  0,
 \  'ie':  0
 \}
 
