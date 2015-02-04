@@ -4,7 +4,7 @@
 set fileencodings=ucs-bom,utf-8,cp936,big5,euc-jp,euc-kr,gb18030,latin1
 
 
-" Plugins
+" Load bundles
 if filereadable(expand('~/.vimrc.bundles'))
   source ~/.vimrc.bundles
 endif
@@ -16,12 +16,12 @@ if filereadable(expand('~/.vimrc.local'))
 endif
 
 
-" General Settings
+" General
 syntax on
 filetype plugin indent on
 set encoding=utf8
 set nocompatible                        " Be improved
-set shell=zsh
+set shell=bash
 set mouse=a                             " Enable mouse
 let mapleader=' '
 set clipboard=unnamedplus               " Use OS clipboard
@@ -54,7 +54,7 @@ set splitright
 set viminfo='100,n$HOME/.vim/files/info/viminfo
 
 
-" Appearance settings
+" Appearance
 set showtabline=2                       " File tabs always visible
 set laststatus=2                        " Show statusline even when no window split
 let base16colorspace=256                " Access colors present in 256 colorspace (MUST BE BEFORE COLORSCHEME)
@@ -69,7 +69,7 @@ set list listchars=tab:⇥⇥,eol:↵,trail:· " Control character highlighting
 set showcmd                             " Show (partial) command in status line.
 
 
-" Gvim settings
+" GVim
 if has('gui_running')
   set guioptions=                       " Get rid of menu icons, toolbar, etc
   set guioptions=ai                     " Use console-style tabs and include icon
@@ -77,13 +77,7 @@ if has('gui_running')
 endif
 
 
-" MacVim settings
-if has("gui_macvim")
-  set clipboard=unnamed
-endif
-
-
-" Tab settings
+" Tabbing
 set expandtab                           " Number of spaces that a Tab counts for
 set tabstop=2                           " Tab is 2 spaces
 set softtabstop=2
@@ -97,7 +91,7 @@ set smarttab                            " When on, a <Tab> in front of a line in
                                         " at the start of the line.
 
 
-" Searching and history settings
+" Search & history
 set hlsearch                            " When there is a previous search pattern highlight all
                                         " its matches.
 set ignorecase                          " Case-insensitive search
@@ -108,13 +102,15 @@ set noswapfile                          " Don't create a swap file
 
 
 " Filetypes
+autocmd! BufRead,BufNewFile *.json set filetype=json
+
 " TODO figure out how to get surround macros for *.tpl
 autocmd! BufNewFile,BufRead *.tpl set filetype=html syntax=mustache
 autocmd! BufNewFile,BufRead *.ejs set filetype=html
+
 " To use erb surround macros (from vim-rails) in combination with emmet macros
 " TODO reconcile this with ultisnips html snippets
 autocmd! BufNewFile,BufRead *.erb set filetype=html syntax=eruby filetype=eruby
-autocmd! BufRead,BufNewFile *.json set filetype=json
 
 
 " Key bindings
@@ -168,7 +164,7 @@ nnoremap <C-w>k :resize +5<CR>
 nnoremap <C-w>h :vertical resize -5<CR>
 nnoremap <C-w>l :vertical resize +5<CR>
 
-" Ctags
+" Ctag navigation
 nnoremap <Leader>[ :pop<CR>
 nnoremap <Leader>] <C-]>
 
@@ -178,45 +174,56 @@ vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 
 
-" Plugin settings
-
-" NeoBundle
+" Bundles
+"
+" Shougo/neobundle.vim
+" ====================
 let g:neobundle#install_process_timeout = 600
 
-" Indent lines
+" Yggdroot/indentLine
+" ===================
 let g:indentLine_char = '┆'
 
-" Vimfiler
+" Shougo/vimfiler.vim
+" ===================
 let g:vimfiler_as_default_explorer = 1
 
-" Ctrlp
+" ctrlpvim/ctrlp.vim
+" ==================
 let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_extensions = ['funky', 'switcher']
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.ctags
 
-" Airline
+" bling/vim-airline
+" =================
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='luna'
 
-" Git-gutter
+" airblade/vim-gitgutter
+" ======================
 let g:gitgutter_eager = 0
 let g:gitgutter_realtime = 0
 let g:gitgutter_map_keys = 0
 
-" Ag
+" rking/ag.vim
+" ============
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
   let g:ctrlp_use_caching = 0
 endif
 
-" Syntastic
-" configure syntastic syntax checking to check on open as well as save
+" scrooloose/syntastic
+" ====================
 let g:syntastic_check_on_open=1
 let g:syntastic_aggregate_errors = 1
+
+let g:syntastic_sh_checkers = ['shellcheck']
+
+" TODO add htmlhint or htmltidy
 
 let g:syntastic_css_checkers = ['prettycss', 'csslint', 'recess']
 let g:syntastic_css_recess_args = '--noOverqualifying --noUnderscores'
@@ -228,28 +235,31 @@ let g:syntastic_javascript_checkers = ['eslint']
 " TODO get these globally-installed gems working within bundler managed projects
 "let g:syntastic_ruby_checkers = ['rubylint', 'rubocop', 'reek']
 
-let g:syntastic_sh_checkers = ['shellcheck']
-
-" Rspec
+" thoughtbot/vim-rspec
+" ====================
 nnoremap <silent> <Leader>rs :call RunNearestSpec()<CR>
 nnoremap <silent> <Leader>rf :call RunCurrentSpecFile()<CR>
 let g:rspec_command = 'Dispatch rspec {spec}'
 
-" Emmet.vim
+" mattn/emmet-vim
+" ===============
 let g:user_emmet_install_global = 0
-autocmd FileType html,erb,ejs,css EmmetInstall
+autocmd! FileType html,erb,ejs,css EmmetInstall
 let g:user_emmet_mode = 'n'
 let g:user_emmet_leader_key = '<CR>'
 
-" Togglelist
+" milkypostman/vim-togglelist
+" ===========================
 let g:toggle_list_no_mappings = 1
 nnoremap <silent> <Leader>P :call ToggleLocationList()<CR>
 nnoremap <silent> <Leader>p :call ToggleQuickfixList()<CR>
 
-" Multiple cursors
+" kristijanhusak/vim-multiple-cursors
+" ===================================
 let g:multi_cursor_quit_key = '<C-e>'
 
-" Incsearch
+" haya14busa/incsearch.vim
+" ========================
 map / <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-backward)
 map n <Plug>(incsearch-nohl-n)
@@ -274,16 +284,17 @@ let g:incsearch#highlight = {
 \  }
 \}
 
-" Over
+" osyo-manga/vim-over
+" ===================
 nnoremap <silent> <Leader>r :OverCommandLine<CR>
 
-" Easy-align
+" junegunn/vim-easy-align
+" =======================
 vmap <CR> <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
 
-" Splitjoin
-let g:splitjoin_split_mapping = ''
-let g:splitjoin_join_mapping = ''
+" AndrewRadev/splitjoin.vim
+" =========================
 let g:splitjoin_align = 1
 let g:splitjoin_ruby_curly_braces = 0
 let g:splitjoin_ruby_trailing_comma = 0
@@ -302,17 +313,20 @@ function! s:try(cmd, default)
   endif
 endfunction
 
-" Sneak
+" justinmk/vim-sneak
+" ==================
 let g:sneak#s_next = 1
 let g:sneak#use_ic_scs = 1
-"replace 'f' with 1-char Sneak
+
+" replace 'f' with 1-char Sneak
 nmap f <Plug>Sneak_f
 nmap F <Plug>Sneak_F
 xmap f <Plug>Sneak_f
 xmap F <Plug>Sneak_F
 omap f <Plug>Sneak_f
 omap F <Plug>Sneak_F
-"replace 't' with 1-char Sneak
+
+" replace 't' with 1-char Sneak
 nmap t <Plug>Sneak_t
 nmap T <Plug>Sneak_T
 xmap t <Plug>Sneak_t
@@ -320,29 +334,37 @@ xmap T <Plug>Sneak_T
 omap t <Plug>Sneak_t
 omap T <Plug>Sneak_T
 
-" Interestingwords
+" vasconcelloslf/vim-interestingwords
+" ===================================
 let g:interestingWordsDefaultMappings = 0
+
 " to disable the default mappings, workaround since plugin config is busted
 nnoremap <silent> <Leader>k <Plug>InterestingWords
 nnoremap <silent> <Leader>f :call InterestingWords('n')<CR>
 nnoremap <silent> <Leader>F :call UncolorAllWords()<CR>
+
+" workaround for busted 'forward' and 'backword'
 nnoremap <silent> n :call WordNavigation(1)<CR>
 nnoremap <silent> N :call WordNavigation(0)<CR>
 
-" Schlepp
+" zirrostig/vim-schlepp
+" =====================
 vmap <unique> <Leader>k <Plug>SchleppUp
 vmap <unique> <Leader>j <Plug>SchleppDown
 vmap <unique> <Leader>h <Plug>SchleppLeft
 vmap <unique> <Leader>l <Plug>SchleppRight
 
-" Ultisnips
+" SirVer/ultisnips
+" ================
 inoremap <C-e> <NOP>
 let g:UltiSnipsExpandTrigger='<C-e>'
 
-" Better-whitespace
+" ntpeters/vim-better-whitespace
+" ==============================
 let g:strip_whitespace_on_save = 1
 
-" Expand-region
+" terryma/vim-expand-region
+" =========================
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 let g:expand_region_text_objects = {
@@ -365,41 +387,44 @@ let g:expand_region_text_objects = {
 \  'ie':  0
 \}
 
-" Youcompleteme
+" Valloric/YouCompleteMe
+" ======================
 let g:ycm_global_ycm_extra_conf = '~/.vim/files/.ycm_extra_conf.py'
 let g:ycm_min_num_of_chars_for_completion = 1
 
-" Tern
+" marijnh/tern_for_vim
+" ====================
 let g:tern_show_signature_in_pum = 1
-autocmd BufEnter * set completeopt-=preview
+autocmd! BufEnter * set completeopt-=preview
 
-" Startify
+" mhinz/vim-startify
+" ==================
 let g:startify_change_to_dir = 1
 let g:startify_change_to_vcs_root = 1
 let g:startify_restore_position = 1
 let g:startify_relative_path = 1
 let g:startify_custom_header = [
-\ '',
-\ '',
-\ '    +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+',
-\ '    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-',
-\ '        ,.-.                          .-·,.            ;*;.',
-\ '       /*$*'';\                       /**$*;''\''       ;*$*'';:\           .·´*'';\',
-\ '       '';*@$*;:''       ,·,:-:,        ;*@$*;:::\     ;*@$@*'';:''\      .''*$@*$*;:''\',
-\ '       '';*@*;::;     ,''*@,'''':;\     '';*$@*;::::;''    ;*@*,$*''·:;  .·‘*@´;:;@*,''::;''',
-\ '        '';*$*'';::;   ,''$*,'':::''\''    ;*$*;::::;    ;*@*;''`.*@$*¨,*$*;:;''$*;:::;',
-\ '        '';*@*;:;  ,''@*,'':::::;''    '';*@;''::::;     ;*$'';::; \*@$*@*;:;*@,'':::;‘',
-\ '         ;*$*;:;''´$,''::::::;''       ;$*'';:::'';     '';@*,''::;  \*;:\;:$'';;:;:::;',
-\ '         '';*@*''*@,·'':::::;''        '';*@;::::;''    ;*$'';::;     ''`´  @*'',·'':::;‘',
-\ '          ,''*$*,.''\::;·´           \*´\:::;‘    \´¨\::;             *::::;',
-\ '          \`*´\:::\;               ''\::\:;''      ''\::\;             \:\;·''',
-\ '           ''\:::\;''                   `*´‘         ''´¨                ¨''',
-\ '             `*´‘',
-\ '    +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+',
-\ '    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-',
-\ '',
-\ '',
-\ ]
+\  '',
+\  '',
+\  '    +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+',
+\  '    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-',
+\  '        ,.-.                          .-·,.            ;*;.',
+\  '       /*$*'';\                       /**$*;''\''       ;*$*'';:\           .·´*'';\',
+\  '       '';*@$*;:''       ,·,:-:,        ;*@$*;:::\     ;*@$@*'';:''\      .''*$@*$*;:''\',
+\  '       '';*@*;::;     ,''*@,'''':;\     '';*$@*;::::;''    ;*@*,$*''·:;  .·‘*@´;:;@*,''::;''',
+\  '        '';*$*'';::;   ,''$*,'':::''\''    ;*$*;::::;    ;*@*;''`.*@$*¨,*$*;:;''$*;:::;',
+\  '        '';*@*;:;  ,''@*,'':::::;''    '';*@;''::::;     ;*$'';::; \*@$*@*;:;*@,'':::;‘',
+\  '         ;*$*;:;''´$,''::::::;''       ;$*'';:::'';     '';@*,''::;  \*;:\;:$'';;:;:::;',
+\  '         '';*@*''*@,·'':::::;''        '';*@;::::;''    ;*$'';::;     ''`´  @*'',·'':::;‘',
+\  '          ,''*$*,.''\::;·´           \*´\:::;‘    \´¨\::;             *::::;',
+\  '          \`*´\:::\;               ''\::\:;''      ''\::\;             \:\;·''',
+\  '           ''\:::\;''                   `*´‘         ''´¨                ¨''',
+\  '             `*´‘',
+\  '    +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+',
+\  '    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-',
+\  '',
+\  '',
+\]
 
 highlight StartifyBracket ctermfg=166
 highlight StartifyFile    ctermfg=253

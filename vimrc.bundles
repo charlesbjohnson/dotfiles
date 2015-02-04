@@ -14,12 +14,12 @@ if filereadable(expand('~/.vimrc.bundles.local'))
 endif
 
 " Search & Replace
-NeoBundle 'justinmk/vim-sneak'
 NeoBundle 'rking/ag.vim'
-NeoBundle 'haya14busa/incsearch.vim'
-NeoBundle 'vasconcelloslf/vim-interestingwords'
-NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'Wolfy87/vim-enmasse'
+NeoBundle 'justinmk/vim-sneak'
+NeoBundle 'vasconcelloslf/vim-interestingwords'
+NeoBundle 'haya14busa/incsearch.vim'
+NeoBundle 'osyo-manga/vim-over'
 
 " System
 NeoBundle 'Shougo/vimproc.vim', {
@@ -30,23 +30,23 @@ NeoBundle 'Shougo/vimproc.vim', {
 \    'unix' : 'make -f make_unix.mak'
 \  },
 \}
-NeoBundle 'svermeulen/vim-easyclip'
 NeoBundle 'moll/vim-bbye'
-NeoBundle 'vim-scripts/repmo.vim'
+NeoBundle 'danro/rename.vim'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'matchit.zip'
-NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
+NeoBundle 'vim-scripts/repmo.vim'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'lucapette/vim-textobj-underscore'
 NeoBundle 'kana/vim-textobj-indent'
 NeoBundle 'kana/vim-textobj-line'
 NeoBundle 'kana/vim-textobj-entire'
+NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-commentary'
-NeoBundle 'danro/rename.vim'
 NeoBundle 'milkypostman/vim-togglelist'
+NeoBundle 'svermeulen/vim-easyclip'
 NeoBundle 'Valloric/YouCompleteMe', {
 \  'build': {
 \    'unix': './install.sh --clang-completer'
@@ -100,8 +100,8 @@ NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload': {'filetypes': ['javas
 NeoBundleLazy 'elzr/vim-json', {'autoload': {'filetypes': ['json']}}
 
 " Webdev
-NeoBundleLazy 'othree/html5.vim', {'autoload': {'filetypes': ['html']}}
 NeoBundleLazy 'mattn/emmet-vim', {'autoload': {'filetypes': ['html']}}
+NeoBundleLazy 'othree/html5.vim', {'autoload': {'filetypes': ['html']}}
 NeoBundleLazy 'hail2u/vim-css3-syntax', {'autoload': {'filetypes': ['css', 'scss']}}
 NeoBundleLazy 'ap/vim-css-color', {'autoload': {'filetypes': ['css', 'scss']}}
 
@@ -109,7 +109,6 @@ NeoBundleLazy 'ap/vim-css-color', {'autoload': {'filetypes': ['css', 'scss']}}
 NeoBundle 'tmux-plugins/vim-tmux'
 NeoBundle 'ekalinin/dockerfile.vim'
 NeoBundleLazy 'chase/vim-ansible-yaml', {'autoload': {'filetypes': ['yaml']}}
-
 
 call neobundle#end()
 

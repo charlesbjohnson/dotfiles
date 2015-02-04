@@ -1,2 +1,12 @@
+" MacVim settings
+if has("gui_macvim")
+  set clipboard=unnamed
+endif
+
+
+" Bundles
+
+" scrooloose/syntastic
+" ====================
 let g:syntastic_html_checkers = ['tidy']
 let g:syntastic_html_tidy_exec = '/usr/local/bin/tidy'
