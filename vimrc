@@ -192,12 +192,9 @@ let g:vimfiler_as_default_explorer = 1
 " Ctrlp
 let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_extensions = ['tag']
+let g:ctrlp_extensions = ['funky', 'switcher']
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.ctags
-nnoremap <C-b> :CtrlPBuffer<CR>
-nnoremap <C-i> :CtrlPSwitch<CR>
-unmap <Tab>
 
 " Airline
 let g:airline_powerline_fonts = 1
