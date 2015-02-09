@@ -1,11 +1,12 @@
-export PATH=$PATH:$HOME/.bin # User scripts/executables
+export PATH="$PATH:$HOME/.bin"
 
-# use nodenv for node
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 
 export EDITOR="vim"
 export BROWSER="chromium"
-eval `dircolors ~/.config/dircolors-solarized/dircolors.256dark`
 
-[[ -f ~/.aliases_sh ]] && source ~/.aliases_sh
+[[ -f  ~/.config/dircolors-solarized/dircolors.256dark ]] && eval `dircolors ~/.config/dircolors-solarized/dircolors.256dark`
+
+[[ -f ~/.shrc.local ]] && source ~/.shrc.local
+[[ -f ~/.aliases ]] && source ~/.aliases

@@ -1,0 +1,3 @@
+[[ -f ~/.aliases.local ]] && source ~/.aliases.local
+
+alias ls='ls --color=auto'
