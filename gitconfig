@@ -25,6 +25,7 @@
   cl = clone
   br = branch --all --verbose
   brg = show-branch --all
+  rmt = remote --verbose
   st = status --branch --short --untracked-files=all
   diffs = diff --staged
   amend = commit --amend --reuse-message HEAD --verbose
