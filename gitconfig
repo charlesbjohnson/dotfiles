@@ -7,6 +7,10 @@
   autocrlf = input
 [commit]
   template = ~/.gitmessage
+[merge]
+  ff = only
+[fetch]
+  prune = true
 [user]
   email = mail@cbjohnson.info
   name = Charles B Johnson
@@ -17,13 +21,15 @@
 [alias]
   a = add
   c = commit
-  ch = checkout
+  co = checkout
   cl = clone
-  br = branch
+  br = branch --all --verbose
+  brg = show-branch --all
   st = status --branch --short --untracked-files=all
-  dfs = diff --staged
-  amend = commit --amend
+  diffs = diff --staged
+  amend = commit --amend --reuse-message HEAD --verbose
   unstage = reset HEAD --
   undo = reset HEAD~
-  l = log --oneline --abbrev-commit --stat
-  lgr = log --graph --stat --decorate --since={3.weeks.ago}
+  l = log --stat --decorate --relative-date
+  lgr = log --oneline --all --graph --decorate
+  ldf = log --oneline --patch-with-stat --full-diff --decorate --since={3.weeks.ago}
