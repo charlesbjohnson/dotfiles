@@ -6,5 +6,3 @@ export PATH=$PATH:$ORACLE_HOME
 
 export GOPATH=$HOME/projects/go
 export PATH="$GOPATH/bin:$PATH"
-
-eval "$(fasd --init auto)"

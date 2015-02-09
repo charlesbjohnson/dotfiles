@@ -9,6 +9,7 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'fasd' \
+  'ssh' \
   'rsync' \
   'tmux' \
   'editor' \
@@ -16,7 +17,8 @@ zstyle ':prezto:load' pmodule \
   'directory' \
   'spectrum' \
   'git' \
-  'prompt'
+  'prompt' \
+  'osx'
 
 #
 # Prompt
