@@ -1,8 +1,8 @@
-source ~/.shenv
+[[ -f ~/.shenv ]] && source ~/.shenv
 
 # always use tmux
 if [[ "$SESSION_TYPE" != remote/ssh && -z "$TMUX" ]]; then
-  ID="`tmux ls 2>/dev/null | grep -vm1 attached | cut -d: -f1`"
+  ID=$(tmux ls 2>/dev/null | grep -vm1 attached | cut -d: -f1)
   if [[ -z "$ID" ]]; then
     exec tmux new-session
   else
@@ -10,9 +10,8 @@ if [[ "$SESSION_TYPE" != remote/ssh && -z "$TMUX" ]]; then
   fi
 fi
 
-source ~/.shrc
-alias ls='ls --color=auto'
-
-# use rbenv for ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+[[ -f ~/.shrc ]] && source ~/.shrc
+[[ -f ~/.bashrc.local ]] && source ~/.bashrc.local
