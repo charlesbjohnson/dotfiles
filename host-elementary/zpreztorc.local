@@ -16,7 +16,6 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'command-not-found' \
   'dpkg' \
-  'git' \
   'prompt'
 
 #
