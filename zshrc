@@ -3,9 +3,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-source ~/.shrc
-source ~/.zshrc.local
+[[ -f ~/.shrc ]] && source ~/.shrc
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 for function in ~/.zsh/functions/*; do
-  source $function
+  [[ -f "$function" ]] && source "$function"
 done
