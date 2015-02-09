@@ -2,3 +2,6 @@ export CLICOLOR=YES
 
 # avoid rate limiting
 export HOMEBREW_GITHUB_API_TOKEN=12fab6eb3f6ceeab9c3feabc5168a292bba17426
+
+# place homebrew executables at front of path
+PATH="/usr/local/bin:/usr/local/sbin:$(echo $PATH | sed -E 's%:?/usr/local/bin:?|:?/usr/local/sbin:?%%g')"
