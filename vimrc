@@ -24,7 +24,7 @@ set nocompatible                        " Be improved
 set shell=bash
 set mouse=a                             " Enable mouse
 let mapleader=' '
-set clipboard=unnamedplus               " Use OS clipboard
+set clipboard=unnamed                   " Use OS clipboard
 set hidden                              " Quick buffer switching
 set ruler                               " Show cursor position
 
@@ -253,6 +253,10 @@ let g:user_emmet_leader_key = '<CR>'
 let g:toggle_list_no_mappings = 1
 nnoremap <silent> <Leader>P :call ToggleLocationList()<CR>
 nnoremap <silent> <Leader>p :call ToggleQuickfixList()<CR>
+
+" svermeulen/vim-easyclip
+" =======================
+let g:EasyClipPreserveCursorPositionAfterYank = 1
 
 " kristijanhusak/vim-multiple-cursors
 " ===================================
