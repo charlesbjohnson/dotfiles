@@ -10,8 +10,5 @@ if [[ "$SESSION_TYPE" != remote/ssh && -z "$TMUX" ]]; then
   fi
 fi
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 [[ -f ~/.shrc ]] && source ~/.shrc
 [[ -f ~/.bashrc.local ]] && source ~/.bashrc.local

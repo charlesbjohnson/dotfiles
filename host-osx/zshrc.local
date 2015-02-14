@@ -1,8 +1,8 @@
-export PATH="$HOME/software/instantclient/bin:$PATH"
 export DYLD_LIBRARY_PATH="$HOME/software/instantclient"
 export NLS_LANG=AMERICAN_AMERICA.UTF8
 export ORACLE_HOME="$HOME/software/instantclient"
 export PATH=$PATH:$ORACLE_HOME
+export PATH="$PATH:$ORACLE_HOME:$HOME/software/instantclient/bin"
 
 export GOPATH=$HOME/projects/go
-export PATH="$GOPATH/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
