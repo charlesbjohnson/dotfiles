@@ -221,9 +221,17 @@ endif
 let g:syntastic_check_on_open=1
 let g:syntastic_aggregate_errors = 1
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_wq = 0
+
 let g:syntastic_sh_checkers = ['shellcheck']
 
-" TODO add htmlhint or htmltidy
+" TODO add htmlhint or htmltidy5
 
 let g:syntastic_css_checkers = ['prettycss', 'csslint', 'recess']
 let g:syntastic_css_recess_args = '--noOverqualifying --noUnderscores'
@@ -232,8 +240,10 @@ let g:syntastic_css_recess_args = '--noOverqualifying --noUnderscores'
 "let g:syntastic_javascript_checkers = ['eslint', 'jscs']
 let g:syntastic_javascript_checkers = ['eslint']
 
-" TODO get these globally-installed gems working within bundler managed projects
-"let g:syntastic_ruby_checkers = ['rubylint', 'rubocop', 'reek']
+" TODO make a rubocop style guide
+" TODO fix reek version number bug
+" let g:syntastic_ruby_checkers = ['ruby-lint', 'rubocop', 'reek']
+let g:syntastic_ruby_checkers = ['ruby-lint']
 
 " thoughtbot/vim-rspec
 " ====================
