@@ -183,6 +183,7 @@ let g:neobundle#install_process_timeout = 600
 " Yggdroot/indentLine
 " ===================
 let g:indentLine_char = '┆'
+let g:indentLine_noConcealCursor=''
 
 " Shougo/vimfiler.vim
 " ===================
