@@ -251,7 +251,6 @@ let g:rspec_command = 'Dispatch rspec {spec}'
 " mattn/emmet-vim
 " ===============
 let g:user_emmet_install_global = 0
-autocmd! FileType html,erb,ejs,css EmmetInstall
 let g:user_emmet_mode = 'n'
 let g:user_emmet_leader_key = '<CR>'
 
