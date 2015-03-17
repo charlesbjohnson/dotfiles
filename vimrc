@@ -253,6 +253,7 @@ let g:rspec_command = 'Dispatch rspec {spec}'
 let g:user_emmet_install_global = 0
 let g:user_emmet_mode = 'n'
 let g:user_emmet_leader_key = '<CR>'
+autocmd FileType html,erb,ejs EmmetInstall
 
 " milkypostman/vim-togglelist
 " ===========================

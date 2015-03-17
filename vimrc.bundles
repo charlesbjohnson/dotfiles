@@ -103,7 +103,7 @@ NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload': {'filetypes': ['javas
 NeoBundleLazy 'elzr/vim-json', {'autoload': {'filetypes': ['json']}}
 
 " Webdev
-NeoBundleLazy 'mattn/emmet-vim', {'autoload': {'filetypes': ['html', 'erb', 'ejs'], 'commands': 'EmmetInstall'}}
+NeoBundleLazy 'mattn/emmet-vim', {'autoload': {'filetypes': ['html', 'erb', 'ejs']}}
 NeoBundleLazy 'othree/html5.vim', {'autoload': {'filetypes': ['html']}}
 NeoBundleLazy 'hail2u/vim-css3-syntax', {'autoload': {'filetypes': ['css', 'scss']}}
 NeoBundleLazy 'ap/vim-css-color', {'autoload': {'filetypes': ['css', 'scss']}}
