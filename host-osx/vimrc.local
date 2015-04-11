@@ -1,9 +1,3 @@
-" MacVim settings
-if has("gui_macvim")
-  set clipboard=unnamed
-endif
-
-
 " Bundles
 
 " scrooloose/syntastic
