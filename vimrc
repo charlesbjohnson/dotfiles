@@ -195,6 +195,7 @@ let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_extensions = ['funky', 'switcher', 'cmdpalette']
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:ctrlp_use_caching = 0
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.ctags
 
 " bling/vim-airline
@@ -208,14 +209,6 @@ let g:airline_theme='luna'
 let g:gitgutter_eager = 0
 let g:gitgutter_realtime = 0
 let g:gitgutter_map_keys = 0
-
-" rking/ag.vim
-" ============
-if executable('ag')
-  set grepprg=ag\ --nogroup\ --nocolor
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-  let g:ctrlp_use_caching = 0
-endif
 
 " scrooloose/syntastic
 " ====================

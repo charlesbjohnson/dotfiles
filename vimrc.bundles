@@ -14,7 +14,6 @@ if filereadable(expand('~/.vimrc.bundles.local'))
 endif
 
 " Search & Replace
-NeoBundle 'rking/ag.vim'
 NeoBundle 'Wolfy87/vim-enmasse'
 NeoBundle 'justinmk/vim-sneak'
 NeoBundle 'vasconcelloslf/vim-interestingwords'
@@ -65,7 +64,7 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'ivan-cukic/vim-ctrlp-switcher'
 NeoBundle 'tacahiroy/ctrlp-funky'
 NeoBundle 'fisadev/vim-ctrlp-cmdpalette'
-NeoBundle 'kristijanhusak/vim-multiple-cursors'
+NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'zirrostig/vim-schlepp'
 NeoBundle 'junegunn/vim-easy-align'
