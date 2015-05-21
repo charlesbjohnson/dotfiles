@@ -5,6 +5,7 @@ set-option -g @tpm_plugins "   \
   tmux-plugins/tmux-sessionist \
   tmux-plugins/tmux-resurrect  \
   tmux-plugins/tmux-continuum  \
+  tmux-plugins/tmux-fpp        \
 "
 
 run-shell ~/.tmux/plugins/tpm/tpm
