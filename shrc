@@ -6,6 +6,9 @@ eval "$(rbenv init -)"
 export PATH="$PATH:$HOME/.nodenv/bin"
 eval "$(nodenv init -)"
 
+export GOPATH=$HOME/projects/go
+export PATH="$PATH:$GOPATH/bin"
+
 export EDITOR="vim"
 export BROWSER="chromium"
 

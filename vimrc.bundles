@@ -23,8 +23,6 @@ NeoBundle 'osyo-manga/vim-over'
 " System
 NeoBundle 'Shougo/vimproc.vim', {
 \  'build' : {
-\    'windows' : 'tools\\update-dll-mingw',
-\    'cygwin' : 'make -f make_cygwin.mak',
 \    'mac' : 'make -f make_mac.mak',
 \    'unix' : 'make -f make_unix.mak'
 \  },
@@ -49,7 +47,7 @@ NeoBundle 'milkypostman/vim-togglelist'
 NeoBundle 'svermeulen/vim-easyclip'
 NeoBundle 'Valloric/YouCompleteMe', {
 \  'build': {
-\    'unix': './install.sh --clang-completer'
+\    'unix': './install.sh --clang-completer --gocode-completer'
 \  }
 \}
 NeoBundle 'SirVer/ultisnips'
@@ -100,6 +98,9 @@ NeoBundleLazy 'marijnh/tern_for_vim', {
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload': {'filetypes': ['javascript']}}
 NeoBundleLazy 'elzr/vim-json', {'autoload': {'filetypes': ['json']}}
+
+" Golang
+NeoBundleLazy 'fatih/vim-go', {'autoload': {'filetypes': ['go']}}
 
 " Webdev
 NeoBundleLazy 'mattn/emmet-vim', {'autoload': {'filetypes': ['html', 'erb', 'ejs']}}
