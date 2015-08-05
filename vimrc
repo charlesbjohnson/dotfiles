@@ -73,7 +73,6 @@ set showcmd                             " Show (partial) command in status line.
 if has('gui_running')
   set guioptions=                       " Get rid of menu icons, toolbar, etc
   set guioptions=ai                     " Use console-style tabs and include icon
-  set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline\ 11
 endif
 
 
