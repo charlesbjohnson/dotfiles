@@ -79,6 +79,7 @@ NeoBundle 'edkolev/tmuxline.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'ntpeters/vim-better-whitespace'
+NeoBundle 'ryanoasis/vim-devicons'
 
 " Ruby
 NeoBundleLazy 'vim-ruby/vim-ruby', {'autoload': { 'filetypes': ['ruby']}}
@@ -111,6 +112,7 @@ NeoBundleLazy 'ap/vim-css-color', {'autoload': {'filetypes': ['css', 'scss']}}
 " Experimental
 NeoBundle 'tmux-plugins/vim-tmux'
 NeoBundle 'ekalinin/dockerfile.vim'
+NeoBundle 'markcornick/vim-hashicorp-tools'
 NeoBundleLazy 'chase/vim-ansible-yaml', {'autoload': {'filetypes': ['yaml']}}
 NeoBundleLazy 'tpope/vim-markdown', {'autoload': {'filetypes': ['markdown']}}
 
