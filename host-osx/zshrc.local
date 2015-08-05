@@ -3,6 +3,3 @@ export NLS_LANG=AMERICAN_AMERICA.UTF8
 export ORACLE_HOME="$HOME/software/instantclient"
 export PATH=$PATH:$ORACLE_HOME
 export PATH="$PATH:$ORACLE_HOME:$HOME/software/instantclient/bin"
-
-export GOPATH=$HOME/projects/go
-export PATH="$PATH:$GOPATH/bin"
