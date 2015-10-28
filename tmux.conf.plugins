@@ -1,11 +1,16 @@
-set-option -g @tpm_plugins "   \
-  tmux-plugins/tpm             \
-  tmux-plugins/tmux-yank       \
-  tmux-plugins/tmux-copycat    \
-  tmux-plugins/tmux-sessionist \
-  tmux-plugins/tmux-resurrect  \
-  tmux-plugins/tmux-continuum  \
-  tmux-plugins/tmux-fpp        \
+set-option -g @tpm_plugins          "\
+  tmux-plugins/tpm                   \
+  tmux-plugins/tmux-yank             \
+  tmux-plugins/tmux-copycat          \
+  tmux-plugins/tmux-sessionist       \
+  tmux-plugins/tmux-resurrect        \
+  tmux-plugins/tmux-continuum        \
 "
 
-run-shell ~/.tmux/plugins/tpm/tpm
+# tmux-yank
+set-option -g @shell_mode "vi"
+
+# tmux-continuum
+set-option -g @continuum-restore "on"
+
+run-shell "~/.tmux/plugins/tpm/tpm"
