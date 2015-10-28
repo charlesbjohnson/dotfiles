@@ -115,6 +115,7 @@ NeoBundle 'ekalinin/dockerfile.vim'
 NeoBundle 'markcornick/vim-hashicorp-tools'
 NeoBundleLazy 'chase/vim-ansible-yaml', {'autoload': {'filetypes': ['yaml']}}
 NeoBundleLazy 'tpope/vim-markdown', {'autoload': {'filetypes': ['markdown']}}
+NeoBundleLazy 'mxw/vim-jsx', {'autoload': {'filetypes': ['javascript']}}
 
 call neobundle#end()
 
