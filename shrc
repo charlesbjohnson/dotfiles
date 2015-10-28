@@ -6,6 +6,8 @@ eval "$(rbenv init -)"
 export PATH="$PATH:$HOME/.nodenv/bin"
 eval "$(nodenv init -)"
 
+export PATH="./node_modules/.bin:$PATH"
+
 export GOPATH=$HOME/projects/go
 export PATH="$PATH:$GOPATH/bin"
 
