@@ -225,9 +225,7 @@ let g:syntastic_sh_checkers = ['shellcheck']
 let g:syntastic_css_checkers = ['prettycss', 'csslint', 'recess']
 let g:syntastic_css_recess_args = '--noOverqualifying --noUnderscores'
 
-" TODO make a jscs style guide
-"let g:syntastic_javascript_checkers = ['eslint', 'jscs']
-let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['eslint', 'standard']
 
 " TODO make a rubocop style guide
 " TODO fix reek version number bug
