@@ -1,15 +1,9 @@
 npm
-bower
-gulp
-grunt-cli
-http-server
 is-up
 ipify
 eslint
-jscs
 PrettyCSS
 csslint
 recess
 json
 nesh
-nodemon
