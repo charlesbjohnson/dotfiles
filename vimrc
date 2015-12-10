@@ -222,8 +222,7 @@ let g:syntastic_sh_checkers = ['shellcheck']
 
 " TODO add htmlhint or htmltidy5
 
-let g:syntastic_css_checkers = ['prettycss', 'csslint', 'recess']
-let g:syntastic_css_recess_args = '--noOverqualifying --noUnderscores'
+let g:syntastic_css_checkers = ['csslint']
 
 let g:syntastic_javascript_checkers = ['eslint', 'standard']
 
