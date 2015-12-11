@@ -1,4 +1,4 @@
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
 
 alias ls='ls --color=auto'
-alias node='env NODE_NO_READLINE=1 rlwrap node'
+alias node='rlwrap --ansi-colour-aware --always-readline -- node'
