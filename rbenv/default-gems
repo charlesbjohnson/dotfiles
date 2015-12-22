@@ -5,7 +5,6 @@ pry-theme
 pry-byebug
 pry-stack_explorer
 awesome_print
-tmuxinator
 ruby-lint
 rubocop
 reek
