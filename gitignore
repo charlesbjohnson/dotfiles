@@ -57,21 +57,11 @@ Temporary Items
 # for a library or gem, you might want to ignore these files since the code is
 # intended to run in multiple environments; otherwise, check them in:
 # Gemfile.lock
-.ruby-version
-.ruby-gemset
 .ruby-env
-.rbenv-gemsets
-.rbenv-vars
-
-# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
-.rvmrc
 
 
 ### javascript ###
 .tern-project
-.node-version
-.eslintrc
-.jscsrc
 
 
 ### Node ###
@@ -117,9 +107,6 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
-
-# if using bower-rails
-/vendor/assets/bower_components
 
 
 ### Ag ###
