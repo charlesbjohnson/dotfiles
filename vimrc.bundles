@@ -14,7 +14,6 @@ if filereadable(expand('~/.vimrc.bundles.local'))
 endif
 
 " Search & Replace
-NeoBundle 'Wolfy87/vim-enmasse'
 NeoBundle 'justinmk/vim-sneak'
 NeoBundle 'vasconcelloslf/vim-interestingwords'
 NeoBundle 'haya14busa/incsearch.vim'
@@ -58,10 +57,13 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-vinegar'
 NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'ivan-cukic/vim-ctrlp-switcher'
-NeoBundle 'tacahiroy/ctrlp-funky'
-NeoBundle 'fisadev/vim-ctrlp-cmdpalette'
+NeoBundle 'junegunn/fzf', {
+\  'directory': '../../.fzf',
+\  'build': {
+\    'unix': './install --all'
+\  }
+\}
+NeoBundle 'junegunn/fzf.vim'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'zirrostig/vim-schlepp'
@@ -115,7 +117,6 @@ NeoBundle 'ekalinin/dockerfile.vim'
 NeoBundle 'markcornick/vim-hashicorp-tools'
 NeoBundleLazy 'chase/vim-ansible-yaml', {'autoload': {'filetypes': ['yaml']}}
 NeoBundleLazy 'tpope/vim-markdown', {'autoload': {'filetypes': ['markdown']}}
-NeoBundleLazy 'mxw/vim-jsx', {'autoload': {'filetypes': ['javascript']}}
 
 call neobundle#end()
 

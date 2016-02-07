@@ -188,14 +188,9 @@ let g:indentLine_noConcealCursor=''
 " ===================
 let g:vimfiler_as_default_explorer = 1
 
-" ctrlpvim/ctrlp.vim
-" ==================
-let g:ctrlp_map = '<C-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_extensions = ['funky', 'switcher', 'cmdpalette']
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-let g:ctrlp_use_caching = 0
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.ctags
+" junegunn/fzf.vim
+" ================
+nnoremap <C-p> :FZF --multi<CR>
 
 " bling/vim-airline
 " =================
