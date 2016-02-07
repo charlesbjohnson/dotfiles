@@ -6,6 +6,8 @@ fi
 [[ -f ~/.shrc ]] && source ~/.shrc
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
+[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
+
 for function in ~/.zsh/functions/*; do
   [[ -f "$function" ]] && source "$function"
 done
