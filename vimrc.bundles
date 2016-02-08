@@ -21,9 +21,9 @@ NeoBundle 'osyo-manga/vim-over'
 
 " System
 NeoBundle 'Shougo/vimproc.vim', {
-\  'build' : {
-\    'mac' : 'make -f make_mac.mak',
-\    'unix' : 'make -f make_unix.mak'
+\  'build': {
+\    'mac': 'make -f make_mac.mak',
+\    'unix': 'make -f make_unix.mak'
 \  },
 \}
 NeoBundle 'moll/vim-bbye'
@@ -72,6 +72,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'rhysd/committia.vim'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'tmux-plugins/vim-tmux-focus-events'
 
 " Appearance
 NeoBundle 'chriskempson/base16-vim'
