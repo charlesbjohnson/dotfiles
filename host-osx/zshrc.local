@@ -1,5 +1,0 @@
-export DYLD_LIBRARY_PATH="$HOME/software/instantclient"
-export NLS_LANG=AMERICAN_AMERICA.UTF8
-export ORACLE_HOME="$HOME/software/instantclient"
-export PATH=$PATH:$ORACLE_HOME
-export PATH="$PATH:$ORACLE_HOME:$HOME/software/instantclient/bin"
