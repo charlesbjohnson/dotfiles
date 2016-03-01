@@ -46,7 +46,7 @@ NeoBundle 'milkypostman/vim-togglelist'
 NeoBundle 'svermeulen/vim-easyclip'
 NeoBundle 'Valloric/YouCompleteMe', {
 \  'build': {
-\    'unix': './install.sh --clang-completer --gocode-completer'
+\    'unix': './install.py --clang-completer --gocode-completer --tern-completer'
 \  }
 \}
 NeoBundle 'SirVer/ultisnips'
@@ -63,7 +63,6 @@ NeoBundle 'junegunn/fzf', {
 \    'unix': './install --all'
 \  }
 \}
-NeoBundle 'junegunn/fzf.vim'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'zirrostig/vim-schlepp'
@@ -92,14 +91,6 @@ NeoBundleLazy 'thoughtbot/vim-rspec', {'autoload': {'filetypes': ['ruby']}}
 NeoBundleLazy 'cakebaker/scss-syntax.vim', {'autoload': {'filetypes': ['scss']}}
 
 " JavaScript
-NeoBundleLazy 'marijnh/tern_for_vim', {
-\  'build': {
-\    'unix': 'npm install'
-\  },
-\  'autoload': {
-\    'filetypes': ['javascript']
-\  }
-\}
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload': {'filetypes': ['javascript']}}
 NeoBundleLazy 'elzr/vim-json', {'autoload': {'filetypes': ['json']}}
