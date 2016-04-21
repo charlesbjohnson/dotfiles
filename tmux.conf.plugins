@@ -11,7 +11,4 @@ set-option -g @tpm_plugins          "\
 # tmux-yank
 set-option -g @shell_mode "vi"
 
-# tmux-continuum
-set-option -g @continuum-restore "on"
-
 run-shell "~/.tmux/plugins/tpm/tpm"
