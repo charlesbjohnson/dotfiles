@@ -1,5 +1,9 @@
 # Created by https://www.gitignore.io/api/linux,osx,vim,vagrant,packer,terraform,ruby,rails,node,jspm,go
 
+### Ag ###
+.agignore
+
+
 ### Linux ###
 *~
 
