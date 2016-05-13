@@ -17,7 +17,6 @@ endif
 NeoBundle 'justinmk/vim-sneak'
 NeoBundle 'vasconcelloslf/vim-interestingwords'
 NeoBundle 'haya14busa/incsearch.vim'
-NeoBundle 'osyo-manga/vim-over'
 
 " System
 NeoBundle 'Shougo/vimproc.vim', {
@@ -46,7 +45,7 @@ NeoBundle 'milkypostman/vim-togglelist'
 NeoBundle 'svermeulen/vim-easyclip'
 NeoBundle 'Valloric/YouCompleteMe', {
 \  'build': {
-\    'unix': './install.py --clang-completer --gocode-completer --tern-completer'
+\    'unix': './install.py --gocode-completer --tern-completer'
 \  }
 \}
 NeoBundle 'SirVer/ultisnips'
@@ -86,29 +85,27 @@ NeoBundle 'ryanoasis/vim-devicons'
 
 " Ruby
 NeoBundleLazy 'vim-ruby/vim-ruby', {'autoload': { 'filetypes': ['ruby']}}
-NeoBundleLazy 'tpope/vim-rails', {'autoload': {'filetypes': ['ruby']}}
-NeoBundleLazy 'thoughtbot/vim-rspec', {'autoload': {'filetypes': ['ruby']}}
-NeoBundleLazy 'cakebaker/scss-syntax.vim', {'autoload': {'filetypes': ['scss']}}
 
 " JavaScript
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload': {'filetypes': ['javascript']}}
 NeoBundleLazy 'elzr/vim-json', {'autoload': {'filetypes': ['json']}}
+NeoBundleLazy 'leafgarland/typescript-vim', {'autoload': {'filetypes': ['typescript']}}
 
 " Golang
 NeoBundleLazy 'fatih/vim-go', {'autoload': {'filetypes': ['go']}}
 
 " Webdev
-NeoBundleLazy 'mattn/emmet-vim', {'autoload': {'filetypes': ['html', 'erb', 'ejs']}}
+NeoBundleLazy 'mattn/emmet-vim', {'autoload': {'filetypes': ['html', 'erb']}}
 NeoBundleLazy 'othree/html5.vim', {'autoload': {'filetypes': ['html']}}
 NeoBundleLazy 'hail2u/vim-css3-syntax', {'autoload': {'filetypes': ['css', 'scss']}}
 NeoBundleLazy 'ap/vim-css-color', {'autoload': {'filetypes': ['css', 'scss']}}
+NeoBundleLazy 'cakebaker/scss-syntax.vim', {'autoload': {'filetypes': ['scss']}}
 
 " Experimental
 NeoBundle 'tmux-plugins/vim-tmux'
 NeoBundle 'ekalinin/dockerfile.vim'
 NeoBundle 'markcornick/vim-hashicorp-tools'
-NeoBundleLazy 'chase/vim-ansible-yaml', {'autoload': {'filetypes': ['yaml']}}
 NeoBundleLazy 'tpope/vim-markdown', {'autoload': {'filetypes': ['markdown']}}
 
 call neobundle#end()

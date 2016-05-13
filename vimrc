@@ -103,14 +103,6 @@ set noswapfile                          " Don't create a swap file
 " Filetypes
 autocmd! BufRead,BufNewFile *.json set filetype=json
 
-" TODO figure out how to get surround macros for *.tpl
-autocmd! BufNewFile,BufRead *.tpl set filetype=html syntax=mustache
-autocmd! BufNewFile,BufRead *.ejs set filetype=html
-
-" To use erb surround macros (from vim-rails) in combination with emmet macros
-" TODO reconcile this with ultisnips html snippets
-autocmd! BufNewFile,BufRead *.erb set filetype=html syntax=eruby filetype=eruby
-
 
 " Key bindings
 nnoremap <Leader>q :q<CR>
@@ -214,30 +206,16 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_sh_checkers = ['shellcheck']
-
-" TODO add htmlhint or htmltidy5
-
 let g:syntastic_css_checkers = ['stylelint']
-
 let g:syntastic_javascript_checkers = ['eslint', 'standard']
-
-" TODO make a rubocop style guide
-" TODO fix reek version number bug
-" let g:syntastic_ruby_checkers = ['ruby-lint', 'rubocop', 'reek']
 let g:syntastic_ruby_checkers = ['ruby-lint']
-
-" thoughtbot/vim-rspec
-" ====================
-nnoremap <silent> <Leader>rs :call RunNearestSpec()<CR>
-nnoremap <silent> <Leader>rf :call RunCurrentSpecFile()<CR>
-let g:rspec_command = 'Dispatch rspec {spec}'
 
 " mattn/emmet-vim
 " ===============
 let g:user_emmet_install_global = 0
 let g:user_emmet_mode = 'n'
 let g:user_emmet_leader_key = '<CR>'
-autocmd FileType html,erb,ejs EmmetInstall
+autocmd FileType html,erb EmmetInstall
 
 " milkypostman/vim-togglelist
 " ===========================
@@ -278,10 +256,6 @@ let g:incsearch#highlight = {
 \    'priority' : '1000'
 \  }
 \}
-
-" osyo-manga/vim-over
-" ===================
-nnoremap <silent> <Leader>r :OverCommandLine<CR>
 
 " junegunn/vim-easy-align
 " =======================
@@ -393,6 +367,11 @@ let g:ycm_min_num_of_chars_for_completion = 1
 " ====================
 let g:tern_show_signature_in_pum = 1
 autocmd! BufEnter * set completeopt-=preview
+
+" fatih/vim-go
+" ============
+let g:go_doc_keywordprg_enabled = 0
+let g:go_def_mapping_enabled = 0
 
 " mhinz/vim-startify
 " ==================
