@@ -1,4 +1,4 @@
-# Created by https://www.gitignore.io/api/linux,osx,vim,vagrant,packer,terraform,ruby,rails,node,jspm,go
+# Created by https://www.gitignore.io/api/linux,osx,vim,vagrant,packer,ruby,rails,node,jspm,go
 
 ### Ag ###
 .agignore
@@ -64,13 +64,6 @@ packer_cache/
 
 # For built boxes
 *.box
-
-
-### Terraform ###
-# Terraform - https://terraform.io/
-.terraform
-terraform.tfstate
-terraform.tfstate.backup
 
 
 ### Ruby ###
