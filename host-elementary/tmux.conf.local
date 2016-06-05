@@ -1,3 +1,7 @@
+# utf8 is on
+set-option -g utf8 on
+set-option -g status-utf8 on
+
 set-option -g default-shell /usr/bin/fish
 
 # scrolling and selecting in copy mode
