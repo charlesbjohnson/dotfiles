@@ -18,19 +18,24 @@
   browser = chromium
 [alias]
   a = add
-  c = commit
-  co = checkout
-  cl = clone
-  br = branch --all --verbose
+  amend = commit --amend --reuse-message HEAD --verbose
+  br = branch --verbose --verbose
+  bra = branch --all --verbose --verbose
+  brd = branch --delete
   brg = show-branch --all
+  brrd = push origin --delete
+  brrn = branch --move
+  c = commit
+  cl = clone
+  co = checkout
+  cop = checkout -
+  diffs = diff --staged
+  l = log --stat --decorate --relative-date
+  ldf = log --oneline --patch-with-stat --full-diff --decorate --since={3.weeks.ago}
+  lgr = log --oneline --all --graph --decorate
   rmt = remote --verbose
   st = status --branch --short --untracked-files=all
-  diffs = diff --staged
-  amend = commit --amend --reuse-message HEAD --verbose
-  unstage = reset HEAD --
   undo = reset HEAD~
-  l = log --stat --decorate --relative-date
-  lgr = log --oneline --all --graph --decorate
-  ldf = log --oneline --patch-with-stat --full-diff --decorate --since={3.weeks.ago}
+  unstage = reset HEAD --
 [include]
   path = ~/.gitconfig.local
