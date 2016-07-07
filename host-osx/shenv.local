@@ -1,1 +1,1 @@
-[[ -f ~/.config/base16-shell/base16-solarized.dark.sh ]] && source ~/.config/base16-shell/base16-solarized.dark.sh
+[[ -f ~/.config/base16-shell/scripts/base16-solarized-dark.sh ]] && source ~/.config/base16-shell/scripts/base16-solarized-dark.sh

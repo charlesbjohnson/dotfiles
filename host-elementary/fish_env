@@ -10,6 +10,6 @@ if [ (ps -o comm= -p $ppid) = pantheon-termin ]
 end
 
 if [ ! $SHELL_COLORED ]
-  eval sh ~/.config/base16-shell/base16-solarized.dark.sh
+  eval sh ~/.config/base16-shell/scripts/base16-solarized-dark.sh
   set -x SHELL_COLORED true
 end
