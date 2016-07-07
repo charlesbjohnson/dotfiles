@@ -58,7 +58,7 @@ set viminfo='100,n$HOME/.vim/files/info/viminfo
 set showtabline=2                       " File tabs always visible
 set laststatus=2                        " Show statusline even when no window split
 let base16colorspace=256                " Access colors present in 256 colorspace (MUST BE BEFORE COLORSCHEME)
-colorscheme base16-solarized
+colorscheme base16-solarized-dark
 set background=dark
 set number                              " Line numbers
 set cursorline                          " Highlights cursor line
