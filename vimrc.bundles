@@ -90,7 +90,6 @@ NeoBundleLazy 'vim-ruby/vim-ruby', {'autoload': { 'filetypes': ['ruby']}}
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload': {'filetypes': ['javascript']}}
 NeoBundleLazy 'elzr/vim-json', {'autoload': {'filetypes': ['json']}}
-NeoBundleLazy 'leafgarland/typescript-vim', {'autoload': {'filetypes': ['typescript']}}
 
 " Golang
 NeoBundleLazy 'fatih/vim-go', {'autoload': {'filetypes': ['go']}}
@@ -107,6 +106,7 @@ NeoBundle 'tmux-plugins/vim-tmux'
 NeoBundle 'ekalinin/dockerfile.vim'
 NeoBundle 'markcornick/vim-hashicorp-tools'
 NeoBundleLazy 'tpope/vim-markdown', {'autoload': {'filetypes': ['markdown']}}
+NeoBundleLazy 'rhysd/vim-crystal', {'autoload': {'filetypes': ['crystal']}}
 
 call neobundle#end()
 
