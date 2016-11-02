@@ -151,7 +151,7 @@ bower.json
 
 ### Node ###
 # Logs
-logs
+/logs
 *.log
 npm-debug.log*
 
