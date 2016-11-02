@@ -4,19 +4,19 @@
 set fileencodings=ucs-bom,utf-8,cp936,big5,euc-jp,euc-kr,gb18030,latin1
 
 
-" Load bundles
+""" Load bundles
 if filereadable(expand('~/.vimrc.bundles'))
   source ~/.vimrc.bundles
 endif
 
 
-" Local configuration
+""" Local configuration
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
 endif
 
 
-" General
+""" General
 syntax on
 filetype plugin indent on
 set encoding=utf8
@@ -54,7 +54,7 @@ set splitright
 set viminfo='100,n$HOME/.vim/files/info/viminfo
 
 
-" Appearance
+""" Appearance
 set showtabline=2                       " File tabs always visible
 set laststatus=2                        " Show statusline even when no window split
 let base16colorspace=256                " Access colors present in 256 colorspace (MUST BE BEFORE COLORSCHEME)
@@ -68,15 +68,14 @@ set colorcolumn=80                      " Highlight column at 80 characters
 set list listchars=tab:⇥⇥,eol:↵,trail:· " Control character highlighting
 set showcmd                             " Show (partial) command in status line.
 
-
-" GVim
+""" GVim
 if has('gui_running')
   set guioptions=                       " Get rid of menu icons, toolbar, etc
   set guioptions=ai                     " Use console-style tabs and include icon
 endif
 
 
-" Tabbing
+""" Tabbing
 set expandtab                           " Number of spaces that a Tab counts for
 set tabstop=2                           " Tab is 2 spaces
 set softtabstop=2
@@ -90,7 +89,7 @@ set smarttab                            " When on, a <Tab> in front of a line in
                                         " at the start of the line.
 
 
-" Search & history
+""" Search & history
 set hlsearch                            " When there is a previous search pattern highlight all
                                         " its matches.
 set ignorecase                          " Case-insensitive search
@@ -100,11 +99,11 @@ set nobackup                            " Don't keep backups
 set noswapfile                          " Don't create a swap file
 
 
-" Filetypes
+""" Filetypes
 autocmd! BufRead,BufNewFile *.json set filetype=json
 
 
-" Key bindings
+""" Key bindings
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>w :w<CR>
 
@@ -165,175 +164,36 @@ vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 
 
-" Bundles
-"
+""" Bundles
+
+"" System
 " Shougo/neobundle.vim
-" ====================
 let g:neobundle#install_process_timeout = 600
 
-" Yggdroot/indentLine
-" ===================
-let g:indentLine_char = '┆'
-let g:indentLine_noConcealCursor=''
+" SirVer/ultisnips
+inoremap <C-e> <NOP>
+let g:UltiSnipsExpandTrigger='<C-e>'
 
-" Shougo/vimfiler.vim
-" ===================
-let g:vimfiler_as_default_explorer = 1
-
-" junegunn/fzf.vim
-" ================
-nnoremap <C-p> :FZF --multi<CR>
-
-" bling/vim-airline
-" =================
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='luna'
-
-" airblade/vim-gitgutter
-" ======================
-let g:gitgutter_eager = 0
-let g:gitgutter_realtime = 0
-let g:gitgutter_map_keys = 0
+" milkypostman/vim-togglelist
+let g:toggle_list_no_mappings = 1
+nnoremap <silent> <Leader>P :call ToggleLocationList()<CR>
+nnoremap <silent> <Leader>p :call ToggleQuickfixList()<CR>
 
 " scrooloose/syntastic
-" ====================
 let g:syntastic_check_on_open = 1
 let g:syntastic_aggregate_errors = 1
-
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
 let g:syntastic_sh_checkers = ['shellcheck']
 let g:syntastic_css_checkers = ['stylelint']
 let g:syntastic_javascript_checkers = ['eslint', 'standard']
 let g:syntastic_ruby_checkers = ['ruby-lint']
 
-" mattn/emmet-vim
-" ===============
-let g:user_emmet_install_global = 0
-let g:user_emmet_mode = 'n'
-let g:user_emmet_leader_key = '<CR>'
-autocmd FileType html,erb EmmetInstall
-
-" milkypostman/vim-togglelist
-" ===========================
-let g:toggle_list_no_mappings = 1
-nnoremap <silent> <Leader>P :call ToggleLocationList()<CR>
-nnoremap <silent> <Leader>p :call ToggleQuickfixList()<CR>
-
 " svermeulen/vim-easyclip
-" =======================
 let g:EasyClipPreserveCursorPositionAfterYank = 1
 
-" kristijanhusak/vim-multiple-cursors
-" ===================================
-let g:multi_cursor_quit_key = '<C-e>'
-
-" haya14busa/incsearch.vim
-" ========================
-map / <Plug>(incsearch-forward)
-map ? <Plug>(incsearch-backward)
-map n <Plug>(incsearch-nohl-n)
-map N <Plug>(incsearch-nohl-N)
-map * <Plug>(incsearch-nohl-*)
-map # <Plug>(incsearch-nohl-#)
-map g* <Plug>(incsearch-nohl-g*)
-map g# <Plug>(incsearch-nohl-g#)
-let g:incsearch#consistent_n_direction = 1
-let g:incsearch#auto_nohlsearch = 1
-let g:incsearch#highlight = {
-\  'match' : {
-\    'group' : 'IncSearchUnderline',
-\    'priority' : '10'
-\  },
-\  'on_cursor' : {
-\    'priority' : '100'
-\  },
-\  'cursor' : {
-\    'group' : 'ErrorMsg',
-\    'priority' : '1000'
-\  }
-\}
-
-" junegunn/vim-easy-align
-" =======================
-vmap <CR> <Plug>(EasyAlign)
-nmap <Leader>a <Plug>(EasyAlign)
-
-" AndrewRadev/splitjoin.vim
-" =========================
-let g:splitjoin_align = 1
-let g:splitjoin_ruby_curly_braces = 0
-let g:splitjoin_ruby_trailing_comma = 0
-nnoremap <silent> <Leader>J :call <SID>try('SplitjoinJoin',  'J')<CR>
-nnoremap <silent> <Leader>K :call <SID>try('SplitjoinSplit', "r\015")<CR>
-
-function! s:try(cmd, default)
-  if exists(':' . a:cmd) && !v:count
-    let tick = b:changedtick
-    execute a:cmd
-    if tick == b:changedtick
-      execute join(['normal!', a:default])
-    endif
-  else
-    execute join(['normal! ', v:count, a:default], '')
-  endif
-endfunction
-
-" justinmk/vim-sneak
-" ==================
-let g:sneak#s_next = 1
-let g:sneak#use_ic_scs = 1
-
-" replace 'f' with 1-char Sneak
-nmap f <Plug>Sneak_f
-nmap F <Plug>Sneak_F
-xmap f <Plug>Sneak_f
-xmap F <Plug>Sneak_F
-omap f <Plug>Sneak_f
-omap F <Plug>Sneak_F
-
-" replace 't' with 1-char Sneak
-nmap t <Plug>Sneak_t
-nmap T <Plug>Sneak_T
-xmap t <Plug>Sneak_t
-xmap T <Plug>Sneak_T
-omap t <Plug>Sneak_t
-omap T <Plug>Sneak_T
-
-" vasconcelloslf/vim-interestingwords
-" ===================================
-let g:interestingWordsDefaultMappings = 0
-
-" to disable the default mappings, workaround since plugin config is busted
-nnoremap <silent> <Leader>k <Plug>InterestingWords
-nnoremap <silent> <Leader>f :call InterestingWords('n')<CR>
-nnoremap <silent> <Leader>F :call UncolorAllWords()<CR>
-
-" workaround for busted 'forward' and 'backword'
-nnoremap <silent> n :call WordNavigation(1)<CR>
-nnoremap <silent> N :call WordNavigation(0)<CR>
-
-" zirrostig/vim-schlepp
-" =====================
-vmap <unique> <Leader>k <Plug>SchleppUp
-vmap <unique> <Leader>j <Plug>SchleppDown
-vmap <unique> <Leader>h <Plug>SchleppLeft
-vmap <unique> <Leader>l <Plug>SchleppRight
-
-" SirVer/ultisnips
-" ================
-inoremap <C-e> <NOP>
-let g:UltiSnipsExpandTrigger='<C-e>'
-
-" ntpeters/vim-better-whitespace
-" ==============================
-let g:strip_whitespace_on_save = 1
-
 " terryma/vim-expand-region
-" =========================
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 let g:expand_region_text_objects = {
@@ -359,23 +219,120 @@ let g:expand_region_text_objects = {
 \}
 
 " Valloric/YouCompleteMe
-" ======================
 let g:ycm_global_ycm_extra_conf = '~/.vim/files/.ycm_extra_conf.py'
 let g:ycm_min_num_of_chars_for_completion = 1
 
-" marijnh/tern_for_vim
-" ====================
-let g:tern_show_signature_in_pum = 1
-autocmd! BufEnter * set completeopt-=preview
+"" Productivity
+" AndrewRadev/splitjoin.vim
+let g:splitjoin_align = 1
+let g:splitjoin_ruby_curly_braces = 0
+let g:splitjoin_ruby_trailing_comma = 0
+nnoremap <silent> <Leader>J :call <SID>try('SplitjoinJoin',  'J')<CR>
+nnoremap <silent> <Leader>K :call <SID>try('SplitjoinSplit', "r\015")<CR>
+function! s:try(cmd, default)
+  if exists(':' . a:cmd) && !v:count
+    let tick = b:changedtick
+    execute a:cmd
+    if tick == b:changedtick
+      execute join(['normal!', a:default])
+    endif
+  else
+    execute join(['normal! ', v:count, a:default], '')
+  endif
+endfunction
 
-" fatih/vim-go
-" ============
-let g:go_fmt_command = "goimports"
-let g:go_doc_keywordprg_enabled = 0
-let g:go_def_mapping_enabled = 0
+" Shougo/vimfiler.vim
+let g:vimfiler_as_default_explorer = 1
+
+" junegunn/fzf.vim
+nnoremap <C-p> :FZF --multi<CR>
+
+" junegunn/vim-easy-align
+vmap <CR> <Plug>(EasyAlign)
+nmap <Leader>a <Plug>(EasyAlign)
+
+" kristijanhusak/vim-multiple-cursors
+let g:multi_cursor_quit_key = '<C-e>'
+
+" zirrostig/vim-schlepp
+vmap <unique> <Leader>k <Plug>SchleppUp
+vmap <unique> <Leader>j <Plug>SchleppDown
+vmap <unique> <Leader>h <Plug>SchleppLeft
+vmap <unique> <Leader>l <Plug>SchleppRight
+
+"" Search & Replace
+" haya14busa/incsearch.vim
+map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
+map n <Plug>(incsearch-nohl-n)
+map N <Plug>(incsearch-nohl-N)
+map * <Plug>(incsearch-nohl-*)
+map # <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
+let g:incsearch#consistent_n_direction = 1
+let g:incsearch#auto_nohlsearch = 1
+let g:incsearch#highlight = {
+\  'match' : {
+\    'group' : 'IncSearchUnderline',
+\    'priority' : '10'
+\  },
+\  'on_cursor' : {
+\    'priority' : '100'
+\  },
+\  'cursor' : {
+\    'group' : 'ErrorMsg',
+\    'priority' : '1000'
+\  }
+\}
+
+" justinmk/vim-sneak
+let g:sneak#s_next = 1
+let g:sneak#use_ic_scs = 1
+" replace 'f' with 1-char Sneak
+nmap f <Plug>Sneak_f
+nmap F <Plug>Sneak_F
+xmap f <Plug>Sneak_f
+xmap F <Plug>Sneak_F
+omap f <Plug>Sneak_f
+omap F <Plug>Sneak_F
+" replace 't' with 1-char Sneak
+nmap t <Plug>Sneak_t
+nmap T <Plug>Sneak_T
+xmap t <Plug>Sneak_t
+xmap T <Plug>Sneak_T
+omap t <Plug>Sneak_t
+omap T <Plug>Sneak_T
+
+" vasconcelloslf/vim-interestingwords
+let g:interestingWordsDefaultMappings = 0
+" to disable the default mappings, workaround since plugin config is busted
+nnoremap <silent> <Leader>k <Plug>InterestingWords
+nnoremap <silent> <Leader>f :call InterestingWords('n')<CR>
+nnoremap <silent> <Leader>F :call UncolorAllWords()<CR>
+" workaround for busted 'forward' and 'backword'
+nnoremap <silent> n :call WordNavigation(1)<CR>
+nnoremap <silent> N :call WordNavigation(0)<CR>
+
+"" Appearance
+" Yggdroot/indentLine
+let g:indentLine_char = '┆'
+let g:indentLine_noConcealCursor=''
+
+" airblade/vim-gitgutter
+let g:gitgutter_eager = 0
+let g:gitgutter_realtime = 0
+let g:gitgutter_map_keys = 0
+
+" bling/vim-airline
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='luna'
+
+" elzr/vim-json
+let g:vim_json_syntax_conceal = 0
 
 " mhinz/vim-startify
-" ==================
 let g:startify_change_to_dir = 1
 let g:startify_change_to_vcs_root = 1
 let g:startify_restore_position = 1
@@ -413,3 +370,25 @@ highlight StartifySection ctermfg=50
 highlight StartifySelect  ctermfg=255
 highlight StartifySlash   ctermfg=245
 highlight StartifySpecial ctermfg=121
+
+" ntpeters/vim-better-whitespace
+let g:strip_whitespace_on_save = 1
+
+"" Ruby
+
+"" JavaScript
+
+"" Golang
+" fatih/vim-go
+let g:go_fmt_command = "goimports"
+let g:go_doc_keywordprg_enabled = 0
+let g:go_def_mapping_enabled = 0
+
+"" Webdev
+" mattn/emmet-vim
+let g:user_emmet_install_global = 0
+let g:user_emmet_mode = 'n'
+let g:user_emmet_leader_key = '<CR>'
+autocmd FileType html,erb EmmetInstall
+
+"" Experimental

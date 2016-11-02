@@ -13,100 +13,99 @@ if filereadable(expand('~/.vimrc.bundles.local'))
   source ~/.vimrc.bundles.local
 endif
 
-" Search & Replace
-NeoBundle 'justinmk/vim-sneak'
-NeoBundle 'vasconcelloslf/vim-interestingwords'
-NeoBundle 'haya14busa/incsearch.vim'
-
 " System
+NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'Shougo/vimproc.vim', {
 \  'build': {
 \    'mac': 'make -f make_mac.mak',
 \    'unix': 'make -f make_unix.mak'
 \  },
 \}
-NeoBundle 'moll/vim-bbye'
-NeoBundle 'danro/rename.vim'
-NeoBundle 'Raimondi/delimitMate'
-NeoBundle 'tpope/vim-endwise'
-NeoBundle 'matchit.zip'
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'vim-scripts/repmo.vim'
-NeoBundle 'terryma/vim-expand-region'
-NeoBundle 'kana/vim-textobj-user'
-NeoBundle 'lucapette/vim-textobj-underscore'
-NeoBundle 'kana/vim-textobj-indent'
-NeoBundle 'kana/vim-textobj-line'
-NeoBundle 'kana/vim-textobj-entire'
-NeoBundle 'glts/vim-textobj-comment'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'milkypostman/vim-togglelist'
-NeoBundle 'svermeulen/vim-easyclip'
 NeoBundle 'Valloric/YouCompleteMe', {
 \  'build': {
 \    'unix': './install.py --gocode-completer --tern-completer'
 \  }
 \}
 NeoBundle 'SirVer/ultisnips'
+NeoBundle 'danro/rename.vim'
+NeoBundle 'glts/vim-textobj-comment'
 NeoBundle 'honza/vim-snippets'
+NeoBundle 'kana/vim-textobj-entire'
+NeoBundle 'kana/vim-textobj-indent'
+NeoBundle 'kana/vim-textobj-line'
+NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'lucapette/vim-textobj-underscore'
+NeoBundle 'matchit.zip'
+NeoBundle 'milkypostman/vim-togglelist'
+NeoBundle 'moll/vim-bbye'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'svermeulen/vim-easyclip'
+NeoBundle 'terryma/vim-expand-region'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'vim-scripts/repmo.vim'
 
 " Productivity
-NeoBundle 'tpope/vim-vinegar'
-NeoBundle 'Shougo/vimfiler.vim'
+NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimfiler.vim'
+NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'junegunn/fzf', {
 \  'directory': '../../.fzf',
 \  'build': {
 \    'unix': './install --all'
 \  }
 \}
-NeoBundle 'terryma/vim-multiple-cursors'
-NeoBundle 'AndrewRadev/splitjoin.vim'
-NeoBundle 'zirrostig/vim-schlepp'
 NeoBundle 'junegunn/vim-easy-align'
-NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'rhysd/committia.vim'
-NeoBundle 'tpope/vim-dispatch'
-NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'tmux-plugins/vim-tmux-focus-events'
+NeoBundle 'tpope/vim-vinegar'
+NeoBundle 'zirrostig/vim-schlepp'
+
+" Search & Replace
+NeoBundle 'haya14busa/incsearch.vim'
+NeoBundle 'justinmk/vim-sneak'
+NeoBundle 'vasconcelloslf/vim-interestingwords'
 
 " Appearance
-NeoBundle 'chriskempson/base16-vim'
-NeoBundle 'mhinz/vim-startify'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'vim-airline/vim-airline-themes'
-NeoBundle 'edkolev/tmuxline.vim'
-NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'edkolev/tmuxline.vim'
+NeoBundle 'mhinz/vim-startify'
 NeoBundle 'ntpeters/vim-better-whitespace'
 NeoBundle 'ryanoasis/vim-devicons'
+NeoBundle 'vim-airline/vim-airline-themes'
 
 " Ruby
 NeoBundleLazy 'vim-ruby/vim-ruby', {'autoload': { 'filetypes': ['ruby']}}
 
 " JavaScript
 NeoBundle 'mustache/vim-mustache-handlebars'
-NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload': {'filetypes': ['javascript']}}
+
 NeoBundleLazy 'elzr/vim-json', {'autoload': {'filetypes': ['json']}}
+NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload': {'filetypes': ['javascript']}}
 
 " Golang
 NeoBundleLazy 'fatih/vim-go', {'autoload': {'filetypes': ['go']}}
 
 " Webdev
-NeoBundleLazy 'mattn/emmet-vim', {'autoload': {'filetypes': ['html', 'erb']}}
-NeoBundleLazy 'othree/html5.vim', {'autoload': {'filetypes': ['html']}}
-NeoBundleLazy 'hail2u/vim-css3-syntax', {'autoload': {'filetypes': ['css', 'scss']}}
 NeoBundleLazy 'ap/vim-css-color', {'autoload': {'filetypes': ['css', 'scss']}}
 NeoBundleLazy 'cakebaker/scss-syntax.vim', {'autoload': {'filetypes': ['scss']}}
+NeoBundleLazy 'hail2u/vim-css3-syntax', {'autoload': {'filetypes': ['css', 'scss']}}
+NeoBundleLazy 'mattn/emmet-vim', {'autoload': {'filetypes': ['html', 'erb']}}
+NeoBundleLazy 'othree/html5.vim', {'autoload': {'filetypes': ['html']}}
 
 " Experimental
-NeoBundle 'tmux-plugins/vim-tmux'
 NeoBundle 'ekalinin/dockerfile.vim'
 NeoBundle 'markcornick/vim-hashicorp-tools'
+NeoBundle 'tmux-plugins/vim-tmux'
+
 NeoBundleLazy 'tpope/vim-markdown', {'autoload': {'filetypes': ['markdown']}}
-NeoBundleLazy 'rhysd/vim-crystal', {'autoload': {'filetypes': ['crystal']}}
 
 call neobundle#end()
 
