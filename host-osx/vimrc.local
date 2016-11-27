@@ -1,12 +1,1 @@
-" GVim
-if has('gui_running')
-  set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline\ Plus\ Nerd\ File\ Types:h12
-endif
 
-
-" Bundles
-
-" scrooloose/syntastic
-" ====================
-let g:syntastic_html_checkers = ['tidy']
-let g:syntastic_html_tidy_exec = '/usr/local/bin/tidy'
