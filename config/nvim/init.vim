@@ -87,18 +87,18 @@ nnoremap <Leader>t :tabnew<CR>
 " Consistent indent/unindent across all modes
 nnoremap <C-d> <<
 nnoremap <C-t> >>
-vnoremap <C-d> <gv
-vnoremap <C-t> >gv
+xnoremap <C-d> <gv
+xnoremap <C-t> >gv
 
 " Move around more quickly
 nnoremap < {
 nnoremap > }
 nnoremap H 0
 nnoremap L $
-vnoremap < {
-vnoremap > }
-vnoremap H 0
-vnoremap L $
+xnoremap < {
+xnoremap > }
+xnoremap H 0
+xnoremap L $
 
 " Splits
 nnoremap <C-w>\| :vsplit<CR>
@@ -114,8 +114,8 @@ nnoremap <Leader>] <C-]>
 
 " Automatically jump to end of pasted text
 nnoremap <silent> p p`]
-vnoremap <silent> p p`]
-vnoremap <silent> y y`]
+xnoremap <silent> p p`]
+xnoremap <silent> y y`]
 
 
 """ Bundles
@@ -275,7 +275,7 @@ xmap t <Plug>Sneak_t
 " workaround https://github.com/lfv89/vim-interestingwords/issues/20
 nmap <silent> <Leader>f <Plug>InterestingWords
 nnoremap <silent> <Leader>f :call InterestingWords('n')<CR>
-vnoremap <silent> <Leader>f :call InterestingWords('v')<CR>
+xnoremap <silent> <Leader>f :call InterestingWords('v')<CR>
 
 nmap <silent> <Leader>F <Plug>InterestingWordsClear
 nmap <silent> <Leader>N <Plug>InterestingWordsBackward
