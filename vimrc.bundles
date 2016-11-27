@@ -53,7 +53,6 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'junegunn/fzf', {
-\  'directory': '../../.fzf',
 \  'build': {
 \    'unix': './install --all'
 \  }
