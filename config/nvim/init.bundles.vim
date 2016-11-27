@@ -79,7 +79,7 @@ call dein#add('tpope/vim-git', { 'on_ft': ['gitconfig'] })
 " Docs
 call dein#add('dhruvasagar/vim-table-mode', { 'on_ft': ['markdown'] })
 call dein#add('tpope/vim-markdown', { 'on_ft': ['markdown']})
-call dein#add('ujihisa/neco-look', { 'on_ft': ['markdown','text','html'] })
+call dein#add('ujihisa/neco-look', { 'on_ft': ['markdown', 'html'] })
 call dein#add('vimlab/mdown.vim', { 'build': 'npm install' })
 
 " Golang
