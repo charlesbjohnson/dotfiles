@@ -49,8 +49,9 @@ set softtabstop=2
 set tabstop=2
 
 
-""" Search & history
+""" Search & History
 set ignorecase
+set inccommand=nosplit
 set noswapfile
 set nowritebackup
 set smartcase
