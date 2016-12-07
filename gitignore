@@ -147,6 +147,7 @@ bower.json
 
 ### JavaScript ###
 .tern-project
+.tern-port
 
 
 ### Node ###

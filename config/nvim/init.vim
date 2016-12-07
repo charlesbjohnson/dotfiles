@@ -143,16 +143,6 @@ let g:neosnippet#snippets_directory = '~/.nvim/bundle/repos/github.com/honza/vim
 
 imap <C-e> <Plug>(neosnippet_expand_or_jump)
 
-" bkad/CamelCaseMotion
-map <silent> w <Plug>CamelCaseMotion_w
-map <silent> b <Plug>CamelCaseMotion_b
-map <silent> e <Plug>CamelCaseMotion_e
-map <silent> ge <Plug>CamelCaseMotion_ge
-sunmap w
-sunmap b
-sunmap e
-sunmap ge
-
 " milkypostman/vim-togglelist
 let g:toggle_list_no_mappings = 1
 
