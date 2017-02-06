@@ -1,5 +1,3 @@
-[[ -f ~/.shenv ]] && source ~/.shenv
-
 # always use tmux
 if [[ "$SESSION_TYPE" != remote/ssh && -z "$TMUX" ]]; then
   ID=$(tmux ls 2>/dev/null | grep -vm1 attached | cut -d: -f1)
