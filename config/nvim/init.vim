@@ -150,7 +150,7 @@ nnoremap <silent> <Leader>P :call ToggleLocationList()<CR>
 nnoremap <silent> <Leader>p :call ToggleQuickfixList()<CR>
 
 " neomake/neomake
-let g:neomake_css_lint_maker = { 'exe': 'styleline' }
+let g:neomake_css_lint_maker = { 'exe': 'stylelint' }
 let g:neomake_javascript_lint_maker = { 'exe': 'eslint' }
 let g:neomake_ruby_lint_maker = { 'exe': 'ruby-lint' }
 let g:neomake_sh_lint_maker = { 'exe': 'shellcheck' }
@@ -229,10 +229,6 @@ xmap <unique> <Leader>k <Plug>SchleppUp
 xmap <unique> <Leader>l <Plug>SchleppRight
 
 "" Search & Replace
-" mhinz/vim-grepper
-nnoremap <leader>g :Grepper -tool ag -cword -noprompt<cr>
-nnoremap <leader>G :Grepper -tool ag -noopen<CR>
-
 " justinmk/vim-sneak
 let g:sneak#s_next = 1
 let g:sneak#use_ic_scs = 1
