@@ -71,6 +71,9 @@ map Q <NOP>
 map <F1> <Esc>
 imap <F1> <Esc>
 
+" Quickly clear highlighted search
+nnoremap <Leader><Leader> :nohlsearch<CR>
+
 " Buffers (creation, deletion, cycling) and delete all buffers
 nnoremap <Leader>BB :Sayonara!<CR>
 nnoremap <Leader>BD :bufdo :Sayonara!<CR>
