@@ -87,7 +87,8 @@ call dein#add('zchee/deoplete-go', { 'on_ft': ['go'], 'build': 'make', 'depends'
 " JavaScript
 call dein#add('carlitux/deoplete-ternjs', { 'on_ft': ['javascript'], 'build': 'npm install -g tern' })
 call dein#add('elzr/vim-json', { 'on_ft': ['json'] })
-call dein#add('othree/yajs.vim', { 'on_ft': ['javascript'], 'rev': '1.6' })
+" call dein#add('othree/yajs.vim', { 'on_ft': ['javascript'], 'rev': '1.6' })
+call dein#add('pangloss/vim-javascript', { 'on_ft': ['javascript'] })
 
 " Ruby
 call dein#add('vim-ruby/vim-ruby', { 'on_ft': ['ruby'] })
