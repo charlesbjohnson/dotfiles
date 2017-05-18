@@ -1,5 +1,3 @@
-# Set the Prezto modules to load (browse modules).
-# The order matters.
 zstyle ':prezto:load' pmodule \
   'environment' \
   'archive' \
@@ -7,29 +5,8 @@ zstyle ':prezto:load' pmodule \
   'history-substring-search' \
   'utility' \
   'completion' \
-  'ssh' \
-  'rsync' \
-  'tmux' \
   'editor' \
   'history' \
   'directory' \
   'spectrum' \
-  'command-not-found' \
-  'dpkg' \
-  'prompt'
-
-#
-# Prompt
-#
-
-# Set the prompt theme to load.
-# Setting it to 'random' loads a random theme.
-# Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'damoekri'
-
-#
-# SSH
-#
-
-# Set the SSH identities to load into the agent.
-zstyle ':prezto:module:ssh:load' identities 'id_rsa'
+  'prompt' \

@@ -1,5 +1,3 @@
-# Set the Prezto modules to load (browse modules).
-# The order matters.
 zstyle ':prezto:load' pmodule \
   'environment' \
   'archive' \
@@ -8,20 +6,8 @@ zstyle ':prezto:load' pmodule \
   'gnu-utility' \
   'utility' \
   'completion' \
-  'rsync' \
-  'tmux' \
   'editor' \
   'history' \
   'directory' \
   'spectrum' \
-  'prompt' \
-  'osx'
-
-#
-# Prompt
-#
-
-# Set the prompt theme to load.
-# Setting it to 'random' loads a random theme.
-# Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'steeef'
+  'prompt'
