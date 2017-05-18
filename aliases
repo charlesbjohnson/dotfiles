@@ -1,1 +1,4 @@
+alias ppath='echo $PATH | tr -s ":" "\n"'
+
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
+[[ -f ~/.aliases.secret ]] && source ~/.aliases.secret
