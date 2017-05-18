@@ -1,6 +1,4 @@
-log
-tags
-tmp
-.ctags
-vendor
-fonts
+.git/
+/log
+/tmp
+/vendor

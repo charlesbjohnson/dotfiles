@@ -1,3 +1,7 @@
+export BROWSER="chromium"
+export VISUAL="nvim"
+export EDITOR="$VISUAL"
+
 export PATH="$PATH:$HOME/.bin"
 
 export PATH="$PATH:$HOME/.rbenv/bin"
@@ -8,11 +12,8 @@ eval "$(nodenv init -)"
 
 export PATH="./node_modules/.bin:$PATH"
 
-export GOPATH=$HOME/projects/go
+export GOPATH=$HOME/Projects/go
 export PATH="$PATH:$GOPATH/bin"
-
-export EDITOR="nvim"
-export BROWSER="chromium"
 
 export FZF_DEFAULT_COMMAND="ag -g \"\""
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"

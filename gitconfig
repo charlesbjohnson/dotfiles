@@ -1,12 +1,14 @@
 [alias]
   a = add
+  aa = add --all
   amend = commit --amend --reuse-message HEAD --verbose
+  ap = add --patch
   br = branch --verbose --verbose
   bra = branch --all --verbose --verbose
   brd = branch --delete
   brg = show-branch --all
+  brmv = branch --move
   brrd = push origin --delete
-  brrn = branch --move
   c = commit
   cl = clone
   co = checkout
@@ -14,9 +16,11 @@
   dif = "!f() { [ \"$GIT_PREFIX\" != \"\" ] && cd "$GIT_PREFIX"; git diff --color $@ | diff-so-fancy | less --tabs=4 -RFX; }; f"
   difs = "!f() { [ \"$GIT_PREFIX\" != \"\" ] && cd "$GIT_PREFIX"; git diff --color --staged $@ | diff-so-fancy | less --tabs=4 -RFX; }; f"
   difst = "!f() { [ \"$GIT_PREFIX\" != \"\" ] && cd "$GIT_PREFIX"; git stash show --color --patch $@ | diff-so-fancy | less --tabs=4 -RFX; }; f"
+  fixup = commit --fixup
   l = log --stat --decorate --relative-date
   ldf = log --oneline --patch-with-stat --full-diff --decorate --since={3.weeks.ago}
   lgr = log --oneline --all --graph --decorate
+  pf = push --force-with-lease
   rmt = remote --verbose
   st = status --branch --short --untracked-files=all
   undo = reset HEAD~
@@ -34,8 +38,12 @@
   path = ~/.gitconfig.local
 [merge]
   ff = only
+[pull]
+  ff = only
 [push]
   default = current
+[rebase]
+  autosquash = true
 [user]
   email = mail@cbjohnson.info
   name = Charles B Johnson
