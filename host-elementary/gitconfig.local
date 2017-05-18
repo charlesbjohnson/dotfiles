@@ -1,15 +1,15 @@
 [credential]
   helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+[diff]
+  tool = meld
+[difftool]
+  prompt = false
+[difftool "meld"]
+  cmd = meld --diff \"$LOCAL\" \"$REMOTE\"
+[merge]
+  tool = meld
+[mergetool]
+  prompt = false
 [mergetool "meld"]
   cmd = meld --output \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
   trustexitcode = true
-[mergetool]
-  prompt = false
-[merge]
-  tool = meld
-[difftool "meld"]
-  cmd = meld --diff \"$LOCAL\" \"$REMOTE\"
-[difftool]
-  prompt = false
-[diff]
-  tool = meld
