@@ -1,3 +1,0 @@
-NeoBundleLazy 'dag/vim-fish', {'autoload': {'filetypes': ['fish']}}
-NeoBundleLazy 'tkztmk/vim-vala', {'autoload': {'filetypes': ['vala', 'vapi']}}
-NeoBundleLazy 'leafo/moonscript-vim', {'autoload': {'filetypes': ['moon']}}
