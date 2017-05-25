@@ -35,7 +35,7 @@
 [fetch]
   prune = true
 [include]
-  path = ~/.gitconfig.local
+  path = ~/.config/dotfiles/gitconfig.local
 [merge]
   ff = only
 [pull]

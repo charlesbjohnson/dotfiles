@@ -1,4 +1,0 @@
-" GVim
-if has('gui_running')
-  set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 12
-endif

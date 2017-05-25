@@ -1,6 +1,6 @@
-""" Load bundles
-if filereadable(expand('~/.config/nvim/init.bundles.vim'))
-  source ~/.config/nvim/init.bundles.vim
+""" Load plugins
+if filereadable(expand('~/.config/nvim/plugins.vim'))
+  source ~/.config/nvim/plugins.vim
 endif
 
 
@@ -121,7 +121,7 @@ xnoremap <silent> p p`]
 xnoremap <silent> y y`]
 
 
-""" Bundles
+""" Plugins
 
 "" System
 " Shougo/deoplete.vim
@@ -142,7 +142,7 @@ endfunction"}}}
 
 " Shougo/neosnippet.vim
 let g:neosnippet#enable_snipmate_compatibility = 1
-let g:neosnippet#snippets_directory = '~/.nvim/bundle/repos/github.com/honza/vim-snippets'
+let g:neosnippet#snippets_directory = '~/.nvim/plugin/repos/github.com/honza/vim-snippets'
 
 imap <C-e> <Plug>(neosnippet_expand_or_jump)
 

@@ -5,14 +5,14 @@ set fileencodings=ucs-bom,utf-8,cp936,big5,euc-jp,euc-kr,gb18030,latin1
 
 
 """ Load bundles
-if filereadable(expand('~/.vimrc.bundles'))
-  source ~/.vimrc.bundles
+if filereadable(expand('~/.config/vim/vimrc.bundles'))
+  source ~/.config/vim/vimrc.bundles
 endif
 
 
 """ Local configuration
-if filereadable(expand('~/.vimrc.local'))
-  source ~/.vimrc.local
+if filereadable(expand('~/.config/vim/vimrc.local'))
+  source ~/.config/vim/vimrc.local
 endif
 
 

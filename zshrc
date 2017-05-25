@@ -14,7 +14,7 @@ zplug "themes/steeef", from:oh-my-zsh
 
 zstyle ':prezto:*:*' color 'yes'
 
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+[[ -f ~/.config/dotfiles/zshrc.local ]] && source ~/.config/dotfiles/zshrc.local
 zplug load
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 

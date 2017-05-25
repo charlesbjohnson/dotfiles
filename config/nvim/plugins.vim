@@ -2,20 +2,20 @@ if &compatible
   set nocompatible
 endif
 
-set runtimepath+=~/.nvim/bundle/repos/github.com/Shougo/dein.vim
-call dein#begin('~/.nvim/bundle')
+set runtimepath+=~/.nvim/plugins/repos/github.com/Shougo/dein.vim
+call dein#begin('~/.nvim/plugins')
 call dein#add('Shougo/dein.vim')
 
 " Local configuration
-if filereadable(expand('~/.config/nvim/init.bundles.local.vim'))
-  source ~/.config/nvim/init.bundles.local.vim
+if filereadable(expand('~/.config/nvim/plugins.local.vim'))
+  source ~/.config/nvim/plugins.local.vim
 endif
 
 " System
 call dein#add('neovim/node-host', { 'build': 'npm install' })
 
 call dein#add('Julian/vim-textobj-variable-segment')
-call dein#add('Shougo/deoplete.nvim', { 'build': 'pip3 install --upgrade neovim' })
+call dein#add('Shougo/deoplete.nvim', { 'build': 'pip install --upgrade neovim && pip3 install --upgrade neovim' })
 call dein#add('Shougo/neosnippet-snippets')
 call dein#add('Shougo/neosnippet.vim')
 call dein#add('Shougo/unite.vim')

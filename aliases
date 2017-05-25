@@ -1,4 +1,4 @@
 alias ppath='echo $PATH | tr -s ":" "\n"'
 
-[[ -f ~/.aliases.local ]] && source ~/.aliases.local
-[[ -f ~/.aliases.secret ]] && source ~/.aliases.secret
+[[ -f ~/.config/dotfiles/aliases.local ]] && source ~/.config/dotfiles/aliases.local
+[[ -f ~/.config/dotfiles/aliases.secret ]] && source ~/.config/dotfiles/aliases.secret
