@@ -15,7 +15,7 @@ endif
 call dein#add('neovim/node-host', { 'build': 'npm install' })
 
 call dein#add('Julian/vim-textobj-variable-segment')
-call dein#add('Shougo/deoplete.nvim', { 'build': 'pip install --upgrade neovim && pip3 install --upgrade neovim' })
+call dein#add('Shougo/deoplete.nvim')
 call dein#add('Shougo/neosnippet-snippets')
 call dein#add('Shougo/neosnippet.vim')
 call dein#add('Shougo/unite.vim')
