@@ -1,5 +1,8 @@
+# TODO
+# tmux autostart
+#
 export ZPLUG_HOME=/usr/local/opt/zplug
-[[ -f $ZPLUG_HOME/init.zsh ]] && source $ZPLUG_HOME/init.zsh
+load_if_exists "$ZPLUG_HOME/init.zsh"
 
 zplug "zsh-users/zsh-syntax-highlighting",      defer:2
 zplug "zsh-users/zsh-history-substring-search", defer:3
@@ -14,8 +17,8 @@ zplug "themes/steeef", from:oh-my-zsh
 
 zstyle ':prezto:*:*' color 'yes'
 
-[[ -f ~/.config/dotfiles/zshrc.local ]] && source ~/.config/dotfiles/zshrc.local
-zplug load
-[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
+load_if_exists "$HOME/.config/dotfiles/shrc"
+load_if_exists "$HOME/.config/dotfiles/zshrc.local"
 
-[[ -f ~/.shrc ]] && source ~/.shrc
+zplug load
+load_if_exists "$HOME/.fzf.zsh"

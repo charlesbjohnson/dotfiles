@@ -7,7 +7,7 @@ if [[ "$SESSION_TYPE" != remote/ssh && -z "$TMUX" ]]; then
   fi
 fi
 
-[[ -f ~/.config/dotfiles/shrc ]] && source ~/.config/dotfiles/shrc
-[[ -f ~/.config/dotfiles/bashrc.local ]] && source ~/.config/dotfiles/bashrc.local
+load_if_exists "$HOME/.config/dotfiles/shrc"
+load_if_exists "$HOME/.config/dotfiles/bashrc.local"
 
-[[ -f ~/.fzf.bash ]] && source ~/.fzf.bash
+load_if_exists "$HOME/.fzf.bash"

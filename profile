@@ -19,11 +19,15 @@ command_exists() {
   command -v "$1" &>/dev/null
 }
 
+load_if_exists() {
+  [[ -f "$1" ]] && source "$1"
+}
+
 export GOPATH=$HOME/Projects/golang
 
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
 path_prepend "$HOME/.local/bin" "./node_modules/.bin" "$GOPATH/bin"
 
-[[ -f ~/.config/dotfiles/profile.local ]] && source ~/.config/dotfiles/profile.local
-[[ -f ~/.config/dotfiles/profile.secret ]] && source ~/.config/dotfiles/profile.secret
+load_if_exists "$HOME/.config/dotfiles/profile.local"
+load_if_exists "$HOME/.config/dotfiles/profile.secret"

@@ -1,5 +1,5 @@
 alias PPATH="echo $PATH | tr -s \":\" \"\n\""
 alias ls="ls --color=auto --group-directories-first --classify"
 
-[[ -f ~/.config/dotfiles/aliases.local ]] && source ~/.config/dotfiles/aliases.local
-[[ -f ~/.config/dotfiles/aliases.secret ]] && source ~/.config/dotfiles/aliases.secret
+load_if_exists "$HOME/.config/dotfiles/aliases.local"
+load_if_exists "$HOME/.config/dotfiles/aliases.secret"
