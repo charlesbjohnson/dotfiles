@@ -1,24 +1,13 @@
-export BROWSER="chromium"
+export BROWSER="chrome"
 export VISUAL="nvim"
 export EDITOR="$VISUAL"
-
-export PATH="$PATH:$HOME/.bin"
-
-export PATH="$PATH:$HOME/.rbenv/bin"
-eval "$(rbenv init -)"
-
-export PATH="$PATH:$HOME/.nodenv/bin"
-eval "$(nodenv init -)"
-
-export PATH="./node_modules/.bin:$PATH"
-
-export GOPATH=$HOME/Projects/go
-export PATH="$PATH:$GOPATH/bin"
 
 export FZF_DEFAULT_COMMAND="ag -g \"\""
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-[[ -f  ~/.config/dircolors-solarized/dircolors.256dark ]] && eval `dircolors ~/.config/dircolors-solarized/dircolors.256dark`
+[[ "$TERM" != *"256color"* ]] && export TERM="xterm-256color"
+[[ -f ~/.config/shell/base16-shell/scripts/base16-solarized-dark.sh ]] && source ~/.config/shell/base16-shell/scripts/base16-solarized-dark.sh
+[[ -f  ~/.config/shell/dircolors-solarized/dircolors.256dark ]] && eval `dircolors ~/.config/shell/dircolors-solarized/dircolors.256dark`
 
-[[ -f ~/.shrc.local ]] && source ~/.shrc.local
+[[ -f ~/.config/dotfiles/shrc.local ]] && source ~/.config/dotfiles/shrc.local
 [[ -f ~/.aliases ]] && source ~/.aliases
