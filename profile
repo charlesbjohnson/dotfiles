@@ -1,4 +1,4 @@
-pathprepend() {
+path_prepend() {
   for ((i=$#; i > 0; i--)); do
     ARG=${!i}
     if [[ ":$PATH:" != *":$ARG:"* ]]; then
@@ -7,7 +7,7 @@ pathprepend() {
   done
 }
 
-pathappend() {
+path_append() {
   for ARG in "$@"; do
     if [[ ":$PATH:" != *":$ARG:"* ]]; then
       PATH="${PATH:+"$PATH:"}$ARG"
@@ -15,11 +15,15 @@ pathappend() {
   done
 }
 
+command_exists() {
+  command -v "$1" &>/dev/null
+}
+
 export GOPATH=$HOME/Projects/golang
 
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
-pathprepend "$HOME/.local/bin" "./node_modules/.bin" "$GOPATH/bin"
+path_prepend "$HOME/.local/bin" "./node_modules/.bin" "$GOPATH/bin"
 
 [[ -f ~/.config/dotfiles/profile.local ]] && source ~/.config/dotfiles/profile.local
 [[ -f ~/.config/dotfiles/profile.secret ]] && source ~/.config/dotfiles/profile.secret
