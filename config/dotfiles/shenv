@@ -1,6 +1,0 @@
-[[ -f ~/.profile ]] && source ~/.profile
-
-# don't do anything if non-interactive
-[[ $- != *i* ]] && return
-
-[[ -f ~/.shenv.local ]] && source ~/.shenv.local
