@@ -1,4 +1,5 @@
-alias ppath='echo $PATH | tr -s ":" "\n"'
+alias PPATH="echo $PATH | tr -s \":\" \"\n\""
+alias ls="ls --color=auto --group-directories-first --classify"
 
 [[ -f ~/.config/dotfiles/aliases.local ]] && source ~/.config/dotfiles/aliases.local
 [[ -f ~/.config/dotfiles/aliases.secret ]] && source ~/.config/dotfiles/aliases.secret
