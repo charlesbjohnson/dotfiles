@@ -1,6 +1,3 @@
-# TODO
-# tmux autostart
-#
 export ZPLUG_HOME=/usr/local/opt/zplug
 load_if_exists "$ZPLUG_HOME/init.zsh"
 

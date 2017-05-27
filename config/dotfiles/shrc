@@ -12,3 +12,5 @@ load_if_exists "$HOME/.config/shell/base16-shell/scripts/base16-solarized-dark.s
 
 load_if_exists "$HOME/.config/dotfiles/shrc.local"
 load_if_exists "$HOME/.aliases"
+
+load_if_exists "$HOME/.config/tmux/auto-start.sh"
