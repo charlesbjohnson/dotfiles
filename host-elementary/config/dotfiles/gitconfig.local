@@ -11,5 +11,5 @@
 [mergetool]
   prompt = false
 [mergetool "meld"]
-  cmd = meld --output \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
+  cmd           = meld --output \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
   trustexitcode = true
