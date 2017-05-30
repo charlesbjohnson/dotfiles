@@ -1,4 +1,4 @@
-export ZPLUG_HOME=/usr/local/opt/zplug
+set_env "ZPLUG_HOME" "/usr/local/opt/zplug"
 load_if_exists "$ZPLUG_HOME/init.zsh"
 
 zplug "zsh-users/zsh-syntax-highlighting",      defer:2

@@ -1,5 +1,5 @@
-export PATH=""
-export GOPATH="$HOME/Projects/golang"
+set_env "PATH" ""
+set_env "GOPATH" "$HOME/Projects/golang"
 
 path_append \
   "/usr/local/bin" \

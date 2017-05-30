@@ -1,11 +1,11 @@
-export BROWSER="chrome"
-export VISUAL="nvim"
-export EDITOR="$VISUAL"
+set_env "BROWSER" "chrome"
+set_env "VISUAL" "nvim"
+set_env "EDITOR" "$VISUAL"
 
-export FZF_DEFAULT_COMMAND="ag -g \"\""
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+set_env "FZF_DEFAULT_COMMAND" "ag -g \"\""
+set_env "FZF_CTRL_T_COMMAND" "$FZF_DEFAULT_COMMAND"
 
-[[ "$TERM" != *"256color"* ]] && export TERM="xterm-256color"
+[[ "$TERM" != *"256color"* ]] && set_env "TERM" "xterm-256color"
 
 load_if_exists "$HOME/.config/shell/base16-shell/scripts/base16-solarized-dark.sh"
 [[ -f  ~/.config/shell/dircolors-solarized/dircolors.256dark ]] && eval `dircolors ~/.config/shell/dircolors-solarized/dircolors.256dark`
