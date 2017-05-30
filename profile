@@ -35,6 +35,7 @@ function load_if_exists() {
   [[ -f "$1" ]] && source "$1"
 }
 
+export PATH=""
 export GOPATH=$HOME/Projects/golang
 
 path_append \
