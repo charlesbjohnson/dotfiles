@@ -1,20 +1,22 @@
-set_env "PATH" ""
-set_env "GOPATH" "$HOME/Projects/golang"
+dotfile::load_if_exists "$HOME/.config/env/init.sh"
 
-path_append \
+dotfile::set_env "PATH" ""
+dotfile::set_env "GOPATH" "$HOME/Projects/golang"
+
+dotfile::path_append \
   "/usr/local/bin" \
   "/usr/bin"       \
   "/bin"           \
   "/usr/sbin"      \
   "/sbin"
 
-! [[ "$PATH" =~ rbenv ]] && eval "$(rbenv init -)"
-! [[ "$PATH" =~ nodenv ]] && eval "$(nodenv init -)"
+! [[ "$PATH" =~ rbenv ]] && env::rbenv
+! [[ "$PATH" =~ nodenv ]] && env::nodenv
 
-path_prepend \
+dotfile::path_prepend \
   "$HOME/.local/bin"    \
   "./node_modules/.bin" \
   "$GOPATH/bin"
 
-load_if_exists "$HOME/.config/dotfile/profile.local"
-load_if_exists "$HOME/.config/dotfile/profile.secret"
+dotfile::load_if_exists "$HOME/.config/dotfile/profile.local"
+dotfile::load_if_exists "$HOME/.config/dotfile/profile.secret"

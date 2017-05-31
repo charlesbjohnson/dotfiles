@@ -1,6 +1,6 @@
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/gnu-utility/init.zsh
 
-! command_exists "gwhoami" && return
+! dotfile::command_exists "gwhoami" && return
 
 gnu_utility_prefix="g"
 gnu_utility_cmds=(
@@ -37,7 +37,7 @@ gnu_utility_cmds=(
 
 for gnu_utility_cmd in "${gnu_utility_cmds[@]}"; do
   gnu_utility_prefixed_cmd="${gnu_utility_prefix}${gnu_utility_cmd}"
-  if command_exists "${gnu_utility_prefixed_cmd}"; then
+  if dotfile::command_exists "${gnu_utility_prefixed_cmd}"; then
     eval "
       function ${gnu_utility_cmd} {
         '${gnu_utility_prefixed_cmd}' \"\$@\"

@@ -1,5 +1,5 @@
-set_env "ZPLUG_HOME" "/usr/local/opt/zplug"
-load_if_exists "$ZPLUG_HOME/init.zsh"
+dotfile::set_env "ZPLUG_HOME" "/usr/local/opt/zplug"
+dotfile::load_if_exists "$ZPLUG_HOME/init.zsh"
 
 zplug "zsh-users/zsh-syntax-highlighting",      defer:2
 zplug "zsh-users/zsh-history-substring-search", defer:3
@@ -13,9 +13,9 @@ zplug "themes/steeef", from:oh-my-zsh
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
-load_if_exists "$HOME/.config/dotfile/shrc"
-load_if_exists "$HOME/.config/dotfile/zshrc.local"
+dotfile::load_if_exists "$HOME/.config/dotfile/shrc"
+dotfile::load_if_exists "$HOME/.config/dotfile/zshrc.local"
 
 zplug load
 
-load_if_exists "$HOME/.fzf.zsh"
+dotfile::load_if_exists "$HOME/.fzf.zsh"

@@ -1,13 +1,13 @@
-function set_env() {
+function dotfile::set_env() {
   unset "$1"
   export "$1=$2"
 }
 
-function load_if_exists() {
+function dotfile::load_if_exists() {
   [[ -f "$1" ]] && source "$1"
 }
 
-function path_prepend() {
+function dotfile::path_prepend() {
   local args=( "$@" )
   local rev=()
 
@@ -23,7 +23,7 @@ function path_prepend() {
   done
 }
 
-function path_append() {
+function dotfile::path_append() {
   for arg in "$@"; do
     if [[ ":$PATH:" != *":$arg:"* ]]; then
       PATH="${PATH:+"$PATH:"}$arg"
@@ -31,6 +31,6 @@ function path_append() {
   done
 }
 
-function command_exists() {
+function dotfile::command_exists() {
   command -v "$1" &>/dev/null
 }

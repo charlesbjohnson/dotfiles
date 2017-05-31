@@ -1,6 +1,6 @@
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/tmux/init.zsh
 
-! command_exists "tmux" && return
+! dotfile::command_exists "tmux" && return
 [[ -n "$SSH_TTY" || -n "$TMUX" || -n "$EMACS" || -n "$VIM"  ]] && return
 
 tmux_session_name="default"
