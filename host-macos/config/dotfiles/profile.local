@@ -1,3 +1,0 @@
-set_env "CLICOLOR" "YES"
-
-load_if_exists "$HOME/.config/dotfiles/gnu-utility.sh"

@@ -13,8 +13,8 @@ zplug "themes/steeef", from:oh-my-zsh
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
-load_if_exists "$HOME/.config/dotfiles/shrc"
-load_if_exists "$HOME/.config/dotfiles/zshrc.local"
+load_if_exists "$HOME/.config/dotfile/shrc"
+load_if_exists "$HOME/.config/dotfile/zshrc.local"
 
 zplug load
 

@@ -16,5 +16,5 @@ path_prepend \
   "./node_modules/.bin" \
   "$GOPATH/bin"
 
-load_if_exists "$HOME/.config/dotfiles/profile.local"
-load_if_exists "$HOME/.config/dotfiles/profile.secret"
+load_if_exists "$HOME/.config/dotfile/profile.local"
+load_if_exists "$HOME/.config/dotfile/profile.secret"
