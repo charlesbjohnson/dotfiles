@@ -8,8 +8,8 @@ path_append \
   "/usr/sbin"      \
   "/sbin"
 
-! path_contains "rbenv" && eval "$(rbenv init -)"
-! path_contains "nodenv" && eval "$(nodenv init -)"
+! [[ "$PATH" =~ rbenv ]] && eval "$(rbenv init -)"
+! [[ "$PATH" =~ nodenv ]] && eval "$(nodenv init -)"
 
 path_prepend \
   "$HOME/.local/bin"    \

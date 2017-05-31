@@ -1,4 +1,4 @@
-[[ -f ~/.config/dotfile/utility.sh ]] && source ~/.config/dotfile/utility.sh
+[[ -f ~/.config/dotfile/init.sh ]] && source ~/.config/dotfile/init.sh
 
 load_if_exists "$HOME/.profile"
 

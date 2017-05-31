@@ -31,10 +31,6 @@ function path_append() {
   done
 }
 
-function path_contains() {
-  echo "$PATH" | grep "$1" &>/dev/null
-}
-
 function command_exists() {
   command -v "$1" &>/dev/null
 }
