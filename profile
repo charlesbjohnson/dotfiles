@@ -10,8 +10,8 @@ dotfile::path_append \
   "/usr/sbin"      \
   "/sbin"
 
-! [[ "$PATH" =~ rbenv ]] && env::rbenv
-! [[ "$PATH" =~ nodenv ]] && env::nodenv
+env::rbenv
+env::nodenv
 
 dotfile::path_prepend \
   "$HOME/.local/bin"    \

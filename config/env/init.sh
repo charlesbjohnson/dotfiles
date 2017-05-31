@@ -1,7 +1,11 @@
 function env::rbenv() {
-  eval "$(rbenv init -)"
+  ! [[ "$PATH" =~ rbenv ]] && eval "$(rbenv init -)"
 }
 
 function env::nodenv() {
-  eval "$(nodenv init -)"
+  ! [[ "$PATH" =~ nodenv ]] && eval "$(nodenv init -)"
+}
+
+function env:gnu() {
+  dotfile::load_if_exists "$HOME/.config/env/gnu.sh"
 }

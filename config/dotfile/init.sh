@@ -1,22 +1,22 @@
 function dotfile::set_env() {
-  unset "$1"
   export "$1=$2"
 }
 
 function dotfile::load_if_exists() {
-  [[ -f "$1" ]] && source "$1"
+  if [[ -f "$1" ]]; then
+    source "$1"
+  fi
 }
 
 function dotfile::path_prepend() {
-  local args=( "$@" )
-  local rev=()
+  local args=()
 
   # ensure that the first argument will appear first in the PATH
-  for arg in "${args[@]}"; do
-    rev=( "$arg" "${rev[@]}" )
+  for arg in "$@"; do
+    args=( "$arg" "${args[@]}" )
   done
 
-  for arg in "${rev[@]}"; do
+  for arg in "${args[@]}"; do
     if [[ ":$PATH:" != *":$arg:"* ]]; then
       PATH="$arg${PATH:+":$PATH"}"
     fi
