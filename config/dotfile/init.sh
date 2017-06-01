@@ -31,6 +31,6 @@ function dotfile::path_append() {
   done
 }
 
-function dotfile::command_exists() {
-  command -v "$1" &>/dev/null
+function dotfile::alias() {
+  alias "$1=$2"
 }

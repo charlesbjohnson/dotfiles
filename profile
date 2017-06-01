@@ -1,5 +1,3 @@
-dotfile::load_if_exists "$HOME/.config/env/init.sh"
-
 dotfile::set_env "PATH" ""
 dotfile::set_env "GOPATH" "$HOME/Projects/golang"
 

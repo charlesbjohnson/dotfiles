@@ -1,11 +1,17 @@
 function shell::termcolor() {
   if ! [[ "$TERM" =~ 256color ]]; then
-    dotfile::set_env "TERM" "$1"
+    export TERM="$1"
+  fi
+}
+
+function shell::color() {
+  if [[ -f "$HOME/.config/shell/$1" ]]; then
+    source "$HOME/.config/shell/$1"
   fi
 }
 
 function shell::dircolors() {
-  if [[ -f "$1" ]]; then
-    eval "$(dircolors $1)"
+  if [[ -f "$HOME/.config/shell/$1" ]]; then
+    eval "$(dircolors $HOME/.config/shell/$1)"
   fi
 }
