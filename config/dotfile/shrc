@@ -12,4 +12,4 @@ shell::dircolors "dircolors-solarized/dircolors.256dark"
 dotfile::load_if_exists "$HOME/.config/dotfile/shrc.local"
 dotfile::load_if_exists "$HOME/.aliases"
 
-#dotfile::load_if_exists "$HOME/.config/tmux/auto-start.sh"
+tmux::autostart "default"
