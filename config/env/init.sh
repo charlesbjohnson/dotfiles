@@ -1,9 +1,13 @@
 function env::rbenv() {
-  ! [[ "$PATH" =~ rbenv ]] && eval "$(rbenv init -)"
+  if ! [[ "$PATH" =~ rbenv ]]; then
+    eval "$(rbenv init -)"
+  fi
 }
 
 function env::nodenv() {
-  ! [[ "$PATH" =~ nodenv ]] && eval "$(nodenv init -)"
+  if ! [[ "$PATH" =~ nodenv ]]; then
+    eval "$(nodenv init -)"
+  fi
 }
 
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/gnu-utility/init.zsh
