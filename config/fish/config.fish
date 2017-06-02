@@ -13,5 +13,7 @@ if not status --is-interactive
   exit
 end
 
+fish_vi_key_bindings
+
 dotfile::load_if_exists "$HOME/.config/dotfile/config.local.fish"
 dotfile::load_if_exists "$HOME/.config/dotfile/shrc"
