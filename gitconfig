@@ -1,6 +1,7 @@
 [alias]
   a       = add
   aa      = add --all
+  alias   = config --get-regexp '^alias.'
   amend   = commit --amend --reuse-message HEAD --verbose
   ap      = add --patch
   br      = branch --verbose --verbose
