@@ -6,4 +6,7 @@ dotfile::load_if_exists "$HOME/.config/tmux/init.sh"
 dotfile::load_if_exists "$HOME/.profile"
 
 dotfile::load_if_exists "$HOME/.config/dotfile/bash_profile.local"
-dotfile::load_if_exists "$HOME/.bashrc"
+
+if [[ "$-" =~ i ]]; then
+  dotfile::load_if_exists "$HOME/.bashrc"
+fi
