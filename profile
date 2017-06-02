@@ -1,4 +1,3 @@
-dotfile::set_env "PATH" ""
 dotfile::set_env "GOPATH" "$HOME/Projects/golang"
 
 dotfile::path_append \
