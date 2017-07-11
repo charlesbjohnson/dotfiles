@@ -10,6 +10,11 @@ function env::nodenv() {
   fi
 }
 
+function env::golang() {
+  export GOPATH="$1"
+  export GOROOT="$(go env GOROOT)"
+}
+
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/gnu-utility/init.zsh
 function env::gnu() {
   if [[ "$(type whoami)" =~ gwhoami ]]; then

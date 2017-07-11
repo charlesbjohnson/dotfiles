@@ -10,6 +10,11 @@ function env::nodenv
   end
 end
 
+function env::golang
+  set --export --global GOPATH $argv[1]
+  set --export --global GOROOT (go env GOROOT)
+end
+
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/gnu-utility/init.zsh
 function env::gnu
   if not command --search --quiet "gwhoami"

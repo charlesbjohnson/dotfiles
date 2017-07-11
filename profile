@@ -1,16 +1,16 @@
-dotfile::set_env "GOPATH" "$HOME/Projects/golang"
+env::golang "$HOME/Projects/golang"
 
 dotfile::path_append \
-  "/usr/local/bin" \
-  "/usr/bin"       \
-  "/bin"           \
-  "/usr/sbin"      \
+  "/usr/local/bin"   \
+  "/usr/bin"         \
+  "/bin"             \
+  "/usr/sbin"        \
   "/sbin"
 
 env::rbenv
 env::nodenv
 
-dotfile::path_prepend \
+dotfile::path_prepend   \
   "$HOME/.local/bin"    \
   "./node_modules/.bin" \
   "$GOPATH/bin"
