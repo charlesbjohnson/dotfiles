@@ -140,6 +140,11 @@ function! s:check_back_space() abort "{{{"
   return !col || getline('.')[col - 1]  =~ '\s'
 endfunction"}}}
 
+" itmammoth/doorboy.vim
+inoremap <expr> <BS> doorboy#map_backspace()
+inoremap <expr> <Space> doorboy#map_space()
+inoremap <expr> <CR> doorboy#map_cr()
+
 " Shougo/neosnippet.vim
 let g:neosnippet#enable_snipmate_compatibility = 1
 let g:neosnippet#snippets_directory = '~/.nvim/plugin/repos/github.com/honza/vim-snippets'
