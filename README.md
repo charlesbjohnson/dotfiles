@@ -1,3 +1,3 @@
 # dotfiles
 
-A totally health obsession.
+A totally healthy obsession.
