@@ -157,17 +157,6 @@ let g:toggle_list_no_mappings = 1
 nnoremap <silent> <Leader>P :call ToggleLocationList()<CR>
 nnoremap <silent> <Leader>p :call ToggleQuickfixList()<CR>
 
-" neomake/neomake
-let g:neomake_css_lint_maker = { 'exe': 'stylelint' }
-let g:neomake_javascript_lint_maker = { 'exe': 'eslint' }
-let g:neomake_ruby_lint_maker = { 'exe': 'ruby-lint' }
-let g:neomake_sh_lint_maker = { 'exe': 'shellcheck' }
-
-augroup neomake_execute
-  autocmd Filetype * Neomake
-  autocmd BufWritePost * Neomake
-augroup END
-
 " svermeulen/vim-easyclip
 let g:EasyClipPreserveCursorPositionAfterYank = 1
 
@@ -194,6 +183,15 @@ let g:expand_region_text_objects = {
 \  'ic':  0,
 \  'ac':  0,
 \  'ie':  0
+\}
+
+" w0rp/ale
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\  'css':        ['stylelint'],
+\  'javascript': ['prettier'],
+\  'ruby':       ['ruby-lint'],
+\  'sh':         ['shellcheck']
 \}
 
 "" Productivity
