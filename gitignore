@@ -151,6 +151,9 @@ bower.json
 
 
 ### Node ###
+# nodenv, nvm
+.node-version
+
 # Logs
 /logs
 *.log
