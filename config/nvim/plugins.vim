@@ -83,6 +83,7 @@ call dein#add('ujihisa/neco-look', { 'on_ft': ['markdown', 'html'] })
 " Golang
 call dein#add('fatih/vim-go', { 'on_ft': ['go'], 'hook_add': 'GoInstallBinaries' })
 call dein#add('zchee/deoplete-go', { 'on_ft': ['go'], 'build': 'make', 'depends': 'vim-go' })
+call dein#add('cespare/vim-toml', { 'on_ft': ['toml'] })
 
 " JavaScript
 call dein#add('carlitux/deoplete-ternjs', { 'on_ft': ['javascript'], 'build': 'npm install -g tern' })
