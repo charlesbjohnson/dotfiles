@@ -188,10 +188,7 @@ let g:expand_region_text_objects = {
 " w0rp/ale
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
-\  'css':        ['stylelint'],
-\  'javascript': ['prettier'],
-\  'ruby':       ['ruby-lint'],
-\  'sh':         ['shellcheck']
+\  'javascript': ['prettier']
 \}
 
 "" Productivity
