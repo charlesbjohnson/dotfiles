@@ -59,14 +59,19 @@ function env::gnu() {
   )
 
   for cmd in "${cmds[@]}"; do
-    local prefixed_cmd="${prefix}${cmd}"
+    local cmd_type=$(type --type "$cmd")
+    if [[ "$cmd_type" = "keyword" || "$cmd_type" = "builtin" ]]; then
+      continue
+    fi
 
+    local prefixed_cmd="${prefix}${cmd}"
     if command -v "$prefixed_cmd" &>/dev/null; then
       eval "
-        function ${cmd} {
-          '${prefixed_cmd}' \"\$@\"
+        function $cmd {
+          '$prefixed_cmd' \"\$@\"
         }
       "
+      export -f "$cmd"
     fi
   done
 }
