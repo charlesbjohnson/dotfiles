@@ -1,0 +1,99 @@
+#!/usr/bin/env bash
+
+DRY_RUN=false
+EXIT_CODE=0
+EXTENSION=bak
+FORCE=false
+NAME=$(basename "$0")
+
+function invalid() {
+  cat << EOF
+$NAME: unrecognized option '$1'
+Try '$NAME --help' for more information.
+EOF
+}
+
+function usage() {
+  cat << EOF
+Usage: $NAME [OPTION]... [FILE]...
+
+  Restore FILEs by restoring the previously bak'd copy.
+
+Example:
+  $NAME foo.tx bar.csv
+
+Options:
+  -h, --help       Print this help message
+  -n, --dry-run    Print the which files will be backed up and to where
+  -e, --extension  Use a specific file extension (default: bak)
+  -f, --force      Force restore a backed up file, potentially overwriting the source file if it is present
+EOF
+}
+
+function unbackup() {
+  local file="$1"
+  local dry="$2"
+  local extension="$3"
+  local force="$4"
+
+  local error
+  local bakfile="$file.$extension"
+  error=$(stat "$bakfile" 2>&1 >/dev/null)
+  if [[ -n "$error" ]]; then
+    error="${error##*stat: }"
+    echo "$NAME: $bakfile: $error"
+    EXIT_CODE=1
+    return
+  fi
+
+  if [[ "$force" = false ]]; then
+    if stat "$file" &>/dev/null; then
+      echo "$NAME: $file: Source file exists, overwrite it with --force"
+      EXIT_CODE=1
+      return
+    fi
+  fi
+
+  if [[ "$dry" = true ]]; then
+    echo "mv $bakfile $file"
+    return
+  fi
+
+  mv "$bakfile" "$file"
+}
+
+function main() {
+  if [[ -z "$*" ]]; then
+    usage
+    exit 1
+  fi
+
+  for arg in "$@"; do
+    unbackup "$arg" "$DRY_RUN" "$EXTENSION" "$FORCE"
+  done
+
+  exit "$EXIT_CODE"
+}
+
+if ! OPTS=$(getopt --options hne:f --long help,dry-run,extension:,force --name "$NAME" -- "$@" 2>/dev/null); then
+  invalid "$1";
+  exit 1;
+fi
+
+eval set -- "$OPTS"
+
+while true; do
+  case "$1" in
+    -h | --help )
+      usage;
+      exit 0
+      ;;
+    -n | --dry-run ) DRY_RUN=true; shift ;;
+    -e | --extension ) EXTENSION="$2"; shift 2 ;;
+    -f | --force ) FORCE=true; shift ;;
+    -- ) shift; break ;;
+    * ) break ;;
+  esac
+done
+
+main "$@"
