@@ -2,7 +2,7 @@ dotfile::set_env "BROWSER" "chrome"
 dotfile::set_env "VISUAL" "nvim"
 dotfile::set_env "EDITOR" "$VISUAL"
 
-dotfile::set_env "FZF_DEFAULT_COMMAND" "ag -g \"\""
+dotfile::set_env "FZF_DEFAULT_COMMAND" "rg --files --hidden --follow --glob \"!.git/*\""
 dotfile::set_env "FZF_CTRL_T_COMMAND" "$FZF_DEFAULT_COMMAND"
 
 shell::termcolor "xterm-256color"
