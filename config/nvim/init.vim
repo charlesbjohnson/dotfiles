@@ -225,6 +225,14 @@ xmap <CR> <Plug>(EasyAlign)
 " kristijanhusak/vim-multiple-cursors
 let g:multi_cursor_quit_key = '<C-e>'
 
+function g:Multiple_cursors_before()
+  let g:deoplete#disable_auto_complete = 1
+ endfunction
+
+function g:Multiple_cursors_after()
+ let g:deoplete#disable_auto_complete = 0
+endfunction
+
 " zirrostig/vim-schlepp
 xmap <unique> <Leader>h <Plug>SchleppLeft
 xmap <unique> <Leader>j <Plug>SchleppDown
