@@ -75,3 +75,11 @@ function env::gnu() {
     fi
   done
 }
+
+function env::cleanup() {
+  unset -f env::rbenv
+  unset -f env::nodenv
+  unset -f env::golang
+  unset -f env::gnu
+  unset -f env::cleanup
+}

@@ -15,3 +15,10 @@ function shell::dircolors() {
     eval "$(dircolors $HOME/.config/shell/$1)"
   fi
 }
+
+function shell::cleanup() {
+  unset -f shell::termcolor
+  unset -f shell::color
+  unset -f shell::dircolors
+  unset -f shell::cleanup
+}

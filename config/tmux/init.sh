@@ -18,3 +18,8 @@ function tmux::autostart() {
 
   exec tmux attach-session
 }
+
+function tmux::cleanup() {
+  unset -f tmux::autostart
+  unset -f tmux::cleanup
+}

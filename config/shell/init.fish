@@ -27,3 +27,10 @@ function shell::dircolors
 
   bass (eval $cmd "$HOME/.config/shell/$argv[1]")
 end
+
+function shell::cleanup
+  functions --erase shell::termcolor
+  functions --erase shell::color
+  functions --erase shell::dircolors
+  functions --erase shell::cleanup
+end

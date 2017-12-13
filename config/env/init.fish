@@ -66,3 +66,11 @@ function env::gnu
     "
   end
 end
+
+function env::cleanup
+  functions --erase env::rbenv
+  functions --erase env::nodenv
+  functions --erase env::golang
+  functions --erase env::gnu
+  functions --erase env::cleanup
+end

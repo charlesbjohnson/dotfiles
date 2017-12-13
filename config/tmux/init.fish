@@ -17,3 +17,8 @@ function tmux::autostart
 
   exec tmux attach-session
 end
+
+function tmux::cleanup
+  functions --erase tmux::autostart
+  functions --erase tmux::cleanup
+end

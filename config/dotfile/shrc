@@ -13,3 +13,7 @@ dotfile::load_if_exists "$HOME/.config/dotfile/shrc.local"
 dotfile::load_if_exists "$HOME/.aliases"
 
 tmux::autostart "default"
+
+env::cleanup
+shell::cleanup
+tmux::cleanup
