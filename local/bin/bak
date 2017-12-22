@@ -7,14 +7,14 @@ NAME=$(basename "$0")
 RENAME=false
 
 function invalid() {
-  cat << EOF
+	cat <<EOF
 $NAME: unrecognized option '$1'
 Try '$NAME --help' for more information.
 EOF
 }
 
 function usage() {
-  cat << EOF
+	cat <<EOF
 Usage: $NAME [OPTION]... [FILE]...
 
   Backup FILEs by creating a copy with an additional file extension.
@@ -31,73 +31,84 @@ EOF
 }
 
 function backup() {
-  local file="$1"
-  local dry="$2"
-  local extension="$3"
-  local rename="$4"
+	local file="$1"
+	local dry="$2"
+	local extension="$3"
+	local rename="$4"
 
-  local error
-  error=$(stat "$file" 2>&1 >/dev/null)
-  if [[ -n "$error" ]]; then
-    error="${error##*stat: }"
-    echo "$NAME: $file: $error"
-    EXIT_CODE=1
-    return
-  fi
+	local error
+	error=$(stat "$file" 2>&1 >/dev/null)
+	if [[ -n "$error" ]]; then
+		error="${error##*stat: }"
+		echo "$NAME: $file: $error"
+		EXIT_CODE=1
+		return
+	fi
 
-  local bakfile="$file.$extension"
-  if stat "$bakfile" &>/dev/null; then
-    echo "$NAME: $bakfile: Backup file exists"
-    EXIT_CODE=1
-    return
-  fi
+	local bakfile="$file.$extension"
+	if stat "$bakfile" &>/dev/null; then
+		echo "$NAME: $bakfile: Backup file exists"
+		EXIT_CODE=1
+		return
+	fi
 
-  local command="cp"
-  if [[ "$rename" = true ]]; then
-    command="mv"
-  fi
+	local command="cp"
+	if [[ "$rename" == true ]]; then
+		command="mv"
+	fi
 
-  if [[ "$dry" = true ]]; then
-    echo "$command $file $bakfile"
-    return
-  fi
+	if [[ "$dry" == true ]]; then
+		echo "$command $file $bakfile"
+		return
+	fi
 
-  eval "$command" "$file" "$bakfile"
+	eval "$command" "$file" "$bakfile"
 }
 
 function main() {
-  if [[ -z "$*" ]]; then
-    usage
-    exit 1
-  fi
+	if [[ -z "$*" ]]; then
+		usage
+		exit 1
+	fi
 
-  for arg in "$@"; do
-    backup "$arg" "$DRY_RUN" "$EXTENSION" "$RENAME"
-  done
+	for arg in "$@"; do
+		backup "$arg" "$DRY_RUN" "$EXTENSION" "$RENAME"
+	done
 
-  exit "$EXIT_CODE"
+	exit "$EXIT_CODE"
 }
 
-
 if ! OPTS=$(getopt --options hne:r --long help,dry-run,extension:,rename --name "$NAME" -- "$@" 2>/dev/null); then
-  invalid "$1"
-  exit 1;
+	invalid "$1"
+	exit 1
 fi
 
 eval set -- "$OPTS"
 
 while true; do
-  case "$1" in
-    -h | --help )
-      usage;
-      exit 0
-      ;;
-    -n | --dry-run ) DRY_RUN=true; shift ;;
-    -e | --extension ) EXTENSION="$2"; shift 2 ;;
-    -r | --rename ) RENAME=true; shift ;;
-    -- ) shift; break ;;
-    * ) break ;;
-  esac
+	case "$1" in
+	-h | --help)
+		usage
+		exit 0
+		;;
+	-n | --dry-run)
+		DRY_RUN=true
+		shift
+		;;
+	-e | --extension)
+		EXTENSION="$2"
+		shift 2
+		;;
+	-r | --rename)
+		RENAME=true
+		shift
+		;;
+	--)
+		shift
+		break
+		;;
+	*) break ;;
+	esac
 done
 
 main "$@"
