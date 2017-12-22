@@ -186,9 +186,19 @@ let g:expand_region_text_objects = {
 \}
 
 " w0rp/ale
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
-\  'javascript': ['prettier']
+\  'javascript': ['prettier'],
+\  'go': ['goimports'],
+\  'sh': ['shfmt']
+\}
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_linters = {
+\  'go': ['go build', 'gosimple']
 \}
 
 "" Productivity
@@ -347,7 +357,7 @@ endfunction"}}}
 " fatih/vim-go
 let g:go_def_mapping_enabled = 0
 let g:go_doc_keywordprg_enabled = 0
-let g:go_fmt_command = "goimports"
+let g:go_fmt_autosave = 0
 
 "" JavaScript
 " elzr/vim-json
