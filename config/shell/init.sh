@@ -4,12 +4,6 @@ function shell::termcolor() {
 	fi
 }
 
-function shell::color() {
-	if [[ -f "$HOME/.config/shell/$1" ]]; then
-		source "$HOME/.config/shell/$1"
-	fi
-}
-
 function shell::dircolors() {
 	if [[ -f "$HOME/.config/shell/$1" ]]; then
 		eval "$(dircolors $HOME/.config/shell/$1)"
@@ -18,7 +12,6 @@ function shell::dircolors() {
 
 function shell::cleanup() {
 	unset -f shell::termcolor
-	unset -f shell::color
 	unset -f shell::dircolors
 	unset -f shell::cleanup
 }

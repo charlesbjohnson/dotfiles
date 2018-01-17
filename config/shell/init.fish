@@ -4,12 +4,6 @@ function shell::termcolor
   end
 end
 
-function shell::color
-  if test -f "$HOME/.config/shell/$argv[1]"
-    eval sh "$HOME/.config/shell/$argv[1]"
-  end
-end
-
 function shell::dircolors
   if not test -f "$HOME/.config/shell/$argv[1]"
     return
@@ -30,7 +24,6 @@ end
 
 function shell::cleanup
   functions --erase shell::termcolor
-  functions --erase shell::color
   functions --erase shell::dircolors
   functions --erase shell::cleanup
 end

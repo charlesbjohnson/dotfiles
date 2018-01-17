@@ -60,14 +60,14 @@ call dein#add('vasconcelloslf/vim-interestingwords')
 
 " Appearance
 call dein#add('Yggdroot/indentLine')
-call dein#add('chriskempson/base16-vim')
+call dein#add('arcticicestudio/nord-vim')
 call dein#add('edkolev/tmuxline.vim')
+call dein#add('itchyny/lightline.vim')
+call dein#add('mgee/lightline-bufferline')
 call dein#add('mhinz/vim-signify')
 call dein#add('mhinz/vim-startify')
 call dein#add('ntpeters/vim-better-whitespace')
 call dein#add('ryanoasis/vim-devicons')
-call dein#add('vim-airline/vim-airline')
-call dein#add('vim-airline/vim-airline-themes')
 
 " DevOps
 call dein#add('dag/vim-fish', { 'on_ft': ['fish'] })

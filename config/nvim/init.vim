@@ -26,19 +26,19 @@ syntax on
 
 
 """ Appearance
-colorscheme base16-solarized-dark
-let base16colorspace=256
 set background=dark
 set colorcolumn=80
 set completeopt-=preview
 set cursorline
 set laststatus=2
 set list listchars=tab:⇥⇥,eol:↵,trail:·
+set noshowmode
 set nowrap
 set number
 set scrolloff=20
 set showcmd
 set showtabline=2
+set termguicolors
 
 
 """ Tabbing
@@ -289,17 +289,49 @@ nmap <silent> <Leader>N <Plug>InterestingWordsBackward
 nmap <silent> <Leader>n <Plug>InterestingWordsForeward
 
 "" Appearance
+" edkolev/tmuxline.vim
+let g:tmuxline_theme = 'lightline'
+let g:tmuxline_preset = 'crosshair'
+
 " Yggdroot/indentLine
 let g:indentLine_char = '┆'
 let g:indentLine_noConcealCursor=''
 
+" arcticicestudio/nord-vim
+let g:nord_italic = 1
+let g:nord_italic_comments = 1
+let g:nord_comment_brightness = 10
+colorscheme nord
+
+" itchyny/lightline.vim
+let g:lightline = {
+\  'colorscheme': 'nord',
+\  'component_expand': {
+\    'buffers': 'lightline#bufferline#buffers'
+\  },
+\  'component_function': {
+\    'filetype': 'Devicon_filetype',
+\    'fileformat': 'Devicon_fileformat',
+\  },
+\  'component_type': {
+\    'buffers': 'tabsel'
+\  },
+\  'tabline': {
+\    'left': [['buffers']],
+\    'right': [[]]
+\  }
+\}
+
+function! g:Devicon_filetype() abort
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+
+function! g:Devicon_fileformat() abort
+  return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+endfunction
+
 " mhinz/vim-signify
 let g:signify_vcs_list = ['git']
-
-" vim-airline/vim-airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline_theme='luna'
 
 " mhinz/vim-startify
 let g:startify_change_to_dir = 1
@@ -319,17 +351,6 @@ let g:startify_custom_header = [
 \  '    +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=',
 \  '    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-='
 \]
-
-highlight StartifyBracket ctermfg=166
-highlight StartifyFile    ctermfg=253
-highlight StartifyFooter  ctermfg=255
-highlight StartifyHeader  ctermfg=196
-highlight StartifyNumber  ctermfg=159
-highlight StartifyPath    ctermfg=245
-highlight StartifySection ctermfg=50
-highlight StartifySelect  ctermfg=255
-highlight StartifySlash   ctermfg=245
-highlight StartifySpecial ctermfg=121
 
 " ntpeters/vim-better-whitespace
 let g:strip_whitespace_on_save = 1
