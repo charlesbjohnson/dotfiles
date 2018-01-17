@@ -5,7 +5,7 @@ dotfile::set_env "EDITOR" "$VISUAL"
 dotfile::set_env "FZF_DEFAULT_COMMAND" "rg --files --hidden --follow --glob \"!.git/*\""
 dotfile::set_env "FZF_CTRL_T_COMMAND" "$FZF_DEFAULT_COMMAND"
 
-shell::termcolor "xterm-256color"
+shell::termcolor "xterm-256color-italic"
 shell::color "base16-shell/scripts/base16-solarized-dark.sh"
 shell::dircolors "dircolors-solarized/dircolors.256dark"
 
