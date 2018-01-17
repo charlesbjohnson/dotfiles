@@ -135,10 +135,10 @@ inoremap <silent><expr> <TAB>
 \      "\<TAB>" :
 \      deoplete#mappings#manual_complete()
 
-function! s:check_back_space() abort "{{{"
+function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~ '\s'
-endfunction"}}}
+endfunction
 
 " itmammoth/doorboy.vim
 inoremap <expr> <BS> doorboy#map_backspace()
@@ -210,7 +210,7 @@ let g:splitjoin_ruby_trailing_comma = 0
 nnoremap <silent> <Leader>J :call <SID>try('SplitjoinJoin',  'J')<CR>
 nnoremap <silent> <Leader>K :call <SID>try('SplitjoinSplit', "r\015")<CR>
 
-function! s:try(cmd, default) abort "{{{"
+function! s:try(cmd, default) abort
   if exists(':' . a:cmd) && !v:count
     let tick = b:changedtick
     execute a:cmd
@@ -220,7 +220,7 @@ function! s:try(cmd, default) abort "{{{"
   else
     execute join(['normal! ', v:count, a:default], '')
   endif
-endfunction"}}}
+endfunction
 
 " Shougo/vimfiler.vim
 let g:vimfiler_as_default_explorer = 1
@@ -235,11 +235,11 @@ xmap <CR> <Plug>(EasyAlign)
 " kristijanhusak/vim-multiple-cursors
 let g:multi_cursor_quit_key = '<C-e>'
 
-function g:Multiple_cursors_before()
+function! g:Multiple_cursors_before() abort
   let g:deoplete#disable_auto_complete = 1
- endfunction
+endfunction
 
-function g:Multiple_cursors_after()
+function! g:Multiple_cursors_after() abort
  let g:deoplete#disable_auto_complete = 0
 endfunction
 
@@ -320,7 +320,6 @@ let g:startify_custom_header = [
 \  '    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-='
 \]
 
-
 highlight StartifyBracket ctermfg=166
 highlight StartifyFile    ctermfg=253
 highlight StartifyFooter  ctermfg=255
@@ -346,12 +345,12 @@ inoreabbrev <expr> __
 \    '<C-o>:silent! TableModeDisable<CR>' :
 \    '__'
 
-function! s:is_at_start_of_line(mapping) abort "{{{"
+function! s:is_at_start_of_line(mapping) abort
   let text_before_cursor = getline('.')[0 : col('.')-1]
   let mapping_pattern = '\V' . escape(a:mapping, '\')
   let comment_pattern = '\V' . escape(substitute(&l:commentstring, '%s.*$', '', ''), '\')
   return (text_before_cursor =~? '^' . ('\v(' . comment_pattern . '\v)?') . '\s*\v' . mapping_pattern . '\v$')
-endfunction"}}}
+endfunction
 
 "" Golang
 " fatih/vim-go
