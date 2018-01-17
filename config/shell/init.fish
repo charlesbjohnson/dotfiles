@@ -1,5 +1,5 @@
 function shell::termcolor
-  if not string match --quiet "256color" $TERM
+  if not string match --quiet "*256color*" $TERM
     set --export --global TERM $argv[1]
   end
 end
