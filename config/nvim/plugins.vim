@@ -70,6 +70,7 @@ call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
 
 " DevOps
+call dein#add('dag/vim-fish', { 'on_ft': ['fish'] })
 call dein#add('ekalinin/dockerfile.vim', { 'on_ft': ['Dockerfile'] })
 call dein#add('markcornick/vim-hashicorp-tools')
 call dein#add('tmux-plugins/vim-tmux', { 'on_ft': ['tmux'] })
