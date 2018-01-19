@@ -140,16 +140,16 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
 
-" itmammoth/doorboy.vim
-inoremap <expr> <BS> doorboy#map_backspace()
-inoremap <expr> <Space> doorboy#map_space()
-inoremap <expr> <CR> doorboy#map_cr()
-
 " Shougo/neosnippet.vim
 let g:neosnippet#enable_snipmate_compatibility = 1
 let g:neosnippet#snippets_directory = '~/.nvim/plugin/repos/github.com/honza/vim-snippets'
 
 imap <C-e> <Plug>(neosnippet_expand_or_jump)
+
+" itmammoth/doorboy.vim
+inoremap <expr> <BS> doorboy#map_backspace()
+inoremap <expr> <Space> doorboy#map_space()
+inoremap <expr> <CR> doorboy#map_cr()
 
 " milkypostman/vim-togglelist
 let g:toggle_list_no_mappings = 1
@@ -289,10 +289,6 @@ nmap <silent> <Leader>N <Plug>InterestingWordsBackward
 nmap <silent> <Leader>n <Plug>InterestingWordsForeward
 
 "" Appearance
-" edkolev/tmuxline.vim
-let g:tmuxline_theme = 'lightline'
-let g:tmuxline_preset = 'crosshair'
-
 " Yggdroot/indentLine
 let g:indentLine_char = '┆'
 let g:indentLine_noConcealCursor=''
@@ -302,6 +298,10 @@ let g:nord_italic = 1
 let g:nord_italic_comments = 1
 let g:nord_comment_brightness = 10
 colorscheme nord
+
+" edkolev/tmuxline.vim
+let g:tmuxline_theme = 'lightline'
+let g:tmuxline_preset = 'crosshair'
 
 " itchyny/lightline.vim
 let g:lightline = {
