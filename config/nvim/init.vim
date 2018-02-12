@@ -191,15 +191,19 @@ let g:ale_set_quickfix = 1
 
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
-\  'javascript': ['prettier'],
 \  'go': ['goimports'],
+\  'javascript': ['prettier'],
+\  'typescript': ['prettier'],
 \  'sh': ['shfmt']
 \}
+
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_linters = {
 \  'go': ['go build', 'gosimple']
 \}
+
+let g:ale_javascript_eslint_suppress_missing_config = 1
 
 "" Productivity
 " AndrewRadev/splitjoin.vim

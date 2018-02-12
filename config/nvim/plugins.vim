@@ -4,7 +4,7 @@ endif
 
 set runtimepath+=~/.nvim/plugins/repos/github.com/Shougo/dein.vim
 call dein#begin('~/.nvim/plugins')
-call dein#add('Shougo/dein.vim')
+call dein#add('~/.nvim/plugins/repos/github.com/Shougo/dein.vim')
 
 " Local configuration
 if filereadable(expand('~/.config/nvim/plugins.local.vim'))
@@ -89,7 +89,7 @@ call dein#add('cespare/vim-toml', { 'on_ft': ['toml'] })
 " JavaScript
 call dein#add('carlitux/deoplete-ternjs', { 'on_ft': ['javascript'], 'build': 'npm install -g tern' })
 call dein#add('elzr/vim-json', { 'on_ft': ['json'] })
-" call dein#add('othree/yajs.vim', { 'on_ft': ['javascript'], 'rev': '1.6' })
+call dein#add('leafgarland/typescript-vim', { 'on_ft': ['typescript'] })
 call dein#add('pangloss/vim-javascript', { 'on_ft': ['javascript'] })
 
 " Ruby
