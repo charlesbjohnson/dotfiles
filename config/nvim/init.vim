@@ -193,9 +193,11 @@ let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \  'go': ['goimports'],
 \  'javascript': ['prettier'],
-\  'typescript': ['prettier'],
-\  'sh': ['shfmt']
+\  'ruby': ['rubocop'],
+\  'sh': ['shfmt'],
+\  'typescript': ['prettier']
 \}
+
 
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
@@ -204,6 +206,7 @@ let g:ale_linters = {
 \}
 
 let g:ale_javascript_eslint_suppress_missing_config = 1
+let g:ale_ruby_rubocop_executable = 'bundle'
 
 "" Productivity
 " AndrewRadev/splitjoin.vim
