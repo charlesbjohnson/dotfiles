@@ -1,3 +1,3 @@
 # dotfiles
 
-A totally healthy obsession.
+A very normal and healthy thing to obsess over.
