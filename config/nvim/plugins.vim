@@ -95,6 +95,10 @@ call dein#add('pangloss/vim-javascript', { 'on_ft': ['javascript'] })
 " Ruby
 call dein#add('vim-ruby/vim-ruby', { 'on_ft': ['ruby'] })
 
+" Rust
+call dein#add('rust-lang/rust.vim', { 'on_ft': ['rust'] })
+call dein#add('sebastianmarkow/deoplete-rust', { 'on_ft': ['rust'], 'build': 'cargo install --force racer' })
+
 " Web
 call dein#add('ap/vim-css-color', { 'on_ft': ['css', 'scss'] })
 call dein#add('hail2u/vim-css3-syntax', { 'on_ft': ['css', 'scss'] })

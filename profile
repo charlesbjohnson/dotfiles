@@ -11,9 +11,10 @@ dotfile::path_append \
 env::rbenv
 env::nodenv
 
-dotfile::path_prepend   \
-  "$HOME/.local/bin"    \
-  "$GOPATH/bin"
+dotfile::path_prepend \
+  "$HOME/.local/bin"  \
+  "$GOPATH/bin"       \
+  "$HOME/.cargo/bin"
 
 dotfile::load_if_exists "$HOME/.config/dotfile/profile.local"
 dotfile::load_if_exists "$HOME/.config/dotfile/profile.secret"
