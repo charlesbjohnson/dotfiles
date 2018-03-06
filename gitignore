@@ -1,4 +1,4 @@
-# Created by https://www.gitignore.io/api/vim,linux,macos
+# Created by https://www.gitignore.io/api/vim,visualstudiocode,linux,macos
 
 ### Linux ###
 *~
@@ -54,6 +54,14 @@ Session.vim
 .netrwhist
 # auto-generated tag files
 tags
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+# !.vscode/launch.json
+!.vscode/extensions.json
+.history
 
 ### Search ###
 .ignore
