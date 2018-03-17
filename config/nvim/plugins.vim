@@ -12,8 +12,6 @@ if filereadable(expand('~/.config/nvim/plugins.local.vim'))
 endif
 
 " System
-call dein#add('neovim/node-host', { 'build': 'npm install' })
-
 call dein#add('Julian/vim-textobj-variable-segment')
 call dein#add('Shougo/deoplete.nvim')
 call dein#add('Shougo/neosnippet-snippets')
@@ -21,7 +19,6 @@ call dein#add('Shougo/neosnippet.vim')
 call dein#add('Shougo/unite.vim')
 call dein#add('Shougo/vimproc.vim', { 'build': 'make' })
 call dein#add('danro/rename.vim')
-call dein#add('sgur/vim-editorconfig')
 call dein#add('glts/vim-textobj-comment')
 call dein#add('haya14busa/dein-command.vim')
 call dein#add('honza/vim-snippets')
@@ -32,6 +29,8 @@ call dein#add('kana/vim-textobj-line')
 call dein#add('kana/vim-textobj-user')
 call dein#add('mhinz/vim-sayonara')
 call dein#add('milkypostman/vim-togglelist')
+call dein#add('neovim/node-host', { 'build': 'npm install' })
+call dein#add('sgur/vim-editorconfig')
 call dein#add('svermeulen/vim-easyclip')
 call dein#add('terryma/vim-expand-region')
 call dein#add('tpope/vim-commentary')
@@ -83,9 +82,9 @@ call dein#add('tpope/vim-markdown', { 'on_ft': ['markdown']})
 call dein#add('ujihisa/neco-look', { 'on_ft': ['markdown', 'html'] })
 
 " Golang
+call dein#add('cespare/vim-toml', { 'on_ft': ['toml'] })
 call dein#add('fatih/vim-go', { 'on_ft': ['go'], 'hook_add': 'GoInstallBinaries gocode' })
 call dein#add('zchee/deoplete-go', { 'on_ft': ['go'], 'build': 'make', 'depends': 'vim-go' })
-call dein#add('cespare/vim-toml', { 'on_ft': ['toml'] })
 
 " JavaScript
 call dein#add('carlitux/deoplete-ternjs', { 'on_ft': ['javascript'], 'build': 'npm install -g tern' })
@@ -94,6 +93,7 @@ call dein#add('leafgarland/typescript-vim', { 'on_ft': ['typescript'] })
 call dein#add('pangloss/vim-javascript', { 'on_ft': ['javascript'] })
 
 " Ruby
+call dein#add('fishbullet/deoplete-ruby', { 'on_ft': ['ruby'] })
 call dein#add('vim-ruby/vim-ruby', { 'on_ft': ['ruby'] })
 
 " Rust
