@@ -106,10 +106,10 @@ xnoremap L $
 " Splits
 nnoremap <C-w>\| :vsplit<CR>
 nnoremap <C-w>_ :split<CR>
-nnoremap <C-w>h :vertical resize -5<CR>
+nnoremap <C-w>h :vertical resize +5<CR>
 nnoremap <C-w>j :resize -5<CR>
 nnoremap <C-w>k :resize +5<CR>
-nnoremap <C-w>l :vertical resize +5<CR>
+nnoremap <C-w>l :vertical resize -5<CR>
 
 " Ctag navigation
 nnoremap <Leader>[ :pop<CR>
