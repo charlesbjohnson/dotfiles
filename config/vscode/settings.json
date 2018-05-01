@@ -38,11 +38,12 @@
     "**/*.js",
     "**/*.rb",
     "**/*.rs",
-    "**/*.ts",
+    "**/*.ts"
   ],
   "todohighlight.keywords": [
     "TODO"
   ],
+  "vsicons.dontShowNewVersionMessage": true,
   "window.zoomLevel": 0,
   "workbench.colorTheme": "Nord",
   "workbench.editor.tabCloseButton": "off",
