@@ -195,7 +195,6 @@ let g:ale_fixers = {
 \  'go': ['goimports'],
 \  'javascript': ['prettier'],
 \  'ruby': ['rubocop'],
-\  'rust': ['rustfmt'],
 \  'sh': ['shfmt'],
 \  'typescript': ['prettier']
 \}
@@ -391,12 +390,6 @@ let g:go_fmt_autosave = 0
 "" JavaScript
 " elzr/vim-json
 let g:vim_json_syntax_conceal = 0
-
-"" Rust
-" sebastianmarkow/deoplete-rust
-let g:deoplete#sources#rust#disable_keymap = 1
-let g:deoplete#sources#rust#racer_binary = systemlist('which racer')[0]
-let g:deoplete#sources#rust#rust_source_path = systemlist('rustc --print sysroot')[0] . '/lib/rustlib/src/rust/src'
 
 "" Web
 " mattn/emmet-vim

@@ -13,7 +13,6 @@ env::nodenv
 
 dotfile::path_prepend \
   "$HOME/.local/bin"  \
-  "$GOPATH/bin"       \
-  "$HOME/.cargo/bin"
+  "$GOPATH/bin"
 
 dotfile::load_all "$HOME/.config/dotfile" "profile.*"
