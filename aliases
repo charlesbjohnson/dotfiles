@@ -1,5 +1,7 @@
 dotfile::alias "PPATH" 'echo $PATH | tr --squeeze-repeats ":" "\n" | tr --squeeze-repeats " " "\n"'
-dotfile::alias "ls" 'ls --color=auto --group-directories-first --classify'
+dotfile::alias "l" "exa --group-directories-first --classify"
+dotfile::alias "lt" "exa --group-directories-first --classify --tree"
+dotfile::alias "ls" "ls --color=auto --group-directories-first --classify"
 
 dotfile::load_if_exists "$HOME/.config/dotfile/aliases.local"
 dotfile::load_if_exists "$HOME/.config/dotfile/aliases.secret"
