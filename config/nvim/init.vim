@@ -4,12 +4,6 @@ if filereadable(expand('~/.config/nvim/plugins.vim'))
 endif
 
 
-""" Local configuration
-if filereadable(expand('~/.config/nvim/init.local.vim'))
-  source ~/.config/nvim/init.local.vim
-endif
-
-
 """ General
 let mapleader=' '
 set clipboard=unnamed
@@ -398,3 +392,9 @@ let g:user_emmet_leader_key = '<CR>'
 let g:user_emmet_mode = 'n'
 
 autocmd FileType html EmmetInstall
+
+
+""" Local configuration
+if filereadable(expand('~/.config/nvim/init.local.vim'))
+  source ~/.config/nvim/init.local.vim
+endif
