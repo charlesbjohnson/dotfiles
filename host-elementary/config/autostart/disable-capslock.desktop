@@ -1,5 +1,0 @@
-[Desktop Entry]
-Name=Disable Capslock
-Exec=setxkbmap -option caps:escape
-Terminal=false
-Type=Application
