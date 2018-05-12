@@ -8,6 +8,12 @@ function dotfile::load_if_exists() {
 	fi
 }
 
+function dotfile::load_all() {
+	for file in $(find -L "$1" -maxdepth 1 -name "$2" -type f); do
+		source "$file"
+	done
+}
+
 function dotfile::path_prepend() {
 	local args=()
 
