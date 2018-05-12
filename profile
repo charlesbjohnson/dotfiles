@@ -16,5 +16,4 @@ dotfile::path_prepend \
   "$GOPATH/bin"       \
   "$HOME/.cargo/bin"
 
-dotfile::load_if_exists "$HOME/.config/dotfile/profile.local"
-dotfile::load_if_exists "$HOME/.config/dotfile/profile.secret"
+dotfile::load_all "$HOME/.config/dotfile" "profile.*"
