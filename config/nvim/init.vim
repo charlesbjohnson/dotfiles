@@ -224,9 +224,6 @@ function! s:try(cmd, default) abort
   endif
 endfunction
 
-" Shougo/vimfiler.vim
-let g:vimfiler_as_default_explorer = 1
-
 " junegunn/fzf.vim
 nnoremap <C-p> :FZF --multi<CR>
 
