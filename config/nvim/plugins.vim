@@ -52,6 +52,7 @@ call dein#add('tpope/vim-vinegar')
 call dein#add('zirrostig/vim-schlepp')
 
 " Search & Replace
+call dein#add('RRethy/vim-illuminate')
 call dein#add('justinmk/vim-sneak')
 call dein#add('vasconcelloslf/vim-interestingwords')
 
