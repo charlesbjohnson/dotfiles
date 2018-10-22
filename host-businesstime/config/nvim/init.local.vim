@@ -6,4 +6,5 @@ unlet g:ale_fixers['css']
 unlet g:ale_fixers['javascript']
 unlet g:ale_fixers['ruby']
 
+let g:ale_linters['javascript'] = []
 let g:ale_linters['ruby'] = []
