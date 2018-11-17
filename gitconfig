@@ -20,7 +20,7 @@
   discard = checkout --
   fixup   = commit --fixup
   l       = log --stat --decorate --relative-date
-  ldf     = log --oneline --patch-with-stat --full-diff --decorate --since={3.weeks.ago}
+  ldf     = log --oneline --patch-with-stat --full-diff --decorate
   lgr     = log --oneline --all --graph --decorate
   pf      = push --force-with-lease
   rbi     = rebase --interactive
