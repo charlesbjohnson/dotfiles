@@ -14,6 +14,10 @@ function dotfile::load_all
   end
 end
 
+function dotfile::path_reset
+  set PATH $fish_user_paths
+end
+
 function dotfile::path_prepend
   set args
 

@@ -14,6 +14,10 @@ function dotfile::load_all() {
 	done
 }
 
+function dotfile::path_reset() {
+	PATH=""
+}
+
 function dotfile::path_prepend() {
 	local args=()
 
