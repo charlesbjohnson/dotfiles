@@ -22,7 +22,7 @@ function dotfile::path_prepend
   end
 
   for arg in $args
-    if not string match --quiet $arg $PATH
+    if not contains $arg $PATH
       set PATH $arg $PATH
     end
   end
@@ -30,7 +30,7 @@ end
 
 function dotfile::path_append
   for arg in $argv
-    if not string match --quiet $arg $PATH
+    if not contains $arg $PATH
       set PATH $PATH $arg
     end
   end
