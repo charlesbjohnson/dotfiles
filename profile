@@ -1,4 +1,4 @@
-env::golang "$HOME/Projects/golang"
+dotfile::path_reset
 
 dotfile::path_append \
   "/usr/local/bin"   \
@@ -11,8 +11,8 @@ dotfile::path_append \
 env::rbenv
 env::nodenv
 
-dotfile::path_prepend \
-  "$HOME/.local/bin"  \
-  "$GOPATH/bin"
+env::golang "$HOME/Projects/golang"
+dotfile::path_prepend "$GOPATH/bin"
 
 dotfile::load_all "$HOME/.config/dotfile" "profile.*"
+dotfile::path_prepend "$HOME/.local/bin"
