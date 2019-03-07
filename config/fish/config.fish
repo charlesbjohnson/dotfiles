@@ -15,5 +15,5 @@ end
 
 fish_vi_key_bindings
 
-dotfile::load_if_exists "$HOME/.config/dotfile/config.local.fish"
+dotfile::load_if_exists "$HOME/.config/dotfile/config/fish/config.local.fish"
 dotfile::load_if_exists "$HOME/.config/dotfile/shrc"
