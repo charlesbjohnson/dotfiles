@@ -19,7 +19,7 @@ function shell::dircolors
     end
   end
 
-  bass (eval $cmd "$HOME/.config/shell/$argv[1]")
+  bax (eval "$cmd $HOME/.config/shell/$argv[1]")
 end
 
 function shell::cleanup
