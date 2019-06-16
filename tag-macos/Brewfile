@@ -7,6 +7,7 @@ tap "homebrew/core"
 tap "neovim/neovim"
 tap "nodenv/nodenv"
 tap "thoughtbot/formulae"
+brew "autoconf"
 brew "bash"
 brew "binutils", link: true
 brew "python"
@@ -18,6 +19,7 @@ brew "exa"
 brew "fd"
 brew "findutils"
 brew "fish"
+brew "mpfr"
 brew "gawk"
 brew "gdb"
 brew "git"
@@ -52,9 +54,11 @@ brew "node-build"
 brew "nodenv"
 brew "openssh"
 brew "parallel"
+brew "perl"
 brew "proctools"
 brew "python@2", link: false
 brew "ranger"
+brew "ruby-build"
 brew "rbenv"
 brew "rbenv-aliases"
 brew "rbenv-default-gems"
@@ -106,8 +110,8 @@ cask "transmission"
 cask "visual-studio-code"
 cask "vlc"
 cask "webpquicklook"
-mas "com.apple.dt.Xcode", id: 497799835
-mas "com.apple.iMovieApp", id: 408981434
-mas "com.apple.iWork.Keynote", id: 409183694
-mas "com.apple.iWork.Numbers", id: 409203825
-mas "com.apple.iWork.Pages", id: 409201541
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Xcode", id: 497799835
