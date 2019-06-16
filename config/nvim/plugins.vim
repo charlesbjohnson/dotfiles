@@ -2,9 +2,7 @@ if &compatible
   set nocompatible
 endif
 
-set runtimepath+=~/.nvim/plugins/repos/github.com/Shougo/dein.vim
-call dein#begin('~/.nvim/plugins')
-call dein#add('~/.nvim/plugins/repos/github.com/Shougo/dein.vim')
+call plug#begin('~/.local/share/nvim/plugins')
 
 " Local configuration
 if filereadable(expand('~/.config/nvim/plugins.local.vim'))
@@ -12,103 +10,95 @@ if filereadable(expand('~/.config/nvim/plugins.local.vim'))
 endif
 
 " System
-call dein#add('Julian/vim-textobj-variable-segment')
-call dein#add('Shougo/deoplete.nvim')
-call dein#add('Shougo/neosnippet-snippets')
-call dein#add('Shougo/neosnippet.vim')
-call dein#add('danro/rename.vim')
-call dein#add('glts/vim-textobj-comment')
-call dein#add('haya14busa/dein-command.vim')
-call dein#add('honza/vim-snippets')
-call dein#add('itmammoth/doorboy.vim')
-call dein#add('kana/vim-textobj-entire')
-call dein#add('kana/vim-textobj-indent')
-call dein#add('kana/vim-textobj-line')
-call dein#add('kana/vim-textobj-user')
-call dein#add('mhinz/vim-sayonara')
-call dein#add('milkypostman/vim-togglelist')
-call dein#add('sgur/vim-editorconfig')
-call dein#add('svermeulen/vim-easyclip')
-call dein#add('terryma/vim-expand-region')
-call dein#add('tpope/vim-commentary')
-call dein#add('tpope/vim-endwise')
-call dein#add('tpope/vim-repeat')
-call dein#add('tpope/vim-surround')
-call dein#add('vim-scripts/repmo.vim')
-call dein#add('w0rp/ale')
+Plug 'Julian/vim-textobj-variable-segment'
+Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'Shougo/neosnippet.vim'
+Plug 'danro/rename.vim'
+Plug 'glts/vim-textobj-comment'
+Plug 'haya14busa/dein-command.vim'
+Plug 'honza/vim-snippets'
+Plug 'itmammoth/doorboy.vim'
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-indent'
+Plug 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-user'
+Plug 'mhinz/vim-sayonara'
+Plug 'milkypostman/vim-togglelist'
+Plug 'sgur/vim-editorconfig'
+Plug 'svermeulen/vim-easyclip'
+Plug 'terryma/vim-expand-region'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'vim-scripts/repmo.vim'
+Plug 'w0rp/ale'
 
 " Productivity
-call dein#add('AndrewRadev/splitjoin.vim')
-call dein#add('christoomey/vim-sort-motion')
-call dein#add('christoomey/vim-tmux-navigator')
-call dein#add('junegunn/fzf', { 'build': './install --bin --xdg' })
-call dein#add('junegunn/vim-easy-align')
-call dein#add('rhysd/committia.vim')
-call dein#add('roxma/vim-tmux-clipboard')
-call dein#add('terryma/vim-multiple-cursors')
-call dein#add('tmux-plugins/vim-tmux-focus-events')
-call dein#add('tpope/vim-vinegar')
-call dein#add('zirrostig/vim-schlepp')
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'christoomey/vim-sort-motion'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin --xdg' }
+Plug 'junegunn/vim-easy-align'
+Plug 'rhysd/committia.vim'
+Plug 'roxma/vim-tmux-clipboard'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'tpope/vim-vinegar'
+Plug 'zirrostig/vim-schlepp'
 
 " Search & Replace
-call dein#add('RRethy/vim-illuminate')
-call dein#add('justinmk/vim-sneak')
-call dein#add('vasconcelloslf/vim-interestingwords')
+Plug 'RRethy/vim-illuminate'
+Plug 'justinmk/vim-sneak'
+Plug 'vasconcelloslf/vim-interestingwords'
 
 " Appearance
-call dein#add('Yggdroot/indentLine')
-call dein#add('arcticicestudio/nord-vim')
-call dein#add('edkolev/tmuxline.vim')
-call dein#add('itchyny/lightline.vim')
-call dein#add('mgee/lightline-bufferline')
-call dein#add('mhinz/vim-signify')
-call dein#add('mhinz/vim-startify')
-call dein#add('ntpeters/vim-better-whitespace')
-call dein#add('ryanoasis/vim-devicons')
+Plug 'Yggdroot/indentLine'
+Plug 'arcticicestudio/nord-vim'
+Plug 'edkolev/tmuxline.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'mgee/lightline-bufferline'
+Plug 'mhinz/vim-signify'
+Plug 'mhinz/vim-startify'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'ryanoasis/vim-devicons'
 
 " DevOps
-call dein#add('dag/vim-fish', { 'on_ft': ['fish'] })
-call dein#add('ekalinin/dockerfile.vim', { 'on_ft': ['Dockerfile'] })
-call dein#add('markcornick/vim-hashicorp-tools')
-call dein#add('tmux-plugins/vim-tmux', { 'on_ft': ['tmux'] })
-call dein#add('tpope/vim-git', { 'on_ft': ['gitconfig'] })
+Plug 'dag/vim-fish', { 'for': ['fish'] }
+Plug 'ekalinin/dockerfile.vim', { 'for': ['Dockerfile'] }
+Plug 'markcornick/vim-hashicorp-tools'
+Plug 'tmux-plugins/vim-tmux', { 'for': ['tmux'] }
+Plug 'tpope/vim-git', { 'for': ['gitconfig'] }
 
 " Docs
-call dein#add('dhruvasagar/vim-table-mode', { 'on_ft': ['markdown'] })
-call dein#add('tpope/vim-markdown', { 'on_ft': ['markdown']})
-call dein#add('ujihisa/neco-look', { 'on_ft': ['markdown', 'html'] })
+Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
+Plug 'tpope/vim-markdown', { 'for': ['markdown']}
+Plug 'ujihisa/neco-look', { 'for': ['markdown', 'html'] }
 
 " Golang
-call dein#add('cespare/vim-toml', { 'on_ft': ['toml'] })
-call dein#add('fatih/vim-go', { 'on_ft': ['go'], 'hook_add': 'GoInstallBinaries gocode' })
-call dein#add('zchee/deoplete-go', { 'on_ft': ['go'], 'build': 'make', 'depends': 'vim-go' })
+Plug 'cespare/vim-toml', { 'for': ['toml'] }
+Plug 'fatih/vim-go', { 'for': ['go'], 'do': ':GoInstallBinaries gocode' }
+Plug 'zchee/deoplete-go', { 'for': ['go'], 'do': 'make', 'depends': 'vim-go' }
 
 " JavaScript
-call dein#add('carlitux/deoplete-ternjs', { 'on_ft': ['javascript'], 'build': 'npm install -g tern' })
-call dein#add('elzr/vim-json', { 'on_ft': ['json'] })
-call dein#add('leafgarland/typescript-vim', { 'on_ft': ['typescript'] })
-call dein#add('pangloss/vim-javascript', { 'on_ft': ['javascript'] })
+Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript'], 'do': 'npm install -g tern' }
+Plug 'elzr/vim-json', { 'for': ['json'] }
+Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
+Plug 'pangloss/vim-javascript', { 'for': ['javascript'] }
 
 " Ruby
-call dein#add('fishbullet/deoplete-ruby', { 'on_ft': ['ruby'] })
-call dein#add('vim-ruby/vim-ruby', { 'on_ft': ['ruby'] })
+Plug 'fishbullet/deoplete-ruby', { 'for': ['ruby'] }
+Plug 'vim-ruby/vim-ruby', { 'for': ['ruby'] }
 
 " Web
-call dein#add('ap/vim-css-color', { 'on_ft': ['css', 'scss'] })
-call dein#add('hail2u/vim-css3-syntax', { 'on_ft': ['css', 'scss'] })
-call dein#add('mattn/emmet-vim', { 'on_ft': ['html'] })
-call dein#add('othree/html5.vim', { 'on_ft': ['html'] })
-call dein#add('valloric/MatchTagAlways', { 'on_ft': ['html'] })
+Plug 'ap/vim-css-color', { 'for': ['css', 'scss'] }
+Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
+Plug 'mattn/emmet-vim', { 'for': ['html'] }
+Plug 'othree/html5.vim', { 'for': ['html'] }
+Plug 'valloric/MatchTagAlways', { 'for': ['html'] }
 
-call dein#end()
-
-filetype plugin indent on
-syntax enable
-
-if dein#check_install()
-  call dein#install()
-endif
-
+call plug#end()
 
 " Broken
-" call dein#add('haya14busa/incsearch.vim') https://github.com/neovim/neovim/issues/3688
+" Plug 'haya14busa/incsearch.vim' https://github.com/neovim/neovim/issues/3688
