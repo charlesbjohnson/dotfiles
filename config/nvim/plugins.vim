@@ -66,7 +66,7 @@ Plug 'ryanoasis/vim-devicons'
 
 " DevOps
 Plug 'dag/vim-fish', { 'for': ['fish'] }
-Plug 'ekalinin/dockerfile.vim', { 'for': ['Dockerfile'] }
+Plug 'ekalinin/Dockerfile.vim', { 'for': ['Dockerfile'] }
 Plug 'markcornick/vim-hashicorp-tools'
 Plug 'tmux-plugins/vim-tmux', { 'for': ['tmux'] }
 Plug 'tpope/vim-git', { 'for': ['gitconfig'] }
