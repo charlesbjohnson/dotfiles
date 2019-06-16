@@ -249,6 +249,13 @@ xmap <unique> <Leader>k <Plug>SchleppUp
 xmap <unique> <Leader>l <Plug>SchleppRight
 
 "" Search & Replace
+" andymass/vim-matchup
+augroup matchup_configuration
+  autocmd!
+  autocmd ColorScheme * hi MatchParen cterm=italic gui=italic ctermfg=lightblue guifg=lightblue
+  autocmd ColorScheme * hi MatchWord cterm=italic gui=italic ctermfg=lightblue guifg=lightblue
+augroup END
+
 " justinmk/vim-sneak
 let g:sneak#s_next = 1
 let g:sneak#use_ic_scs = 1

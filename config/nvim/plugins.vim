@@ -49,6 +49,7 @@ Plug 'zirrostig/vim-schlepp'
 
 " Search & Replace
 Plug 'RRethy/vim-illuminate'
+Plug 'andymass/vim-matchup'
 Plug 'justinmk/vim-sneak'
 Plug 'vasconcelloslf/vim-interestingwords'
 
