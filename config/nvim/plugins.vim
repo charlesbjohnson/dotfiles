@@ -4,10 +4,10 @@ endif
 
 call plug#begin('~/.local/share/nvim/plugins')
 
-" Local configuration
-if filereadable(expand('~/.config/nvim/plugins.local.vim'))
-  source ~/.config/nvim/plugins.local.vim
-endif
+" Local configuration overrides
+for file in split(glob('~/.config/nvim/plugins.*.vim'), '\n')
+  execute 'source' file
+endfor
 
 " System
 Plug 'Julian/vim-textobj-variable-segment'

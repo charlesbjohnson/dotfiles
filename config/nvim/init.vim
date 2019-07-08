@@ -398,7 +398,7 @@ let g:user_emmet_mode = 'n'
 autocmd FileType html EmmetInstall
 
 
-""" Local configuration
-if filereadable(expand('~/.config/nvim/init.local.vim'))
-  source ~/.config/nvim/init.local.vim
-endif
+" Local configuration overrides
+for file in split(glob('~/.config/nvim/init.*.vim'), '\n')
+  execute 'source' file
+endfor
