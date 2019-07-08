@@ -1,9 +1,3 @@
-function env::rbenv() {
-  if ! [[ "$PATH" =~ rbenv ]]; then
-    eval "$(rbenv init -)"
-  fi
-}
-
 function env::golang() {
   export GOPATH="$1"
   export GOROOT="$(go env GOROOT)"
@@ -71,7 +65,6 @@ function env::gnu() {
 }
 
 function env::cleanup() {
-  unset -f env::rbenv
   unset -f env::golang
   unset -f env::gnu
   unset -f env::cleanup

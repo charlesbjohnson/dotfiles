@@ -1,9 +1,3 @@
-function env::rbenv
-  if not string match --quiet "*rbenv*" $PATH
-    source (rbenv init - | psub)
-  end
-end
-
 function env::golang
   set --export --global GOPATH $argv[1]
   set --export --global GOROOT (go env GOROOT)
@@ -62,7 +56,6 @@ function env::gnu
 end
 
 function env::cleanup
-  functions --erase env::rbenv
   functions --erase env::golang
   functions --erase env::gnu
   functions --erase env::cleanup
