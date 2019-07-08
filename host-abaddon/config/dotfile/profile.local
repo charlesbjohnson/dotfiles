@@ -1,1 +1,7 @@
+env::rbenv
+env::nodenv
+
+env::golang "$HOME/Projects/golang"
+dotfile::path_prepend "$GOPATH/bin"
+
 dotfile::path_prepend "$HOME/.cargo/bin"
