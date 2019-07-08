@@ -4,12 +4,6 @@ function env::rbenv
   end
 end
 
-function env::nodenv
-  if not string match --quiet "*nodenv*" $PATH
-    source (nodenv init - | psub)
-  end
-end
-
 function env::golang
   set --export --global GOPATH $argv[1]
   set --export --global GOROOT (go env GOROOT)
@@ -69,7 +63,6 @@ end
 
 function env::cleanup
   functions --erase env::rbenv
-  functions --erase env::nodenv
   functions --erase env::golang
   functions --erase env::gnu
   functions --erase env::cleanup
