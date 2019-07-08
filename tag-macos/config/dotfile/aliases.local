@@ -1,1 +1,2 @@
 dotfile::alias "ls" "gls --color=auto --group-directories-first --classify"
+dotfile::alias "notedate" "date \"+%Y/%m/%d\""
