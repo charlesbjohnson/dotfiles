@@ -1,3 +1,9 @@
+function env::asdf
+  if not string match --quiet "*asdf*" $PATH
+    source (brew --prefix asdf)/asdf.fish
+  end
+end
+
 function env::golang
   set --export --global GOPATH $argv[1]
   set --export --global GOROOT (go env GOROOT)
@@ -56,6 +62,7 @@ function env::gnu
 end
 
 function env::cleanup
+  functions --erase env::asdf
   functions --erase env::golang
   functions --erase env::gnu
   functions --erase env::cleanup

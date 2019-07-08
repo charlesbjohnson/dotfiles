@@ -7,6 +7,7 @@ tap "homebrew/core"
 tap "neovim/neovim"
 tap "shopify/shopify"
 tap "thoughtbot/formulae"
+brew "asdf"
 brew "autoconf"
 brew "bash"
 brew "binutils", link: true
