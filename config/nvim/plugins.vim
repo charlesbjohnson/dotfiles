@@ -64,12 +64,10 @@ Plug 'mhinz/vim-startify'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'ryanoasis/vim-devicons'
 
-" DevOps
+" Sysadmin
 Plug 'cespare/vim-toml', { 'for': ['toml'] }
 Plug 'dag/vim-fish', { 'for': ['fish'] }
-Plug 'ekalinin/Dockerfile.vim', { 'for': ['Dockerfile'] }
 Plug 'elzr/vim-json', { 'for': ['json'] }
-Plug 'markcornick/vim-hashicorp-tools'
 Plug 'tmux-plugins/vim-tmux', { 'for': ['tmux'] }
 Plug 'tpope/vim-git', { 'for': ['gitconfig'] }
 
