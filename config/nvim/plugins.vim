@@ -65,6 +65,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'ryanoasis/vim-devicons'
 
 " DevOps
+Plug 'cespare/vim-toml', { 'for': ['toml'] }
 Plug 'dag/vim-fish', { 'for': ['fish'] }
 Plug 'ekalinin/Dockerfile.vim', { 'for': ['Dockerfile'] }
 Plug 'markcornick/vim-hashicorp-tools'
@@ -75,11 +76,6 @@ Plug 'tpope/vim-git', { 'for': ['gitconfig'] }
 Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 Plug 'tpope/vim-markdown', { 'for': ['markdown']}
 Plug 'ujihisa/neco-look', { 'for': ['markdown', 'html'] }
-
-" Golang
-Plug 'cespare/vim-toml', { 'for': ['toml'] }
-Plug 'fatih/vim-go', { 'for': ['go'], 'do': ':GoInstallBinaries gocode' }
-Plug 'zchee/deoplete-go', { 'for': ['go'], 'do': 'make', 'depends': 'vim-go' }
 
 " JavaScript
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript'], 'do': 'npm install -g tern' }

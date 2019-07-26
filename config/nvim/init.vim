@@ -368,12 +368,6 @@ function! s:is_at_start_of_line(mapping) abort
   return (text_before_cursor =~? '^' . ('\v(' . comment_pattern . '\v)?') . '\s*\v' . mapping_pattern . '\v$')
 endfunction
 
-"" Golang
-" fatih/vim-go
-let g:go_def_mapping_enabled = 0
-let g:go_doc_keywordprg_enabled = 0
-let g:go_fmt_autosave = 0
-
 "" JavaScript
 " elzr/vim-json
 let g:vim_json_syntax_conceal = 0
