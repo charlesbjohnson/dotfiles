@@ -78,10 +78,6 @@ Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 Plug 'tpope/vim-markdown', { 'for': ['markdown']}
 Plug 'ujihisa/neco-look', { 'for': ['markdown', 'html'] }
 
-" Ruby
-Plug 'fishbullet/deoplete-ruby', { 'for': ['ruby'] }
-Plug 'vim-ruby/vim-ruby', { 'for': ['ruby'] }
-
 " Web
 Plug 'ap/vim-css-color', { 'for': ['css', 'scss'] }
 Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
