@@ -182,26 +182,9 @@ let g:expand_region_text_objects = {
 " w0rp/ale
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
-
 let g:ale_fix_on_save = 1
-let g:ale_fixers = {
-\  'css': ['prettier'],
-\  'go': ['goimports'],
-\  'javascript': ['prettier'],
-\  'ruby': ['rubocop'],
-\  'sh': ['shfmt'],
-\  'typescript': ['prettier']
-\}
-
-
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_linters = {
-\  'go': ['go build', 'gosimple']
-\}
-
-let g:ale_javascript_eslint_suppress_missing_config = 1
-let g:ale_ruby_rubocop_executable = 'bundle'
 
 "" Productivity
 " AndrewRadev/splitjoin.vim
