@@ -2,3 +2,5 @@
 /log
 /tmp
 /vendor
+
+*.DS_Store

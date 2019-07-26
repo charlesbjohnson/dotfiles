@@ -1,4 +1,5 @@
 # Created by https://www.gitignore.io/api/vim,visualstudiocode,linux,macos
+# Edit at https://www.gitignore.io/?templates=vim,visualstudiocode,linux,macos
 
 ### Linux ###
 *~
@@ -16,7 +17,8 @@
 .nfs*
 
 ### macOS ###
-*.DS_Store
+# General
+.DS_Store
 .AppleDouble
 .LSOverride
 
@@ -43,39 +45,33 @@ Temporary Items
 .apdisk
 
 ### Vim ###
-# swap
+# Swap
 [._]*.s[a-v][a-z]
 [._]*.sw[a-p]
-[._]s[a-v][a-z]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
 [._]sw[a-p]
-# session
+
+# Session
 Session.vim
-# temporary
+Sessionx.vim
+
+# Temporary
 .netrwhist
-# auto-generated tag files
+# Auto-generated tag files
 tags
+# Persistent undo
+[._]*.un~
 
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
-# !.vscode/launch.json
+!.vscode/launch.json
 !.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
 .history
 
-### Search ###
-.ignore
-
-### Node ###
-# Environment normalization
-.node-version
-
-# Editor autocompletion
-.tern-project
-.tern-port
-
-### Ruby ###
-# Environment normalization
-.ruby-version
-
-# End of https://www.gitignore.io/api/vim,linux,macos
+# End of https://www.gitignore.io/api/vim,visualstudiocode,linux,macos
