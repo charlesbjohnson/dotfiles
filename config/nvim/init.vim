@@ -350,6 +350,10 @@ let g:strip_whitelines_at_eof = 1
 let g:strip_whitespace_confirm = 0
 let g:strip_whitespace_on_save = 1
 
+"" DevOps
+" elzr/vim-json
+let g:vim_json_syntax_conceal = 0
+
 "" Docs
 " dhruvasagar/vim-table-mode
 inoreabbrev <expr> <BAR><BAR>
@@ -367,10 +371,6 @@ function! s:is_at_start_of_line(mapping) abort
   let comment_pattern = '\V' . escape(substitute(&l:commentstring, '%s.*$', '', ''), '\')
   return (text_before_cursor =~? '^' . ('\v(' . comment_pattern . '\v)?') . '\s*\v' . mapping_pattern . '\v$')
 endfunction
-
-"" JavaScript
-" elzr/vim-json
-let g:vim_json_syntax_conceal = 0
 
 "" Web
 " mattn/emmet-vim

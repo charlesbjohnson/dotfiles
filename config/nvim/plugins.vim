@@ -68,6 +68,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'cespare/vim-toml', { 'for': ['toml'] }
 Plug 'dag/vim-fish', { 'for': ['fish'] }
 Plug 'ekalinin/Dockerfile.vim', { 'for': ['Dockerfile'] }
+Plug 'elzr/vim-json', { 'for': ['json'] }
 Plug 'markcornick/vim-hashicorp-tools'
 Plug 'tmux-plugins/vim-tmux', { 'for': ['tmux'] }
 Plug 'tpope/vim-git', { 'for': ['gitconfig'] }
@@ -76,12 +77,6 @@ Plug 'tpope/vim-git', { 'for': ['gitconfig'] }
 Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 Plug 'tpope/vim-markdown', { 'for': ['markdown']}
 Plug 'ujihisa/neco-look', { 'for': ['markdown', 'html'] }
-
-" JavaScript
-Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript'], 'do': 'npm install -g tern' }
-Plug 'elzr/vim-json', { 'for': ['json'] }
-Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
-Plug 'pangloss/vim-javascript', { 'for': ['javascript'] }
 
 " Ruby
 Plug 'fishbullet/deoplete-ruby', { 'for': ['ruby'] }
