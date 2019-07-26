@@ -78,13 +78,6 @@ Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 Plug 'tpope/vim-markdown', { 'for': ['markdown']}
 Plug 'ujihisa/neco-look', { 'for': ['markdown', 'html'] }
 
-" Web
-Plug 'ap/vim-css-color', { 'for': ['css', 'scss'] }
-Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
-Plug 'mattn/emmet-vim', { 'for': ['html'] }
-Plug 'othree/html5.vim', { 'for': ['html'] }
-Plug 'valloric/MatchTagAlways', { 'for': ['html'] }
-
 call plug#end()
 
 " Broken

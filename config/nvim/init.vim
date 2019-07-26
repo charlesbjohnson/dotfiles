@@ -372,14 +372,6 @@ function! s:is_at_start_of_line(mapping) abort
   return (text_before_cursor =~? '^' . ('\v(' . comment_pattern . '\v)?') . '\s*\v' . mapping_pattern . '\v$')
 endfunction
 
-"" Web
-" mattn/emmet-vim
-let g:user_emmet_install_global = 0
-let g:user_emmet_leader_key = '<CR>'
-let g:user_emmet_mode = 'n'
-
-autocmd FileType html EmmetInstall
-
 
 " Local configuration overrides
 for file in split(glob('~/.config/nvim/init.*.vim'), '\n')
