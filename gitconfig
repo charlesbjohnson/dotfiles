@@ -1,33 +1,35 @@
 [alias]
-  a       = add
-  aa      = add --all
-  alias   = config --get-regexp '^alias.'
-  amend   = commit --amend --reuse-message HEAD --verbose
-  ap      = add --patch
-  br      = branch --verbose
-  bra     = branch --all --verbose
-  brd     = branch --delete
-  brg     = show-branch --all
-  brmv    = branch --move
-  brrd    = push origin --delete
-  c       = commit
-  cl      = clone
-  co      = checkout
-  cop     = checkout -
-  dif     = diff --color
-  difs    = diff --color --staged
-  difst   = stash show --color --patch
-  discard = checkout --
-  fixup   = commit --fixup
-  l       = log --stat --decorate --relative-date
-  ldf     = log --oneline --patch-with-stat --full-diff --decorate
-  lgr     = log --oneline --all --graph --decorate
-  pf      = push --force-with-lease
-  rbi     = rebase --interactive
-  rmt     = remote --verbose
-  st      = status --branch --short --untracked-files=all
-  undo    = reset HEAD~1
-  unstage = reset HEAD --
+  a        = add
+  aa       = add --all
+  alias    = config --get-regexp '^alias.'
+  amend    = commit --amend --reuse-message HEAD --verbose
+  ap       = add --patch
+  br       = branch --verbose
+  bra      = branch --all --verbose
+  brd      = branch --delete
+  brg      = show-branch --all
+  brmv     = branch --move
+  brrd     = push origin --delete
+  c        = commit
+  cl       = clone
+  cleanall = git clean --force -d
+  co       = checkout
+  df       = diff --color
+  dfh      = stash show --color --patch
+  dfs      = diff --color --staged
+  discard  = checkout --
+  fix      = commit --fixup
+  l        = log --oneline --graph
+  la       = log --oneline --graph --all
+  ldf      = log --oneline --patch-with-stat --full-diff --decorate
+  ll       = log --stat --decorate --relative-date
+  pf       = push --force-with-lease
+  rba      = rebase --abort
+  rbi      = rebase --interactive
+  rmt      = remote --verbose
+  st       = status --branch --short --untracked-files=all
+  undo     = reset HEAD~1
+  unstage  = reset HEAD --
 [color]
   ui = true
 [commit]
