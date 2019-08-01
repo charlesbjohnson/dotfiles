@@ -12,7 +12,7 @@
   brrd     = push origin --delete
   c        = commit
   cl       = clone
-  cleanall = git clean --force -d
+  cleanall = clean --force -d
   co       = checkout
   df       = diff --color
   dfh      = stash show --color --patch
@@ -25,8 +25,11 @@
   ll       = log --stat --decorate --relative-date
   pf       = push --force-with-lease
   rba      = rebase --abort
+  rbc      = rebase --continue
   rbi      = rebase --interactive
   rmt      = remote --verbose
+  sha      = stash --include-untracked
+  shax     = stash --include-untracked --keep-index
   st       = status --branch --short --untracked-files=all
   undo     = reset HEAD~1
   unstage  = reset HEAD --
