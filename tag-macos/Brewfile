@@ -49,7 +49,6 @@ brew "ripgrep"
 brew "rsync"
 brew "shellcheck"
 brew "shfmt"
-brew "shopify/shopify/themekit"
 brew "thoughtbot/formulae/rcm"
 brew "tmux"
 brew "unzip"
@@ -93,7 +92,6 @@ cask "transmission"
 cask "visual-studio-code"
 cask "vlc"
 cask "webpquicklook"
-cask "zoomus"
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
@@ -106,7 +104,6 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "neovim/neovim"
-tap "shopify/shopify"
 tap "thoughtbot/formulae"
 
 Dir.glob(File.join(File.expand_path('~/.config/dotfile'), 'Brewfile.*')) do |path|
