@@ -73,6 +73,7 @@ Plug 'tpope/vim-git', { 'for': ['gitconfig'] }
 
 " Docs
 Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
+Plug 'masukomi/vim-markdown-folding', { 'for': ['markdown'] }
 Plug 'tpope/vim-markdown', { 'for': ['markdown']}
 Plug 'ujihisa/neco-look', { 'for': ['markdown', 'html'] }
 
