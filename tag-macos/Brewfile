@@ -107,3 +107,7 @@ tap "homebrew/core"
 tap "neovim/neovim"
 tap "shopify/shopify"
 tap "thoughtbot/formulae"
+
+Dir.glob(File.join(File.expand_path('~/.config/dotfile'), 'Brewfile.*')) do |path|
+  instance_eval(File.read(path))
+end
