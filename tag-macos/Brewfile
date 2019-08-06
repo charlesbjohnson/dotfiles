@@ -43,7 +43,7 @@ brew 'parallel'
 brew 'perl'
 brew 'proctools'
 brew 'python'
-brew 'python@2', link: false
+brew 'python@2'
 brew 'ranger'
 brew 'ripgrep'
 brew 'rsync'
