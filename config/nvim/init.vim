@@ -13,7 +13,7 @@ set ruler
 set showmatch
 set splitbelow
 set splitright
-set viminfo='100,n$HOME/.nvim/files/info/nviminfo
+set viminfo='100,n$HOME/.local/share/nvim/files/info/nviminfo
 set visualbell t_vb=
 set wildmode=longest:full,full
 syntax on
@@ -136,7 +136,7 @@ endfunction
 
 " Shougo/neosnippet.vim
 let g:neosnippet#enable_snipmate_compatibility = 1
-let g:neosnippet#snippets_directory = '~/.nvim/plugin/repos/github.com/honza/vim-snippets'
+let g:neosnippet#snippets_directory = '~/.local/share/nvim/plugin/vim-snippets'
 
 imap <C-e> <Plug>(neosnippet_expand_or_jump)
 
