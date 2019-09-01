@@ -12,8 +12,8 @@ Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
 Plug 'pangloss/vim-javascript', { 'for': ['javascript'] }
 
 " Ruby
-Plug 'fishbullet/deoplete-ruby', { 'for': ['ruby'] }
-Plug 'vim-ruby/vim-ruby', { 'for': ['ruby'] }
+" Plug 'fishbullet/deoplete-ruby', { 'for': ['ruby'] }
+" Plug 'vim-ruby/vim-ruby', { 'for': ['ruby'] }
 
 " Rust
 Plug 'rust-lang/rust.vim', { 'for': ['rust'] }
