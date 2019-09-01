@@ -22,6 +22,5 @@ Plug 'sebastianmarkow/deoplete-rust', { 'for': ['rust'], 'do': 'cargo install --
 " Web
 Plug 'ap/vim-css-color', { 'for': ['css', 'scss'] }
 Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
-Plug 'mattn/emmet-vim', { 'for': ['html'] }
 Plug 'othree/html5.vim', { 'for': ['html'] }
 Plug 'valloric/MatchTagAlways', { 'for': ['html'] }
