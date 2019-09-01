@@ -269,7 +269,7 @@ omap t <Plug>Sneak_t
 xmap T <Plug>Sneak_T
 xmap t <Plug>Sneak_t
 
-"" vasconcelloslf/vim-interestingwords
+"" lfv89/vim-interestingwords
 " workaround https://github.com/lfv89/vim-interestingwords/issues/20
 nmap <silent> <Leader>f <Plug>InterestingWords
 nnoremap <silent> <Leader>f :call InterestingWords('n')<CR>

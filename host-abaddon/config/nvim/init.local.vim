@@ -1,7 +1,7 @@
 """ Plugins
 
 "" System
-" w0rp/ale
+" dense-analysis/ale
 let g:ale_fixers = {}
 let g:ale_linters = {}
 
