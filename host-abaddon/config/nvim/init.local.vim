@@ -10,8 +10,8 @@ let g:ale_fixers['scss'] = ['stylelint']
 let g:ale_linters['css'] = ['stylelint']
 let g:ale_linters['scss'] = ['stylelint']
 
-let g:ale_fixers['go'] = ['goimports']
-let g:ale_linters['go'] = ['go build', 'gosimple']
+" let g:ale_fixers['go'] = ['goimports']
+" let g:ale_linters['go'] = ['go build', 'gosimple']
 
 let g:ale_fixers['javascript'] = ['xo']
 let g:ale_fixers['typescript'] = ['prettier']
@@ -30,9 +30,9 @@ let g:ale_linters['sh'] = ['shellcheck']
 
 "" Golang
 " fatih/vim-go
-let g:go_def_mapping_enabled = 0
-let g:go_doc_keywordprg_enabled = 0
-let g:go_fmt_autosave = 0
+" let g:go_def_mapping_enabled = 0
+" let g:go_doc_keywordprg_enabled = 0
+" let g:go_fmt_autosave = 0
 
 "" Rust
 " sebastianmarkow/deoplete-rust

@@ -3,8 +3,8 @@
 " Plug 'ekalinin/Dockerfile.vim', { 'for': ['Dockerfile'] }
 
 " Golang
-Plug 'fatih/vim-go', { 'for': ['go'], 'do': ':GoInstallBinaries gocode' }
-Plug 'zchee/deoplete-go', { 'for': ['go'], 'do': 'make', 'depends': 'vim-go' }
+" Plug 'fatih/vim-go', { 'for': ['go'], 'do': ':GoInstallBinaries gocode' }
+" Plug 'zchee/deoplete-go', { 'for': ['go'], 'do': 'make', 'depends': 'vim-go' }
 
 " JavaScript
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript'], 'do': 'npm install -g tern' }
