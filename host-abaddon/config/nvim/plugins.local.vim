@@ -16,8 +16,8 @@ Plug 'pangloss/vim-javascript', { 'for': ['javascript'] }
 " Plug 'vim-ruby/vim-ruby', { 'for': ['ruby'] }
 
 " Rust
-Plug 'rust-lang/rust.vim', { 'for': ['rust'] }
-Plug 'sebastianmarkow/deoplete-rust', { 'for': ['rust'], 'do': 'cargo install --force racer' }
+" Plug 'rust-lang/rust.vim', { 'for': ['rust'] }
+" Plug 'sebastianmarkow/deoplete-rust', { 'for': ['rust'], 'do': 'cargo install --force racer' }
 
 " Web
 Plug 'ap/vim-css-color', { 'for': ['css', 'scss'] }
