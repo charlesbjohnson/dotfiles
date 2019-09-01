@@ -6,9 +6,10 @@ let g:ale_fixers = {}
 let g:ale_linters = {}
 
 let g:ale_fixers['css'] = ['stylelint']
-let g:ale_fixers['scss'] = ['stylelint']
 let g:ale_linters['css'] = ['stylelint']
-let g:ale_linters['scss'] = ['stylelint']
+
+let g:ale_fixers['scss'] = g:ale_fixers['css']
+let g:ale_linters['scss'] = g:ale_linters['css']
 
 " let g:ale_fixers['go'] = ['goimports']
 " let g:ale_linters['go'] = ['go build', 'gosimple']
