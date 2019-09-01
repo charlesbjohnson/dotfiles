@@ -3,7 +3,6 @@
 " :source this file in vim to restore the snapshot
 " or execute: vim -S snapshot.vim
 
-silent! let g:plugs['Dockerfile.vim'].commit = 'f647f90'
 silent! let g:plugs['MatchTagAlways'].commit = '352eb47'
 silent! let g:plugs['ale'].commit = '6e28eec'
 silent! let g:plugs['committia.vim'].commit = 'd367190'
@@ -39,7 +38,6 @@ silent! let g:plugs['vim-expand-region'].commit = '9665135'
 silent! let g:plugs['vim-fish'].commit = '50b95cb'
 silent! let g:plugs['vim-git'].commit = 'be1cc34'
 silent! let g:plugs['vim-go'].commit = 'b6a0bde'
-silent! let g:plugs['vim-hashicorp-tools'].commit = 'cadfa0c'
 silent! let g:plugs['vim-illuminate'].commit = 'd2b547c'
 silent! let g:plugs['vim-interestingwords'].commit = '7e3ec6a'
 silent! let g:plugs['vim-javascript'].commit = 'ee44580'

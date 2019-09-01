@@ -1,6 +1,6 @@
 " DevOps
-Plug 'markcornick/vim-hashicorp-tools'
-Plug 'ekalinin/Dockerfile.vim', { 'for': ['Dockerfile'] }
+" Plug 'markcornick/vim-hashicorp-tools'
+" Plug 'ekalinin/Dockerfile.vim', { 'for': ['Dockerfile'] }
 
 " Golang
 Plug 'fatih/vim-go', { 'for': ['go'], 'do': ':GoInstallBinaries gocode' }
