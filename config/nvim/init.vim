@@ -56,24 +56,24 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>w :w<CR>
 
 " No confusing window
-map q: <NOP>
+noremap q: <NOP>
 
 " No Ex mode
-map Q <NOP>
+noremap Q <NOP>
 
 " No help window
-map <F1> <Esc>
-imap <F1> <Esc>
+noremap <F1> <Esc>
+inoremap <F1> <Esc>
 
 " Quickly clear highlighted search
-nnoremap <Leader><Leader> :nohlsearch<CR>
+nnoremap <silent> <Leader><Leader> :nohlsearch<CR>
 
 " Buffers (creation, deletion, cycling) and delete all buffers
-nnoremap <Leader>BB :Sayonara!<CR>
-nnoremap <Leader>BD :bufdo :Sayonara!<CR>
-nnoremap <Leader>b :enew<CR>
-nnoremap <Leader>h :bp<CR>
-nnoremap <Leader>l :bn<CR>
+nnoremap <silent> <Leader>BB :Sayonara!<CR>
+nnoremap <silent> <Leader>BD :bufdo :Sayonara!<CR>
+nnoremap <silent> <Leader>b :enew<CR>
+nnoremap <silent> <Leader>h :bp<CR>
+nnoremap <silent> <Leader>l :bn<CR>
 
 " Tabs (creation, deletion, cycling)
 nnoremap <Leader>H :tabprevious<CR>
@@ -89,24 +89,24 @@ xnoremap <C-t> >gv
 
 " Move around more quickly
 nnoremap < {
-nnoremap > }
-nnoremap H 0
-nnoremap L $
 xnoremap < {
+nnoremap > }
 xnoremap > }
+nnoremap H 0
 xnoremap H 0
+nnoremap L $
 xnoremap L $
 
 " Splits
-nnoremap <C-w>\| :vsplit<CR>
-nnoremap <C-w>_ :split<CR>
-nnoremap <C-w>h :vertical resize +5<CR>
-nnoremap <C-w>j :resize -5<CR>
-nnoremap <C-w>k :resize +5<CR>
-nnoremap <C-w>l :vertical resize -5<CR>
+nnoremap <silent> <C-w>\| :vsplit<CR>
+nnoremap <silent> <C-w>_ :split<CR>
+nnoremap <silent> <C-w>h :vertical resize +5<CR>
+nnoremap <silent> <C-w>j :resize -5<CR>
+nnoremap <silent> <C-w>k :resize +5<CR>
+nnoremap <silent> <C-w>l :vertical resize -5<CR>
 
 " Ctag navigation
-nnoremap <Leader>[ :pop<CR>
+nnoremap <silent> <Leader>[ :pop<CR>
 nnoremap <Leader>] <C-]>
 
 " Automatically jump to end of pasted text
@@ -122,7 +122,7 @@ xnoremap <silent> y y`]
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#file#enable_buffer_path = 1
 
-inoremap <silent><expr> <TAB>
+inoremap <silent> <expr> <TAB>
 \  pumvisible() ?
 \    "\<C-n>" :
 \    <SID>check_back_space() ?
@@ -155,8 +155,6 @@ nnoremap <silent> <Leader>p :call ToggleQuickfixList()<CR>
 let g:EasyClipPreserveCursorPositionAfterYank = 1
 
 " terryma/vim-expand-region
-vmap v <Plug>(expand_region_expand)
-vmap <C-v> <Plug>(expand_region_shrink)
 let g:expand_region_text_objects = {
 \  'ii':  0,
 \  'ai':  0,
@@ -178,6 +176,9 @@ let g:expand_region_text_objects = {
 \  'ac':  0,
 \  'ie':  0
 \}
+
+xmap v <Plug>(expand_region_expand)
+xmap <C-v> <Plug>(expand_region_shrink)
 
 " w0rp/ale
 let g:ale_fix_on_save = 1
@@ -210,7 +211,7 @@ function! s:try(cmd, default) abort
 endfunction
 
 " junegunn/fzf.vim
-nnoremap <C-p> :FZF --multi<CR>
+nnoremap <silent> <C-p> :FZF --multi<CR>
 
 " junegunn/vim-easy-align
 nmap <Leader>a <Plug>(EasyAlign)
@@ -228,10 +229,10 @@ function! g:Multiple_cursors_after() abort
 endfunction
 
 " zirrostig/vim-schlepp
-xmap <unique> <Leader>h <Plug>SchleppLeft
-xmap <unique> <Leader>j <Plug>SchleppDown
-xmap <unique> <Leader>k <Plug>SchleppUp
-xmap <unique> <Leader>l <Plug>SchleppRight
+xmap <Leader>h <Plug>SchleppLeft
+xmap <Leader>j <Plug>SchleppDown
+xmap <Leader>k <Plug>SchleppUp
+xmap <Leader>l <Plug>SchleppRight
 
 "" Search & Replace
 " andymass/vim-matchup
@@ -271,13 +272,13 @@ xmap t <Plug>Sneak_t
 
 "" lfv89/vim-interestingwords
 " workaround https://github.com/lfv89/vim-interestingwords/issues/20
-nmap <silent> <Leader>f <Plug>InterestingWords
+nmap <Leader>f <Plug>InterestingWords
 nnoremap <silent> <Leader>f :call InterestingWords('n')<CR>
 xnoremap <silent> <Leader>f :call InterestingWords('v')<CR>
 
-nmap <silent> <Leader>F <Plug>InterestingWordsClear
-nmap <silent> <Leader>N <Plug>InterestingWordsBackward
-nmap <silent> <Leader>n <Plug>InterestingWordsForeward
+nmap <Leader>F <Plug>InterestingWordsClear
+nmap <Leader>N <Plug>InterestingWordsBackward
+nmap <Leader>n <Plug>InterestingWordsForeward
 
 "" Appearance
 " Yggdroot/indentLine
@@ -288,6 +289,7 @@ let g:indentLine_noConcealCursor=''
 let g:nord_cursor_line_number_background = 1
 let g:nord_italic = 1
 let g:nord_italic_comments = 1
+
 colorscheme nord
 
 " edkolev/tmuxline.vim
@@ -362,6 +364,7 @@ inoreabbrev <expr> <BAR><BAR>
 \  <SID>is_at_start_of_line('\|\|') ?
 \    '<C-o>:TableModeEnable<CR><BAR><SPACE><BAR><LEFT><LEFT>' :
 \    '<BAR><BAR>'
+
 inoreabbrev <expr> __
 \  <SID>is_at_start_of_line('__') ?
 \    '<C-o>:silent! TableModeDisable<CR>' :
