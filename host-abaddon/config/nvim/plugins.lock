@@ -3,7 +3,6 @@
 " :source this file in vim to restore the snapshot
 " or execute: vim -S snapshot.vim
 
-silent! let g:plugs['MatchTagAlways'].commit = '352eb47'
 silent! let g:plugs['ale'].commit = '41ff80dc'
 silent! let g:plugs['committia.vim'].commit = 'd367190'
 silent! let g:plugs['doorboy.vim'].commit = 'be1ad24'

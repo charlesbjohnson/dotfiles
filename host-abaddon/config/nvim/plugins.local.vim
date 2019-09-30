@@ -15,4 +15,3 @@ Plug 'pangloss/vim-javascript', { 'for': ['javascript'] }
 " Web
 Plug 'ap/vim-css-color', { 'for': ['css', 'scss'] }
 Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
-Plug 'valloric/MatchTagAlways', { 'for': ['html'] }
