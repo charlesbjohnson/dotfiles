@@ -135,32 +135,6 @@ xnoremap m d
 nnoremap mm dd
 nnoremap M D
 
-" terryma/vim-expand-region
-let g:expand_region_text_objects = {
-\  'ii':  0,
-\  'ai':  0,
-\  'iv':  0,
-\  'av':  0,
-\  'iw':  0,
-\  'iW':  0,
-\  'i"':  0,
-\  'i''': 0,
-\  'i]':  0,
-\  'a]':  0,
-\  'ib':  0,
-\  'ab':  0,
-\  'iB':  0,
-\  'aB':  0,
-\  'il':  0,
-\  'ip':  0,
-\  'ic':  0,
-\  'ac':  0,
-\  'ie':  0
-\}
-
-xmap v <Plug>(expand_region_expand)
-xmap <C-v> <Plug>(expand_region_shrink)
-
 " w0rp/ale
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {}
