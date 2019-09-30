@@ -25,9 +25,3 @@ let g:ale_linters['javascript'] = ['xo']
 
 let g:ale_fixers['sh'] = ['shfmt']
 let g:ale_linters['sh'] = ['shellcheck']
-
-"" Golang
-" fatih/vim-go
-" let g:go_def_mapping_enabled = 0
-" let g:go_doc_keywordprg_enabled = 0
-" let g:go_fmt_autosave = 0

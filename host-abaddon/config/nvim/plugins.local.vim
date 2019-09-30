@@ -2,9 +2,6 @@
 " Plug 'ekalinin/Dockerfile.vim', { 'for': ['Dockerfile'] }
 " Plug 'hashivim/vim-hashicorp-tools'
 
-" Golang
-" Plug 'fatih/vim-go', { 'for': ['go'], 'do': ':GoInstallBinaries gocode' }
-
 " JavaScript
 Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
 Plug 'pangloss/vim-javascript', { 'for': ['javascript'] }
