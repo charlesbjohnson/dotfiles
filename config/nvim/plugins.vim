@@ -11,13 +11,9 @@ endfor
 
 " System
 Plug 'Julian/vim-textobj-variable-segment'
-Plug 'Shougo/deoplete.nvim'
-Plug 'Shougo/neosnippet-snippets'
-Plug 'Shougo/neosnippet.vim'
 Plug 'danro/rename.vim'
 Plug 'dense-analysis/ale'
 Plug 'glts/vim-textobj-comment'
-Plug 'honza/vim-snippets'
 Plug 'itmammoth/doorboy.vim'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-indent'
@@ -75,6 +71,5 @@ Plug 'tpope/vim-git', { 'for': ['gitconfig'] }
 Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 Plug 'masukomi/vim-markdown-folding', { 'for': ['markdown'] }
 Plug 'tpope/vim-markdown', { 'for': ['markdown']}
-Plug 'ujihisa/neco-look', { 'for': ['markdown', 'html'] }
 
 call plug#end()

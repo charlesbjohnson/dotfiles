@@ -3,21 +3,17 @@
 " Plug 'hashivim/vim-hashicorp-tools'
 
 " Golang
-" Plug 'deoplete-plugins/deoplete-go', { 'for': ['go'], 'do': 'make', 'depends': 'vim-go' }
 " Plug 'fatih/vim-go', { 'for': ['go'], 'do': ':GoInstallBinaries gocode' }
 
 " JavaScript
-Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript'], 'do': 'npm install -g tern' }
 Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
 Plug 'pangloss/vim-javascript', { 'for': ['javascript'] }
 
 " Ruby
-" Plug 'fishbullet/deoplete-ruby', { 'for': ['ruby'] }
 " Plug 'vim-ruby/vim-ruby', { 'for': ['ruby'] }
 
 " Rust
 " Plug 'rust-lang/rust.vim', { 'for': ['rust'] }
-" Plug 'sebastianmarkow/deoplete-rust', { 'for': ['rust'], 'do': 'cargo install --force racer' }
 
 " Web
 Plug 'ap/vim-css-color', { 'for': ['css', 'scss'] }

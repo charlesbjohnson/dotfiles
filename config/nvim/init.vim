@@ -118,28 +118,6 @@ xnoremap <silent> y y`]
 """ Plugins
 
 "" System
-" Shougo/deoplete.vim
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#file#enable_buffer_path = 1
-
-inoremap <silent> <expr> <TAB>
-\  pumvisible() ?
-\    "\<C-n>" :
-\    <SID>check_back_space() ?
-\      "\<TAB>" :
-\      deoplete#mappings#manual_complete()
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
-
-" Shougo/neosnippet.vim
-let g:neosnippet#enable_snipmate_compatibility = 1
-let g:neosnippet#snippets_directory = '~/.local/share/nvim/plugin/vim-snippets'
-
-imap <C-e> <Plug>(neosnippet_expand_or_jump)
-
 " itmammoth/doorboy.vim
 inoremap <expr> <BS> doorboy#map_backspace()
 inoremap <expr> <Space> doorboy#map_space()
@@ -219,14 +197,6 @@ xmap <CR> <Plug>(EasyAlign)
 
 " kristijanhusak/vim-multiple-cursors
 let g:multi_cursor_quit_key = '<C-e>'
-
-function! g:Multiple_cursors_before() abort
-  let g:deoplete#disable_auto_complete = 1
-endfunction
-
-function! g:Multiple_cursors_after() abort
- let g:deoplete#disable_auto_complete = 0
-endfunction
 
 " zirrostig/vim-schlepp
 xmap <Leader>h <Plug>SchleppLeft

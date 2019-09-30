@@ -31,9 +31,3 @@ let g:ale_linters['sh'] = ['shellcheck']
 " let g:go_def_mapping_enabled = 0
 " let g:go_doc_keywordprg_enabled = 0
 " let g:go_fmt_autosave = 0
-
-"" Rust
-" sebastianmarkow/deoplete-rust
-" let g:deoplete#sources#rust#disable_keymap = 1
-" let g:deoplete#sources#rust#racer_binary = systemlist('which racer')[0]
-" let g:deoplete#sources#rust#rust_source_path = systemlist('rustc --print sysroot')[0] . '/lib/rustlib/src/rust/src'
