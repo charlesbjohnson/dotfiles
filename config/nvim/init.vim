@@ -13,6 +13,7 @@ set ruler
 set showmatch
 set splitbelow
 set splitright
+set updatetime=300
 set viminfo='100,n$HOME/.local/share/nvim/files/info/nviminfo
 set visualbell t_vb=
 set wildmode=longest:full,full
@@ -21,6 +22,7 @@ syntax on
 
 """ Appearance
 set background=dark
+set cmdheight=2
 set colorcolumn=80
 set completeopt-=preview
 set cursorline
@@ -30,8 +32,10 @@ set noshowmode
 set nowrap
 set number
 set scrolloff=20
+set shortmess+=c
 set showcmd
 set showtabline=2
+set signcolumn=yes
 set termguicolors
 
 
