@@ -78,6 +78,3 @@ Plug 'tpope/vim-markdown', { 'for': ['markdown']}
 Plug 'ujihisa/neco-look', { 'for': ['markdown', 'html'] }
 
 call plug#end()
-
-" Broken
-" Plug 'haya14busa/incsearch.vim' https://github.com/neovim/neovim/issues/3688
