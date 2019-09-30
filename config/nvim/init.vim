@@ -172,9 +172,6 @@ nnoremap <silent> <C-p> :FZF --multi<CR>
 nmap <Leader>a <Plug>(EasyAlign)
 xmap <CR> <Plug>(EasyAlign)
 
-" kristijanhusak/vim-multiple-cursors
-let g:multi_cursor_quit_key = '<C-e>'
-
 " zirrostig/vim-schlepp
 xmap <Leader>h <Plug>SchleppLeft
 xmap <Leader>j <Plug>SchleppDown

@@ -37,7 +37,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin --xdg' }
 Plug 'junegunn/vim-easy-align'
 Plug 'rhysd/committia.vim'
 Plug 'roxma/vim-tmux-clipboard'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-vinegar'
 Plug 'zirrostig/vim-schlepp'
