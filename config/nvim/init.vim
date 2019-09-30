@@ -129,8 +129,11 @@ let g:toggle_list_no_mappings = 1
 nnoremap <silent> <Leader>P :call ToggleLocationList()<CR>
 nnoremap <silent> <Leader>p :call ToggleQuickfixList()<CR>
 
-" svermeulen/vim-easyclip
-let g:EasyClipPreserveCursorPositionAfterYank = 1
+" svermeulen/vim-cutlass
+nnoremap m d
+xnoremap m d
+nnoremap mm dd
+nnoremap M D
 
 " terryma/vim-expand-region
 let g:expand_region_text_objects = {
