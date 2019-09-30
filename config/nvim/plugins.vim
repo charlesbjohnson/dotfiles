@@ -45,7 +45,6 @@ Plug 'zirrostig/vim-schlepp'
 Plug 'RRethy/vim-illuminate'
 Plug 'andymass/vim-matchup'
 Plug 'justinmk/vim-sneak'
-Plug 'lfv89/vim-interestingwords'
 
 " Appearance
 Plug 'Yggdroot/indentLine'

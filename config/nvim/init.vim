@@ -214,16 +214,6 @@ omap t <Plug>Sneak_t
 xmap T <Plug>Sneak_T
 xmap t <Plug>Sneak_t
 
-"" lfv89/vim-interestingwords
-" workaround https://github.com/lfv89/vim-interestingwords/issues/20
-nmap <Leader>f <Plug>InterestingWords
-nnoremap <silent> <Leader>f :call InterestingWords('n')<CR>
-xnoremap <silent> <Leader>f :call InterestingWords('v')<CR>
-
-nmap <Leader>F <Plug>InterestingWordsClear
-nmap <Leader>N <Plug>InterestingWordsBackward
-nmap <Leader>n <Plug>InterestingWordsForeward
-
 "" Appearance
 " Yggdroot/indentLine
 let g:indentLine_char = '┆'
