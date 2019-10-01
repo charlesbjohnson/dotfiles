@@ -11,6 +11,3 @@ Plug 'pangloss/vim-javascript', { 'for': ['javascript'] }
 
 " Rust
 " Plug 'rust-lang/rust.vim', { 'for': ['rust'] }
-
-" Web
-Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
