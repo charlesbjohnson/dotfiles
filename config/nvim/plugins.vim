@@ -21,6 +21,7 @@ Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
 Plug 'mhinz/vim-sayonara'
 Plug 'milkypostman/vim-togglelist'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'sgur/vim-editorconfig'
 Plug 'svermeulen/vim-cutlass'
 Plug 'tpope/vim-commentary'

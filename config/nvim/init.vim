@@ -142,6 +142,46 @@ let g:toggle_list_no_mappings = 1
 nnoremap <silent> <Leader>P :call ToggleLocationList()<CR>
 nnoremap <silent> <Leader>p :call ToggleQuickfixList()<CR>
 
+" neoclide/coc.nvim
+inoremap <silent> <expr> <TAB>
+\  pumvisible() ? "\<C-n>" :
+\  <SID>check_back_space() ? "\<TAB>" :
+\  coc#refresh()
+
+inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <expr> <CR> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation() abort
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+xmap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap if <Plug>(coc-funcobj-i)
+omap af <Plug>(coc-funcobj-a)
+
+xmap <silent> v <Plug>(coc-range-select)
+
+nmap <silent> <C-i> <Plug>(coc-cursors-word)*
+xmap <silent> <C-i> y/\V<C-r>=escape(@",'/\')<CR><CR>gN<Plug>(coc-cursors-range)gn
+
 " svermeulen/vim-cutlass
 nnoremap m d
 xnoremap m d
