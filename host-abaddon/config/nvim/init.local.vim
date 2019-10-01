@@ -2,9 +2,6 @@
 
 "" System
 " dense-analysis/ale
-let g:ale_fixers = {}
-let g:ale_linters = {}
-
 let g:ale_fixers['css'] = ['stylelint']
 let g:ale_linters['css'] = ['stylelint']
 
