@@ -449,7 +449,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>132 89 796 473 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 2560 1417 0 0 2560 1417 </string>
+	<string>0 0 1440 877 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 450 585 427 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1132,7 +1132,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>CascadiaCode-Regular 12</string>
+			<string>CascadiaCodeNerdFont-Regular 12</string>
 			<key>Open Toolbelt</key>
 			<false/>
 			<key>Option Key Sends</key>
@@ -1225,15 +1225,16 @@
 	<key>NoSyncAllAppVersions</key>
 	<array>
 		<string>3.3.6</string>
-		<string>3.3.4</string>
+		<string>3.3.2</string>
 		<string>3.3.1</string>
 		<string>3.3.3</string>
-		<string>3.2.9</string>
-		<string>3.3.2</string>
 		<string>3.3.0</string>
+		<string>3.2.9</string>
+		<string>3.3.4</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
+		<string>CascadiaCode Nerd Font</string>
 		<string>Cascadia Code</string>
 	</array>
 	<key>NoSyncFrame_SessionsPreferences</key>
@@ -1248,7 +1249,7 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1440, 900}}</string>
 		<key>topLeft</key>
-		<string>{271, 743}</string>
+		<string>{298, 734}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -1257,7 +1258,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>AE10FFBE-3C21-4605-8866-88372125FE31</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>60</integer>
+	<integer>63</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
