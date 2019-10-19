@@ -71,7 +71,7 @@ cask 'firefox'
 cask 'firefox-developer-edition'
 cask 'flash-player'
 cask 'flux'
-cask 'font-meslo-nerd-font'
+cask 'font-cascadia'
 cask 'google-chrome'
 cask 'iterm2'
 cask 'kaleidoscope'
@@ -99,7 +99,6 @@ mas 'Dato', id: 1470584107
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
-mas 'Xcode', id: 497799835
 mas 'iMovie', id: 408981434
 tap 'buo/cask-upgrade'
 tap 'homebrew/bundle'
