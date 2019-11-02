@@ -179,8 +179,30 @@ omap af <Plug>(coc-funcobj-a)
 
 xmap <silent> v <Plug>(coc-range-select)
 
-nmap <silent> <C-i> <Plug>(coc-cursors-word)*
-xmap <silent> <C-i> y/\V<C-r>=escape(@",'/\')<CR><CR>gN<Plug>(coc-cursors-range)gn
+autocmd ColorScheme * hi CocCursorRange ctermbg=red guibg=red
+
+nmap <expr> <silent> <C-i> <SID>select_current_cursor('normal')
+xmap <expr> <silent> <C-i> <SID>select_current_cursor('visual')
+
+let s:previous_cursor_mode = ''
+
+function! s:select_current_cursor(mode) abort
+  if !get(g:, 'coc_cursors_activated', 0)
+    let s:previous_cursor_mode = a:mode
+
+    if a:mode == 'visual'
+      return "y/\\V\<C-r>=escape(@\", '/\\')\<CR>\<CR>Ngn\<Plug>(coc-cursors-range)n:nohlsearch\<CR>"
+    endif
+
+    return "\<Plug>(coc-cursors-word)"
+  end
+
+  if s:previous_cursor_mode == 'visual'
+    return "gN\<Plug>(coc-cursors-range)n:nohlsearch\<CR>"
+  endif
+
+  return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
+endfunction
 
 " svermeulen/vim-cutlass
 nnoremap m d
