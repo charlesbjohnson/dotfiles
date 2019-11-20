@@ -42,6 +42,7 @@ Plug 'sgur/vim-editorconfig'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'itmammoth/doorboy.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'psliwka/vim-smoothie'
 Plug 'svermeulen/vim-cutlass'
 Plug 'zirrostig/vim-schlepp'
 
