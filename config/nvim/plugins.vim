@@ -9,37 +9,45 @@ for file in split(glob('~/.config/nvim/plugins.*.vim'), '\n')
   execute 'source' file
 endfor
 
-" System
+" Text Objects
 Plug 'Julian/vim-textobj-variable-segment'
-Plug 'danro/rename.vim'
-Plug 'dense-analysis/ale'
 Plug 'glts/vim-textobj-comment'
-Plug 'itmammoth/doorboy.vim'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
-Plug 'mhinz/vim-sayonara'
-Plug 'milkypostman/vim-togglelist'
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'sgur/vim-editorconfig'
-Plug 'svermeulen/vim-cutlass'
+
+" Motions
+Plug 'christoomey/vim-sort-motion'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/repmo.vim'
 
-" Productivity
-Plug 'AndrewRadev/splitjoin.vim'
-Plug 'christoomey/vim-sort-motion'
+" Application Controls
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin --xdg' }
-Plug 'junegunn/vim-easy-align'
+Plug 'mhinz/vim-sayonara'
+Plug 'milkypostman/vim-togglelist'
 Plug 'rhysd/committia.vim'
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-vinegar'
+
+" Application Enhancements
+Plug 'danro/rename.vim'
+Plug 'sgur/vim-editorconfig'
+
+" Editor Controls
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'itmammoth/doorboy.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'svermeulen/vim-cutlass'
 Plug 'zirrostig/vim-schlepp'
+
+" Editor Enhancements
+Plug 'dense-analysis/ale'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " Search & Replace
 Plug 'RRethy/vim-illuminate'
