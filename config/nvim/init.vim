@@ -120,8 +120,45 @@ xnoremap <silent> y y`]
 
 
 """ Plugins
+" AndrewRadev/splitjoin.vim
+let g:splitjoin_align = 1
+let g:splitjoin_ruby_curly_braces = 0
+let g:splitjoin_ruby_trailing_comma = 0
 
-"" System
+nnoremap <silent> <Leader>J :call <SID>try('SplitjoinJoin',  'J')<CR>
+nnoremap <silent> <Leader>K :call <SID>try('SplitjoinSplit', "r\015")<CR>
+
+function! s:try(cmd, default) abort
+  if exists(':' . a:cmd) && !v:count
+    let tick = b:changedtick
+    execute a:cmd
+    if tick == b:changedtick
+      execute join(['normal!', a:default])
+    endif
+  else
+    execute join(['normal! ', v:count, a:default], '')
+  endif
+endfunction
+
+" Yggdroot/indentLine
+let g:indentLine_char = '┆'
+let g:indentLine_noConcealCursor=''
+
+" andymass/vim-matchup
+augroup matchup_configuration
+  autocmd!
+  autocmd ColorScheme * hi MatchParen cterm=italic gui=italic ctermfg=lightblue guifg=lightblue
+  autocmd ColorScheme * hi MatchWord cterm=italic gui=italic ctermfg=lightblue guifg=lightblue
+augroup END
+
+" arcticicestudio/nord-vim
+let g:nord_cursor_line_number_background = 1
+let g:nord_italic = 1
+let g:nord_italic_comments = 1
+let g:nord_underline = 1
+
+colorscheme nord
+
 " dense-analysis/ale
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {}
@@ -131,10 +168,111 @@ let g:ale_linters = {}
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
 
+" dhruvasagar/vim-table-mode
+inoreabbrev <expr> <BAR><BAR>
+\  <SID>is_at_start_of_line('\|\|') ?
+\    '<C-o>:TableModeEnable<CR><BAR><SPACE><BAR><LEFT><LEFT>' :
+\    '<BAR><BAR>'
+
+inoreabbrev <expr> __
+\  <SID>is_at_start_of_line('__') ?
+\    '<C-o>:silent! TableModeDisable<CR>' :
+\    '__'
+
+function! s:is_at_start_of_line(mapping) abort
+  let text_before_cursor = getline('.')[0 : col('.')-1]
+  let mapping_pattern = '\V' . escape(a:mapping, '\')
+  let comment_pattern = '\V' . escape(substitute(&l:commentstring, '%s.*$', '', ''), '\')
+  return (text_before_cursor =~? '^' . ('\v(' . comment_pattern . '\v)?') . '\s*\v' . mapping_pattern . '\v$')
+endfunction
+
+" edkolev/tmuxline.vim
+let g:tmuxline_theme = 'lightline'
+let g:tmuxline_preset = 'crosshair'
+
+" elzr/vim-json
+let g:vim_json_syntax_conceal = 0
+
+" itchyny/lightline.vim
+let g:lightline = {
+\  'colorscheme': 'nord',
+\  'component_expand': {
+\    'buffers': 'lightline#bufferline#buffers'
+\  },
+\  'component_function': {
+\    'filetype': 'Devicon_filetype',
+\    'fileformat': 'Devicon_fileformat',
+\  },
+\  'component_type': {
+\    'buffers': 'tabsel'
+\  },
+\  'tabline': {
+\    'left': [['buffers']],
+\    'right': [[]]
+\  }
+\}
+
 " itmammoth/doorboy.vim
 inoremap <expr> <BS> doorboy#map_backspace()
 inoremap <expr> <Space> doorboy#map_space()
 inoremap <expr> <CR> doorboy#map_cr()
+
+" junegunn/fzf.vim
+nnoremap <silent> <C-p> :FZF --multi<CR>
+
+" junegunn/vim-easy-align
+nmap <Leader>a <Plug>(EasyAlign)
+xmap <CR> <Plug>(EasyAlign)
+
+" justinmk/vim-sneak
+let g:sneak#s_next = 1
+let g:sneak#use_ic_scs = 1
+
+ " 2-character Sneak (default)
+nmap S <Plug>Sneak_S
+nmap s <Plug>Sneak_s
+omap S <Plug>Sneak_S
+omap s <Plug>Sneak_s
+xmap S <Plug>Sneak_S
+xmap s <Plug>Sneak_s
+
+" replace 'f' with 1-char Sneak
+nmap F <Plug>Sneak_F
+nmap f <Plug>Sneak_f
+omap F <Plug>Sneak_F
+omap f <Plug>Sneak_f
+xmap F <Plug>Sneak_F
+xmap f <Plug>Sneak_f
+
+" replace 't' with 1-char Sneak
+nmap T <Plug>Sneak_T
+nmap t <Plug>Sneak_t
+omap T <Plug>Sneak_T
+omap t <Plug>Sneak_t
+xmap T <Plug>Sneak_T
+xmap t <Plug>Sneak_t
+
+" mhinz/vim-signify
+let g:signify_vcs_list = ['git']
+
+" mhinz/vim-startify
+let g:startify_change_to_dir = 1
+let g:startify_change_to_vcs_root = 1
+let g:startify_restore_position = 1
+let g:startify_relative_path = 1
+let g:startify_custom_header = [
+\  '',
+\  '',
+\  '          ::::    ::: :::::::::: ::::::::  :::     ::: :::::::::::   :::   :::',
+\  '         :+:+:   :+: :+:       :+:    :+: :+:     :+:     :+:      :+:+: :+:+:',
+\  '        :+:+:+  +:+ +:+       +:+    +:+ +:+     +:+     +:+     +:+ +:+:+ +:+',
+\  '       +#+ +:+ +#+ +#++:++#  +#+    +:+ +#+     +:+     +#+     +#+  +:+  +#+',
+\  '      +#+  +#+#+# +#+       +#+    +#+  +#+   +#+      +#+     +#+       +#+',
+\  '     #+#   #+#+# #+#       #+#    #+#   #+#+#+#       #+#     #+#       #+#',
+\  '    ###    #### ########## ########      ###     ########### ###       ###',
+\  '    +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=',
+\  '    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-='
+\]
 
 " milkypostman/vim-togglelist
 let g:toggle_list_no_mappings = 1
@@ -204,148 +342,6 @@ function! s:select_current_cursor(mode) abort
   return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
 endfunction
 
-" svermeulen/vim-cutlass
-nnoremap m d
-xnoremap m d
-nnoremap mm dd
-nnoremap M D
-
-"" Productivity
-" AndrewRadev/splitjoin.vim
-let g:splitjoin_align = 1
-let g:splitjoin_ruby_curly_braces = 0
-let g:splitjoin_ruby_trailing_comma = 0
-
-nnoremap <silent> <Leader>J :call <SID>try('SplitjoinJoin',  'J')<CR>
-nnoremap <silent> <Leader>K :call <SID>try('SplitjoinSplit', "r\015")<CR>
-
-function! s:try(cmd, default) abort
-  if exists(':' . a:cmd) && !v:count
-    let tick = b:changedtick
-    execute a:cmd
-    if tick == b:changedtick
-      execute join(['normal!', a:default])
-    endif
-  else
-    execute join(['normal! ', v:count, a:default], '')
-  endif
-endfunction
-
-" junegunn/fzf.vim
-nnoremap <silent> <C-p> :FZF --multi<CR>
-
-" junegunn/vim-easy-align
-nmap <Leader>a <Plug>(EasyAlign)
-xmap <CR> <Plug>(EasyAlign)
-
-" zirrostig/vim-schlepp
-xmap <Leader>h <Plug>SchleppLeft
-xmap <Leader>j <Plug>SchleppDown
-xmap <Leader>k <Plug>SchleppUp
-xmap <Leader>l <Plug>SchleppRight
-
-"" Search & Replace
-" andymass/vim-matchup
-augroup matchup_configuration
-  autocmd!
-  autocmd ColorScheme * hi MatchParen cterm=italic gui=italic ctermfg=lightblue guifg=lightblue
-  autocmd ColorScheme * hi MatchWord cterm=italic gui=italic ctermfg=lightblue guifg=lightblue
-augroup END
-
-" justinmk/vim-sneak
-let g:sneak#s_next = 1
-let g:sneak#use_ic_scs = 1
-
- " 2-character Sneak (default)
-nmap S <Plug>Sneak_S
-nmap s <Plug>Sneak_s
-omap S <Plug>Sneak_S
-omap s <Plug>Sneak_s
-xmap S <Plug>Sneak_S
-xmap s <Plug>Sneak_s
-
-" replace 'f' with 1-char Sneak
-nmap F <Plug>Sneak_F
-nmap f <Plug>Sneak_f
-omap F <Plug>Sneak_F
-omap f <Plug>Sneak_f
-xmap F <Plug>Sneak_F
-xmap f <Plug>Sneak_f
-
-" replace 't' with 1-char Sneak
-nmap T <Plug>Sneak_T
-nmap t <Plug>Sneak_t
-omap T <Plug>Sneak_T
-omap t <Plug>Sneak_t
-xmap T <Plug>Sneak_T
-xmap t <Plug>Sneak_t
-
-"" Appearance
-" Yggdroot/indentLine
-let g:indentLine_char = '┆'
-let g:indentLine_noConcealCursor=''
-
-" arcticicestudio/nord-vim
-let g:nord_cursor_line_number_background = 1
-let g:nord_italic = 1
-let g:nord_italic_comments = 1
-let g:nord_underline = 1
-
-colorscheme nord
-
-" edkolev/tmuxline.vim
-let g:tmuxline_theme = 'lightline'
-let g:tmuxline_preset = 'crosshair'
-
-" itchyny/lightline.vim
-let g:lightline = {
-\  'colorscheme': 'nord',
-\  'component_expand': {
-\    'buffers': 'lightline#bufferline#buffers'
-\  },
-\  'component_function': {
-\    'filetype': 'Devicon_filetype',
-\    'fileformat': 'Devicon_fileformat',
-\  },
-\  'component_type': {
-\    'buffers': 'tabsel'
-\  },
-\  'tabline': {
-\    'left': [['buffers']],
-\    'right': [[]]
-\  }
-\}
-
-function! g:Devicon_filetype() abort
-  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
-endfunction
-
-function! g:Devicon_fileformat() abort
-  return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
-endfunction
-
-" mhinz/vim-signify
-let g:signify_vcs_list = ['git']
-
-" mhinz/vim-startify
-let g:startify_change_to_dir = 1
-let g:startify_change_to_vcs_root = 1
-let g:startify_restore_position = 1
-let g:startify_relative_path = 1
-let g:startify_custom_header = [
-\  '',
-\  '',
-\  '          ::::    ::: :::::::::: ::::::::  :::     ::: :::::::::::   :::   :::',
-\  '         :+:+:   :+: :+:       :+:    :+: :+:     :+:     :+:      :+:+: :+:+:',
-\  '        :+:+:+  +:+ +:+       +:+    +:+ +:+     +:+     +:+     +:+ +:+:+ +:+',
-\  '       +#+ +:+ +#+ +#++:++#  +#+    +:+ +#+     +:+     +#+     +#+  +:+  +#+',
-\  '      +#+  +#+#+# +#+       +#+    +#+  +#+   +#+      +#+     +#+       +#+',
-\  '     #+#   #+#+# #+#       #+#    #+#   #+#+#+#       #+#     #+#       #+#',
-\  '    ###    #### ########## ########      ###     ########### ###       ###',
-\  '    +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=',
-\  '    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-='
-\]
-
 " ntpeters/vim-better-whitespace
 let g:better_whitespace_enabled = 1
 let g:better_whitespace_skip_empty_lines = 0
@@ -355,29 +351,25 @@ let g:strip_whitelines_at_eof = 1
 let g:strip_whitespace_confirm = 0
 let g:strip_whitespace_on_save = 1
 
-"" Sysadmin
-" elzr/vim-json
-let g:vim_json_syntax_conceal = 0
+" svermeulen/vim-cutlass
+nnoremap m d
+xnoremap m d
+nnoremap mm dd
+nnoremap M D
 
-"" Docs
-" dhruvasagar/vim-table-mode
-inoreabbrev <expr> <BAR><BAR>
-\  <SID>is_at_start_of_line('\|\|') ?
-\    '<C-o>:TableModeEnable<CR><BAR><SPACE><BAR><LEFT><LEFT>' :
-\    '<BAR><BAR>'
+" zirrostig/vim-schlepp
+xmap <Leader>h <Plug>SchleppLeft
+xmap <Leader>j <Plug>SchleppDown
+xmap <Leader>k <Plug>SchleppUp
+xmap <Leader>l <Plug>SchleppRight
 
-inoreabbrev <expr> __
-\  <SID>is_at_start_of_line('__') ?
-\    '<C-o>:silent! TableModeDisable<CR>' :
-\    '__'
-
-function! s:is_at_start_of_line(mapping) abort
-  let text_before_cursor = getline('.')[0 : col('.')-1]
-  let mapping_pattern = '\V' . escape(a:mapping, '\')
-  let comment_pattern = '\V' . escape(substitute(&l:commentstring, '%s.*$', '', ''), '\')
-  return (text_before_cursor =~? '^' . ('\v(' . comment_pattern . '\v)?') . '\s*\v' . mapping_pattern . '\v$')
+function! g:Devicon_filetype() abort
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
 endfunction
 
+function! g:Devicon_fileformat() abort
+  return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+endfunction
 
 " Local configuration overrides
 for file in split(glob('~/.config/nvim/init.*.vim'), '\n')
