@@ -351,6 +351,11 @@ let g:strip_whitelines_at_eof = 1
 let g:strip_whitespace_confirm = 0
 let g:strip_whitespace_on_save = 1
 
+" psliwka/vim-smoothie
+let g:smoothie_no_default_mappings = 1
+nmap <silent> <C-f> <Plug>(SmoothieForwards)
+nmap <silent> <C-b> <Plug>(SmoothieBackwards)
+
 " svermeulen/vim-cutlass
 nnoremap m d
 xnoremap m d
