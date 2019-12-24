@@ -48,5 +48,8 @@
   "workbench.colorTheme": "Nord",
   "workbench.editor.tabCloseButton": "off",
   "workbench.list.openMode": "doubleClick",
-  "workbench.statusBar.feedback.visible": false
+  "workbench.statusBar.feedback.visible": false,
+  "javascript.format.enable": false,
+  "javascript.implicitProjectConfig.checkJs": true,
+  "typescript.format.enable": false
 }
