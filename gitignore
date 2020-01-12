@@ -68,6 +68,8 @@ tags
 [._]*.un~
 
 ### VisualStudioCode ###
+jsconfig.json
+
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
