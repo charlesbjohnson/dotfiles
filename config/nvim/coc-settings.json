@@ -1,4 +1,5 @@
 {
+  "coc.preferences.rootPatterns": [".git", "Cargo.toml"],
   "javascript.format.enabled": false,
   "javascript.suggestionActions.enabled": false,
   "tsserver.implicitProjectConfig.checkJs": true,
