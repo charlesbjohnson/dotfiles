@@ -1,6 +1,7 @@
 brew 'asdf'
 brew 'autoconf'
 brew 'bash'
+brew 'bat'
 brew 'binutils', link: true
 brew 'coreutils'
 brew 'curl'
