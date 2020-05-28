@@ -1,3 +1,11 @@
+function shell::is_sh
+  false
+end
+
+function shell::is_fish
+  true
+end
+
 function shell::termcolor
   if not string match --quiet "*256color*" $TERM
     set --export --global TERM $argv[1]
@@ -23,6 +31,8 @@ function shell::dircolors
 end
 
 function shell::cleanup
+  functions --erase shell::is_sh
+  functions --erase shell::is_fish
   functions --erase shell::termcolor
   functions --erase shell::dircolors
   functions --erase shell::cleanup
