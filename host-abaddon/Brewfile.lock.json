@@ -1095,22 +1095,22 @@
         }
       },
       "vim": {
-        "version": "8.2.0950",
+        "version": "8.2.1000",
         "bottle": {
           "cellar": "/usr/local/Cellar",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/vim-8.2.0950.catalina.bottle.tar.gz",
-              "sha256": "950227e7d7b57a1b5a768d3e0d44f2d4aefcfc214b4cd7fbeb989731fb68dbaf"
+              "url": "https://homebrew.bintray.com/bottles/vim-8.2.1000.catalina.bottle.tar.gz",
+              "sha256": "4d5b4097a2795bad5250ecb1d8723e0eb9752e7f814c8cc0c6c402bfbc7bdb61"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/vim-8.2.0950.mojave.bottle.tar.gz",
-              "sha256": "2347dafec2dff1277f22ebd24f8b7663ace840fe0ea74dfb0f942bb16e78a559"
+              "url": "https://homebrew.bintray.com/bottles/vim-8.2.1000.mojave.bottle.tar.gz",
+              "sha256": "3f36dd7c91e937512de009422062ed48185d21a460eb17dcfa3010fb40251c30"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/vim-8.2.0950.high_sierra.bottle.tar.gz",
-              "sha256": "b1c402f03b78b52035268c31a0d8b2ab30dfe8a26b07ce6d0d83654cf7733dd8"
+              "url": "https://homebrew.bintray.com/bottles/vim-8.2.1000.high_sierra.bottle.tar.gz",
+              "sha256": "612d512d26c1787ef744b6e716b02777f3ad4838eacfa98a10030a31d88fff78"
             }
           }
         }
@@ -1204,22 +1204,22 @@
         }
       },
       "circleci": {
-        "version": "0.1.7971",
+        "version": "0.1.8302",
         "bottle": {
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/circleci-0.1.7971.catalina.bottle.tar.gz",
-              "sha256": "8bdd215b938073eebb789f9d021e61158839f8db9ca3dfd7924e68f15c960c5a"
+              "url": "https://homebrew.bintray.com/bottles/circleci-0.1.8302.catalina.bottle.tar.gz",
+              "sha256": "3d81a6969466ca3c2759e8541e51ecf86c35928eb5083eda57b4dbb7c8d16ce2"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/circleci-0.1.7971.mojave.bottle.tar.gz",
-              "sha256": "b6b287d8409ce94164cca746e1752b86250975e9f08f7572e53f75c12d0df3aa"
+              "url": "https://homebrew.bintray.com/bottles/circleci-0.1.8302.mojave.bottle.tar.gz",
+              "sha256": "82d2510812f148c47bb48c6ae100604d6a6de1c9b0e4b848c2dfeeb653d15012"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/circleci-0.1.7971.high_sierra.bottle.tar.gz",
-              "sha256": "7f86646638b4992e24897924d8ae47a3b2fb1833773f55af345c70dcf145b3a2"
+              "url": "https://homebrew.bintray.com/bottles/circleci-0.1.8302.high_sierra.bottle.tar.gz",
+              "sha256": "3ac7e0ff8f06a7514280612a71eb67c0af52661561d49976a3e1ae86052f2367"
             }
           }
         }
@@ -1336,7 +1336,7 @@
         }
       },
       "google-chrome": {
-        "version": "83.0.4103.97",
+        "version": "83.0.4103.106",
         "options": {
           "full_name": "google-chrome"
         }
@@ -1456,13 +1456,13 @@
         }
       },
       "visual-studio-code": {
-        "version": "1.46.0",
+        "version": "1.46.1",
         "options": {
           "full_name": "visual-studio-code"
         }
       },
       "vlc": {
-        "version": "3.0.10",
+        "version": "3.0.11",
         "options": {
           "full_name": "vlc"
         }
@@ -1527,7 +1527,7 @@
       },
       "Microsoft Remote Desktop": {
         "id": "1295203466",
-        "version": "10.3.11"
+        "version": "10.3.12"
       }
     },
     "tap": {
@@ -1535,19 +1535,19 @@
         "revision": "f61ca8c408de4f758c7d28e0db687126795c1b30"
       },
       "homebrew/bundle": {
-        "revision": "e96cb8ba2f8876089dae27efe3200f2ba0ef587f"
+        "revision": "4b9a95355a4784a6839821ec58467f8e1ed96ad7"
       },
       "homebrew/cask": {
-        "revision": "69e5132214de1a3e88cb703f39c29c7347744589"
+        "revision": "ce3a1f13a7d7722c71ca225d7c828e828f35ea47"
       },
       "homebrew/cask-fonts": {
-        "revision": "5a51d2e83d155c4510cb663d18701cb4ba82ae2c"
+        "revision": "4002bfa454011d0bb83f8897637055bbe5f9550a"
       },
       "homebrew/cask-versions": {
-        "revision": "63ca43df8d61e4b3a60a151338c7c54ebbffe1f7"
+        "revision": "79fdb85eb2ce6cb64bfaefe6d4bd6f91def41009"
       },
       "homebrew/core": {
-        "revision": "ccc52af3a32ef9acc899605c70f952cf5a08ff96"
+        "revision": "f34594ce752ca8952293a25e9b3ce6ac4e1b9f76"
       },
       "neovim/neovim": {
         "revision": "e587b5c90456a895a11bc5ae81e5cfdde6b23dd4"
@@ -1563,9 +1563,9 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.4.0-37-g797507f",
+        "HOMEBREW_VERSION": "2.4.0-87-g8c21e8b",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "ccc52af3a32ef9acc899605c70f952cf5a08ff96",
+        "Homebrew/homebrew-core": "f34594ce752ca8952293a25e9b3ce6ac4e1b9f76",
         "CLT": "11.0.33.17",
         "Xcode": "11.5",
         "macOS": "10.15.5"
