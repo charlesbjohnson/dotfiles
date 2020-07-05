@@ -1078,7 +1078,6 @@
           }
         }
       },
-      "thoughtbot/formulae/rcm": null,
       "tmux": {
         "version": "3.1b",
         "bottle": {
@@ -1241,21 +1240,28 @@
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/circleci-0.1.8599.catalina.bottle.tar.gz",
-              "sha256": "3a26df6b9686727e98418ffc3eb28c83689e202d9360d56eaebe358586be074e"
+              "url": "https://homebrew.bintray.com/bottles/circleci-0.1.8599.catalina.bottle.1.tar.gz",
+              "sha256": "b5e4fde6730de4b58a8d3246ba9ee7eab7f1f8ef548af7f1396081925824aa8c"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/circleci-0.1.8599.mojave.bottle.tar.gz",
-              "sha256": "df2b01078f81928ebff0a17b9580a0105ab1ac5606513db5661fd56539c584af"
+              "url": "https://homebrew.bintray.com/bottles/circleci-0.1.8599.mojave.bottle.1.tar.gz",
+              "sha256": "900623318d8f9fda662feb96e790e26efc99aafccefa4117b1d849f887c957b7"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/circleci-0.1.8599.high_sierra.bottle.tar.gz",
-              "sha256": "8aba332a6953247117def80ddd864c7c04d72876cf8389ac8f5436604beb44a4"
+              "url": "https://homebrew.bintray.com/bottles/circleci-0.1.8599.high_sierra.bottle.1.tar.gz",
+              "sha256": "feb8f16711a9798ae6aab4f7c48706ba866aff44effb4ea8abc8c2b266ae066c"
             }
           }
         }
       },
-      "shopify/shopify/themekit": null
+      "themekit": {
+        "version": "v1.0.3",
+        "bottle": false
+      },
+      "rcm": {
+        "version": "1.3.3",
+        "bottle": false
+      }
     },
     "cask": {
       "1password": {
@@ -1495,16 +1501,16 @@
         "revision": "9a3850f055cbb0eceec5b57d68334388594793ce"
       },
       "homebrew/cask": {
-        "revision": "bf73baaf669f55b0293d20ccc9228aa6f46a1f7a"
+        "revision": "1543cd980ae5dbec5bb43237bca89c95e0e77de2"
       },
       "homebrew/cask-fonts": {
         "revision": "25d915075752d5350f917b5438b13e24ed7c9043"
       },
       "homebrew/cask-versions": {
-        "revision": "87678f62a94476bbb9ed51d49d1960a4d8a20a1a"
+        "revision": "a6bbf7e4cf0e174b36e7e6b72eb8daa610a65c41"
       },
       "homebrew/core": {
-        "revision": "3b511b36b88f810ff7eddbc8ca1442a54be9c2e6"
+        "revision": "ff1b6d7880561f90b6c09a6d0d1a6dbce6ac84f4"
       },
       "neovim/neovim": {
         "revision": "e587b5c90456a895a11bc5ae81e5cfdde6b23dd4"
@@ -1522,7 +1528,7 @@
       "catalina": {
         "HOMEBREW_VERSION": "2.4.3-49-g4290789",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "3b511b36b88f810ff7eddbc8ca1442a54be9c2e6",
+        "Homebrew/homebrew-core": "ff1b6d7880561f90b6c09a6d0d1a6dbce6ac84f4",
         "CLT": "11.0.33.17",
         "Xcode": "11.5",
         "macOS": "10.15.5"
