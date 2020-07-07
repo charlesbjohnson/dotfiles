@@ -1,9 +1,9 @@
-### asdf ###
+### Project ###
+.ignore
 .tool-versions
 
-
-# Created by https://www.gitignore.io/api/vim,visualstudiocode,linux,macos
-# Edit at https://www.gitignore.io/?templates=vim,visualstudiocode,linux,macos
+# JavaScript
+jsconfig.json
 
 ### Linux ###
 *~
@@ -51,6 +51,7 @@ Temporary Items
 ### Vim ###
 # Swap
 [._]*.s[a-v][a-z]
+!*.svg  # comment out if you don't need vector files
 [._]*.sw[a-p]
 [._]s[a-rt-v][a-z]
 [._]ss[a-gi-z]
@@ -68,16 +69,13 @@ tags
 [._]*.un~
 
 ### VisualStudioCode ###
-jsconfig.json
-
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+*.code-workspace
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history
-
-# End of https://www.gitignore.io/api/vim,visualstudiocode,linux,macos
