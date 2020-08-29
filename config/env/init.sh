@@ -9,6 +9,10 @@ function env::golang() {
   export GOROOT="$(go env GOROOT)"
 }
 
+function env::gpg() {
+  export GPG_TTY="$(tty)"
+}
+
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/gnu-utility/init.zsh
 function env::gnu() {
   if [[ "$(type whoami)" =~ gwhoami ]]; then

@@ -37,6 +37,7 @@
   ui = true
 [commit]
   template = ~/.gitmessage
+  gpgsign  = true
 [core]
   autocrlf     = input
   excludesfile = ~/.gitignore
@@ -52,8 +53,9 @@
 [rebase]
   autosquash = true
 [user]
-  email = mail@cbjohnson.info
-  name  = Charles B Johnson
+  email      = mail@cbjohnson.info
+  name       = Charles B Johnson
+  signingKey = 390184033B3454E3
 [web]
   browser = chromium
 [include]

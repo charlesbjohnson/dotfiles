@@ -9,6 +9,10 @@ function env::golang
   set --export --global GOROOT (go env GOROOT)
 end
 
+function env::gpg
+  set --export --global GPG_TTY (tty)
+end
+
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/gnu-utility/init.zsh
 function env::gnu
   if not command --search --quiet "gwhoami"
