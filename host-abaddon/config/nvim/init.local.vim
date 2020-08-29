@@ -26,3 +26,6 @@ let g:ale_linters['rust'] = ['cargo', 'rustc']
 
 let g:ale_fixers['sh'] = ['shfmt']
 let g:ale_linters['sh'] = ['shellcheck']
+
+let g:ale_fixers['typescript'] = g:ale_fixers['javascript']
+let g:ale_linters['typescript'] = g:ale_fixers['typescript']
