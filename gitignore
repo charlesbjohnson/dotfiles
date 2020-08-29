@@ -5,6 +5,9 @@
 # JavaScript
 jsconfig.json
 
+# Ruby
+.solargraph.yml
+
 ### Linux ###
 *~
 
