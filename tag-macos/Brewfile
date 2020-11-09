@@ -48,12 +48,13 @@ brew 'proctools'
 brew 'python@2'
 brew 'python@3.9'
 brew 'ranger'
-brew 'rcm'
 brew 'ripgrep'
 brew 'rsync'
 brew 'shellcheck'
 brew 'shfmt'
+brew 'thoughtbot/formulae/rcm'
 brew 'tmux'
+brew 'unbound'
 brew 'unzip'
 brew 'vim'
 brew 'watch'
@@ -95,6 +96,7 @@ mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
 mas 'Xcode', id: 497799835
 mas 'iMovie', id: 408981434
+tap 'heroku/brew'
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
