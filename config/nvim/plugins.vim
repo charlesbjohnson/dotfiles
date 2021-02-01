@@ -39,7 +39,7 @@ Plug 'danro/rename.vim'
 Plug 'sgur/vim-editorconfig'
 
 " Editor Controls
-Plug 'AndrewRadev/splitjoin.vim'
+Plug 'AndrewRadev/splitjoin.vim', { 'branch': 'main' }
 Plug 'itmammoth/doorboy.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'psliwka/vim-smoothie'
