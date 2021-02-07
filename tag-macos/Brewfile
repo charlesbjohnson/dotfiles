@@ -48,6 +48,7 @@ brew 'proctools'
 brew 'python@2'
 brew 'python@3.9'
 brew 'ranger'
+brew 'readline'
 brew 'ripgrep'
 brew 'rsync'
 brew 'shellcheck'
@@ -65,6 +66,7 @@ cask '1password'
 cask 'backblaze'
 cask 'betterzipql'
 cask 'daisydisk'
+cask 'docker'
 cask 'dropbox'
 cask 'encryptme'
 cask 'firefox'
@@ -92,16 +94,17 @@ cask 'vlc'
 cask 'webpquicklook'
 mas 'Dato', id: 1470584107
 mas 'Keynote', id: 409183694
+mas 'Microsoft Remote Desktop', id: 1295203466
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
 mas 'Xcode', id: 497799835
 mas 'iMovie', id: 408981434
-tap 'heroku/brew'
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/core'
+tap 'homebrew/services'
 tap 'thoughtbot/formulae'
 
 Dir.glob(File.join(File.expand_path('~/.config/dotfile'), 'Brewfile.*')) do |path|
