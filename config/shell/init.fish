@@ -34,11 +34,16 @@ function shell::prompt
   starship init fish | source
 end
 
+function shell::fzf
+  fzf_key_bindings
+end
+
 function shell::cleanup
   functions --erase shell::is_sh
   functions --erase shell::is_fish
   functions --erase shell::termcolor
   functions --erase shell::dircolors
   functions --erase shell::prompt
+  functions --erase shell::fzf
   functions --erase shell::cleanup
 end

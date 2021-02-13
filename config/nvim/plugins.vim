@@ -26,7 +26,7 @@ Plug 'vim-scripts/repmo.vim'
 
 " Application Controls
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin --xdg' }
+Plug 'junegunn/fzf'
 Plug 'mhinz/vim-sayonara'
 Plug 'milkypostman/vim-togglelist'
 Plug 'rhysd/committia.vim'

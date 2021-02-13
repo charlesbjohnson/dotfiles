@@ -22,11 +22,18 @@ function shell::prompt() {
   eval "$(starship init bash)"
 }
 
+function shell::fzf() {
+  if [[ -f "$HOME/.fzf.bash" ]]; then
+    source "$HOME/.fzf.bash"
+  fi
+}
+
 function shell::cleanup() {
   unset -f shell::is_sh
   unset -f shell::is_fish
   unset -f shell::termcolor
   unset -f shell::dircolors
   unset -f shell::prompt
+  unset -f shell::fzf
   unset -f shell::cleanup
 }
