@@ -18,10 +18,15 @@ function shell::dircolors() {
   fi
 }
 
+function shell::prompt() {
+  eval "$(starship init bash)"
+}
+
 function shell::cleanup() {
   unset -f shell::is_sh
   unset -f shell::is_fish
   unset -f shell::termcolor
   unset -f shell::dircolors
+  unset -f shell::prompt
   unset -f shell::cleanup
 }

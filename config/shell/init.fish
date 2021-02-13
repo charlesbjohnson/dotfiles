@@ -30,10 +30,15 @@ function shell::dircolors
   eval (eval "$cmd -c $HOME/.config/shell/$argv[1]")
 end
 
+function shell::prompt
+  starship init fish | source
+end
+
 function shell::cleanup
   functions --erase shell::is_sh
   functions --erase shell::is_fish
   functions --erase shell::termcolor
   functions --erase shell::dircolors
+  functions --erase shell::prompt
   functions --erase shell::cleanup
 end
