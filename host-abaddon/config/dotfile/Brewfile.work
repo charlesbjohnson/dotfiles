@@ -1,0 +1,15 @@
+brew 'circleci'
+brew 'heroku'
+brew 'heroku-node'
+brew 'lefthook'
+brew 'pgformatter'
+brew 'postgresql', restart_service: true
+brew 'postgresql@13', restart_service: true
+brew 'redis', restart_service: true
+brew 'themekit'
+cask 'kap'
+cask 'ngrok'
+cask 'zoom'
+tap 'arkweid/lefthook'
+tap 'heroku/brew'
+tap 'shopify/shopify'
