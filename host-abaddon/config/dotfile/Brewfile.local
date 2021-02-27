@@ -1,0 +1,42 @@
+brew 'm-cli'
+brew 'mas'
+brew 'pinentry-mac'
+cask '1password'
+cask 'backblaze'
+cask 'betterzipql'
+cask 'daisydisk'
+cask 'docker'
+cask 'dropbox'
+cask 'encryptme'
+cask 'firefox'
+cask 'flash-player'
+cask 'flux'
+cask 'font-cascadia'
+cask 'google-chrome'
+cask 'iterm2'
+cask 'kaleidoscope'
+cask 'monodraw'
+cask 'moom'
+cask 'qlcolorcode'
+cask 'qlimagesize'
+cask 'qlmarkdown'
+cask 'qlprettypatch'
+cask 'qlstephen'
+cask 'qlvideo'
+cask 'quicklook-csv'
+cask 'quicklook-json'
+cask 'quicklookase'
+cask 'slack'
+cask 'spotify'
+cask 'visual-studio-code'
+cask 'vlc'
+cask 'webpquicklook'
+mas 'Dato', id: 1470584107
+mas 'Keynote', id: 409183694
+mas 'Microsoft Remote Desktop', id: 1295203466
+mas 'Numbers', id: 409203825
+mas 'Pages', id: 409201541
+mas 'Xcode', id: 497799835
+mas 'iMovie', id: 408981434
+tap 'homebrew/cask'
+tap 'homebrew/cask-fonts'
