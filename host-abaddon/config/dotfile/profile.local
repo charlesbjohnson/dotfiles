@@ -1,4 +1,1 @@
 env::asdf
-
-# env::golang "$HOME/Projects/golang"
-# dotfile::path_prepend "$GOPATH/bin"

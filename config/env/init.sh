@@ -4,11 +4,6 @@ function env::asdf() {
   fi
 }
 
-function env::golang() {
-  export GOPATH="$1"
-  export GOROOT="$(go env GOROOT)"
-}
-
 function env::gpg() {
   export GPG_TTY="$(tty)"
 }
@@ -76,7 +71,6 @@ function env::gnu() {
 
 function env::cleanup() {
   unset -f env::asdf
-  unset -f env::golang
   unset -f env::gnu
   unset -f env::cleanup
 }

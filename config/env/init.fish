@@ -4,11 +4,6 @@ function env::asdf
   end
 end
 
-function env::golang
-  set --export --global GOPATH $argv[1]
-  set --export --global GOROOT (go env GOROOT)
-end
-
 function env::gpg
   set --export --global GPG_TTY (tty)
 end
@@ -67,7 +62,6 @@ end
 
 function env::cleanup
   functions --erase env::asdf
-  functions --erase env::golang
   functions --erase env::gnu
   functions --erase env::cleanup
 end
