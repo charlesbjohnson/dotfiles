@@ -4,6 +4,10 @@ function env::asdf() {
   fi
 }
 
+function env::direnv() {
+  eval "$(direnv hook bash)"
+}
+
 function env::gpg() {
   export GPG_TTY="$(tty)"
 }
@@ -71,6 +75,7 @@ function env::gnu() {
 
 function env::cleanup() {
   unset -f env::asdf
+  unset -f env::direnv
   unset -f env::gnu
   unset -f env::cleanup
 }
