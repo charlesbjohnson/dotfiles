@@ -5,6 +5,7 @@ dotfile::set_env "EDITOR" "$VISUAL"
 shell::termcolor "xterm-256color-italic"
 shell::dircolors "nord-dircolors/src/dir_colors"
 shell::prompt
+shell::tmux "default"
 
 dotfile::load_all "$HOME/.config/dotfile" "shrc.*"
 dotfile::load_if_exists "$HOME/.aliases"
@@ -13,8 +14,5 @@ dotfile::set_env "FZF_DEFAULT_COMMAND" "fd --type f --hidden --follow --exclude 
 dotfile::set_env "FZF_DEFAULT_OPTS" "--inline-info --border sharp --color 'border:#8FBCBB'"
 dotfile::set_env "FZF_CTRL_T_COMMAND" "$FZF_DEFAULT_COMMAND"
 
-tmux::autostart "default"
-
 env::cleanup
 shell::cleanup
-tmux::cleanup

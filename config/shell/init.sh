@@ -22,11 +22,33 @@ function shell::prompt() {
   eval "$(starship init bash)"
 }
 
+# https://github.com/sorin-ionescu/prezto/blob/master/modules/tmux/init.zsh
+function shell::tmux() {
+  if ! command -v "tmux" &>/dev/null; then
+    return
+  fi
+
+  if [[ -n "$SSH_TTY" || -n "$TMUX" || -n "$EMACS" || -n "$VIM" ]]; then
+    return
+  fi
+
+  local name="$1"
+
+  tmux start-server
+  if ! tmux has-session 2>/dev/null; then
+    tmux new-session -d -s "$name"
+    tmux set-option -t "$name" destroy-unattached off &>/dev/null
+  fi
+
+  exec tmux attach-session
+}
+
 function shell::cleanup() {
   unset -f shell::is_sh
   unset -f shell::is_fish
   unset -f shell::termcolor
   unset -f shell::dircolors
   unset -f shell::prompt
+  unset -f shell::tmux
   unset -f shell::cleanup
 }
