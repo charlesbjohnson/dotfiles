@@ -1,5 +1,6 @@
 brew 'm-cli'
 brew 'mas'
+brew 'node'
 brew 'pinentry-mac'
 brew 'ruby'
 cask '1password'
