@@ -14,7 +14,7 @@ function env::fzf
 end
 
 function env::gpg
-  set --export --global GPG_TTY (tty)
+  dotfile::set_env GPG_TTY (tty)
 end
 
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/gnu-utility/init.zsh
