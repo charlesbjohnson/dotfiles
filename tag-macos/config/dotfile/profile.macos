@@ -1,3 +1,4 @@
 dotfile::set_env "CLICOLOR" "YES"
 
 env::gnu "g"
+env::ruby

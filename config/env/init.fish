@@ -69,10 +69,15 @@ function env::gnu
   end
 end
 
+function env::ruby
+  dotfile::prepend_env USER_PATH (brew --prefix ruby)/bin
+end
+
 function env::cleanup
   functions --erase env::asdf
   functions --erase env::direnv
   functions --erase env::fzf
   functions --erase env::gnu
+  functions --erase env::ruby
   functions --erase env::cleanup
 end

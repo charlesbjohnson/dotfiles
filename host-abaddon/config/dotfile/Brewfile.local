@@ -1,6 +1,7 @@
 brew 'm-cli'
 brew 'mas'
 brew 'pinentry-mac'
+brew 'ruby'
 cask '1password'
 cask 'backblaze'
 cask 'betterzipql'

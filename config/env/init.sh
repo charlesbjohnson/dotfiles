@@ -80,10 +80,15 @@ function env::gnu() {
   done
 }
 
+function env::ruby() {
+  dotfile::prepend_env USER_PATH "$(brew --prefix ruby)/bin"
+}
+
 function env::cleanup() {
   unset -f env::asdf
   unset -f env::direnv
   unset -f env::fzf
   unset -f env::gnu
+  unset -f env::ruby
   unset -f env::cleanup
 }
