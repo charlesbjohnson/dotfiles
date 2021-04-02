@@ -18,6 +18,10 @@ function dotfile::set_env() {
   export "$1=$2"
 }
 
+function dotfile::unset_env() {
+  unset "$1"
+}
+
 function dotfile::load() {
   if [[ -f "$1" ]]; then
     source "$1"

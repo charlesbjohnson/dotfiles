@@ -9,6 +9,7 @@ function env::direnv() {
 }
 
 function env::fzf() {
+  dotfile::prepend_env PATH $(brew --prefix fzf)/bin
   if [[ -f "$HOME/.fzf.bash" ]]; then
     source "$HOME/.fzf.bash"
   fi
