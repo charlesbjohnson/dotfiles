@@ -2,7 +2,7 @@ function dotfile::set_env
   set --export --global $argv[1] $argv[2]
 end
 
-function dotfile::load_if_exists
+function dotfile::load
   if test -f $argv[1]
     source $argv[1]
   end

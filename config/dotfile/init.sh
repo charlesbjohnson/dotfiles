@@ -2,7 +2,7 @@ function dotfile::set_env() {
   export "$1=$2"
 }
 
-function dotfile::load_if_exists() {
+function dotfile::load() {
   if [[ -f "$1" ]]; then
     source "$1"
   fi
