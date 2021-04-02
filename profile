@@ -10,6 +10,7 @@ dotfile::path_append \
 
 env::gpg
 env::fzf
+env::asdf
 
 dotfile::load_all "$HOME/.config/dotfile" "profile.*"
 dotfile::path_prepend "$HOME/.local/bin"
