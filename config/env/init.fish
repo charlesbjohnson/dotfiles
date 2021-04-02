@@ -8,6 +8,11 @@ function env::direnv
   direnv hook fish | source
 end
 
+function env::fzf
+  dotfile::path_prepend (brew --prefix fzf)/bin
+  fzf_key_bindings
+end
+
 function env::gpg
   set --export --global GPG_TTY (tty)
 end
@@ -67,6 +72,7 @@ end
 function env::cleanup
   functions --erase env::asdf
   functions --erase env::direnv
+  functions --erase env::fzf
   functions --erase env::gnu
   functions --erase env::cleanup
 end
