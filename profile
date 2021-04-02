@@ -1,12 +1,11 @@
-dotfile::path_reset
+dotfile::set_env PATH
 
-dotfile::path_append \
-  "/usr/local/bin"   \
-  "/usr/bin"         \
-  "/bin"             \
-  "/usr/local/sbin"  \
-  "/usr/sbin"        \
-  "/sbin"
+ dotfile::append_env PATH "/usr/local/bin"
+ dotfile::append_env PATH "/usr/bin"
+ dotfile::append_env PATH "/bin"
+ dotfile::append_env PATH "/usr/local/sbin"
+ dotfile::append_env PATH "/usr/sbin"
+ dotfile::append_env PATH "/sbin"
 
 env::gpg
 env::fzf
@@ -14,4 +13,4 @@ env::asdf
 env::direnv
 
 dotfile::load_all "$HOME/.config/dotfile" "profile.*"
-dotfile::path_prepend "$HOME/.local/bin"
+dotfile::prepend_env PATH "$HOME/.local/bin"
