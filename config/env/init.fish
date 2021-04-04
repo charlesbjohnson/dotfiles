@@ -70,7 +70,7 @@ function env::gnu
 end
 
 function env::ruby
-  dotfile::prepend_env USER_PATH (brew --prefix ruby)/bin
+  dotfile::prepend_env PATH (brew --prefix ruby)/bin
 end
 
 function env::cleanup
