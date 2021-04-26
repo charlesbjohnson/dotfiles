@@ -1,4 +1,5 @@
 brew 'circleci'
+brew 'graphviz'
 brew 'heroku'
 brew 'heroku-node'
 brew 'lefthook'
