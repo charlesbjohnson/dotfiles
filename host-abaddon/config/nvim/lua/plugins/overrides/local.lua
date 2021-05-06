@@ -1,4 +1,4 @@
-return function (plug)
+return function (use)
   -- Syntax & Language Enhancements
-  plug("pangloss/vim-javascript", {["for"] = {"javascript"}})
+  use({"pangloss/vim-javascript", ft = "javascript"})
 end

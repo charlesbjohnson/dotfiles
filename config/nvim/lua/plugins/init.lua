@@ -1,79 +1,81 @@
-local function startup(registration)
-  vim.fn["plug#begin"]("~/.local/share/nvim/plugins")
+local fs = require("fs")
+local path = require("path")
 
-  registration(function(name, ...)
-    vim.fn["plug#"](name, ...)
-  end)
-
-  vim.fn["plug#end"]()
+local packer_path = path.join({vim.fn.stdpath("data"), "site/pack/packer/opt/packer.nvim"})
+if not fs.exists(packer_path) then
+  vim.fn.system({"git", "clone", "https://github.com/wbthomason/packer.nvim", packer_path})
 end
 
-startup(function (plug)
+vim.cmd("packadd packer.nvim")
+
+return require("packer").startup(function(use)
+  use({'wbthomason/packer.nvim', opt = true})
+
   -- Text Objects
-  plug("Julian/vim-textobj-variable-segment")
-  plug("glts/vim-textobj-comment")
-  plug("kana/vim-textobj-entire")
-  plug("kana/vim-textobj-indent")
-  plug("kana/vim-textobj-line")
-  plug("kana/vim-textobj-user")
+  use("Julian/vim-textobj-variable-segment")
+  use("glts/vim-textobj-comment")
+  use("kana/vim-textobj-entire")
+  use("kana/vim-textobj-indent")
+  use("kana/vim-textobj-line")
+  use("kana/vim-textobj-user")
 
   -- Motions
-  plug("christoomey/vim-sort-motion")
-  plug("tpope/vim-commentary")
-  plug("tpope/vim-repeat")
-  plug("tpope/vim-surround")
-  plug("vim-scripts/repmo.vim")
+  use("christoomey/vim-sort-motion")
+  use("tpope/vim-commentary")
+  use("tpope/vim-repeat")
+  use("tpope/vim-surround")
+  use("vim-scripts/repmo.vim")
 
   -- Application Controls
-  plug("christoomey/vim-tmux-navigator")
-  plug("junegunn/fzf")
-  plug("mhinz/vim-sayonara")
-  plug("milkypostman/vim-togglelist")
-  plug("rhysd/committia.vim")
-  plug("roxma/vim-tmux-clipboard")
-  plug("tpope/vim-vinegar")
+  use("christoomey/vim-tmux-navigator")
+  use("junegunn/fzf")
+  use("mhinz/vim-sayonara")
+  use("milkypostman/vim-togglelist")
+  use("rhysd/committia.vim")
+  use("roxma/vim-tmux-clipboard")
+  use("tpope/vim-vinegar")
 
   -- Application Enhancements
-  plug("danro/rename.vim")
-  plug("editorconfig/editorconfig-vim")
+  use("danro/rename.vim")
+  use("editorconfig/editorconfig-vim")
 
   -- Editor Controls
-  plug("AndrewRadev/splitjoin.vim", {branch = "main"})
-  plug("itmammoth/doorboy.vim")
-  plug("junegunn/vim-easy-align")
-  plug("psliwka/vim-smoothie")
-  plug("svermeulen/vim-cutlass")
-  plug("zirrostig/vim-schlepp")
+  use({"AndrewRadev/splitjoin.vim", branch = "main"})
+  use("itmammoth/doorboy.vim")
+  use("junegunn/vim-easy-align")
+  use("psliwka/vim-smoothie")
+  use("svermeulen/vim-cutlass")
+  use("zirrostig/vim-schlepp")
 
   -- Editor Enhancements
-  plug("dense-analysis/ale")
-  plug("neoclide/coc.nvim", {branch = "release"})
+  use("dense-analysis/ale")
+  use({"neoclide/coc.nvim", branch = "release"})
 
   -- Search & Replace
-  plug("RRethy/vim-illuminate")
-  plug("andymass/vim-matchup")
+  use("RRethy/vim-illuminate")
+  use("andymass/vim-matchup")
 
   -- Editor Appearance
-  plug("Yggdroot/indentLine")
-  plug("arcticicestudio/nord-vim")
-  plug("edkolev/tmuxline.vim")
-  plug("itchyny/lightline.vim")
-  plug("mengelbrecht/lightline-bufferline")
-  plug("mhinz/vim-signify")
-  plug("mhinz/vim-startify")
-  plug("ryanoasis/vim-devicons")
+  use("Yggdroot/indentLine")
+  use("arcticicestudio/nord-vim")
+  use("edkolev/tmuxline.vim")
+  use("itchyny/lightline.vim")
+  use("mengelbrecht/lightline-bufferline")
+  use("mhinz/vim-signify")
+  use("mhinz/vim-startify")
+  use("ryanoasis/vim-devicons")
 
   -- Syntax & Language Enhancements
-  plug("cespare/vim-toml",              {["for"] = {"toml"}})
-  plug("dag/vim-fish",                  {["for"] = {"fish"}})
-  plug("elzr/vim-json",                 {["for"] = {"json"}})
-  plug("masukomi/vim-markdown-folding", {["for"] = {"markdown"}})
-  plug("tpope/vim-git",                 {["for"] = {"gitconfig"}})
+  use({"cespare/vim-toml",              ft = "toml"})
+  use({"dag/vim-fish",                  ft = "fish"})
+  use({"elzr/vim-json",                 ft = "json"})
+  use({"masukomi/vim-markdown-folding", ft = "markdown"})
+  use({"tpope/vim-git",                 ft = "gitconfig"})
 
   -- Overrides
   for _, register in pairs(require.tree("plugins.overrides")) do
     if type(register) == "function" then
-      register(plug)
+      register(use)
     end
   end
 end)
