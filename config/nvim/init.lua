@@ -3,6 +3,10 @@ local ext = require("ext")
 require = ext.require
 vim     = _G.vim
 
+vim.__o  = vim.o
+vim.__wo = vim.wo
+vim.__bo = vim.bo
+
 vim.o  = ext.vim.option("o")
 vim.wo = ext.vim.option("wo")
 vim.bo = ext.vim.option("bo")
@@ -125,6 +129,10 @@ vim.nmap("<Leader>]", "<C-]>")
 vim.nmap("p", "p`]", {silent = true})
 vim.xmap("p", "p`]", {silent = true})
 vim.xmap("y", "y`]", {silent = true})
+
+vim.o  = vim.__o
+vim.wo = vim.__wo
+vim.bo = vim.__bo
 
 --- Plugins
 require("plugins")
