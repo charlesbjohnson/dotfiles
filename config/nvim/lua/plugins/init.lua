@@ -65,4 +65,11 @@ startup(function (plug)
   plug("elzr/vim-json",                 {["for"] = {"json"}})
   plug("masukomi/vim-markdown-folding", {["for"] = {"markdown"}})
   plug("tpope/vim-git",                 {["for"] = {"gitconfig"}})
+
+  -- Overrides
+  for _, register in pairs(require.tree("plugins.overrides")) do
+    if type(register) == "function" then
+      register(plug)
+    end
+  end
 end)

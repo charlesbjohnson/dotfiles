@@ -1,3 +1,5 @@
+vim = _G.vim
+
 -- AndrewRadev/splitjoin.vim
 vim.g.splitjoin_quiet = 1
 
