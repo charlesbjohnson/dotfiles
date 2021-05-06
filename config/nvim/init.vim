@@ -121,35 +121,20 @@ xnoremap <silent> y y`]
 
 """ Plugins
 " AndrewRadev/splitjoin.vim
-let g:splitjoin_align = 1
-let g:splitjoin_ruby_curly_braces = 0
-let g:splitjoin_ruby_trailing_comma = 0
+let g:splitjoin_quiet = 1
 
-nnoremap <silent> <Leader>J :call <SID>try('SplitjoinJoin',  'J')<CR>
-nnoremap <silent> <Leader>K :call <SID>try('SplitjoinSplit', "r\015")<CR>
-
-function! s:try(cmd, default) abort
-  if exists(':' . a:cmd) && !v:count
-    let tick = b:changedtick
-    execute a:cmd
-    if tick == b:changedtick
-      execute join(['normal!', a:default])
-    endif
-  else
-    execute join(['normal! ', v:count, a:default], '')
-  endif
-endfunction
+let g:splitjoin_join_mapping = "cJ"
+let g:splitjoin_split_mapping = "cK"
 
 " Yggdroot/indentLine
-let g:indentLine_char = '┆'
-let g:indentLine_noConcealCursor=''
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indentLine_fileTypeExclude = ['help', 'startify']
 
 " andymass/vim-matchup
-augroup matchup_configuration
-  autocmd!
-  autocmd ColorScheme * hi MatchParen cterm=italic gui=italic ctermfg=lightblue guifg=lightblue
-  autocmd ColorScheme * hi MatchWord cterm=italic gui=italic ctermfg=lightblue guifg=lightblue
-augroup END
+let g:matchup_matchparen_deferred = 1
+let g:matchup_matchparen_hi_surround_always = 1
+let g:matchup_matchparen_offscreen = {'method': "popup"}
+let g:matchup_surround_enabled = 1
 
 " arcticicestudio/nord-vim
 let g:nord_cursor_line_number_background = 1
@@ -160,13 +145,17 @@ let g:nord_underline = 1
 colorscheme nord
 
 " dense-analysis/ale
+let g:ale_disable_lsp = 1
+
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {}
+
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_linters = {}
+
 let g:ale_set_loclist = 0
-let g:ale_set_quickfix = 1
+let g:ale_set_quickfix = 0
 
 " edkolev/tmuxline.vim
 let g:tmuxline_theme = 'lightline'
@@ -182,8 +171,8 @@ let g:lightline = {
 \    'buffers': 'lightline#bufferline#buffers'
 \  },
 \  'component_function': {
-\    'filetype': 'Devicon_filetype',
-\    'fileformat': 'Devicon_fileformat',
+\    'filetype': 'LightlineFileType',
+\    'fileformat': 'LightlineFileFormat',
 \  },
 \  'component_type': {
 \    'buffers': 'tabsel'
@@ -193,6 +182,14 @@ let g:lightline = {
 \    'right': [[]]
 \  }
 \}
+
+function! g:LightlineFileType() abort
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+
+function! g:LightlineFileFormat() abort
+  return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+endfunction
 
 " itmammoth/doorboy.vim
 inoremap <expr> <BS> doorboy#map_backspace()
@@ -206,13 +203,13 @@ nnoremap <silent> <C-p> :FZF --multi<CR>
 nmap <Leader>a <Plug>(EasyAlign)
 xmap <CR> <Plug>(EasyAlign)
 
-" mhinz/vim-signify
-let g:signify_vcs_list = ['git']
+" mengelbrecht/lightline-bufferline
+let g:lightline#bufferline#enable_devicons = 1
+let g:lightline#bufferline#show_number = 2
 
 " mhinz/vim-startify
 let g:startify_change_to_dir = 1
 let g:startify_change_to_vcs_root = 1
-let g:startify_restore_position = 1
 let g:startify_relative_path = 1
 let g:startify_custom_header = [
 \  '',
@@ -312,14 +309,6 @@ xmap <Leader>h <Plug>SchleppLeft
 xmap <Leader>j <Plug>SchleppDown
 xmap <Leader>k <Plug>SchleppUp
 xmap <Leader>l <Plug>SchleppRight
-
-function! g:Devicon_filetype() abort
-  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
-endfunction
-
-function! g:Devicon_fileformat() abort
-  return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
-endfunction
 
 " Local configuration overrides
 for file in split(glob('~/.config/nvim/init.*.vim'), '\n')

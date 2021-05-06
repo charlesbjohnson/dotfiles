@@ -35,7 +35,7 @@ Plug 'tpope/vim-vinegar'
 
 " Application Enhancements
 Plug 'danro/rename.vim'
-Plug 'sgur/vim-editorconfig'
+Plug 'editorconfig/editorconfig-vim'
 
 " Editor Controls
 Plug 'AndrewRadev/splitjoin.vim', { 'branch': 'main' }

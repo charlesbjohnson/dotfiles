@@ -1,6 +1,11 @@
 """ Plugins
+" AndrewRadev/splitjoin.vim
+let g:splitjoin_html_attributes_bracket_on_new_line = 1
 
-"" System
+let g:splitjoin_ruby_do_block_split = 0
+let g:splitjoin_ruby_hanging_args = 0
+let g:splitjoin_ruby_options_as_arguments = 1
+
 " dense-analysis/ale
 let g:ale_fixers['css'] = ['stylelint']
 let g:ale_linters['css'] = ['stylelint']
