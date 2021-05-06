@@ -58,7 +58,6 @@ return require("packer").startup(function(use)
   -- Editor Appearance
   use("Yggdroot/indentLine")
   use("arcticicestudio/nord-vim")
-  use("edkolev/tmuxline.vim")
   use("itchyny/lightline.vim")
   use("mengelbrecht/lightline-bufferline")
   use("mhinz/vim-signify")

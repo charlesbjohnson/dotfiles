@@ -37,10 +37,6 @@ vim.g.ale_linters              = vim.empty_dict()
 vim.g.ale_set_loclist  = 0
 vim.g.ale_set_quickfix = 0
 
--- edkolev/tmuxline.vim
-vim.g.tmuxline_theme  = "lightline"
-vim.g.tmuxline_preset = "crosshair"
-
 -- elzr/vim-json
 vim.g.vim_json_syntax_conceal = 0
 
