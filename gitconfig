@@ -42,10 +42,21 @@
   autocrlf     = input
   excludesfile = ~/.gitignore
   pager        = "diff-so-fancy | less --tabs 4 -RFX"
+[diff]
+  tool = nvimdiff
+[difftool]
+  prompt = false
+[difftool "nvimdiff"]
+  cmd = nvim -d $LOCAL $REMOTE
 [fetch]
   prune = true
 [merge]
-  ff = only
+  ff   = only
+  tool = nvimdiff
+[mergetool]
+  prompt = false
+[mergetool "nvimdiff"]
+  cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 [pull]
   ff = only
 [push]
@@ -56,8 +67,6 @@
   email      = mail@cbjohnson.info
   name       = Charles B Johnson
   signingKey = 390184033B3454E3
-[web]
-  browser = chromium
 [include]
   path = ~/.config/dotfile/gitconfig.local
 [include]
