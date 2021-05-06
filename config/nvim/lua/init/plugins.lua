@@ -43,15 +43,35 @@ vim.g.vim_json_syntax_conceal = 0
 -- itchyny/lightline.vim
 vim.g.lightline = {
   colorscheme = "nord",
+  active = {
+    left = {
+      {"mode", "paste"},
+      {"gitbranch", "readonly", "filename", "modified"}
+    },
+    right = {
+      {"lineinfo"},
+      {"percent"},
+      {"fileformat", "fileencoding", "filetype"}
+    }
+  },
   component_expand = {
     buffers = "lightline#bufferline#buffers"
   },
   component_function = {
     filetype = "LightlineFileType",
-    fileformat = "LightlineFileFormat"
+    fileformat = "LightlineFileFormat",
+    gitbranch = "gitbranch#name"
   },
   component_type = {
     buffers = "tabsel"
+  },
+  separator = {
+    left = "",
+    right = ""
+  },
+  subseparator = {
+    left = "",
+    right = ""
   },
   tabline = {
     left = {{"buffers"}},
