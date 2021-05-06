@@ -126,5 +126,9 @@ vim.nmap("p", "p`]", {silent = true})
 vim.xmap("p", "p`]", {silent = true})
 vim.xmap("y", "y`]", {silent = true})
 
+--- Plugins
+require("plugins")
+require("init.plugins")
+
 --- Overrides
 require.tree("init.overrides")

@@ -1,7 +1,11 @@
 local function startup(registration)
+  vim.fn["plug#begin"]("~/.local/share/nvim/plugins")
+
   registration(function(name, ...)
     vim.fn["plug#"](name, ...)
   end)
+
+  vim.fn["plug#end"]()
 end
 
 startup(function (plug)
