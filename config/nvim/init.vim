@@ -168,24 +168,6 @@ let g:ale_linters = {}
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
 
-" dhruvasagar/vim-table-mode
-inoreabbrev <expr> <BAR><BAR>
-\  <SID>is_at_start_of_line('\|\|') ?
-\    '<C-o>:TableModeEnable<CR><BAR><SPACE><BAR><LEFT><LEFT>' :
-\    '<BAR><BAR>'
-
-inoreabbrev <expr> __
-\  <SID>is_at_start_of_line('__') ?
-\    '<C-o>:silent! TableModeDisable<CR>' :
-\    '__'
-
-function! s:is_at_start_of_line(mapping) abort
-  let text_before_cursor = getline('.')[0 : col('.')-1]
-  let mapping_pattern = '\V' . escape(a:mapping, '\')
-  let comment_pattern = '\V' . escape(substitute(&l:commentstring, '%s.*$', '', ''), '\')
-  return (text_before_cursor =~? '^' . ('\v(' . comment_pattern . '\v)?') . '\s*\v' . mapping_pattern . '\v$')
-endfunction
-
 " edkolev/tmuxline.vim
 let g:tmuxline_theme = 'lightline'
 let g:tmuxline_preset = 'crosshair'
@@ -223,34 +205,6 @@ nnoremap <silent> <C-p> :FZF --multi<CR>
 " junegunn/vim-easy-align
 nmap <Leader>a <Plug>(EasyAlign)
 xmap <CR> <Plug>(EasyAlign)
-
-" justinmk/vim-sneak
-let g:sneak#s_next = 1
-let g:sneak#use_ic_scs = 1
-
- " 2-character Sneak (default)
-nmap S <Plug>Sneak_S
-nmap s <Plug>Sneak_s
-omap S <Plug>Sneak_S
-omap s <Plug>Sneak_s
-xmap S <Plug>Sneak_S
-xmap s <Plug>Sneak_s
-
-" replace 'f' with 1-char Sneak
-nmap F <Plug>Sneak_F
-nmap f <Plug>Sneak_f
-omap F <Plug>Sneak_F
-omap f <Plug>Sneak_f
-xmap F <Plug>Sneak_F
-xmap f <Plug>Sneak_f
-
-" replace 't' with 1-char Sneak
-nmap T <Plug>Sneak_T
-nmap t <Plug>Sneak_t
-omap T <Plug>Sneak_T
-omap t <Plug>Sneak_t
-xmap T <Plug>Sneak_T
-xmap t <Plug>Sneak_t
 
 " mhinz/vim-signify
 let g:signify_vcs_list = ['git']
@@ -341,15 +295,6 @@ function! s:select_current_cursor(mode) abort
 
   return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
 endfunction
-
-" ntpeters/vim-better-whitespace
-let g:better_whitespace_enabled = 1
-let g:better_whitespace_skip_empty_lines = 0
-let g:show_spaces_that_precede_tabs = 1
-let g:strip_only_modified_lines = 0
-let g:strip_whitelines_at_eof = 1
-let g:strip_whitespace_confirm = 0
-let g:strip_whitespace_on_save = 1
 
 " psliwka/vim-smoothie
 let g:smoothie_no_default_mappings = 1

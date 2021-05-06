@@ -31,7 +31,6 @@ Plug 'mhinz/vim-sayonara'
 Plug 'milkypostman/vim-togglelist'
 Plug 'rhysd/committia.vim'
 Plug 'roxma/vim-tmux-clipboard'
-Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-vinegar'
 
 " Application Enhancements
@@ -53,9 +52,8 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 " Search & Replace
 Plug 'RRethy/vim-illuminate'
 Plug 'andymass/vim-matchup'
-Plug 'justinmk/vim-sneak'
 
-" Appearance
+" Editor Appearance
 Plug 'Yggdroot/indentLine'
 Plug 'arcticicestudio/nord-vim'
 Plug 'edkolev/tmuxline.vim'
@@ -63,19 +61,13 @@ Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'mhinz/vim-signify'
 Plug 'mhinz/vim-startify'
-Plug 'ntpeters/vim-better-whitespace'
 Plug 'ryanoasis/vim-devicons'
 
-" Sysadmin
+" Syntax & Language Enhancements
 Plug 'cespare/vim-toml', { 'for': ['toml'] }
 Plug 'dag/vim-fish', { 'for': ['fish'] }
 Plug 'elzr/vim-json', { 'for': ['json'] }
-Plug 'tmux-plugins/vim-tmux', { 'for': ['tmux'] }
-Plug 'tpope/vim-git', { 'for': ['gitconfig'] }
-
-" Docs
-Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 Plug 'masukomi/vim-markdown-folding', { 'for': ['markdown'] }
-Plug 'tpope/vim-markdown', { 'for': ['markdown']}
+Plug 'tpope/vim-git', { 'for': ['gitconfig'] }
 
 call plug#end()
