@@ -31,7 +31,7 @@ brew 'jq'
 brew 'less'
 brew 'libvterm'
 brew 'make'
-brew 'neovim'
+brew 'neovim', args: ['HEAD']
 brew 'netcat'
 brew 'openssh'
 brew 'openssl@1.1'
