@@ -213,14 +213,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/vim-surround"
   },
-  ["vim-textobj-comment"] = {
-    loaded = true,
-    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/vim-textobj-comment"
-  },
-  ["vim-textobj-entire"] = {
-    loaded = true,
-    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/vim-textobj-entire"
-  },
   ["vim-textobj-indent"] = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/vim-textobj-indent"
@@ -232,10 +224,6 @@ _G.packer_plugins = {
   ["vim-textobj-user"] = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/vim-textobj-user"
-  },
-  ["vim-textobj-variable-segment"] = {
-    loaded = true,
-    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/vim-textobj-variable-segment"
   },
   ["vim-tmux-clipboard"] = {
     loaded = true,

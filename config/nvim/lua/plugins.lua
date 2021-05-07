@@ -15,9 +15,6 @@ return require("packer").startup({
     use({"wbthomason/packer.nvim", opt = true})
 
     -- Text Objects
-    use("Julian/vim-textobj-variable-segment")
-    use("glts/vim-textobj-comment")
-    use("kana/vim-textobj-entire")
     use("kana/vim-textobj-indent")
     use("kana/vim-textobj-line")
     use("kana/vim-textobj-user")
