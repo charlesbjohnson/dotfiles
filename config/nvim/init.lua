@@ -136,7 +136,7 @@ vim.bo = vim.__bo
 
 --- Plugins
 require("plugins")
-require("init.plugins")
 
 --- Overrides
-require.tree("init.overrides")
+require("init.plugins")
+require.tree("init")

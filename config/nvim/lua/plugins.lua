@@ -76,7 +76,7 @@ return require("packer").startup({
     use({"tpope/vim-git",                 ft = "gitconfig"})
 
     -- Overrides
-    for _, register in pairs(require.tree("plugins.overrides")) do
+    for _, register in pairs(require.tree("plugins")) do
       if type(register) == "function" then
         register(use)
       end
