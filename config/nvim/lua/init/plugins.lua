@@ -37,9 +37,6 @@ vim.g.ale_linters              = vim.empty_dict()
 vim.g.ale_set_loclist  = 0
 vim.g.ale_set_quickfix = 0
 
--- elzr/vim-json
-vim.g.vim_json_syntax_conceal = 0
-
 -- itchyny/lightline.vim
 vim.g.lightline = {
   colorscheme = "nord",
@@ -189,6 +186,26 @@ vim.cmd([[
     return "*<Plug>(coc-cursors-word):nohlsearch<CR>"
   endfunction
 ]])
+
+
+-- nvim-treesitter/nvim-treesitter
+require("nvim-treesitter.configs").setup({
+  ensure_installed = "maintained",
+  highlight = {
+    enable = true
+  },
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "gnn",
+      node_incremental = "gnn",
+      node_decremental = "gNN"
+    }
+  },
+  indent = {
+    enable = true
+  }
+})
 
 -- psliwka/vim-smoothie
 vim.g.smoothie_no_default_mappings = 1

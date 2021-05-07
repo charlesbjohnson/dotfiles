@@ -49,6 +49,7 @@ return require("packer").startup({
 
     -- Editor Enhancements
     use("dense-analysis/ale")
+    use("nvim-treesitter/nvim-treesitter")
     use({"neoclide/coc.nvim", branch = "release"})
 
     -- Search & Replace
@@ -66,9 +67,7 @@ return require("packer").startup({
     use("ryanoasis/vim-devicons")
 
     -- Syntax & Language Enhancements
-    use({"cespare/vim-toml",              ft = "toml"})
     use({"dag/vim-fish",                  ft = "fish"})
-    use({"elzr/vim-json",                 ft = "json"})
     use({"masukomi/vim-markdown-folding", ft = "markdown"})
     use({"tpope/vim-git",                 ft = "gitconfig"})
 

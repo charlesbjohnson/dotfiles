@@ -111,6 +111,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/nord-vim"
   },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+  },
   ["packer.nvim"] = {
     loaded = false,
     needs_bufread = false,
@@ -161,16 +165,6 @@ _G.packer_plugins = {
   ["vim-illuminate"] = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/vim-illuminate"
-  },
-  ["vim-javascript"] = {
-    loaded = false,
-    needs_bufread = true,
-    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/opt/vim-javascript"
-  },
-  ["vim-json"] = {
-    loaded = false,
-    needs_bufread = true,
-    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/opt/vim-json"
   },
   ["vim-markdown-folding"] = {
     loaded = false,
@@ -237,11 +231,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/vim-togglelist"
   },
-  ["vim-toml"] = {
-    loaded = false,
-    needs_bufread = true,
-    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/opt/vim-toml"
-  },
   ["vim-vinegar"] = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/vim-vinegar"
@@ -253,27 +242,12 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time("Defining lazy-load filetype autocommands", true)
-vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-markdown-folding'}, { ft = "markdown" }, _G.packer_plugins)]]
-vim.cmd [[au FileType javascript ++once lua require("packer.load")({'vim-javascript'}, { ft = "javascript" }, _G.packer_plugins)]]
 vim.cmd [[au FileType fish ++once lua require("packer.load")({'vim-fish'}, { ft = "fish" }, _G.packer_plugins)]]
 vim.cmd [[au FileType gitconfig ++once lua require("packer.load")({'vim-git'}, { ft = "gitconfig" }, _G.packer_plugins)]]
-vim.cmd [[au FileType json ++once lua require("packer.load")({'vim-json'}, { ft = "json" }, _G.packer_plugins)]]
-vim.cmd [[au FileType toml ++once lua require("packer.load")({'vim-toml'}, { ft = "toml" }, _G.packer_plugins)]]
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-markdown-folding'}, { ft = "markdown" }, _G.packer_plugins)]]
 time("Defining lazy-load filetype autocommands", false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
-time("Sourcing ftdetect script at: /Users/cbjohnson/.local/share/nvim/site/pack/packer/opt/vim-json/ftdetect/json.vim", true)
-vim.cmd [[source /Users/cbjohnson/.local/share/nvim/site/pack/packer/opt/vim-json/ftdetect/json.vim]]
-time("Sourcing ftdetect script at: /Users/cbjohnson/.local/share/nvim/site/pack/packer/opt/vim-json/ftdetect/json.vim", false)
-time("Sourcing ftdetect script at: /Users/cbjohnson/.local/share/nvim/site/pack/packer/opt/vim-toml/ftdetect/toml.vim", true)
-vim.cmd [[source /Users/cbjohnson/.local/share/nvim/site/pack/packer/opt/vim-toml/ftdetect/toml.vim]]
-time("Sourcing ftdetect script at: /Users/cbjohnson/.local/share/nvim/site/pack/packer/opt/vim-toml/ftdetect/toml.vim", false)
-time("Sourcing ftdetect script at: /Users/cbjohnson/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/flow.vim", true)
-vim.cmd [[source /Users/cbjohnson/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/flow.vim]]
-time("Sourcing ftdetect script at: /Users/cbjohnson/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/flow.vim", false)
-time("Sourcing ftdetect script at: /Users/cbjohnson/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/javascript.vim", true)
-vim.cmd [[source /Users/cbjohnson/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/javascript.vim]]
-time("Sourcing ftdetect script at: /Users/cbjohnson/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/javascript.vim", false)
 time("Sourcing ftdetect script at: /Users/cbjohnson/.local/share/nvim/site/pack/packer/opt/vim-git/ftdetect/git.vim", true)
 vim.cmd [[source /Users/cbjohnson/.local/share/nvim/site/pack/packer/opt/vim-git/ftdetect/git.vim]]
 time("Sourcing ftdetect script at: /Users/cbjohnson/.local/share/nvim/site/pack/packer/opt/vim-git/ftdetect/git.vim", false)
