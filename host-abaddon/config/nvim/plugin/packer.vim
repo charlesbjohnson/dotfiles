@@ -207,6 +207,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/vim-surround"
   },
+  ["vim-textobj-backticks"] = {
+    loaded = true,
+    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/vim-textobj-backticks"
+  },
   ["vim-textobj-indent"] = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/vim-textobj-indent"
