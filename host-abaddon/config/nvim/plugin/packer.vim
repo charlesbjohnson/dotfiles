@@ -71,10 +71,6 @@ end
 time("try_loadstring definition", false)
 time("Defining packer_plugins", true)
 _G.packer_plugins = {
-  ale = {
-    loaded = true,
-    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/ale"
-  },
   ["committia.vim"] = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/committia.vim"

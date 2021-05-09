@@ -24,19 +24,6 @@ vim.g.nord_underline                     = 1
 
 vim.cmd("colorscheme nord")
 
--- dense-analysis/ale
-vim.g.ale_disable_lsp = 1
-
-vim.g.ale_fix_on_save = 1
-vim.g.ale_fixers      = vim.empty_dict()
-
-vim.g.ale_lint_on_save         = 1
-vim.g.ale_lint_on_text_changed = "never"
-vim.g.ale_linters              = vim.empty_dict()
-
-vim.g.ale_set_loclist  = 0
-vim.g.ale_set_quickfix = 0
-
 -- itchyny/lightline.vim
 vim.g.lightline = {
   colorscheme = "nord",

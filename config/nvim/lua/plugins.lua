@@ -49,7 +49,6 @@ return require("packer").startup({
     use("zirrostig/vim-schlepp")
 
     -- Editor Enhancements
-    use("dense-analysis/ale")
     use("nvim-treesitter/nvim-treesitter")
 
     -- Search & Replace
