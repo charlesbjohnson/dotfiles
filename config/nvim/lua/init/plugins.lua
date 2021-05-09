@@ -26,6 +26,69 @@ vim.g.nord_underline                     = 1
 
 vim.cmd("colorscheme nord")
 
+-- hrsh7th/nvim-compe
+require("compe").setup({
+  source = {
+    buffer = true,
+    nvim_lsp = true,
+    nvim_lua = true,
+    path = true
+  }
+})
+
+vim.imap("<CR>",  "compe#confirm('<CR>')", {expr = true})
+vim.imap("<C-e>", "compe#close('<C-e>')",  {expr = true})
+
+vim.imap("<Tab>",   "v:lua.compe.tab()",   {expr = true})
+vim.smap("<Tab>",   "v:lua.compe.tab()",   {expr = true})
+vim.imap("<S-Tab>", "v:lua.compe.s_tab()", {expr = true})
+vim.smap("<S-Tab>", "v:lua.compe.s_tab()", {expr = true})
+
+_G.compe = (function()
+  local function termcode(str)
+    return vim.api.nvim_replace_termcodes(str, true, true, true)
+  end
+
+  local function cursor_is_blank()
+    local col = vim.fn.col(".") - 1
+    if col == 0 then
+      return true
+    end
+
+    local line = vim.fn.getline(".")
+    if line:sub(col, col):match("%s") then
+      return true
+    end
+
+    return false
+  end
+
+  local function forward()
+    if vim.fn.pumvisible() == 1 then
+      return termcode("<C-n>")
+    end
+
+    if cursor_is_blank() then
+      return termcode("<Tab>")
+    end
+
+    return vim.fn["compe#complete"]()
+  end
+
+  local function backward()
+    if vim.fn.pumvisible() == 1 then
+      return termcode("<C-p>")
+    end
+
+    return termcode("<S-Tab>")
+  end
+
+  return {
+    tab = forward,
+    s_tab = backward
+  }
+end)()
+
 -- itchyny/lightline.vim
 vim.g.lightline = {
   colorscheme = "nord",

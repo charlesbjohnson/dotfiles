@@ -49,6 +49,7 @@ return require("packer").startup({
     use("zirrostig/vim-schlepp")
 
     -- Editor Enhancements
+    use("hrsh7th/nvim-compe")
     use("kabouzeid/nvim-lspinstall")
     use("neovim/nvim-lspconfig")
     use("nvim-treesitter/nvim-treesitter")

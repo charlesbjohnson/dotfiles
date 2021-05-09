@@ -15,6 +15,7 @@ vim.map  = ext.vim.mapping("")
 vim.imap = ext.vim.mapping("i")
 vim.nmap = ext.vim.mapping("n")
 vim.omap = ext.vim.mapping("o")
+vim.smap = ext.vim.mapping("s")
 vim.vmap = ext.vim.mapping("v")
 vim.xmap = ext.vim.mapping("x")
 
@@ -38,7 +39,7 @@ vim.cmd("syntax on")
 vim.o.background    = "dark"
 vim.o.cmdheight     = 2
 vim.wo.colorcolumn  = "80"
-vim.o.completeopt   = "menu"
+vim.o.completeopt   = "menuone,noselect"
 vim.wo.cursorline   = true
 vim.o.laststatus    = 2
 vim.wo.list         = true
