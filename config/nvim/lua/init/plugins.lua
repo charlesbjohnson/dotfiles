@@ -1,3 +1,5 @@
+require("ext.string")
+
 vim = _G.vim
 
 -- AndrewRadev/splitjoin.vim
@@ -113,6 +115,20 @@ vim.g.toggle_list_no_mappings = 1
 
 vim.nmap("<Leader>p", ":call ToggleQuickfixList()<CR>", {silent = true})
 vim.nmap("<Leader>P", ":call ToggleLocationList()<CR>", {silent = true})
+
+-- neovim/nvim-lspconfig & kabouzeid/nvim-lspinstall
+local lspconfig = require("lspconfig")
+local lspinstall = require("lspinstall")
+
+lspinstall.setup()
+
+for _, server in pairs(lspinstall.installed_servers()) do
+  local ok, options = pcall(function()
+    return require(string.join({"init", "plugins", "lsp", server}, "."))
+  end)
+
+  lspconfig[server].setup(ok and options(lspconfig[server]) or {})
+end
 
 -- nvim-treesitter/nvim-treesitter
 require("nvim-treesitter.configs").setup({

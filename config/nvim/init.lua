@@ -130,6 +130,14 @@ vim.nmap("p", "p`]", {silent = true})
 vim.xmap("p", "p`]", {silent = true})
 vim.xmap("y", "y`]", {silent = true})
 
+-- LSP
+vim.nmap("gd", "v:lua.vim.lsp.buf.definition()",     {expr = true})
+vim.nmap("gD", "v:lua.vim.lsp.buf.declaration()",    {expr = true})
+vim.nmap("gi", "v:lua.vim.lsp.buf.implementation()", {expr = true})
+vim.nmap("gr", "v:lua.vim.lsp.buf.references()",     {expr = true})
+vim.nmap("F",  "v:lua.vim.lsp.buf.formatting()",     {expr = true})
+vim.nmap("K",  "v:lua.vim.lsp.buf.hover()",          {expr = true})
+
 vim.o  = vim.__o
 vim.wo = vim.__wo
 vim.bo = vim.__bo
