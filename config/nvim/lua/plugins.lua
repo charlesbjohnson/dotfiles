@@ -51,7 +51,6 @@ return require("packer").startup({
     -- Editor Enhancements
     use("dense-analysis/ale")
     use("nvim-treesitter/nvim-treesitter")
-    use({"neoclide/coc.nvim", branch = "release"})
 
     -- Search & Replace
     use("RRethy/vim-illuminate")
