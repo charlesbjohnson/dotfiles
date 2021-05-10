@@ -1,0 +1,4 @@
+---
+reporters:
+  - require_not_found
+  - typecheck
