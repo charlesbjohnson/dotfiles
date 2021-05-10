@@ -34,22 +34,9 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "todohighlight.include": [
-    "**/*.js",
-    "**/*.rb",
-    "**/*.rs",
-    "**/*.ts"
-  ],
-  "todohighlight.keywords": [
-    "TODO"
-  ],
-  "vsicons.dontShowNewVersionMessage": true,
   "window.zoomLevel": 0,
   "workbench.colorTheme": "Nord",
   "workbench.editor.tabCloseButton": "off",
   "workbench.list.openMode": "doubleClick",
-  "workbench.statusBar.feedback.visible": false,
-  "javascript.format.enable": false,
-  "javascript.implicitProjectConfig.checkJs": true,
-  "typescript.format.enable": false
+  "workbench.statusBar.feedback.visible": false
 }
