@@ -128,13 +128,44 @@ vim.g.lightline = {
   }
 }
 
+_G.lightline = (function()
+  local web_devicons = require("nvim-web-devicons")
+
+  local function file_type()
+    if vim.fn.winwidth(0) <= 70 then
+      return ""
+    end
+
+    local type = (vim.bo.filetype or "no ft")
+    local icon = web_devicons.get_icon(vim.fn.expand("%"), vim.fn.expand("%:e"))
+
+    return string.join({type, icon}, " ")
+  end
+
+  local function file_format()
+    if vim.fn.winwidth(0) <= 70 then
+      return ""
+    end
+
+    local format = vim.bo.fileformat
+    local icon = web_devicons.get_icon(format)
+
+    return string.join({format, icon}, " ")
+  end
+
+  return {
+    file_type = file_type,
+    file_format = file_format
+  }
+end)()
+
 vim.cmd([[
   function! g:LightlineFileType() abort
-    return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+    return v:lua.lightline.file_type()
   endfunction
 
   function! g:LightlineFileFormat() abort
-    return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+    return v:lua.lightline.file_format()
   endfunction
 ]])
 
@@ -149,6 +180,21 @@ vim.nmap("<C-p>", ":FZF<CR>", {silent = true})
 -- junegunn/vim-easy-align
 vim.nmap("<Leader>a", "<Plug>(EasyAlign)", {noremap = false})
 vim.xmap("<CR>",      "<Plug>(EasyAlign)", {noremap = false})
+
+-- kyazdani42/nvim-web-devicons
+require("nvim-web-devicons").setup({
+  override = {
+    ["dos"] = {
+      icon = ""
+    },
+    ["mac"] = {
+      icon = ""
+    },
+    ["unix"] = {
+      icon = ""
+    }
+  }
+})
 
 -- mengelbrecht/lightline-bufferline
 vim.g["lightline#bufferline#enable_devicons"] = 1

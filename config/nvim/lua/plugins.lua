@@ -63,10 +63,10 @@ return require("packer").startup({
     use("arcticicestudio/nord-vim")
     use("itchyny/lightline.vim")
     use("itchyny/vim-gitbranch")
+    use("kyazdani42/nvim-web-devicons")
     use("mengelbrecht/lightline-bufferline")
     use("mhinz/vim-signify")
     use("mhinz/vim-startify")
-    use("ryanoasis/vim-devicons")
 
     -- Syntax & Language Enhancements
     use({"dag/vim-fish",                  ft = "fish"})
