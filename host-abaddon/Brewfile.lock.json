@@ -1880,10 +1880,10 @@
           "full_name": "flux"
         }
       },
-      "font-cascadia": {
-        "version": "2008.25",
+      "font-caskaydia-cove-nerd-font": {
+        "version": "2.1.0",
         "options": {
-          "full_name": "font-cascadia"
+          "full_name": "font-caskaydia-cove-nerd-font"
         }
       },
       "google-chrome": {
