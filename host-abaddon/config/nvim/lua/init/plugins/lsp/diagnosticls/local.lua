@@ -6,8 +6,6 @@ return function(setup)
   require("plugins.lsp.diagnosticls.yaml")(setup)
 
   require("plugins.lsp.diagnosticls.javascript")(setup)
-  require("plugins.lsp.diagnosticls.typescript")(setup)
-
   require("plugins.lsp.diagnosticls.ruby")(setup)
 end
 
