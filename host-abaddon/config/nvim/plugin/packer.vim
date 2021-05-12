@@ -99,6 +99,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/lightline.vim"
   },
+  ["lsp-colors.nvim"] = {
+    loaded = true,
+    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim"
+  },
   ["nord-vim"] = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/nord-vim"

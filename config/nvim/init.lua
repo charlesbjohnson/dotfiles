@@ -132,6 +132,11 @@ vim.xmap("p", "p`]", {silent = true})
 vim.xmap("y", "y`]", {silent = true})
 
 -- LSP
+vim.fn.sign_define("LspDiagnosticsSignError",       {text = "", texthl = "LspDiagnosticsSignError"})
+vim.fn.sign_define("LspDiagnosticsSignHint",        {text = "", texthl = "LspDiagnosticsSignHint"})
+vim.fn.sign_define("LspDiagnosticsSignInformation", {text = "", texthl = "LspDiagnosticsSignInformation"})
+vim.fn.sign_define("LspDiagnosticsSignWarning",     {text = "", texthl = "LspDiagnosticsSignWarning"})
+
 vim.nmap("gd", "v:lua.vim.lsp.buf.definition()",     {expr = true})
 vim.nmap("gD", "v:lua.vim.lsp.buf.declaration()",    {expr = true})
 vim.nmap("gi", "v:lua.vim.lsp.buf.implementation()", {expr = true})

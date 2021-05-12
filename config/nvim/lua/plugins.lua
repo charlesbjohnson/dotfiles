@@ -61,6 +61,7 @@ return require("packer").startup({
     -- Editor Appearance
     use("Yggdroot/indentLine")
     use("arcticicestudio/nord-vim")
+    use("folke/lsp-colors.nvim")
     use("itchyny/lightline.vim")
     use("itchyny/vim-gitbranch")
     use("kyazdani42/nvim-web-devicons")
