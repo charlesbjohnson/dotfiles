@@ -7,5 +7,7 @@ return function(setup)
 
   require("plugins.lsp.diagnosticls.javascript")(setup)
   require("plugins.lsp.diagnosticls.ruby")(setup)
+
+  require("plugins.lsp.diagnosticls.css")(setup)
 end
 
