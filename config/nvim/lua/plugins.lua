@@ -68,6 +68,7 @@ return require("packer").startup({
     use("mengelbrecht/lightline-bufferline")
     use("mhinz/vim-signify")
     use("mhinz/vim-startify")
+    use("norcalli/nvim-colorizer.lua")
 
     -- Syntax & Language Enhancements
     use({"dag/vim-fish",                  ft = "fish"})

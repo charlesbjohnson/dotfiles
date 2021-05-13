@@ -239,6 +239,9 @@ for _, server in pairs(lspinstall.installed_servers()) do
   lspconfig[server].setup(ok and options(lspconfig[server]) or {})
 end
 
+-- norcalli/nvim-colorizer.lua
+require("colorizer").setup()
+
 -- nvim-treesitter/nvim-treesitter
 require("nvim-treesitter.configs").setup({
   ensure_installed = "maintained",
