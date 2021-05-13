@@ -83,21 +83,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/editorconfig-vim"
   },
+  ["feline.nvim"] = {
+    loaded = true,
+    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/feline.nvim"
+  },
   fzf = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/fzf"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+  },
   indentLine = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/indentLine"
-  },
-  ["lightline-bufferline"] = {
-    loaded = true,
-    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/lightline-bufferline"
-  },
-  ["lightline.vim"] = {
-    loaded = true,
-    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/lightline.vim"
   },
   ["lsp-colors.nvim"] = {
     loaded = true,
@@ -136,6 +136,10 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/opt/packer.nvim"
   },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+  },
   ["rename.vim"] = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/rename.vim"
@@ -170,10 +174,6 @@ _G.packer_plugins = {
     needs_bufread = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/opt/vim-git"
   },
-  ["vim-gitbranch"] = {
-    loaded = true,
-    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/vim-gitbranch"
-  },
   ["vim-illuminate"] = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/vim-illuminate"
@@ -198,10 +198,6 @@ _G.packer_plugins = {
   ["vim-schlepp"] = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/vim-schlepp"
-  },
-  ["vim-signify"] = {
-    loaded = true,
-    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/vim-signify"
   },
   ["vim-smoothie"] = {
     loaded = true,

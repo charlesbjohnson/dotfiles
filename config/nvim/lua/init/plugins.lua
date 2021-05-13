@@ -26,6 +26,9 @@ vim.g.nord_underline                     = 1
 
 vim.cmd("colorscheme nord")
 
+-- famiu/feline.nvim
+require("init.plugins.statusline")
+
 -- hrsh7th/nvim-compe
 require("compe").setup({
   source = {
@@ -89,86 +92,6 @@ _G.compe = (function()
   }
 end)()
 
--- itchyny/lightline.vim
-vim.g.lightline = {
-  colorscheme = "nord",
-  active = {
-    left = {
-      {"mode", "paste"},
-      {"gitbranch", "readonly", "filename", "modified"}
-    },
-    right = {
-      {"lineinfo"},
-      {"percent"},
-      {"fileformat", "fileencoding", "filetype"}
-    }
-  },
-  component_expand = {
-    buffers = "lightline#bufferline#buffers"
-  },
-  component_function = {
-    filetype = "LightlineFileType",
-    fileformat = "LightlineFileFormat",
-    gitbranch = "gitbranch#name"
-  },
-  component_type = {
-    buffers = "tabsel"
-  },
-  separator = {
-    left = "",
-    right = ""
-  },
-  subseparator = {
-    left = "",
-    right = ""
-  },
-  tabline = {
-    left = {{"buffers"}},
-    right = {{}}
-  }
-}
-
-_G.lightline = (function()
-  local web_devicons = require("nvim-web-devicons")
-
-  local function file_type()
-    if vim.fn.winwidth(0) <= 70 then
-      return ""
-    end
-
-    local type = (vim.bo.filetype or "no ft")
-    local icon = web_devicons.get_icon(vim.fn.expand("%"), vim.fn.expand("%:e"))
-
-    return string.join({type, icon}, " ")
-  end
-
-  local function file_format()
-    if vim.fn.winwidth(0) <= 70 then
-      return ""
-    end
-
-    local format = vim.bo.fileformat
-    local icon = web_devicons.get_icon(format)
-
-    return string.join({format, icon}, " ")
-  end
-
-  return {
-    file_type = file_type,
-    file_format = file_format
-  }
-end)()
-
-vim.cmd([[
-  function! g:LightlineFileType() abort
-    return v:lua.lightline.file_type()
-  endfunction
-
-  function! g:LightlineFileFormat() abort
-    return v:lua.lightline.file_format()
-  endfunction
-]])
-
 -- itmammoth/doorboy.vim
 vim.imap("<BS>",    "doorboy#map_backspace()", {expr = true})
 vim.imap("<Space>", "doorboy#map_space()",     {expr = true})
@@ -196,9 +119,10 @@ require("nvim-web-devicons").setup({
   }
 })
 
--- mengelbrecht/lightline-bufferline
-vim.g["lightline#bufferline#enable_devicons"] = 1
-vim.g["lightline#bufferline#show_number"] = 2
+-- lewis6991/gitsigns.nvim
+require("gitsigns").setup({
+  keymaps = {}
+})
 
 -- mhinz/vim-startify
 vim.g.startify_change_to_dir      = 1

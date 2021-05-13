@@ -61,14 +61,15 @@ return require("packer").startup({
     -- Editor Appearance
     use("Yggdroot/indentLine")
     use("arcticicestudio/nord-vim")
+    use("famiu/feline.nvim")
     use("folke/lsp-colors.nvim")
-    use("itchyny/lightline.vim")
-    use("itchyny/vim-gitbranch")
     use("kyazdani42/nvim-web-devicons")
-    use("mengelbrecht/lightline-bufferline")
-    use("mhinz/vim-signify")
+    use("lewis6991/gitsigns.nvim")
     use("mhinz/vim-startify")
     use("norcalli/nvim-colorizer.lua")
+
+    -- Support
+    use("nvim-lua/plenary.nvim")
 
     -- Syntax & Language Enhancements
     use({"dag/vim-fish",                  ft = "fish"})
