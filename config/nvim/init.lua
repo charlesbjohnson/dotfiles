@@ -95,14 +95,20 @@ vim.xmap("<C-d>", "<gv")
 vim.xmap("<C-t>", ">gv")
 
 -- Move around more quickly
-vim.nmap("<", "{")
-vim.xmap("<", "{")
-vim.nmap(">", "}")
-vim.xmap(">", "}")
-vim.nmap("H", "0")
-vim.xmap("H", "0")
-vim.nmap("L", "$")
-vim.xmap("L", "$")
+vim.nmap("<C-n>", "<NOP>")
+vim.xmap("<C-n>", "<NOP>")
+
+vim.nmap("<C-u>", "<NOP>")
+vim.xmap("<C-u>", "<NOP>")
+--
+vim.nmap("<M-k>", "{")
+vim.xmap("<M-k>", "{")
+vim.nmap("<M-j>", "}")
+vim.xmap("<M-j>", "}")
+vim.nmap("<M-h>", "0")
+vim.xmap("<M-h>", "0")
+vim.nmap("<M-l>", "$")
+vim.xmap("<M-l>", "$")
 
 -- Splits
 vim.nmap("<C-w>|", ":vsplit<CR>",             {silent = true})

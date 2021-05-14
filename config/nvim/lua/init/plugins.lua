@@ -193,12 +193,6 @@ vim.xmap("<C-f>", "<Plug>(SmoothieForwards)", {noremap = false})
 vim.nmap("<C-b>", "<Plug>(SmoothieBackwards)", {noremap = false})
 vim.xmap("<C-b>", "<Plug>(SmoothieBackwards)", {noremap = false})
 
-vim.nmap(">", "<Plug>(SmoothieDownwards)", {noremap = false})
-vim.xmap(">", "<Plug>(SmoothieDownwards)", {noremap = false})
-
-vim.nmap("<", "<Plug>(SmoothieUpwards)", {noremap = false})
-vim.xmap("<", "<Plug>(SmoothieUpwards)", {noremap = false})
-
 -- romgrk/barbar.nvim
 vim.g.bufferline = {
   animation          = false,
