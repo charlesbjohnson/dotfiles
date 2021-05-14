@@ -1800,6 +1800,10 @@
             }
           }
         }
+      },
+      "code-minimap": {
+        "version": "0.6.0",
+        "bottle": false
       }
     },
     "tap": {
@@ -1817,6 +1821,9 @@
       },
       "homebrew/cask-fonts": {
         "revision": "a155399dab71d9d1b3242f3f1cdc704c8ec4cae2"
+      },
+      "wfxr/code-minimap": {
+        "revision": "5a38e05925fee2c8aaa108aee624d1970c44f669"
       }
     },
     "cask": {

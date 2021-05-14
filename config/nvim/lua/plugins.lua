@@ -35,6 +35,7 @@ return require("packer").startup({
     use("rhysd/committia.vim")
     use("roxma/vim-tmux-clipboard")
     use("tpope/vim-vinegar")
+    use("wfxr/minimap.vim")
 
     -- Application Enhancements
     use("danro/rename.vim")

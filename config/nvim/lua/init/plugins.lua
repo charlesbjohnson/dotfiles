@@ -292,6 +292,19 @@ vim.xmap("m",  "d")
 vim.nmap("mm", "dd")
 vim.nmap("M",  "D")
 
+-- wfxr/minimap.vim
+vim.g.minimap_highlight       = "CursorLine"
+vim.g.minimap_highlight_range = true
+
+vim.g.minimap_block_buftypes = {"nofile", "nowrite", "prompt", "quickfix", "terminal"}
+vim.g.minimap_close_buftypes = {}
+
+vim.g.minimap_block_filetypes = {"gitcommit", "packer", "startify"}
+vim.g.minimap_close_filetypes = vim.g.minimap_block_filetypes
+
+vim.nmap("<C-m>", ":MinimapToggle<CR>",  {silent = true})
+vim.nmap("<M-m>", ":MinimapRefresh<CR>", {silent = true})
+
 -- zirrostig/vim-schlepp
 vim.xmap("<Leader>h", "<Plug>SchleppLeft",  {noremap = false})
 vim.xmap("<Leader>j", "<Plug>SchleppDown",  {noremap = false})

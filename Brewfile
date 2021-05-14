@@ -2,6 +2,7 @@ brew 'asdf'
 brew 'bash'
 brew 'bat'
 brew 'binutils', link: true
+brew 'code-minimap'
 brew 'coreutils'
 brew 'curl'
 brew 'diff-so-fancy'
@@ -57,6 +58,7 @@ brew 'yamllint'
 tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'thoughtbot/formulae'
+tap 'wfxr/code-minimap'
 
 Dir.glob(File.join(File.expand_path('~/.config/dotfile'), 'Brewfile.*')) do |path|
   instance_eval(File.read(path))
