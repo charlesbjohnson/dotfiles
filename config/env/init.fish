@@ -9,7 +9,6 @@ function env::direnv
 end
 
 function env::fzf
-  dotfile::prepend_env PATH (brew --prefix fzf)/bin
   fzf_key_bindings
 end
 
