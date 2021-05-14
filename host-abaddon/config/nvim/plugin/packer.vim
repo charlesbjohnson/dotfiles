@@ -71,6 +71,10 @@ end
 time("try_loadstring definition", false)
 time("Defining packer_plugins", true)
 _G.packer_plugins = {
+  ["barbar.nvim"] = {
+    loaded = true,
+    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/barbar.nvim"
+  },
   ["committia.vim"] = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/committia.vim"
@@ -190,10 +194,6 @@ _G.packer_plugins = {
   ["vim-repeat"] = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/vim-repeat"
-  },
-  ["vim-sayonara"] = {
-    loaded = true,
-    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/vim-sayonara"
   },
   ["vim-schlepp"] = {
     loaded = true,

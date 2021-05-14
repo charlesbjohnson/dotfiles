@@ -19,6 +19,9 @@ vim.smap = ext.vim.mapping("s")
 vim.vmap = ext.vim.mapping("v")
 vim.xmap = ext.vim.mapping("x")
 
+vim.hl      = ext.vim.highlight
+vim.hl_link = ext.vim.highlight_link
+
 --- General
 vim.g.mapleader   = " "
 vim.o.clipboard   = "unnamed"
@@ -84,19 +87,6 @@ vim.imap("<F1>", "<Esc>")
 
 -- Quickly clear highlighted search
 vim.nmap("<Leader><Leader>", ":nohlsearch<CR>", {silent = true})
-
--- Buffers (creation, deletion, cycling) and delete all buffers
-vim.nmap("<Leader>BB", ":Sayonara!<CR>",        {silent = true})
-vim.nmap("<Leader>BD", ":bufdo :Sayonara!<CR>", {silent = true})
-vim.nmap("<Leader>b",  ":enew<CR>",             {silent = true})
-vim.nmap("<Leader>h",  ":bp<CR>",               {silent = true})
-vim.nmap("<Leader>l",  ":bn<CR>",               {silent = true})
-
--- Tabs (creation, deletion, cycling)
-vim.nmap("<Leader>H",  ":tabprevious<CR>")
-vim.nmap("<Leader>L",  ":tabnext<CR>")
-vim.nmap("<Leader>TT", ":tabclose<CR>")
-vim.nmap("<Leader>t",  ":tabnew<CR>")
 
 -- Consistent indent/unindent across all modes
 vim.nmap("<C-d>", "<<")

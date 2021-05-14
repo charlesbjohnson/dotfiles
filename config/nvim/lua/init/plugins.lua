@@ -1,5 +1,4 @@
-require("ext.string")
-
+local colors = require("colors.nord").colors
 vim = _G.vim
 
 -- AndrewRadev/splitjoin.vim
@@ -199,6 +198,42 @@ vim.xmap(">", "<Plug>(SmoothieDownwards)", {noremap = false})
 
 vim.nmap("<", "<Plug>(SmoothieUpwards)", {noremap = false})
 vim.xmap("<", "<Plug>(SmoothieUpwards)", {noremap = false})
+
+-- romgrk/barbar.nvim
+vim.g.bufferline = {
+  animation          = false,
+  clickable          = false,
+  closable           = true,
+  icon_close_tab     = "",
+  icon_custom_colors = "BufferCurrent",
+  icons              = "both",
+  tabpages           = false
+}
+
+vim.hl("BufferCurrent",      {bg = colors[3], fg = colors[6]})
+vim.hl("BufferCurrentIndex", {bg = colors[3], fg = colors[6]})
+vim.hl("BufferCurrentMod",   {bg = colors[3], fg = colors[6]})
+vim.hl("BufferCurrentSign",  {bg = colors[3], fg = colors[6]})
+
+vim.hl_link("BufferVisible",      "BufferCurrent")
+vim.hl_link("BufferVisibleIndex", "BufferCurrentIndex")
+vim.hl_link("BufferVisibleMod",   "BufferCurrentMod")
+vim.hl_link("BufferVisibleSign",  "BufferCurrentSign")
+
+vim.hl("BufferInactive",      {bg = colors.bg, fg = colors.fg})
+vim.hl("BufferInactiveIndex", {bg = colors.bg, fg = colors.fg})
+vim.hl("BufferInactiveMod",   {bg = colors.bg, fg = colors.fg})
+vim.hl("BufferInactiveSign",  {bg = colors.bg, fg = colors.fg})
+
+vim.hl("BufferTabpageFill", {bg = colors[0]})
+
+vim.nmap("<Leader>BB", ":BufferClose<CR>",              {silent = true})
+vim.nmap("<Leader>BD", ":BufferCloseAllButCurrent<CR>", {silent = true})
+vim.nmap("<Leader>H",  ":BufferMovePrevious<CR>",       {silent = true})
+vim.nmap("<Leader>L",  ":BufferMoveNext<CR>",           {silent = true})
+vim.nmap("<Leader>b",  ":enew<CR>",                     {silent = true})
+vim.nmap("<Leader>h",  ":BufferPrevious<CR>",           {silent = true})
+vim.nmap("<Leader>l",  ":BufferNext<CR>",               {silent = true})
 
 -- svermeulen/vim-cutlass
 vim.nmap("m",  "d")

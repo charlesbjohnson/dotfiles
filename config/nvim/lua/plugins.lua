@@ -30,7 +30,6 @@ return require("packer").startup({
     -- Application Controls
     use("christoomey/vim-tmux-navigator")
     use("junegunn/fzf")
-    use("mhinz/vim-sayonara")
     use("milkypostman/vim-togglelist")
     use("rhysd/committia.vim")
     use("roxma/vim-tmux-clipboard")
@@ -67,6 +66,7 @@ return require("packer").startup({
     use("lewis6991/gitsigns.nvim")
     use("mhinz/vim-startify")
     use("norcalli/nvim-colorizer.lua")
+    use("romgrk/barbar.nvim")
 
     -- Support
     use("nvim-lua/plenary.nvim")
