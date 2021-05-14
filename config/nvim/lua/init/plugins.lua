@@ -96,9 +96,6 @@ vim.imap("<BS>",    "doorboy#map_backspace()", {expr = true})
 vim.imap("<Space>", "doorboy#map_space()",     {expr = true})
 vim.imap("<CR>",    "doorboy#map_cr()",        {expr = true})
 
--- junegunn/fzf
-vim.nmap("<C-p>", ":FZF<CR>", {silent = true})
-
 -- junegunn/vim-easy-align
 vim.nmap("<Leader>a", "<Plug>(EasyAlign)", {noremap = false})
 vim.xmap("<CR>",      "<Plug>(EasyAlign)", {noremap = false})
@@ -164,6 +161,66 @@ end
 
 -- norcalli/nvim-colorizer.lua
 require("colorizer").setup()
+
+-- nvim-telescope/telescope.nvim
+require("telescope").setup({
+  defaults = {
+    color_devicons = false,
+    mappings = {
+      i = {
+        ["<C-n>"] = false,
+        ["<C-j>"] = require("telescope.actions").move_selection_next,
+        ["<M-j>"] = require("telescope.actions").move_selection_next,
+
+        ["<C-p>"] = false,
+        ["<C-k>"] = require("telescope.actions").move_selection_previous,
+        ["<M-k>"] = require("telescope.actions").move_selection_previous,
+
+        ["<C-u>"] = require("telescope.actions").preview_scrolling_up,
+        ["<C-d>"] = require("telescope.actions").preview_scrolling_down,
+
+        ["<C-v>"]  = false,
+        ["<M-\\>"] = require("telescope.actions").select_vertical,
+        ["<C-\\>"] = require("telescope.actions").select_vertical,
+
+        ["<C-x>"] = false,
+        ["<C-_>"] = require("telescope.actions").select_horizontal,
+        ["<M-_>"] = require("telescope.actions").select_horizontal,
+
+        ["<C-t>"] = false,
+        ["<C-c>"] = require("telescope.actions").close
+    },
+    n = {
+        ["<C-n>"] = false,
+        ["<C-j>"] = require("telescope.actions").move_selection_next,
+        ["<M-j>"] = require("telescope.actions").move_selection_next,
+
+        ["<C-p>"] = false,
+        ["<C-k>"] = require("telescope.actions").move_selection_previous,
+        ["<M-k>"] = require("telescope.actions").move_selection_previous,
+
+        ["<C-u>"] = require("telescope.actions").preview_scrolling_up,
+        ["<C-d>"] = require("telescope.actions").preview_scrolling_down,
+
+        ["<C-v>"]  = false,
+        ["<M-\\>"] = require("telescope.actions").select_vertical,
+        ["<C-\\>"] = require("telescope.actions").select_vertical,
+
+        ["<C-x>"] = false,
+        ["<C-_>"] = require("telescope.actions").select_horizontal,
+        ["<M-_>"] = require("telescope.actions").select_horizontal,
+
+        ["<C-t>"] = false,
+        ["<C-c>"] = require("telescope.actions").close
+      }
+    }
+  }
+})
+
+require("telescope").load_extension("fzf_writer")
+
+vim.nmap("<C-p>", ":lua require('telescope').extensions.fzf_writer.files()<CR>", {silent = true})
+vim.nmap("<M-p>", ":lua require('telescope').extensions.fzf_writer.grep()<CR>",  {silent = true})
 
 -- nvim-treesitter/nvim-treesitter
 require("nvim-treesitter.configs").setup({

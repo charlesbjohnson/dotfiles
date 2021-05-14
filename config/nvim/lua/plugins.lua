@@ -29,8 +29,9 @@ return require("packer").startup({
 
     -- Application Controls
     use("christoomey/vim-tmux-navigator")
-    use("junegunn/fzf")
     use("milkypostman/vim-togglelist")
+    use("nvim-telescope/telescope-fzf-writer.nvim")
+    use("nvim-telescope/telescope.nvim")
     use("rhysd/committia.vim")
     use("roxma/vim-tmux-clipboard")
     use("tpope/vim-vinegar")
@@ -70,6 +71,7 @@ return require("packer").startup({
 
     -- Support
     use("nvim-lua/plenary.nvim")
+    use("nvim-lua/popup.nvim")
 
     -- Syntax & Language Enhancements
     use({"dag/vim-fish",                  ft = "fish"})

@@ -91,10 +91,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/feline.nvim"
   },
-  fzf = {
-    loaded = true,
-    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/fzf"
-  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
@@ -144,6 +140,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/popup.nvim"
+  },
   ["rename.vim"] = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/rename.vim"
@@ -155,6 +155,14 @@ _G.packer_plugins = {
   ["splitjoin.vim"] = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/splitjoin.vim"
+  },
+  ["telescope-fzf-writer.nvim"] = {
+    loaded = true,
+    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/telescope-fzf-writer.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
   ["vim-commentary"] = {
     loaded = true,
