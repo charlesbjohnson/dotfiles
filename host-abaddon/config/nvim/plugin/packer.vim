@@ -127,6 +127,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
   },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
@@ -147,10 +151,6 @@ _G.packer_plugins = {
   ["popup.nvim"] = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/popup.nvim"
-  },
-  ["rename.vim"] = {
-    loaded = true,
-    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/rename.vim"
   },
   ["repmo.vim"] = {
     loaded = true,
@@ -254,10 +254,6 @@ _G.packer_plugins = {
   ["vim-togglelist"] = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/vim-togglelist"
-  },
-  ["vim-vinegar"] = {
-    loaded = true,
-    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/vim-vinegar"
   }
 }
 

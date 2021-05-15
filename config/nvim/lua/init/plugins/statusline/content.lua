@@ -6,6 +6,7 @@ local file_formats = {
 
 return function(options)
   vim.list_extend(options.properties.force_inactive.filetypes, {
+    "NvimTree",
     "minimap",
     "packer",
     "startify"

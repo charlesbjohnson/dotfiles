@@ -100,6 +100,23 @@ vim.imap("<CR>",    "doorboy#map_cr()",        {expr = true})
 vim.nmap("<Leader>a", "<Plug>(EasyAlign)", {noremap = false})
 vim.xmap("<CR>",      "<Plug>(EasyAlign)", {noremap = false})
 
+-- kyazdani42/nvim-tree.lua
+vim.g.nvim_tree_bindings = {
+  ["<2-LeftMouse>"]  = "",
+  ["<2-RightMouse>"] = "",
+  ["<C-t>"]          = "",
+  ["o"]              = "",
+
+  ["<C-v>"]  = "",
+  ["<C-\\>"] = require("nvim-tree.config").nvim_tree_callback("vsplit"),
+
+  ["<C-x>"] = "",
+  ["<C-_>"] = require("nvim-tree.config").nvim_tree_callback("split")
+}
+
+vim.nmap("<C-n>", ":NvimTreeToggle<CR>",  {silent = true})
+vim.nmap("<M-n>", ":NvimTreeRefresh<CR>", {silent = true})
+
 -- kyazdani42/nvim-web-devicons
 require("nvim-web-devicons").setup({
   override = {

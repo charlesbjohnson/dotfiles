@@ -29,16 +29,15 @@ return require("packer").startup({
 
     -- Application Controls
     use("christoomey/vim-tmux-navigator")
+    use("kyazdani42/nvim-tree.lua")
     use("milkypostman/vim-togglelist")
     use("nvim-telescope/telescope-fzf-writer.nvim")
     use("nvim-telescope/telescope.nvim")
     use("rhysd/committia.vim")
     use("roxma/vim-tmux-clipboard")
-    use("tpope/vim-vinegar")
     use("wfxr/minimap.vim")
 
     -- Application Enhancements
-    use("danro/rename.vim")
     use("editorconfig/editorconfig-vim")
 
     -- Editor Controls
