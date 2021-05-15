@@ -27,49 +27,47 @@ return require("packer").startup({
     use("tpope/vim-surround")
     use("vim-scripts/repmo.vim")
 
-    -- Application Controls
+    -- Application Enhancements
     use("christoomey/vim-tmux-navigator")
-    use("kyazdani42/nvim-tree.lua")
+    use("editorconfig/editorconfig-vim")
     use("milkypostman/vim-togglelist")
+    use("roxma/vim-tmux-clipboard")
+
+    -- Application Features
+    use("kyazdani42/nvim-tree.lua")
     use("nvim-telescope/telescope-fzf-writer.nvim")
     use("nvim-telescope/telescope.nvim")
     use("rhysd/committia.vim")
-    use("roxma/vim-tmux-clipboard")
     use("wfxr/minimap.vim")
+    use("romgrk/barbar.nvim")
+    use("mhinz/vim-startify")
 
-    -- Application Enhancements
-    use("editorconfig/editorconfig-vim")
-
-    -- Editor Controls
-    use({"AndrewRadev/splitjoin.vim", branch = "main"})
+    -- Editor Enhancements
+    use("RRethy/vim-illuminate")
+    use("andymass/vim-matchup")
     use("itmammoth/doorboy.vim")
     use("junegunn/vim-easy-align")
     use("psliwka/vim-smoothie")
     use("svermeulen/vim-cutlass")
     use("zirrostig/vim-schlepp")
+    use({"AndrewRadev/splitjoin.vim", branch = "main"})
 
-    -- Editor Enhancements
+    -- Editor Features
+    use("Yggdroot/indentLine")
+    use("famiu/feline.nvim")
+    use("folke/lsp-colors.nvim")
     use("hrsh7th/nvim-compe")
     use("kabouzeid/nvim-lspinstall")
+    use("lewis6991/gitsigns.nvim")
     use("neovim/nvim-lspconfig")
     use("nvim-treesitter/nvim-treesitter")
 
-    -- Search & Replace
-    use("RRethy/vim-illuminate")
-    use("andymass/vim-matchup")
-
     -- Editor Appearance
-    use("Yggdroot/indentLine")
     use("arcticicestudio/nord-vim")
-    use("famiu/feline.nvim")
-    use("folke/lsp-colors.nvim")
     use("kyazdani42/nvim-web-devicons")
-    use("lewis6991/gitsigns.nvim")
-    use("mhinz/vim-startify")
     use("norcalli/nvim-colorizer.lua")
-    use("romgrk/barbar.nvim")
 
-    -- Support
+    -- Supporting Libraries
     use("nvim-lua/plenary.nvim")
     use("nvim-lua/popup.nvim")
 
