@@ -21,8 +21,8 @@ return require("packer").startup({
     use("kana/vim-textobj-user")
 
     -- Motions
+    use("b3nj5m1n/kommentary")
     use("christoomey/vim-sort-motion")
-    use("tpope/vim-commentary")
     use("tpope/vim-repeat")
     use("tpope/vim-surround")
     use("vim-scripts/repmo.vim")
