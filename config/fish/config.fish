@@ -2,7 +2,7 @@ if not status --is-login
   exit
 end
 
-test -f "$HOME/.config/dotfile/init.fish"; and source "$HOME/.config/dotfile/init.fish"
+test -f "$HOME/.config/dotfile/init.fish" && source "$HOME/.config/dotfile/init.fish"
 dotfile::load "$HOME/.config/env/init.fish"
 dotfile::load "$HOME/.config/shell/init.fish"
 dotfile::load "$HOME/.config/tmux/init.fish"

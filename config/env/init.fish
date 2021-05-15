@@ -56,7 +56,7 @@ function env::gnu
       continue
     end
 
-    if begin command --search --quiet $cmd; and test "builtin" = (type --type $cmd); end
+    if command --search --quiet $cmd && test "builtin" = (type --type $cmd)
       continue
     end
 
