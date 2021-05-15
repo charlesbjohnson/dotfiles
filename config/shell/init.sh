@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 function shell::is_sh() {
   true
 }
@@ -14,7 +16,7 @@ function shell::termcolor() {
 
 function shell::dircolors() {
   if [[ -f "$HOME/.config/shell/$1" ]]; then
-    eval "$(dircolors $HOME/.config/shell/$1)"
+    eval "$(dircolors "$HOME/.config/shell/$1")"
   fi
 }
 

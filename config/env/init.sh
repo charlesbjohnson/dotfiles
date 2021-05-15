@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 function env::asdf() {
   if ! [[ "$PATH" =~ asdf ]]; then
     source "$(brew --prefix asdf)/asdf.sh"
@@ -69,11 +71,7 @@ function env::gnu() {
 
     local prefixed_cmd="${prefix}${cmd}"
     if command -v "$prefixed_cmd" &>/dev/null; then
-      eval "
-        function $cmd {
-          '$prefixed_cmd' \"\$@\"
-        }
-      "
+      eval "function $cmd() { $prefixed_cmd \"\$@\"; }"
       export -f "$cmd"
     fi
   done

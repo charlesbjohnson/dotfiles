@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 function dotfile::append_env() {
   if eval "[[ -z \"\$$1\" ]]"; then
     dotfile::set_env "$1" "$2"
