@@ -1,5 +1,5 @@
 if not status --is-login
-  exit
+    exit
 end
 
 test -f "$HOME/.config/dotfile/init.fish" && source "$HOME/.config/dotfile/init.fish"
@@ -10,7 +10,7 @@ dotfile::load "$HOME/.config/tmux/init.fish"
 dotfile::load "$HOME/.profile"
 
 if not status --is-interactive
-  exit
+    exit
 end
 
 fish_vi_key_bindings
