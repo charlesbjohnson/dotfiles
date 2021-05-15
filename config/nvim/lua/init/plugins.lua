@@ -117,21 +117,6 @@ vim.g.nvim_tree_bindings = {
 vim.nmap("<C-n>", ":NvimTreeToggle<CR>",  {silent = true})
 vim.nmap("<M-n>", ":NvimTreeRefresh<CR>", {silent = true})
 
--- kyazdani42/nvim-web-devicons
-require("nvim-web-devicons").setup({
-  override = {
-    ["dos"] = {
-      icon = ""
-    },
-    ["mac"] = {
-      icon = ""
-    },
-    ["unix"] = {
-      icon = ""
-    }
-  }
-})
-
 -- lewis6991/gitsigns.nvim
 require("gitsigns").setup({
   keymaps = {}
