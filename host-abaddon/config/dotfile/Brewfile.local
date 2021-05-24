@@ -1,8 +1,12 @@
+tap 'homebrew/cask'
+tap 'homebrew/cask-fonts'
+
 brew 'm-cli'
 brew 'mas'
 brew 'node'
 brew 'pinentry-mac'
 brew 'ruby'
+
 cask '1password'
 cask 'backblaze'
 cask 'betterzipql'
@@ -32,6 +36,7 @@ cask 'spotify'
 cask 'visual-studio-code'
 cask 'vlc'
 cask 'webpquicklook'
+
 mas 'Dato', id: 1470584107
 mas 'Keynote', id: 409183694
 mas 'Microsoft Remote Desktop', id: 1295203466
@@ -39,5 +44,3 @@ mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
 mas 'Xcode', id: 497799835
 mas 'iMovie', id: 408981434
-tap 'homebrew/cask'
-tap 'homebrew/cask-fonts'

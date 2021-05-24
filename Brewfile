@@ -1,3 +1,8 @@
+tap 'homebrew/bundle'
+tap 'homebrew/core'
+tap 'thoughtbot/formulae'
+tap 'wfxr/code-minimap'
+
 brew 'asdf'
 brew 'bat'
 brew 'code-minimap'
@@ -26,10 +31,6 @@ brew 'vim'
 brew 'wdiff'
 brew 'wget'
 brew 'yamllint'
-tap 'homebrew/bundle'
-tap 'homebrew/core'
-tap 'thoughtbot/formulae'
-tap 'wfxr/code-minimap'
 
 Dir.glob(File.join(File.expand_path('~/.config/dotfile'), 'Brewfile.*')) do |path|
   instance_eval(File.read(path))
