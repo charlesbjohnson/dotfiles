@@ -23,28 +23,24 @@ vim.hl      = ext.vim.highlight
 vim.hl_link = ext.vim.highlight_link
 
 --- General
-vim.g.mapleader   = " "
-vim.o.clipboard   = "unnamed"
-vim.o.hidden      = true
-vim.o.startofline = false
-vim.o.ruler       = true
-vim.o.showmatch   = true
-vim.o.splitbelow  = true
-vim.o.splitright  = true
-vim.o.updatetime  = 300
-vim.o.viminfo     = "'100,n$HOME/.local/share/nvim/files/info/nviminfo"
-vim.o.visualbell  = true
-vim.o.wildmode    = "longest:full,full"
+vim.g.mapleader  = " "
+vim.o.clipboard  = "unnamed"
+vim.o.hidden     = true
+vim.o.showmatch  = true
+vim.o.splitbelow = true
+vim.o.splitright = true
+vim.o.updatetime = 300
+vim.o.viminfo    = "'100,n$HOME/.local/share/nvim/files/info/nviminfo"
+vim.o.visualbell = true
+vim.o.wildmode   = "longest:full,full"
 
 vim.cmd("syntax on")
 
 --- Appearance
-vim.o.background    = "dark"
 vim.o.cmdheight     = 2
 vim.wo.colorcolumn  = "80"
 vim.o.completeopt   = "menuone,noselect"
 vim.wo.cursorline   = true
-vim.o.laststatus    = 2
 vim.wo.list         = true
 vim.wo.listchars    = "tab:⇥ ,eol:↵,trail:·"
 vim.o.showmode      = false
@@ -52,7 +48,6 @@ vim.wo.wrap         = false
 vim.wo.number       = true
 vim.wo.scrolloff    = 20
 vim.o.shortmess     = vim.o.shortmess .. "c"
-vim.o.showcmd       = true
 vim.o.showtabline   = 2
 vim.wo.signcolumn   = "yes"
 vim.o.termguicolors = true
