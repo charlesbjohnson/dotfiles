@@ -35,8 +35,8 @@ function shell::tmux() {
   fi
 
   local name="$1"
-
   tmux start-server
+
   if ! tmux has-session 2>/dev/null; then
     tmux new-session -d -s "$name"
     tmux set-option -t "$name" destroy-unattached off &>/dev/null

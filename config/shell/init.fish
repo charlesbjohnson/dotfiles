@@ -44,11 +44,11 @@ function shell::tmux
     end
 
     set name $argv[1]
-
     tmux start-server
-    if not tmux has-session ^/dev/null
+
+    if not tmux has-session 2>/dev/null
         tmux new-session -d -s $name
-        tmux set-option -t $name destroy-unattached off >/dev/null ^/dev/null
+        tmux set-option -t $name destroy-unattached off &>/dev/null
     end
 
     exec tmux attach-session
