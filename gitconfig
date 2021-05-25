@@ -14,9 +14,9 @@
   cl       = clone
   cleanall = clean --force -d
   co       = checkout
-  df       = diff --color
-  dfh      = stash show --color --patch
-  dfs      = diff --color --staged
+  df       = diff
+  dfsg     = diff --staged
+  dfsh     = stash show --patch
   discard  = checkout --
   fix      = commit --fixup
   l        = log --oneline --graph
@@ -41,7 +41,14 @@
 [core]
   autocrlf     = input
   excludesfile = ~/.gitignore
-  pager        = "diff-so-fancy | less --tabs 4 -RFX"
+  pager        = delta
+[delta]
+  file-decoration-style = yellow box
+  file-style            = yellow
+  hunk-header-style     = omit
+  line-numbers          = true
+  navigate              = true
+  syntax-theme          = Nord
 [diff]
   tool = nvimdiff
 [difftool]
@@ -50,6 +57,8 @@
   cmd = nvim -d $LOCAL $REMOTE
 [fetch]
   prune = true
+[interactive]
+  diffFilter = delta --color-only
 [merge]
   ff   = only
   tool = nvimdiff

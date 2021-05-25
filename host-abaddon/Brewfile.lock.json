@@ -135,20 +135,6 @@
         },
         "version": "7.76.1_1"
       },
-      "diff-so-fancy": {
-        "bottle": {
-          "files": {
-            "all": {
-              "cellar": ":any_skip_relocation",
-              "sha256": "cad82a5ca348351d26bb9673dee9534f874c6df6cf1969b5254bef430773a4a7",
-              "url": "https://ghcr.io/v2/homebrew/core/diff-so-fancy/blobs/sha256:cad82a5ca348351d26bb9673dee9534f874c6df6cf1969b5254bef430773a4a7"
-            }
-          },
-          "rebuild": 1,
-          "root_url": "https://ghcr.io/v2/homebrew/core"
-        },
-        "version": "1.4.0"
-      },
       "diffutils": {
         "bottle": {
           "files": {
@@ -448,6 +434,35 @@
           "root_url": "https://ghcr.io/v2/homebrew/core"
         },
         "version": "2.31.1"
+      },
+      "git-delta": {
+        "bottle": {
+          "files": {
+            "arm64_big_sur": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "028874b198dcfafdc9df029ac5e3f9df9c22969e10f6552a8fa9681905fe3633",
+              "url": "https://ghcr.io/v2/homebrew/core/git-delta/blobs/sha256:028874b198dcfafdc9df029ac5e3f9df9c22969e10f6552a8fa9681905fe3633"
+            },
+            "big_sur": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "2c0b4c2decb0c447cdf66bcca647251e6ccc3684f5a060a950c7645c047e1a04",
+              "url": "https://ghcr.io/v2/homebrew/core/git-delta/blobs/sha256:2c0b4c2decb0c447cdf66bcca647251e6ccc3684f5a060a950c7645c047e1a04"
+            },
+            "catalina": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "adf32ac4190cbf84233ab11c9ee0f39ff8698221fc81ef09f2dcf604631d062d",
+              "url": "https://ghcr.io/v2/homebrew/core/git-delta/blobs/sha256:adf32ac4190cbf84233ab11c9ee0f39ff8698221fc81ef09f2dcf604631d062d"
+            },
+            "mojave": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "158e488f87574ced953ebc9b8d4de54ba2206eda1d3bda950ad39f9ab303e9e6",
+              "url": "https://ghcr.io/v2/homebrew/core/git-delta/blobs/sha256:158e488f87574ced953ebc9b8d4de54ba2206eda1d3bda950ad39f9ab303e9e6"
+            }
+          },
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        },
+        "version": "0.7.1"
       },
       "gnu-getopt": {
         "bottle": {
@@ -1879,7 +1894,7 @@
         "revision": "75e81f99bc41951c3c3a8d1c863748d9a4793dae"
       },
       "homebrew/cask": {
-        "revision": "c5cf1d3fd2184d76a86a94f7993448d6f95f2e08"
+        "revision": "a7acf0830f50da111e00941bb7cadf10b9efe498"
       },
       "homebrew/cask-fonts": {
         "revision": "8962efc000e784721d64ffa3557af62aa42a4869"
