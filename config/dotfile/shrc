@@ -1,4 +1,3 @@
-dotfile::set_env BROWSER "chrome"
 dotfile::set_env VISUAL "nvim"
 dotfile::set_env EDITOR "$VISUAL"
 
