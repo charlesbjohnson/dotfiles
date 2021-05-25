@@ -34,6 +34,16 @@ function shell::prompt
     starship init fish | source
 end
 
+function shell::ssh
+    if ! pgrep --full "ssh-agent" &>/dev/null
+        eval (ssh-agent -c) &>/dev/null
+        return
+    end
+
+    set --export --global SSH_AGENT_PID (pgrep --full "ssh-agent" | head --lines 1)
+    set --export --global SSH_AUTH_SOCK (find /tmp/ssh-* -name "agent.*" | head --lines 1)
+end
+
 function shell::tmux
     if not command --search --quiet tmux
         return
@@ -65,6 +75,7 @@ function shell::cleanup
     functions --erase shell::termcolor
     functions --erase shell::dircolors
     functions --erase shell::prompt
+    functions --erase shell::ssh
     functions --erase shell::tmux
     functions --erase shell::cleanup
 end

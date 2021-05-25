@@ -26,6 +26,16 @@ function shell::prompt() {
   eval "$(starship init bash)"
 }
 
+function shell::ssh() {
+  if ! pgrep --full "ssh-agent" &>/dev/null; then
+    eval "$(ssh-agent -c)" &>/dev/null
+    return
+  fi
+
+  export SSH_AGENT_PID="$(pgrep --full "ssh-agent" | head --lines 1)"
+  export SSH_AUTH_SOCK="$(find /tmp/ssh-* -name "agent.*" | head --lines 1)"
+}
+
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/tmux/init.zsh
 function shell::tmux() {
   if ! command -v "tmux" &>/dev/null; then
@@ -58,6 +68,7 @@ function shell::cleanup() {
   unset -f shell::termcolor
   unset -f shell::dircolors
   unset -f shell::prompt
+  unset -f shell::ssh
   unset -f shell::tmux
   unset -f shell::cleanup
 }
