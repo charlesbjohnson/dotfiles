@@ -13,6 +13,8 @@ if not status --is-interactive
     exit
 end
 
+set -g fish_greeting
+fish_nord_colors
 fish_vi_key_bindings
 
 dotfile::load "$HOME/.config/dotfile/config/fish/config.local.fish"
