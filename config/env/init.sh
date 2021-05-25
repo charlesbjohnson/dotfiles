@@ -6,6 +6,10 @@ function env::asdf() {
   fi
 }
 
+function env::brew() {
+  eval "$($1/bin/brew shellenv)"
+}
+
 function env::direnv() {
   eval "$(direnv hook bash)"
 }
@@ -81,6 +85,7 @@ function env::ruby() {
 
 function env::cleanup() {
   unset -f env::asdf
+  unset -f env::brew
   unset -f env::direnv
   unset -f env::fzf
   unset -f env::gnu

@@ -4,6 +4,10 @@ function env::asdf
     end
 end
 
+function env::brew
+    eval ($argv[1]/bin/brew shellenv)
+end
+
 function env::direnv
     direnv hook fish | source
 end
@@ -68,6 +72,7 @@ end
 
 function env::cleanup
     functions --erase env::asdf
+    functions --erase env::brew
     functions --erase env::direnv
     functions --erase env::fzf
     functions --erase env::gnu
