@@ -9,7 +9,7 @@ function env::direnv
 end
 
 function env::fzf
-    fzf_key_bindings
+    source (brew --prefix fzf)/shell/key-bindings.fish && fzf_key_bindings
 end
 
 function env::gpg

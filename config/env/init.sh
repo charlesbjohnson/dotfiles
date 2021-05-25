@@ -11,9 +11,7 @@ function env::direnv() {
 }
 
 function env::fzf() {
-  if [[ -f "$HOME/.fzf.bash" ]]; then
-    source "$HOME/.fzf.bash"
-  fi
+  source "$(brew --prefix fzf)/shell/key-bindings.bash"
 }
 
 function env::gpg() {
