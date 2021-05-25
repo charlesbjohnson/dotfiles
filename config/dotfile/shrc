@@ -9,9 +9,18 @@ shell::tmux "default"
 dotfile::load_all "$HOME/.config/dotfile" "shrc.*"
 dotfile::load "$HOME/.aliases"
 
-dotfile::set_env FZF_DEFAULT_COMMAND "fd --type f --hidden --follow --exclude .git"
-dotfile::set_env FZF_DEFAULT_OPTS "--inline-info --border sharp --color 'border:#8FBCBB'"
+dotfile::set_env FZF_DEFAULT_COMMAND "fd --type f --hidden --follow"
 dotfile::set_env FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
+dotfile::set_env FZF_DEFAULT_OPTS "                       \
+  --bind 'alt-j:down,alt-k:up'                            \
+  --color 'fg:#E5E9F0,bg:#3B4252,hl:#81A1C1'              \
+  --color 'fg+:#E5E9F0,bg+:#3B4252,hl+:#81A1C1'           \
+  --color 'info:#EACB8A,prompt:#BF6069,pointer:#B48DAC'   \
+  --color 'marker:#A3BE8B,spinner:#B48DAC,header:#A3BE8B' \
+  --info hidden                                           \
+  --margin 0,2                                            \
+  --pointer '|' --prompt '| '                             \
+"
 
 env::cleanup
 shell::cleanup
