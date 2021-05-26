@@ -1902,9 +1902,6 @@
       "homebrew/core": {
         "revision": "10bf835c789a5302d224f3e13d8d8eb2a6c351e1"
       },
-      "thoughtbot/formulae": {
-        "revision": "a6bb452f4c03204fc49556c81e64172700a6d6d1"
-      },
       "wfxr/code-minimap": {
         "revision": "5a38e05925fee2c8aaa108aee624d1970c44f669"
       }

@@ -1,6 +1,5 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
-tap "thoughtbot/formulae"
 tap "wfxr/code-minimap"
 
 brew "asdf"
