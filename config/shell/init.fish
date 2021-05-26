@@ -43,6 +43,11 @@ function shell::tmux
         return
     end
 
+    if not test -d "$HOME/.tmux/plugins/tpm"
+        git clone "https://github.com/tmux-plugins/tpm" "$HOME/.tmux/plugins/tpm"
+        $HOME/.tmux/plugins/tpm/bin/install_plugins
+    end
+
     set name $argv[1]
     tmux start-server
 
