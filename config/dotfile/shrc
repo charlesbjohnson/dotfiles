@@ -1,7 +1,7 @@
 dotfile::set_env VISUAL "nvim"
 dotfile::set_env EDITOR "$VISUAL"
 
-shell::termcolor "xterm-256color-italic"
+shell::terminfo "xterm-256color" "https://invisible-island.net/datafiles/current/terminfo.src.gz"
 shell::dircolors "nord-dircolors/src/dir_colors" "https://github.com/arcticicestudio/nord-dircolors.git"
 shell::prompt
 shell::tmux "default"

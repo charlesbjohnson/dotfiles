@@ -6,12 +6,6 @@ function shell::is_fish
     true
 end
 
-function shell::termcolor
-    if not string match --quiet "*256color*" $TERM
-        set --export --global TERM $argv[1]
-    end
-end
-
 function shell::dircolors
     if not test -f "$HOME/.config/shell/$argv[1]"
         cd "$HOME/.config/shell" && git clone $argv[2] && cd -
@@ -44,6 +38,14 @@ function shell::ssh
     set --export --global SSH_AUTH_SOCK (find /tmp/ssh-* -name "agent.*" | head --lines 1)
 end
 
+function shell::terminfo
+    if not test -d "$HOME/.terminfo"
+        tic -x (curl --silent --location $argv[2] | gunzip | psub)
+    end
+
+    set --global --export TERM $argv[1]
+end
+
 function shell::tmux
     if not command --search --quiet tmux
         return
@@ -72,10 +74,10 @@ end
 function shell::cleanup
     functions --erase shell::is_sh
     functions --erase shell::is_fish
-    functions --erase shell::termcolor
     functions --erase shell::dircolors
     functions --erase shell::prompt
     functions --erase shell::ssh
+    functions --erase shell::terminfo
     functions --erase shell::tmux
     functions --erase shell::cleanup
 end

@@ -8,12 +8,6 @@ function shell::is_fish() {
   false
 }
 
-function shell::termcolor() {
-  if ! [[ "$TERM" =~ 256color ]]; then
-    export TERM="$1"
-  fi
-}
-
 function shell::dircolors() {
   if ! [[ -f "$HOME/.config/shell/$1" ]]; then
     cd "$HOME/.config/shell" && git clone "$2" && cd -
@@ -34,6 +28,14 @@ function shell::ssh() {
 
   export SSH_AGENT_PID="$(pgrep --full "ssh-agent" | head --lines 1)"
   export SSH_AUTH_SOCK="$(find /tmp/ssh-* -name "agent.*" | head --lines 1)"
+}
+
+function shell::terminfo() {
+  if ! [[ -d "$HOME/.terminfo" ]]; then
+    tic -x <(curl --silent --location "$2" | gunzip)
+  fi
+
+  export TERM="$1"
 }
 
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/tmux/init.zsh
@@ -65,10 +67,10 @@ function shell::tmux() {
 function shell::cleanup() {
   unset -f shell::is_sh
   unset -f shell::is_fish
-  unset -f shell::termcolor
   unset -f shell::dircolors
   unset -f shell::prompt
   unset -f shell::ssh
+  unset -f shell::terminfo
   unset -f shell::tmux
   unset -f shell::cleanup
 }
