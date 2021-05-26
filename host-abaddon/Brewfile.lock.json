@@ -1269,7 +1269,7 @@
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core"
         },
-        "version": "1.3.3"
+        "version": "1.3.4"
       },
       "readline": {
         "bottle": {
@@ -1688,7 +1688,7 @@
         "options": {
           "full_name": "1password"
         },
-        "version": "7.8.3"
+        "version": "7.8.4"
       },
       "backblaze": {
         "options": {
@@ -1748,13 +1748,13 @@
         "options": {
           "full_name": "google-chrome"
         },
-        "version": "90.0.4430.212"
+        "version": "91.0.4472.77"
       },
       "iterm2": {
         "options": {
           "full_name": "iterm2"
         },
-        "version": "3.4.7"
+        "version": "3.4.8"
       },
       "kaleidoscope": {
         "options": {
@@ -1894,13 +1894,13 @@
         "revision": "75e81f99bc41951c3c3a8d1c863748d9a4793dae"
       },
       "homebrew/cask": {
-        "revision": "a7acf0830f50da111e00941bb7cadf10b9efe498"
+        "revision": "2bef471b5703753876dd144b1ed059f2a3202e08"
       },
       "homebrew/cask-fonts": {
         "revision": "8962efc000e784721d64ffa3557af62aa42a4869"
       },
       "homebrew/core": {
-        "revision": "13a1ea558907f3b537ffc223830a19fab02e1755"
+        "revision": "10bf835c789a5302d224f3e13d8d8eb2a6c351e1"
       },
       "thoughtbot/formulae": {
         "revision": "a6bb452f4c03204fc49556c81e64172700a6d6d1"
@@ -1915,8 +1915,8 @@
       "big_sur": {
         "CLT": "12.5.0.22.9",
         "HOMEBREW_PREFIX": "/usr/local",
-        "HOMEBREW_VERSION": "3.1.9-2-g1795b37",
-        "Homebrew/homebrew-core": "13a1ea558907f3b537ffc223830a19fab02e1755",
+        "HOMEBREW_VERSION": "3.1.9-8-g6f1398a",
+        "Homebrew/homebrew-core": "10bf835c789a5302d224f3e13d8d8eb2a6c351e1",
         "Xcode": "12.5",
         "macOS": "11.3.1"
       }
