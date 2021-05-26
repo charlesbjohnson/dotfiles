@@ -6,6 +6,7 @@ brew "mas"
 brew "node"
 brew "pinentry-mac"
 brew "ruby"
+brew "rust"
 
 cask "1password"
 cask "backblaze"
