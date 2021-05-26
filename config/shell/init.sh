@@ -15,9 +15,11 @@ function shell::termcolor() {
 }
 
 function shell::dircolors() {
-  if [[ -f "$HOME/.config/shell/$1" ]]; then
-    eval "$(dircolors "$HOME/.config/shell/$1")"
+  if ! [[ -f "$HOME/.config/shell/$1" ]]; then
+    cd "$HOME/.config/shell" && git clone "$2" && cd -
   fi
+
+  eval "$(dircolors "$HOME/.config/shell/$1")"
 }
 
 function shell::prompt() {

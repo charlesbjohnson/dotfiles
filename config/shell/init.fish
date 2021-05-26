@@ -14,7 +14,7 @@ end
 
 function shell::dircolors
     if not test -f "$HOME/.config/shell/$argv[1]"
-        return
+        cd "$HOME/.config/shell" && git clone $argv[2] && cd -
     end
 
     set try_cmds dircolors gdircolors
