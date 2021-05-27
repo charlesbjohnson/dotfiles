@@ -1,0 +1,3 @@
+EXCLUDES="*.example LICENSE README.md"
+HOSTNAME="puck"
+TAGS="linux wsl"
