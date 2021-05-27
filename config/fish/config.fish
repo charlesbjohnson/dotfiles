@@ -14,8 +14,8 @@ if not status --is-interactive
 end
 
 set -g fish_greeting
-fish_nord_colors
-fish_vi_key_bindings
+fish_user_colors
+fish_user_keybindings
 
 dotfile::load "$HOME/.config/dotfile/config/fish/config.local.fish"
 dotfile::load "$HOME/.config/dotfile/shrc"
