@@ -1,7 +1,6 @@
 [[ -f "$HOME/.config/dotfile/init.sh" ]] && source "$HOME/.config/dotfile/init.sh"
 dotfile::load "$HOME/.config/env/init.sh"
 dotfile::load "$HOME/.config/shell/init.sh"
-dotfile::load "$HOME/.config/tmux/init.sh"
 
 dotfile::load "$HOME/.profile"
 
