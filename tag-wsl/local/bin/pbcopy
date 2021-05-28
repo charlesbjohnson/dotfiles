@@ -1,0 +1,24 @@
+#!/bin/sh
+
+main() {
+  # & $env:SYSTEMROOT\Microsoft.NET\Framework\v3.5\csc.exe /o copy.cs
+  #
+  # using System;
+  # using System.Windows.Forms;
+  #
+  # namespace Copy
+  # {
+  #     class Program
+  #     {
+  #         [STAThread]
+  #         static void Main()
+  #         {
+  #             Clipboard.SetText(Console.In.ReadToEnd().Replace("\n", "\r\n"));
+  #         }
+  #     }
+  # }
+
+  copy.exe <&0
+}
+
+main "$@"
