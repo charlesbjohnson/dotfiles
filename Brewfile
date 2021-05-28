@@ -18,7 +18,7 @@ brew "jq"
 brew "just"
 brew "neovim", args: ["HEAD"]
 brew "netcat"
-brew "python@3"
+brew "python"
 brew "ranger"
 brew "rargs"
 brew "rcm"

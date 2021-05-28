@@ -482,7 +482,7 @@
         },
         "version": "16.2.0"
       },
-      "python@3": {
+      "python": {
         "bottle": {
           "files": {
             "arm64_big_sur": {
