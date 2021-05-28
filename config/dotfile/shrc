@@ -21,6 +21,3 @@ dotfile::set_env FZF_DEFAULT_OPTS "                       \
   --margin 0,2                                            \
   --pointer '|' --prompt '| '                             \
 "
-
-env::cleanup
-shell::cleanup

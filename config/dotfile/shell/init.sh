@@ -55,12 +55,3 @@ function shell::tmux() {
 
   exec tmux attach-session
 }
-
-function shell::cleanup() {
-  unset -f shell::dircolors
-  unset -f shell::prompt
-  unset -f shell::ssh
-  unset -f shell::terminfo
-  unset -f shell::tmux
-  unset -f shell::cleanup
-}

@@ -25,7 +25,7 @@ function dotfile::load
 end
 
 function dotfile::load_all
-    for file in (find -L $argv[1] -maxdepth 1 -name $argv[2] -type f)
+    for file in (find -L $argv[1] -name $argv[2] -type f)
         source $file
     end
 end

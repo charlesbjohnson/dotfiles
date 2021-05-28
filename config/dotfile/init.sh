@@ -31,7 +31,7 @@ function dotfile::load() {
 }
 
 function dotfile::load_all() {
-  for file in $(find -L "$1" -maxdepth 1 -name "$2" -type f); do
+  for file in $(find -L "$1" -name "$2" -type f); do
     source "$file"
   done
 }

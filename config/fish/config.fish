@@ -3,8 +3,7 @@ if not status --is-login
 end
 
 test -f "$HOME/.config/dotfile/init.fish" && source "$HOME/.config/dotfile/init.fish"
-dotfile::load "$HOME/.config/dotfile/env/init.fish"
-dotfile::load "$HOME/.config/dotfile/shell/init.fish"
+dotfile::load_all "$HOME/.config/dotfile" "init.fish"
 
 dotfile::load "$HOME/.profile"
 
@@ -14,6 +13,8 @@ end
 
 dotfile::load "$HOME/.config/dotfile/shrc"
 dotfile::load "$HOME/.config/dotfile/config/fish/config.local.fish"
+
+dotfile::load_all "$HOME/.config/dotfile" "cleanup.fish"
 
 set -g fish_greeting
 fish_user_colors
