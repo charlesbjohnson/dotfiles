@@ -1,11 +1,3 @@
-function shell::is_sh
-    false
-end
-
-function shell::is_fish
-    true
-end
-
 function shell::dircolors
     if not test -f "$HOME/.config/shell/$argv[1]"
         cd "$HOME/.config/shell" && git clone $argv[2] && cd -
@@ -72,8 +64,6 @@ function shell::tmux
 end
 
 function shell::cleanup
-    functions --erase shell::is_sh
-    functions --erase shell::is_fish
     functions --erase shell::dircolors
     functions --erase shell::prompt
     functions --erase shell::ssh

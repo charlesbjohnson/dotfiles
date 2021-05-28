@@ -1,13 +1,5 @@
 #!/usr/bin/env bash
 
-function shell::is_sh() {
-  true
-}
-
-function shell::is_fish() {
-  false
-}
-
 function shell::dircolors() {
   if ! [[ -f "$HOME/.config/shell/$1" ]]; then
     cd "$HOME/.config/shell" && git clone "$2" && cd -
@@ -65,8 +57,6 @@ function shell::tmux() {
 }
 
 function shell::cleanup() {
-  unset -f shell::is_sh
-  unset -f shell::is_fish
   unset -f shell::dircolors
   unset -f shell::prompt
   unset -f shell::ssh
