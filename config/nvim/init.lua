@@ -24,7 +24,7 @@ vim.hl_link = ext.vim.highlight_link
 
 --- General
 vim.g.mapleader  = " "
-vim.o.clipboard  = "unnamed"
+vim.o.clipboard  = "unnamedplus"
 vim.o.hidden     = true
 vim.o.showmatch  = true
 vim.o.splitbelow = true
