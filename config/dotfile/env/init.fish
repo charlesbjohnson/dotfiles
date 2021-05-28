@@ -76,6 +76,7 @@ function env::cleanup
     functions --erase env::direnv
     functions --erase env::fzf
     functions --erase env::gnu
+    functions --erase env::gpg
     functions --erase env::ruby
     functions --erase env::cleanup
 end

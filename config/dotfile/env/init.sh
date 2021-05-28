@@ -89,6 +89,7 @@ function env::cleanup() {
   unset -f env::direnv
   unset -f env::fzf
   unset -f env::gnu
+  unset -f env::gpg
   unset -f env::ruby
   unset -f env::cleanup
 }
