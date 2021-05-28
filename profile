@@ -10,7 +10,7 @@ dotfile::append_env PATH "/sbin"
 
 dotfile::load_all "$HOME/.config/dotfile" "profile.*"
 
-env::gpg
-env::fzf
-env::direnv
-env::asdf
+dotfile::env::gpg
+dotfile::env::fzf
+dotfile::env::direnv
+dotfile::env::asdf

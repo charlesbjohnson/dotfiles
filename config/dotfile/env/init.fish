@@ -1,27 +1,27 @@
-function env::asdf
+function dotfile::env::asdf
     if not string match --quiet "*asdf*" $PATH
         source (brew --prefix asdf)/asdf.fish
     end
 end
 
-function env::brew
+function dotfile::env::brew
     eval ($argv[1]/bin/brew shellenv)
 end
 
-function env::direnv
+function dotfile::env::direnv
     direnv hook fish | source
 end
 
-function env::fzf
+function dotfile::env::fzf
     source (brew --prefix fzf)/shell/key-bindings.fish && fzf_key_bindings
 end
 
-function env::gpg
+function dotfile::env::gpg
     dotfile::set_env GPG_TTY (tty)
 end
 
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/gnu-utility/init.zsh
-function env::gnu
+function dotfile::env::gnu
     if not command --search --quiet gwhoami
         return
     end
@@ -66,6 +66,6 @@ function env::gnu
     end
 end
 
-function env::ruby
+function dotfile::env::ruby
     dotfile::prepend_env PATH (brew --prefix ruby)/bin
 end

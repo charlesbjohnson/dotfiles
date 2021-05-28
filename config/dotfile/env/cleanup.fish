@@ -1,7 +1,7 @@
-functions --erase env::asdf
-functions --erase env::brew
-functions --erase env::direnv
-functions --erase env::fzf
-functions --erase env::gnu
-functions --erase env::gpg
-functions --erase env::ruby
+functions --erase dotfile::env::asdf
+functions --erase dotfile::env::brew
+functions --erase dotfile::env::direnv
+functions --erase dotfile::env::fzf
+functions --erase dotfile::env::gnu
+functions --erase dotfile::env::gpg
+functions --erase dotfile::env::ruby

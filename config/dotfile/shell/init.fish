@@ -1,4 +1,4 @@
-function shell::dircolors
+function dotfile::shell::dircolors
     if not test -f "$HOME/.config/shell/$argv[1]"
         cd "$HOME/.config/shell" && git clone $argv[2] && cd -
     end
@@ -16,11 +16,11 @@ function shell::dircolors
     eval (eval "$cmd -c $HOME/.config/shell/$argv[1]")
 end
 
-function shell::prompt
+function dotfile::shell::prompt
     starship init fish | source
 end
 
-function shell::ssh
+function dotfile::shell::ssh
     if ! pgrep --full "ssh-agent" &>/dev/null
         eval (ssh-agent -c) &>/dev/null
         return
@@ -30,7 +30,7 @@ function shell::ssh
     set --export --global SSH_AUTH_SOCK (find /tmp/ssh-* -name "agent.*" | head --lines 1)
 end
 
-function shell::terminfo
+function dotfile::shell::terminfo
     if not test -d "$HOME/.terminfo"
         tic -x (curl --silent --location $argv[2] | gunzip | psub)
     end
@@ -38,7 +38,7 @@ function shell::terminfo
     set --global --export TERM $argv[1]
 end
 
-function shell::tmux
+function dotfile::shell::tmux
     if not command --search --quiet tmux
         return
     end

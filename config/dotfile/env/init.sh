@@ -1,29 +1,29 @@
 #!/usr/bin/env bash
 
-function env::asdf() {
+function dotfile::env::asdf() {
   if ! [[ "$PATH" =~ asdf ]]; then
     source "$(brew --prefix asdf)/asdf.sh"
   fi
 }
 
-function env::brew() {
+function dotfile::env::brew() {
   eval "$($1/bin/brew shellenv)"
 }
 
-function env::direnv() {
+function dotfile::env::direnv() {
   eval "$(direnv hook bash)"
 }
 
-function env::fzf() {
+function dotfile::env::fzf() {
   source "$(brew --prefix fzf)/shell/key-bindings.bash"
 }
 
-function env::gpg() {
+function dotfile::env::gpg() {
   export GPG_TTY="$(tty)"
 }
 
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/gnu-utility/init.zsh
-function env::gnu() {
+function dotfile::env::gnu() {
   if [[ "$(type whoami)" =~ gwhoami ]]; then
     return
   fi
@@ -79,6 +79,6 @@ function env::gnu() {
   done
 }
 
-function env::ruby() {
+function dotfile::env::ruby() {
   dotfile::prepend_env PATH "$(brew --prefix ruby)/bin"
 }

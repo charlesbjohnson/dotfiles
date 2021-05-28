@@ -1,5 +1,5 @@
-unset -f shell::dircolors
-unset -f shell::prompt
-unset -f shell::ssh
-unset -f shell::terminfo
-unset -f shell::tmux
+unset -f dotfile::shell::dircolors
+unset -f dotfile::shell::prompt
+unset -f dotfile::shell::ssh
+unset -f dotfile::shell::terminfo
+unset -f dotfile::shell::tmux

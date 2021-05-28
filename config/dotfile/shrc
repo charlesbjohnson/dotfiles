@@ -1,10 +1,10 @@
 dotfile::set_env VISUAL "nvim"
 dotfile::set_env EDITOR "$VISUAL"
 
-shell::terminfo "xterm-256color" "https://invisible-island.net/datafiles/current/terminfo.src.gz"
-shell::dircolors "nord-dircolors/src/dir_colors" "https://github.com/arcticicestudio/nord-dircolors.git"
-shell::prompt
-shell::tmux "default"
+dotfile::shell::terminfo "xterm-256color" "https://invisible-island.net/datafiles/current/terminfo.src.gz"
+dotfile::shell::dircolors "nord-dircolors/src/dir_colors" "https://github.com/arcticicestudio/nord-dircolors.git"
+dotfile::shell::prompt
+dotfile::shell::tmux "default"
 
 dotfile::load_all "$HOME/.config/dotfile" "shrc.*"
 dotfile::load "$HOME/.aliases"

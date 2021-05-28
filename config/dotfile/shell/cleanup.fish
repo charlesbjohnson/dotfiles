@@ -1,5 +1,5 @@
-functions --erase shell::dircolors
-functions --erase shell::prompt
-functions --erase shell::ssh
-functions --erase shell::terminfo
-functions --erase shell::tmux
+functions --erase dotfile::shell::dircolors
+functions --erase dotfile::shell::prompt
+functions --erase dotfile::shell::ssh
+functions --erase dotfile::shell::terminfo
+functions --erase dotfile::shell::tmux

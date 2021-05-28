@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function shell::dircolors() {
+function dotfile::shell::dircolors() {
   if ! [[ -f "$HOME/.config/shell/$1" ]]; then
     cd "$HOME/.config/shell" && git clone "$2" && cd -
   fi
@@ -8,11 +8,11 @@ function shell::dircolors() {
   eval "$(dircolors "$HOME/.config/shell/$1")"
 }
 
-function shell::prompt() {
+function dotfile::shell::prompt() {
   eval "$(starship init bash)"
 }
 
-function shell::ssh() {
+function dotfile::shell::ssh() {
   if ! pgrep --full "ssh-agent" &>/dev/null; then
     eval "$(ssh-agent -c)" &>/dev/null
     return
@@ -22,7 +22,7 @@ function shell::ssh() {
   export SSH_AUTH_SOCK="$(find /tmp/ssh-* -name "agent.*" | head --lines 1)"
 }
 
-function shell::terminfo() {
+function dotfile::shell::terminfo() {
   if ! [[ -d "$HOME/.terminfo" ]]; then
     tic -x <(curl --silent --location "$2" | gunzip)
   fi
@@ -31,7 +31,7 @@ function shell::terminfo() {
 }
 
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/tmux/init.zsh
-function shell::tmux() {
+function dotfile::shell::tmux() {
   if ! command -v "tmux" &>/dev/null; then
     return
   fi
