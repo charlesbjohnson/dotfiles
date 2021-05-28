@@ -3,8 +3,8 @@ if not status --is-login
 end
 
 test -f "$HOME/.config/dotfile/init.fish" && source "$HOME/.config/dotfile/init.fish"
-dotfile::load "$HOME/.config/env/init.fish"
-dotfile::load "$HOME/.config/shell/init.fish"
+dotfile::load "$HOME/.config/dotfile/env/init.fish"
+dotfile::load "$HOME/.config/dotfile/shell/init.fish"
 
 dotfile::load "$HOME/.profile"
 
