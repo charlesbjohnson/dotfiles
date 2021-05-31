@@ -1,12 +1,9 @@
-def local(name)
-  brew "~/.config/homebrew/formula/#{name}.rb"
-end
-
 tap "homebrew/bundle"
 tap "homebrew/core"
 
 brew "asdf"
 brew "bat"
+brew "code-minimap"
 brew "direnv"
 brew "exa"
 brew "fd"
@@ -34,8 +31,6 @@ brew "vim"
 brew "watchexec"
 brew "wget"
 brew "yamllint"
-
-local "code-minimap"
 
 Dir.glob(File.join(File.expand_path("~/.config/dotfile"), "Brewfile.*")) do |path|
   instance_eval(File.read(path))
