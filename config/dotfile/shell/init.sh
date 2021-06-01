@@ -18,8 +18,8 @@ function dotfile::shell::ssh() {
     return
   fi
 
-  export SSH_AGENT_PID="$(pgrep --full "ssh-agent" | head --lines 1)"
-  export SSH_AUTH_SOCK="$(find /tmp/ssh-* -name "agent.*" | head --lines 1)"
+  dotfile::set_env SSH_AGENT_PID "$(pgrep --full "ssh-agent" | head --lines 1)"
+  dotfile::set_env SSH_AUTH_SOCK "$(find /tmp/ssh-* -name "agent.*" | head --lines 1)"
 }
 
 function dotfile::shell::terminfo() {
@@ -27,7 +27,7 @@ function dotfile::shell::terminfo() {
     tic -x <(curl --silent --location "$2" | gunzip)
   fi
 
-  export TERM="$1"
+  dotfile::set_env TERM "$1"
 }
 
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/tmux/init.zsh
@@ -42,15 +42,14 @@ function dotfile::shell::tmux() {
 
   if ! [[ -d "$HOME/.tmux/plugins/tpm" ]]; then
     git clone "https://github.com/tmux-plugins/tpm" "$HOME/.tmux/plugins/tpm"
-    $HOME/.tmux/plugins/tpm/bin/install_plugins
+    "$HOME/.tmux/plugins/tpm/bin/install_plugins"
   fi
 
-  local name="$1"
   tmux start-server
 
   if ! tmux has-session 2>/dev/null; then
-    tmux new-session -d -s "$name"
-    tmux set-option -t "$name" destroy-unattached off &>/dev/null
+    tmux new-session -d -s "$1"
+    tmux set-option -t "$1" destroy-unattached off &>/dev/null
   fi
 
   exec tmux attach-session

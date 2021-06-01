@@ -19,7 +19,7 @@ function dotfile::env::fzf() {
 }
 
 function dotfile::env::gpg() {
-  export GPG_TTY="$(tty)"
+  dotfile::set_env GPG_TTY "$(tty)"
 }
 
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/gnu-utility/init.zsh

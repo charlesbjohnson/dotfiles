@@ -21,13 +21,13 @@ function dotfile::shell::prompt
 end
 
 function dotfile::shell::ssh
-    if ! pgrep --full "ssh-agent" &>/dev/null
+    if ! pgrep --full ssh-agent &>/dev/null
         eval (ssh-agent -c) &>/dev/null
         return
     end
 
-    set --export --global SSH_AGENT_PID (pgrep --full "ssh-agent" | head --lines 1)
-    set --export --global SSH_AUTH_SOCK (find /tmp/ssh-* -name "agent.*" | head --lines 1)
+    dotfile::set_env SSH_AGENT_PID (pgrep --full "ssh-agent" | head --lines 1)
+    dotfile::set_env SSH_AUTH_SOCK (find /tmp/ssh-* -name "agent.*" | head --lines 1)
 end
 
 function dotfile::shell::terminfo
@@ -35,7 +35,7 @@ function dotfile::shell::terminfo
         tic -x (curl --silent --location $argv[2] | gunzip | psub)
     end
 
-    set --global --export TERM $argv[1]
+    dotfile::set_env TERM $argv[1]
 end
 
 function dotfile::shell::tmux
@@ -52,12 +52,11 @@ function dotfile::shell::tmux
         $HOME/.tmux/plugins/tpm/bin/install_plugins
     end
 
-    set name $argv[1]
     tmux start-server
 
     if not tmux has-session 2>/dev/null
-        tmux new-session -d -s $name
-        tmux set-option -t $name destroy-unattached off &>/dev/null
+        tmux new-session -d -s $argv[1]
+        tmux set-option -t $argv[1] destroy-unattached off &>/dev/null
     end
 
     exec tmux attach-session
