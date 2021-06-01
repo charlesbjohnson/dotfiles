@@ -1,19 +1,9 @@
 function dotfile::shell::dircolors
-    if not test -f "$HOME/.config/shell/$argv[1]"
-        cd "$HOME/.config/shell" && git clone $argv[2] && cd -
+    if not test -f $HOME/.dir_colors
+        curl --silent --location --output $HOME/.dir_colors $argv[1]
     end
 
-    set try_cmds dircolors gdircolors
-    set cmd
-
-    for try_cmd in $try_cmds
-        if command --search --quiet $try_cmd
-            set cmd $try_cmd
-            break
-        end
-    end
-
-    eval (eval "$cmd -c $HOME/.config/shell/$argv[1]")
+    eval (dircolors --csh $HOME/.dir_colors)
 end
 
 function dotfile::shell::prompt

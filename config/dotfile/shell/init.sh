@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 function dotfile::shell::dircolors() {
-  if ! [[ -f "$HOME/.config/shell/$1" ]]; then
-    cd "$HOME/.config/shell" && git clone "$2" && cd -
+  if ! [[ -f "$HOME/.dir_colors" ]]; then
+    curl --silent --location --output "$HOME/.dir_colors" "$1"
   fi
 
-  eval "$(dircolors "$HOME/.config/shell/$1")"
+  eval "$(dircolors --sh "$HOME/.dir_colors")"
 }
 
 function dotfile::shell::prompt() {
