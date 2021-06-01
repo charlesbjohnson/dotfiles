@@ -2,12 +2,12 @@
 
 function dotfile::env::asdf() {
   if ! [[ "$PATH" =~ asdf ]]; then
-    source "$(brew --prefix asdf)/asdf.sh"
+    source "$HOMEBREW_PREFIX/opt/asdf/asdf.sh"
   fi
 }
 
 function dotfile::env::brew() {
-  eval "$($1/bin/brew shellenv)"
+  eval "$("$1/bin/brew" shellenv)"
 }
 
 function dotfile::env::direnv() {
@@ -15,7 +15,7 @@ function dotfile::env::direnv() {
 }
 
 function dotfile::env::fzf() {
-  source "$(brew --prefix fzf)/shell/key-bindings.bash"
+  source "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.bash"
 }
 
 function dotfile::env::gpg() {
@@ -80,5 +80,5 @@ function dotfile::env::gnu() {
 }
 
 function dotfile::env::ruby() {
-  dotfile::prepend_env PATH "$(brew --prefix ruby)/bin"
+  dotfile::prepend_env PATH "$HOMEBREW_PREFIX/opt/ruby/bin"
 }

@@ -1,4 +1,5 @@
-dotfile::set_env "CLICOLOR" "YES"
+dotfile::set_env CLICOLOR "YES"
 
+dotfile::env::brew "/usr/local"
 dotfile::env::gnu "g"
 dotfile::env::ruby

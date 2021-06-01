@@ -1,6 +1,6 @@
 function dotfile::env::asdf
     if not string match --quiet "*asdf*" $PATH
-        source (brew --prefix asdf)/asdf.fish
+        source $HOMEBREW_PREFIX/opt/asdf/asdf.fish
     end
 end
 
@@ -13,7 +13,7 @@ function dotfile::env::direnv
 end
 
 function dotfile::env::fzf
-    source (brew --prefix fzf)/shell/key-bindings.fish && fzf_key_bindings
+    source $HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.fish && fzf_key_bindings
 end
 
 function dotfile::env::gpg
@@ -67,5 +67,5 @@ function dotfile::env::gnu
 end
 
 function dotfile::env::ruby
-    dotfile::prepend_env PATH (brew --prefix ruby)/bin
+    dotfile::prepend_env PATH $HOMEBREW_PREFIX/opt/ruby/bin
 end
