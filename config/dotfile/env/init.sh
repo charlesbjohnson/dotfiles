@@ -35,25 +35,26 @@ function dotfile::env::gnu() {
   local prefix="$1"
   local cmds=(
     # Coreutils
-    "[" "base64" "basename" "cat" "chcon" "chgrp" "chmod" "chown"
-    "chroot" "cksum" "comm" "cp" "csplit" "cut" "date" "dd" "df"
-    "dir" "dircolors" "dirname" "du" "echo" "env" "expand" "expr"
-    "factor" "false" "fmt" "fold" "groups" "head" "hostid" "id"
-    "install" "join" "kill" "link" "ln" "logname" "ls" "make" "md5sum"
-    "mkdir" "mkfifo" "mknod" "mktemp" "mv" "nice" "nl" "nohup" "nproc"
-    "od" "paste" "pathchk" "pinee" "pr" "printenv" "printf" "ptx"
-    "pwd" "readlink" "realpath" "rm" "rmdir" "runcon" "seq" "sha1sum"
-    "sha224sum" "sha256sum" "sha384sum" "sha512sum" "shred" "shuf"
-    "sleep" "sort" "split" "stat" "stty" "sum" "sync" "tac" "tail"
-    "tee" "test" "timeout" "touch" "tr" "true" "truncate" "tsort"
-    "tty" "uname" "unexpand" "uniq" "unlink" "uptime" "users" "vdir"
+    "[" "b2sum" "base32" "base64" "basename" "basenc" "cat" "chcon" "chgrp"
+    "chmod" "chown" "chroot" "cksum" "comm" "cp" "csplit" "cut"
+    "date" "dd" "df" "dir" "dircolors" "dirname" "du" "echo" "env" "expand" "expr"
+    "factor" "false" "fmt" "fold" "groups" "head" "hostid" "id" "install" "join"
+    "kill" "link" "ln" "logname" "ls" "md5sum" "mkdir" "mkfifo"
+    "mknod" "mktemp" "mv" "nice" "nl" "nohup" "nproc" "numfmt" "od"
+    "paste" "pathchk" "pinky" "pr" "printenv" "printf" "ptx" "pwd"
+    "readlink" "realpath" "rm" "rmdir" "runcon"
+    "seq" "sha1sum" "sha224sum" "sha256sum" "sha384sum" "sha512sum" "shred" "shuf"
+    "sleep" "sort" "split" "stat" "stdbuf" "stty" "sum" "sync" "tac" "tail"
+    "tee" "test" "timeout" "touch" "tr" "true" "truncate" "tsort" "tty"
+    "uname" "unexpand" "uniq" "unlink" "uptime" "users" "vdir"
     "wc" "who" "whoami" "yes"
 
     # The following utilities are not part of Coreutils but installed separately.
 
     # Binutils
-    "addr2line" "ar" "c++filt" "elfedit" "nm" "objcopy" "objdump"
-    "ranlib" "readelf" "size" "strings" "strip"
+    "addr2line" "ar" "c++filt" "coffdump" "dlltool" "dllwrap" "elfedit" "nm"
+    "objcopy" "objdump" "ranlib" "readelf"
+    "size" "srconv" "strings" "strip" "sysdump" "windmc" "windres"
 
     # Findutils
     "find" "locate" "oldfind" "updatedb" "xargs"
@@ -62,7 +63,8 @@ function dotfile::env::gnu() {
     "libtool" "libtoolize"
 
     # Miscellaneous
-    "getopt" "grep" "indent" "sed" "tar" "time" "units" "which"
+    "egrep" "fgrep" "getopt" "grep" "indent" "make" "sed" "tar" "time" "units"
+    "which"
   )
 
   for cmd in "${cmds[@]}"; do
