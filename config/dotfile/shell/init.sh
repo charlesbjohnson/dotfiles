@@ -8,18 +8,18 @@ function dotfile::shell::dircolors() {
   eval "$(dircolors --sh "$HOME/.dir_colors")"
 }
 
+function dotfile::shell::gpg() {
+  dotfile::set_env GPG_TTY "$(tty)"
+  gpg-agent --daemon 2>/dev/null
+}
+
 function dotfile::shell::prompt() {
   eval "$(starship init bash)"
 }
 
 function dotfile::shell::ssh() {
-  if ! pgrep --full "ssh-agent" &>/dev/null; then
-    eval "$(ssh-agent -c)" &>/dev/null
-    return
-  fi
-
-  dotfile::set_env SSH_AGENT_PID "$(pgrep --full "ssh-agent" | head --lines 1)"
-  dotfile::set_env SSH_AUTH_SOCK "$(find /tmp/ssh-* -name "agent.*" | head --lines 1)"
+  dotfile::set_env SSH_AUTH_SOCK "$(gpgconf --list-dirs agent-ssh-socket)"
+  dotfile::unset_env SSH_AGENT_PID
 }
 
 function dotfile::shell::terminfo() {

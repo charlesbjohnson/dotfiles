@@ -18,10 +18,6 @@ function dotfile::env::fzf() {
   source "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.bash"
 }
 
-function dotfile::env::gpg() {
-  dotfile::set_env GPG_TTY "$(tty)"
-}
-
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/gnu-utility/init.zsh
 function dotfile::env::gnu() {
   if [[ "$(type whoami)" =~ gwhoami ]]; then

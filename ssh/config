@@ -1,5 +1,5 @@
 Host *
-  AddKeysToAgent yes
+  AddKeysToAgent ask
   IdentityFile ~/.ssh/id_rsa
 
-Include config.d/*
+Match host * exec "gpg-connect-agent updatestartuptty /bye"

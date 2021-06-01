@@ -1,3 +1,0 @@
-Host *
-  IgnoreUnknown UseKeychain
-  UseKeychain yes

@@ -6,18 +6,18 @@ function dotfile::shell::dircolors
     eval (dircolors --csh $HOME/.dir_colors)
 end
 
+function dotfile::shell::gpg
+    dotfile::set_env GPG_TTY (tty)
+    gpg-agent --daemon 2>/dev/null
+end
+
 function dotfile::shell::prompt
     starship init fish | source
 end
 
 function dotfile::shell::ssh
-    if ! pgrep --full ssh-agent &>/dev/null
-        eval (ssh-agent -c) &>/dev/null
-        return
-    end
-
-    dotfile::set_env SSH_AGENT_PID (pgrep --full "ssh-agent" | head --lines 1)
-    dotfile::set_env SSH_AUTH_SOCK (find /tmp/ssh-* -name "agent.*" | head --lines 1)
+    dotfile::set_env SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
+    dotfile::unset_env SSH_AGENT_PID
 end
 
 function dotfile::shell::terminfo

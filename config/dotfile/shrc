@@ -4,7 +4,10 @@ dotfile::set_env EDITOR "$VISUAL"
 dotfile::shell::terminfo "xterm-256color" "https://invisible-island.net/datafiles/current/terminfo.src.gz"
 dotfile::shell::dircolors "https://raw.githubusercontent.com/arcticicestudio/nord-dircolors/develop/src/dir_colors"
 dotfile::shell::prompt
+
 dotfile::shell::tmux "default"
+dotfile::shell::gpg
+dotfile::shell::ssh
 
 dotfile::load_all "$HOME/.config/dotfile" "shrc.*"
 dotfile::load "$HOME/.aliases"

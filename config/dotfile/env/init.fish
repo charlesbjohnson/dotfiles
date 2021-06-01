@@ -16,10 +16,6 @@ function dotfile::env::fzf
     source $HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.fish && fzf_key_bindings
 end
 
-function dotfile::env::gpg
-    dotfile::set_env GPG_TTY (tty)
-end
-
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/gnu-utility/init.zsh
 function dotfile::env::gnu
     if not command --search --quiet gwhoami
