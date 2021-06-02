@@ -6,6 +6,7 @@ test -f "$HOME/.config/dotfile/init.fish" && source "$HOME/.config/dotfile/init.
 dotfile::load_all "$HOME/.config/dotfile" "init.fish"
 
 dotfile::load "$HOME/.profile"
+dotfile::load "$HOME/.aliases"
 
 if status --is-interactive
     dotfile::load "$HOME/.config/dotfile/shrc"

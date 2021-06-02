@@ -10,7 +10,6 @@ dotfile::shell::gpg
 dotfile::shell::ssh
 
 dotfile::load_all "$HOME/.config/dotfile" "shrc.*"
-dotfile::load "$HOME/.aliases"
 
 dotfile::set_env FZF_DEFAULT_COMMAND "fd --type f --hidden --follow"
 dotfile::set_env FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
