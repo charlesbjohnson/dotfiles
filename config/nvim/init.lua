@@ -23,16 +23,18 @@ vim.hl      = ext.vim.highlight
 vim.hl_link = ext.vim.highlight_link
 
 --- General
-vim.g.mapleader  = " "
-vim.o.clipboard  = "unnamedplus"
-vim.o.hidden     = true
-vim.o.showmatch  = true
-vim.o.splitbelow = true
-vim.o.splitright = true
-vim.o.updatetime = 300
-vim.o.viminfo    = "'100,n$HOME/.local/share/nvim/files/info/nviminfo"
-vim.o.visualbell = true
-vim.o.wildmode   = "longest:full,full"
+vim.g.mapleader    = " "
+vim.o.clipboard    = "unnamedplus"
+vim.o.hidden       = true
+vim.o.shell        = vim.fn.system("which bash"):trim()
+vim.o.shellcmdflag = "-lc"
+vim.o.showmatch    = true
+vim.o.splitbelow   = true
+vim.o.splitright   = true
+vim.o.updatetime   = 300
+vim.o.viminfo      = "'100,n$HOME/.local/share/nvim/files/info/nviminfo"
+vim.o.visualbell   = true
+vim.o.wildmode     = "longest:full,full"
 
 vim.cmd("syntax on")
 
