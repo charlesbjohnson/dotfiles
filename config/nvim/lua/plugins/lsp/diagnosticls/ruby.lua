@@ -7,7 +7,7 @@ return function(setup)
 
     command      = "bundle",
     args         = {"exec", "rubocop", "--format", "json", "--force-exclusion", "--stdin", "%filepath"},
-    rootPatterns = {".git"},
+    rootPatterns = {"Gemfile", ".git"},
 
     debounce = 100,
 

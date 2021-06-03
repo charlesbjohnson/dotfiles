@@ -1,3 +1,3 @@
 EXCLUDES="*.example LICENSE README.md"
 HOSTNAME="abaddon"
-TAGS="macos"
+TAGS="personal macos"

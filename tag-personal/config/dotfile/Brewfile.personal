@@ -1,0 +1,8 @@
+brew "direnv"
+brew "just"
+brew "node"
+brew "ruby"
+brew "rust"
+brew "shellcheck"
+brew "shfmt"
+brew "yamllint"

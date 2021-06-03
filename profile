@@ -7,8 +7,7 @@ dotfile::append_env PATH "/sbin"
 
 dotfile::load_all "$HOME/.config/dotfile" "profile.*"
 
-dotfile::env::fzf
-dotfile::env::direnv
 dotfile::env::asdf
+dotfile::env::fzf
 
 dotfile::prepend_env PATH "$HOME/.local/bin"
