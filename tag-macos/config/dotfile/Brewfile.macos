@@ -1,3 +1,5 @@
+tap "homebrew/cask"
+
 brew "coreutils"
 brew "diffutils"
 brew "findutils"
@@ -11,6 +13,29 @@ brew "gnu-which"
 brew "grep"
 brew "gzip"
 brew "less"
+brew "m-cli"
 brew "make"
+brew "mas"
 brew "openssh"
+brew "pinentry-mac"
 brew "proctools"
+
+cask "betterzipql"
+cask "iterm2"
+cask "moom"
+cask "qlcolorcode"
+cask "qlimagesize"
+cask "qlmarkdown"
+cask "qlprettypatch"
+cask "qlstephen"
+cask "qlvideo"
+cask "quicklook-csv"
+cask "quicklook-json"
+cask "quicklookase"
+cask "webpquicklook"
+
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Xcode", id: 497799835
+mas "iMovie", id: 408981434
