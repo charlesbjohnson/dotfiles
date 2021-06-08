@@ -219,6 +219,8 @@ require("telescope").setup({
   }
 })
 
+require("telescope").load_extension("fzf")
+
 vim.nmap("<C-p>", ":lua require('telescope.builtin').find_files({ hidden = true })<CR>", {silent = true})
 vim.nmap("<M-p>", ":lua require('telescope.builtin').live_grep()<CR>",                   {silent = true})
 

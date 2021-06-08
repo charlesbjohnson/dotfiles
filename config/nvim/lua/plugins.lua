@@ -35,11 +35,12 @@ return require("packer").startup({
 
     -- Application Features
     use("kyazdani42/nvim-tree.lua")
+    use("mhinz/vim-startify")
     use("nvim-telescope/telescope.nvim")
     use("rhysd/committia.vim")
-    use("wfxr/minimap.vim")
     use("romgrk/barbar.nvim")
-    use("mhinz/vim-startify")
+    use("wfxr/minimap.vim")
+    use({"nvim-telescope/telescope-fzf-native.nvim", run = "make"})
 
     -- Editor Enhancements
     use("RRethy/vim-illuminate")
