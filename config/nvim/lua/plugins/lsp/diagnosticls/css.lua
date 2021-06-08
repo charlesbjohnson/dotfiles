@@ -5,8 +5,8 @@ return function(setup)
   setup.init_options.linters.stylelint = {
     sourceName = "stylelint",
 
-    command      = "npx",
-    args         = {"stylelint", "--formatter", "json", "--stdin", "--stdin-filename", "%filepath"},
+    command      = "npm",
+    args         = {"exec", "--yes", "--parseable", "--", "stylelint", "--formatter", "json", "--stdin", "--stdin-filename", "%filepath"},
     rootPatterns = {"package.json", ".git"},
 
     debounce = 100,
@@ -29,8 +29,8 @@ return function(setup)
 
   setup.init_options.formatFiletypes.css = "stylelint"
   setup.init_options.formatters.stylelint = {
-    command      = "npx",
-    args         = {"stylelint", "--fix", "--stdin", "--stdin-filename", "%filepath"},
+    command      = "npm",
+    args         = {"exec", "--yes", "--parseable", "--", "stylelint", "--fix", "--stdin", "--stdin-filename", "%filepath"},
     rootPatterns = {"package.json", ".git"}
   }
 end

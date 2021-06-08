@@ -8,8 +8,8 @@ return function(setup)
   setup.init_options.linters.xo = {
     sourceName = "xo",
 
-    command      = "npx",
-    args         = {"xo", "--reporter", "json", "--stdin", "--stdin-filename", "%filepath"},
+    command      = "npm",
+    args         = {"exec", "--yes", "--parseable", "--", "xo", "--reporter", "json", "--stdin", "--stdin-filename", "%filepath"},
     rootPatterns = {"package.json", ".git"},
 
     debounce = 100,
@@ -36,8 +36,8 @@ return function(setup)
   setup.init_options.formatFiletypes.typescript = "xo"
 
   setup.init_options.formatters.xo = {
-    command      = "npx",
-    args         = {"xo", "--fix", "--stdin", "--stdin-filename", "%filepath"},
+    command      = "npm",
+    args         = {"exec", "--yes", "--parseable",  "--", "xo", "--fix", "--stdin", "--stdin-filename", "%filepath"},
     rootPatterns = {"package.json", ".git"},
   }
 end

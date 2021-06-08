@@ -29,8 +29,8 @@ return function(setup)
 
   setup.init_options.formatFiletypes.yaml = "prettier"
   setup.init_options.formatters.prettier = {
-    command      = "npx",
-    args         = {"prettier", "--stdin-filepath", "%filepath"},
+    command      = "npm",
+    args         = {"exec", "--yes", "--parseable", "--", "prettier", "--stdin-filepath", "%filepath"},
     rootPatterns = {"package.json", ".git"},
   }
 end
