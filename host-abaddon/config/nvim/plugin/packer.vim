@@ -164,10 +164,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/splitjoin.vim"
   },
-  ["telescope-fzf-writer.nvim"] = {
-    loaded = true,
-    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/telescope-fzf-writer.nvim"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/telescope.nvim"

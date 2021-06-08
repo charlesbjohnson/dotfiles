@@ -219,10 +219,8 @@ require("telescope").setup({
   }
 })
 
-require("telescope").load_extension("fzf_writer")
-
-vim.nmap("<C-p>", ":lua require('telescope').extensions.fzf_writer.files()<CR>", {silent = true})
-vim.nmap("<M-p>", ":lua require('telescope').extensions.fzf_writer.grep()<CR>",  {silent = true})
+vim.nmap("<C-p>", ":lua require('telescope.builtin').find_files({ hidden = true })<CR>", {silent = true})
+vim.nmap("<M-p>", ":lua require('telescope.builtin').live_grep()<CR>",                   {silent = true})
 
 -- nvim-treesitter/nvim-treesitter
 require("nvim-treesitter.configs").setup({

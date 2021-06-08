@@ -35,7 +35,6 @@ return require("packer").startup({
 
     -- Application Features
     use("kyazdani42/nvim-tree.lua")
-    use("nvim-telescope/telescope-fzf-writer.nvim")
     use("nvim-telescope/telescope.nvim")
     use("rhysd/committia.vim")
     use("wfxr/minimap.vim")
