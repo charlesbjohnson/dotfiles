@@ -632,40 +632,6 @@
         },
         "version": "16.3.0"
       },
-      "prettier": {
-        "bottle": {
-          "files": {
-            "arm64_big_sur": {
-              "cellar": ":any_skip_relocation",
-              "sha256": "56b4631291f0ee43a70f5b7478fb5e70e299d397847edd180accb680919b590d",
-              "url": "https://ghcr.io/v2/linuxbrew/core/prettier/blobs/sha256:56b4631291f0ee43a70f5b7478fb5e70e299d397847edd180accb680919b590d"
-            },
-            "big_sur": {
-              "cellar": ":any_skip_relocation",
-              "sha256": "94c79734e35421a5fac58bda0612e34c23ba2bb6391baa67bd6217084fd15e2a",
-              "url": "https://ghcr.io/v2/linuxbrew/core/prettier/blobs/sha256:94c79734e35421a5fac58bda0612e34c23ba2bb6391baa67bd6217084fd15e2a"
-            },
-            "catalina": {
-              "cellar": ":any_skip_relocation",
-              "sha256": "94c79734e35421a5fac58bda0612e34c23ba2bb6391baa67bd6217084fd15e2a",
-              "url": "https://ghcr.io/v2/linuxbrew/core/prettier/blobs/sha256:94c79734e35421a5fac58bda0612e34c23ba2bb6391baa67bd6217084fd15e2a"
-            },
-            "mojave": {
-              "cellar": ":any_skip_relocation",
-              "sha256": "94c79734e35421a5fac58bda0612e34c23ba2bb6391baa67bd6217084fd15e2a",
-              "url": "https://ghcr.io/v2/linuxbrew/core/prettier/blobs/sha256:94c79734e35421a5fac58bda0612e34c23ba2bb6391baa67bd6217084fd15e2a"
-            },
-            "x86_64_linux": {
-              "cellar": ":any_skip_relocation",
-              "sha256": "bdabbb3fd416afb70b1a0ac5f3c8ab88e89f725d9e7ce5ce4ee9f3b8d58b01c6",
-              "url": "https://ghcr.io/v2/linuxbrew/core/prettier/blobs/sha256:bdabbb3fd416afb70b1a0ac5f3c8ab88e89f725d9e7ce5ce4ee9f3b8d58b01c6"
-            }
-          },
-          "rebuild": 0,
-          "root_url": "https://ghcr.io/v2/linuxbrew/core"
-        },
-        "version": "2.3.0"
-      },
       "rargs": {
         "bottle": {
           "files": {
