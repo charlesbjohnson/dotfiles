@@ -3,14 +3,6 @@ local ext = require("ext")
 require = ext.require
 vim     = _G.vim
 
-vim.__o  = vim.o
-vim.__wo = vim.wo
-vim.__bo = vim.bo
-
-vim.o  = ext.vim.option("o")
-vim.wo = ext.vim.option("wo")
-vim.bo = ext.vim.option("bo")
-
 vim.map  = ext.vim.mapping("")
 vim.imap = ext.vim.mapping("i")
 vim.nmap = ext.vim.mapping("n")
@@ -23,50 +15,51 @@ vim.hl      = ext.vim.highlight
 vim.hl_link = ext.vim.highlight_link
 
 --- General
-vim.g.mapleader    = " "
-vim.o.clipboard    = "unnamedplus"
-vim.o.hidden       = true
-vim.o.shell        = vim.fn.system("which bash"):trim()
-vim.o.shellcmdflag = "-lc"
-vim.o.showmatch    = true
-vim.o.splitbelow   = true
-vim.o.splitright   = true
-vim.o.updatetime   = 300
-vim.o.viminfo      = "'100,n$HOME/.local/share/nvim/files/info/nviminfo"
-vim.o.visualbell   = true
-vim.o.wildmode     = "longest:full,full"
+vim.g.mapleader = " "
+
+vim.opt.clipboard    = {"unnamedplus"}
+vim.opt.hidden       = true
+vim.opt.shell        = vim.fn.system("which bash"):trim()
+vim.opt.shellcmdflag = "-lc"
+vim.opt.showmatch    = true
+vim.opt.splitbelow   = true
+vim.opt.splitright   = true
+vim.opt.updatetime   = 300
+vim.opt.viminfo      = "'100,n$HOME/.local/share/nvim/files/info/nviminfo"
+vim.opt.visualbell   = true
+vim.opt.wildmode     = vim.opt.wildmode ^ {"longest:full"}
 
 vim.cmd("syntax on")
 
 --- Appearance
-vim.o.cmdheight     = 2
-vim.wo.colorcolumn  = "80"
-vim.o.completeopt   = "menuone,noselect"
-vim.wo.cursorline   = true
-vim.wo.list         = true
-vim.wo.listchars    = "tab:⇥ ,eol:↵,trail:·"
-vim.o.showmode      = false
-vim.wo.wrap         = false
-vim.wo.number       = true
-vim.wo.scrolloff    = 20
-vim.o.shortmess     = vim.o.shortmess .. "c"
-vim.o.showtabline   = 2
-vim.wo.signcolumn   = "yes"
-vim.o.termguicolors = true
+vim.opt.cmdheight     = 2
+vim.opt.colorcolumn   = "80"
+vim.opt.completeopt   = {"menuone", "noselect"}
+vim.opt.cursorline    = true
+vim.opt.list          = true
+vim.opt.listchars     = {eol = "↵", tab = "⇥ ", trail = "·"}
+vim.opt.number        = true
+vim.opt.scrolloff     = 20
+vim.opt.shortmess     = vim.opt.shortmess + {c = true}
+vim.opt.showmode      = false
+vim.opt.showtabline   = 2
+vim.opt.signcolumn    = "yes"
+vim.opt.termguicolors = true
+vim.opt.wrap          = false
 
 --- Tabbing
-vim.bo.cindent     = true
-vim.bo.expandtab   = true
-vim.bo.shiftwidth  = 2
-vim.bo.softtabstop = 2
-vim.bo.tabstop     = 2
+vim.opt.cindent     = true
+vim.opt.expandtab   = true
+vim.opt.shiftwidth  = 2
+vim.opt.softtabstop = 2
+vim.opt.tabstop     = 2
 
 --- Search & History
-vim.o.ignorecase  = true
-vim.o.inccommand  = "nosplit"
-vim.bo.swapfile   = false
-vim.o.writebackup = false
-vim.o.smartcase   = true
+vim.opt.ignorecase  = true
+vim.opt.inccommand  = "nosplit"
+vim.opt.swapfile    = false
+vim.opt.writebackup = false
+vim.opt.smartcase   = true
 
 --- Key bindings
 vim.nmap("<Leader>q", ":q<CR>")
@@ -136,10 +129,6 @@ vim.nmap("gi", "v:lua.vim.lsp.buf.implementation()", {expr = true})
 vim.nmap("gr", "v:lua.vim.lsp.buf.references()",     {expr = true})
 vim.nmap("F",  "v:lua.vim.lsp.buf.formatting()",     {expr = true})
 vim.nmap("K",  "v:lua.vim.lsp.buf.hover()",          {expr = true})
-
-vim.o  = vim.__o
-vim.wo = vim.__wo
-vim.bo = vim.__bo
 
 --- Plugins
 require("plugins")
