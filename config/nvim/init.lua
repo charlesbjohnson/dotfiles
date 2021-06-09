@@ -25,15 +25,12 @@ vim.opt.showmatch    = true
 vim.opt.splitbelow   = true
 vim.opt.splitright   = true
 vim.opt.updatetime   = 300
-vim.opt.viminfo      = "'100,n$HOME/.local/share/nvim/files/info/nviminfo"
-vim.opt.visualbell   = true
 vim.opt.wildmode     = vim.opt.wildmode ^ {"longest:full"}
 
 vim.cmd("syntax on")
 
 --- Appearance
-vim.opt.cmdheight     = 2
-vim.opt.colorcolumn   = "80"
+vim.opt.cmdheight     = 1
 vim.opt.completeopt   = {"menuone", "noselect"}
 vim.opt.cursorline    = true
 vim.opt.list          = true
