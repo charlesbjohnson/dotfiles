@@ -31,7 +31,6 @@ return require("packer").startup({
     use("christoomey/vim-tmux-navigator")
     use("editorconfig/editorconfig-vim")
     use("folke/trouble.nvim")
-    use("roxma/vim-tmux-clipboard")
 
     -- Application Features
     use("kyazdani42/nvim-tree.lua")

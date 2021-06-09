@@ -247,10 +247,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/vim-textobj-user"
   },
-  ["vim-tmux-clipboard"] = {
-    loaded = true,
-    path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/vim-tmux-clipboard"
-  },
   ["vim-tmux-navigator"] = {
     loaded = true,
     path = "/Users/cbjohnson/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator"
