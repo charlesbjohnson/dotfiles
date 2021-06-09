@@ -30,7 +30,7 @@ return require("packer").startup({
     -- Application Enhancements
     use("christoomey/vim-tmux-navigator")
     use("editorconfig/editorconfig-vim")
-    use("milkypostman/vim-togglelist")
+    use("folke/trouble.nvim")
     use("roxma/vim-tmux-clipboard")
 
     -- Application Features

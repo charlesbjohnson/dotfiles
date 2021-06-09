@@ -28,6 +28,12 @@ vim.cmd("colorscheme nord")
 -- famiu/feline.nvim
 require("init.plugins.statusline")
 
+-- folke/trouble.nvim
+require("trouble").setup()
+
+vim.nmap("<Leader>p", "<Cmd>TroubleToggle lsp_document_diagnostics<CR>",  {silent = true})
+vim.nmap("<Leader>P", "<Cmd>TroubleToggle lsp_workspace_diagnostics<CR>", {silent = true})
+
 -- hrsh7th/nvim-compe
 require("compe").setup({
   source = {
@@ -139,13 +145,6 @@ vim.g.startify_custom_header      = vim.split([[
     +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
     -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 ]], "\n")
-
-
--- milkypostman/vim-togglelist
-vim.g.toggle_list_no_mappings = 1
-
-vim.nmap("<Leader>p", ":call ToggleQuickfixList()<CR>", {silent = true})
-vim.nmap("<Leader>P", ":call ToggleLocationList()<CR>", {silent = true})
 
 -- neovim/nvim-lspconfig & kabouzeid/nvim-lspinstall
 local lspconfig = require("lspconfig")

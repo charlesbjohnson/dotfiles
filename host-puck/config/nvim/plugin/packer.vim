@@ -172,6 +172,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/home/charlie/.local/share/nvim/site/pack/packer/start/trouble.nvim"
+  },
   ["vim-cutlass"] = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/vim-cutlass"
@@ -250,10 +254,6 @@ _G.packer_plugins = {
   ["vim-tmux-navigator"] = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator"
-  },
-  ["vim-togglelist"] = {
-    loaded = true,
-    path = "/home/charlie/.local/share/nvim/site/pack/packer/start/vim-togglelist"
   }
 }
 
