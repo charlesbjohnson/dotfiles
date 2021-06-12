@@ -31,8 +31,8 @@ require("init.plugins.statusline")
 -- folke/trouble.nvim
 require("trouble").setup()
 
-vim.nmap("<Leader>p", "<Cmd>TroubleToggle lsp_document_diagnostics<CR>",  {silent = true})
-vim.nmap("<Leader>P", "<Cmd>TroubleToggle lsp_workspace_diagnostics<CR>", {silent = true})
+vim.nmap("<C-n>",   ":TroubleToggle lsp_document_diagnostics<CR>",  {silent = true})
+vim.nmap("<C-M-n>", ":TroubleToggle lsp_workspace_diagnostics<CR>", {silent = true})
 
 -- hrsh7th/nvim-compe
 require("compe").setup({
@@ -101,8 +101,8 @@ vim.g.nvim_tree_bindings = {
   ["<C-_>"] = require("nvim-tree.config").nvim_tree_callback("split")
 }
 
-vim.nmap("<C-n>", ":NvimTreeToggle<CR>",  {silent = true})
-vim.nmap("<M-n>", ":NvimTreeRefresh<CR>", {silent = true})
+vim.nmap("<C-b>",   ":NvimTreeToggle<CR>",  {silent = true})
+vim.nmap("<C-M-b>", ":NvimTreeRefresh<CR>", {silent = true})
 
 -- lewis6991/gitsigns.nvim
 require("gitsigns").setup({
@@ -201,8 +201,9 @@ require("telescope").setup({
 
 require("telescope").load_extension("fzf")
 
-vim.nmap("<C-p>", ":lua require('telescope.builtin').find_files({ hidden = true })<CR>", {silent = true})
-vim.nmap("<M-p>", ":lua require('telescope.builtin').live_grep()<CR>",                   {silent = true})
+vim.nmap("<C-p>",   ":lua require('telescope.builtin').find_files({ hidden = true })<CR>", {silent = true})
+vim.nmap("<C-M-p>", ":lua require('telescope.builtin').commands()<CR>",                    {silent = true})
+vim.nmap("<C-_>",   ":lua require('telescope.builtin').live_grep()<CR>",                   {silent = true})
 
 -- nvim-treesitter/nvim-treesitter
 require("nvim-treesitter.configs").setup({
@@ -226,11 +227,11 @@ require("nvim-treesitter.configs").setup({
 -- psliwka/vim-smoothie
 vim.g.smoothie_no_default_mappings = 1
 
-vim.nmap("<C-f>", "<Plug>(SmoothieForwards)", {noremap = false})
-vim.xmap("<C-f>", "<Plug>(SmoothieForwards)", {noremap = false})
+vim.nmap("<C-M-j>", "<Plug>(SmoothieForwards)", {noremap = false})
+vim.xmap("<C-M-j>", "<Plug>(SmoothieForwards)", {noremap = false})
 
-vim.nmap("<C-b>", "<Plug>(SmoothieBackwards)", {noremap = false})
-vim.xmap("<C-b>", "<Plug>(SmoothieBackwards)", {noremap = false})
+vim.nmap("<C-M-k>", "<Plug>(SmoothieBackwards)", {noremap = false})
+vim.xmap("<C-M-k>", "<Plug>(SmoothieBackwards)", {noremap = false})
 
 -- romgrk/barbar.nvim
 vim.g.bufferline = {
@@ -283,9 +284,6 @@ vim.g.minimap_close_buftypes = {}
 
 vim.g.minimap_block_filetypes = {"gitcommit", "packer", "startify"}
 vim.g.minimap_close_filetypes = vim.g.minimap_block_filetypes
-
-vim.nmap("<C-m>", ":MinimapToggle<CR>",  {silent = true})
-vim.nmap("<M-m>", ":MinimapRefresh<CR>", {silent = true})
 
 -- zirrostig/vim-schlepp
 vim.xmap("<Leader>h", "<Plug>SchleppLeft",  {noremap = false})

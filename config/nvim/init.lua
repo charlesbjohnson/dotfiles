@@ -82,12 +82,18 @@ vim.xmap("<C-d>", "<gv")
 vim.xmap("<C-t>", ">gv")
 
 -- Move around more quickly
+vim.nmap("<C-b>", "<NOP>")
+vim.xmap("<C-b>", "<NOP>")
+
+vim.nmap("<C-f>", "<NOP>")
+vim.xmap("<C-f>", "<NOP>")
+
 vim.nmap("<C-n>", "<NOP>")
 vim.xmap("<C-n>", "<NOP>")
 
 vim.nmap("<C-u>", "<NOP>")
 vim.xmap("<C-u>", "<NOP>")
---
+
 vim.nmap("<M-k>", "{")
 vim.xmap("<M-k>", "{")
 vim.nmap("<M-j>", "}")
