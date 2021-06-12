@@ -36,7 +36,6 @@ return require("packer").startup({
     use("kyazdani42/nvim-tree.lua")
     use("mhinz/vim-startify")
     use("nvim-telescope/telescope.nvim")
-    use("rhysd/committia.vim")
     use("romgrk/barbar.nvim")
     use("wfxr/minimap.vim")
     use({"nvim-telescope/telescope-fzf-native.nvim", run = "make"})

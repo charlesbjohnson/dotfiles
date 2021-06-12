@@ -76,10 +76,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/barbar.nvim"
   },
-  ["committia.vim"] = {
-    loaded = true,
-    path = "/home/charlie/.local/share/nvim/site/pack/packer/start/committia.vim"
-  },
   ["doorboy.vim"] = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/doorboy.vim"
