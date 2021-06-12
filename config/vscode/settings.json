@@ -1,22 +1,15 @@
 {
-  "diffEditor.ignoreTrimWhitespace": false,
-  "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.acceptSuggestionOnEnter": "off",
-  "editor.cursorBlinking": "solid",
+  "editor.fontFamily": "'CaskaydiaCove Nerd Font', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
   "editor.dragAndDrop": false,
   "editor.emptySelectionClipboard": false,
-  "editor.folding": false,
-  "editor.formatOnSave": true,
-  "editor.links": false,
   "editor.quickSuggestions": {
     "other": true,
     "comments": true,
     "strings": true
   },
   "editor.renderWhitespace": "boundary",
-  "editor.roundedSelection": false,
   "editor.scrollBeyondLastLine": false,
-  "editor.tabSize": 2,
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -27,16 +20,7 @@
       }
     ]
   },
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "explorer.enableDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
-  "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true,
-  "window.zoomLevel": 0,
   "workbench.colorTheme": "Nord",
-  "workbench.editor.tabCloseButton": "off",
-  "workbench.list.openMode": "doubleClick",
-  "workbench.statusBar.feedback.visible": false
+  "workbench.list.openMode": "doubleClick"
 }

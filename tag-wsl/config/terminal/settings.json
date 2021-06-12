@@ -1,0 +1,109 @@
+{
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "actions": [
+    {
+      "command": {
+        "action": "commandPalette"
+      },
+      "keys": "ctrl+alt+shift+p"
+    },
+    {
+      "command": "unbound",
+      "keys": "ctrl+shift+d"
+    },
+    {
+      "command": "unbound",
+      "keys": "ctrl+shift+w"
+    },
+    {
+      "command": "unbound",
+      "keys": "ctrl+shift+f"
+    },
+    {
+      "command": "unbound",
+      "keys": "alt+enter"
+    },
+    {
+      "command": "unbound",
+      "keys": "ctrl+,"
+    },
+    {
+      "command": "unbound",
+      "keys": "ctrl+alt+,"
+    },
+    {
+      "command": "unbound",
+      "keys": "ctrl+shift+space"
+    },
+    {
+      "command": "unbound",
+      "keys": "ctrl+shift+,"
+    },
+    {
+      "command": "unbound",
+      "keys": "ctrl+shift+t"
+    },
+    {
+      "command": "unbound",
+      "keys": "ctrl+shift+n"
+    },
+    {
+      "command": "unbound",
+      "keys": "ctrl+tab"
+    },
+    {
+      "command": "unbound",
+      "keys": "ctrl+shift+p"
+    }
+  ],
+  "alwaysOnTop": false,
+  "alwaysShowTabs": false,
+  "copyFormatting": "none",
+  "copyOnSelect": false,
+  "defaultProfile": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+  "disableAnimations": true,
+  "profiles": {
+    "defaults": {
+      "bellStyle": "none",
+      "colorScheme": "Nord",
+      "cursorShape": "filledBox",
+      "fontFace": "CaskaydiaCove NF"
+    },
+    "list": [
+      {
+        "commandline": "wsl.exe -d Debian",
+        "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+        "name": "Debian",
+        "scrollbarState": "hidden",
+        "source": "Windows.Terminal.Wsl",
+        "startingDirectory": "\\\\wsl$\\Debian\\home\\charlie"
+      }
+    ]
+  },
+  "schemes": [
+    {
+      "background": "#2E3440",
+      "black": "#3B4252",
+      "blue": "#5E81AC",
+      "brightBlack": "#4C566A",
+      "brightBlue": "#81A1C1",
+      "brightCyan": "#88C0D0",
+      "brightGreen": "#A3BE8C",
+      "brightPurple": "#B48EAD",
+      "brightRed": "#BF616A",
+      "brightWhite": "#ECEFF4",
+      "brightYellow": "#F9F1A5",
+      "cursorColor": "#D8DEE9",
+      "cyan": "#8FBCBB",
+      "foreground": "#D8DEE9",
+      "green": "#A3BE8C",
+      "name": "Nord",
+      "purple": "#B48EAD",
+      "red": "#BF616A",
+      "selectionBackground": "#4C566A",
+      "white": "#E5E9F0",
+      "yellow": "#EBCB8B"
+    }
+  ],
+  "showTabsInTitlebar": true
+}
