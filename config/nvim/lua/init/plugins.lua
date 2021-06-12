@@ -144,7 +144,18 @@ for _, server in pairs(lspinstall.installed_servers()) do
     return require(string.join({"init", "plugins", "lsp", server}, "."))
   end)
 
-  lspconfig[server].setup(ok and options(lspconfig[server]) or {})
+  lspconfig[server].setup(
+    vim.tbl_extend(
+      "force",
+      ok and options(lspconfig[server]) or {},
+      {
+        on_attach = function(client)
+          -- RRethy/vim-illuminate")
+          require("illuminate").on_attach(client)
+        end
+      }
+    )
+  )
 end
 
 -- norcalli/nvim-colorizer.lua
