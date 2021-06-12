@@ -51,7 +51,6 @@ return require("packer").startup({
     use({"AndrewRadev/splitjoin.vim", branch = "main"})
 
     -- Editor Features
-    use("Yggdroot/indentLine")
     use("famiu/feline.nvim")
     use("folke/lsp-colors.nvim")
     use("hrsh7th/nvim-compe")
@@ -59,6 +58,7 @@ return require("packer").startup({
     use("lewis6991/gitsigns.nvim")
     use("neovim/nvim-lspconfig")
     use("nvim-treesitter/nvim-treesitter")
+    use({"lukas-reineke/indent-blankline.nvim", branch = "lua"})
 
     -- Editor Appearance
     use("arcticicestudio/nord-vim")

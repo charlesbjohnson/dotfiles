@@ -92,9 +92,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
   },
-  indentLine = {
+  ["indent-blankline.nvim"] = {
     loaded = true,
-    path = "/home/charlie/.local/share/nvim/site/pack/packer/start/indentLine"
+    path = "/home/charlie/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
   },
   kommentary = {
     loaded = true,

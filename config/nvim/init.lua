@@ -31,8 +31,8 @@ vim.cmd("syntax on")
 
 --- Appearance
 vim.opt.cmdheight     = 1
+vim.opt.colorcolumn   = {0} -- https://github.com/lukas-reineke/indent-blankline.nvim/issues/59
 vim.opt.completeopt   = {"menuone", "noselect"}
-vim.opt.cursorline    = true
 vim.opt.list          = true
 vim.opt.listchars     = {eol = "↵", tab = "⇥ ", trail = "·"}
 vim.opt.number        = true

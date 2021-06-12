@@ -7,10 +7,6 @@ vim.g.splitjoin_quiet = 1
 vim.g.splitjoin_join_mapping  = "cJ"
 vim.g.splitjoin_split_mapping = "cK"
 
--- Yggdroot/indentLine
-vim.g.indentLine_char_list = {"|", "¦", "┆", "┊"}
-vim.g.indentLine_fileTypeExclude = {"help", "startify"}
-
 -- andymass/vim-matchup
 vim.g.matchup_matchparen_deferred           = 1
 vim.g.matchup_matchparen_hi_surround_always = 1
@@ -108,6 +104,16 @@ vim.nmap("<C-M-b>", ":NvimTreeRefresh<CR>", {silent = true})
 require("gitsigns").setup({
   keymaps = {}
 })
+
+-- lukas-reineke/indent-blankline.nvim
+vim.g.indent_blankline_char_list                      = {"|", "¦", "┆", "┊"}
+vim.g.indent_blankline_show_first_indent_level        = false
+vim.g.indent_blankline_show_trailing_blankline_indent = false
+
+vim.g.indent_blankline_show_current_context = true
+vim.g.indent_blankline_use_treesitter       = true
+
+vim.g.indent_blankline_filetype_exclude = {"help", "startify"}
 
 -- mhinz/vim-startify
 vim.g.startify_change_to_dir      = 1
