@@ -7,6 +7,12 @@ vim.g.splitjoin_quiet = 1
 vim.g.splitjoin_join_mapping  = "cJ"
 vim.g.splitjoin_split_mapping = "cK"
 
+-- akinsho/nvim-toggleterm.lua
+require("toggleterm").setup({
+  open_mapping    = "<C-x>",
+  shade_terminals = false
+})
+
 -- andymass/vim-matchup
 vim.g.matchup_matchparen_deferred           = 1
 vim.g.matchup_matchparen_hi_surround_always = 1

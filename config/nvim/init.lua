@@ -8,6 +8,7 @@ vim.imap = ext.vim.mapping("i")
 vim.nmap = ext.vim.mapping("n")
 vim.omap = ext.vim.mapping("o")
 vim.smap = ext.vim.mapping("s")
+vim.tmap = ext.vim.mapping("t")
 vim.vmap = ext.vim.mapping("v")
 vim.xmap = ext.vim.mapping("x")
 
@@ -19,7 +20,7 @@ vim.g.mapleader = " "
 
 vim.opt.clipboard    = {"unnamedplus"}
 vim.opt.hidden       = true
-vim.opt.shell        = vim.fn.system("which bash"):trim()
+vim.opt.shell        = vim.fn.system("which bash"):trim() .. " --login"
 vim.opt.shellcmdflag = "-lc"
 vim.opt.showmatch    = true
 vim.opt.splitbelow   = true
@@ -132,6 +133,14 @@ vim.nmap("gi", ":lua vim.lsp.buf.implementation()<CR>", {silent = true})
 vim.nmap("gr", ":lua vim.lsp.buf.references()<CR>",     {silent = true})
 vim.nmap("F",  ":lua vim.lsp.buf.formatting()<CR>",     {silent = true})
 vim.nmap("K",  ":lua vim.lsp.buf.hover()<CR>",          {silent = true})
+
+-- Terminal
+vim.tmap("<Esc>", "<C-\\><C-n>")
+
+vim.tmap("<C-h>", "<C-\\><C-n><C-w>h")
+vim.tmap("<C-j>", "<C-\\><C-n><C-w>j")
+vim.tmap("<C-k>", "<C-\\><C-n><C-w>k")
+vim.tmap("<C-l>", "<C-\\><C-n><C-w>l")
 
 --- Plugins
 require("plugins")

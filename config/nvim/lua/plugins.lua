@@ -33,6 +33,7 @@ return require("packer").startup({
     use("folke/trouble.nvim")
 
     -- Application Features
+    use("akinsho/nvim-toggleterm.lua")
     use("kyazdani42/nvim-tree.lua")
     use("mhinz/vim-startify")
     use("nvim-telescope/telescope.nvim")
