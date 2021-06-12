@@ -152,6 +152,13 @@ for _, server in pairs(lspinstall.installed_servers()) do
         on_attach = function(client)
           -- RRethy/vim-illuminate")
           require("illuminate").on_attach(client)
+
+          -- ray-x/lsp_signature.nvim
+          require("lsp_signature").on_attach({
+            bind         = true,
+            handler_opts = {border = "none"},
+            hint_enable  = false
+          })
         end
       }
     )

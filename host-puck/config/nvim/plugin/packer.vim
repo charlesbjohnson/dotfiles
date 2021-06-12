@@ -104,6 +104,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim"
   },
+  ["lsp_signature.nvim"] = {
+    loaded = true,
+    path = "/home/charlie/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim"
+  },
   ["minimap.vim"] = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/minimap.vim"
