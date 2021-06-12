@@ -44,8 +44,8 @@ require("compe").setup({
   }
 })
 
-vim.imap("<CR>",  "compe#confirm('<CR>')", {expr = true})
-vim.imap("<C-e>", "compe#close('<C-e>')",  {expr = true})
+vim.imap("<CR>",  "compe#confirm(doorboy#map_cr())", {expr = true})
+vim.imap("<C-e>", "compe#close('<C-e>')",            {expr = true})
 
 vim.imap("<Tab>",   "v:lua.compe.tab()",   {expr = true})
 vim.smap("<Tab>",   "v:lua.compe.tab()",   {expr = true})
@@ -57,30 +57,12 @@ _G.compe = (function()
     return vim.api.nvim_replace_termcodes(str, true, true, true)
   end
 
-  local function cursor_is_blank()
-    local col = vim.fn.col(".") - 1
-    if col == 0 then
-      return true
-    end
-
-    local line = vim.fn.getline(".")
-    if line:sub(col, col):match("%s") then
-      return true
-    end
-
-    return false
-  end
-
   local function forward()
     if vim.fn.pumvisible() == 1 then
       return termcode("<C-n>")
     end
 
-    if cursor_is_blank() then
-      return termcode("<Tab>")
-    end
-
-    return vim.fn["compe#complete"]()
+    return termcode("<Tab>")
   end
 
   local function backward()
@@ -100,7 +82,6 @@ end)()
 -- itmammoth/doorboy.vim
 vim.imap("<BS>",    "doorboy#map_backspace()", {expr = true})
 vim.imap("<Space>", "doorboy#map_space()",     {expr = true})
-vim.imap("<CR>",    "doorboy#map_cr()",        {expr = true})
 
 -- junegunn/vim-easy-align
 vim.nmap("<Leader>a", "<Plug>(EasyAlign)", {noremap = false})
