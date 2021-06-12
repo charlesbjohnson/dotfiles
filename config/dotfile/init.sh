@@ -4,7 +4,7 @@ function dotfile::append_env() {
   if eval "[[ -z \"\$$1\" ]]"; then
     dotfile::set_env "$1" "$2"
   elif eval "[[ \":\$$1:\" != *\":$2:\"* ]]"; then
-    eval "$1=\$$1:$2"
+    eval "$1=\"\$$1:$2\""
   fi
 }
 
@@ -12,7 +12,7 @@ function dotfile::prepend_env() {
   if eval "[[ -z \"\$$1\" ]]"; then
     dotfile::set_env "$1" "$2"
   elif eval "[[ \":\$$1:\" != *\":$2:\"* ]]"; then
-    eval "$1=$2:\$$1"
+    eval "$1=\"$2:\$$1\""
   fi
 }
 
