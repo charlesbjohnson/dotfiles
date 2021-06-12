@@ -55,6 +55,7 @@ return require("packer").startup({
     use("folke/lsp-colors.nvim")
     use("hrsh7th/nvim-compe")
     use("kabouzeid/nvim-lspinstall")
+    use("kevinhwang91/nvim-hlslens")
     use("lewis6991/gitsigns.nvim")
     use("neovim/nvim-lspconfig")
     use("nvim-treesitter/nvim-treesitter")

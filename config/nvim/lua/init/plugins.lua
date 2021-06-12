@@ -83,6 +83,21 @@ vim.imap("<Space>", "doorboy#map_space()",     {expr = true})
 vim.nmap("<Leader>a", "<Plug>(EasyAlign)", {noremap = false})
 vim.xmap("<CR>",      "<Plug>(EasyAlign)", {noremap = false})
 
+-- kevinhwang91/nvim-hlslens
+require("hlslens").setup({
+  calm_down    = true,
+  nearest_only = true
+})
+
+vim.nmap("n", ":execute('normal! ' . v:count1 . 'n')<CR>:lua require('hlslens').start()<CR>", {silent = true})
+vim.nmap("N", ":execute('normal! ' . v:count1 . 'N')<CR>:lua require('hlslens').start()<CR>", {silent = true})
+
+vim.nmap("* *", ":lua require('hlslens').start()<CR>")
+vim.nmap("# #", ":lua require('hlslens').start()<CR>")
+
+vim.nmap("g* g*", ":lua require('hlslens').start()<CR>")
+vim.nmap("g# g#", ":lua require('hlslens').start()<CR>")
+
 -- kyazdani42/nvim-tree.lua
 vim.g.nvim_tree_bindings = {
   ["<2-LeftMouse>"]  = "",

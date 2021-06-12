@@ -124,6 +124,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
+  ["nvim-hlslens"] = {
+    loaded = true,
+    path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nvim-hlslens"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
