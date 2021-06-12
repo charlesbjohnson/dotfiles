@@ -13,7 +13,13 @@ main() {
   #         [STAThread]
   #         static void Main()
   #         {
-  #             Clipboard.SetText(Console.In.ReadToEnd().Replace("\n", "\r\n"));
+  #             var s = Console.In.ReadToEnd();
+  #             if (String.IsNullOrEmpty(s))
+  #             {
+  #                 Clipboard.SetText("\r\n");
+  #             } else {
+  #                 Clipboard.SetText(s.Replace("\n", "\r\n"));
+  #             }
   #         }
   #     }
   # }
