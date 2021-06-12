@@ -126,12 +126,12 @@ vim.fn.sign_define("LspDiagnosticsSignHint",        {text = "", texthl = "Lsp
 vim.fn.sign_define("LspDiagnosticsSignInformation", {text = "", texthl = "LspDiagnosticsSignInformation"})
 vim.fn.sign_define("LspDiagnosticsSignWarning",     {text = "", texthl = "LspDiagnosticsSignWarning"})
 
-vim.nmap("gd", "v:lua.vim.lsp.buf.definition()",     {expr = true})
-vim.nmap("gD", "v:lua.vim.lsp.buf.declaration()",    {expr = true})
-vim.nmap("gi", "v:lua.vim.lsp.buf.implementation()", {expr = true})
-vim.nmap("gr", "v:lua.vim.lsp.buf.references()",     {expr = true})
-vim.nmap("F",  "v:lua.vim.lsp.buf.formatting()",     {expr = true})
-vim.nmap("K",  "v:lua.vim.lsp.buf.hover()",          {expr = true})
+vim.nmap("gd", ":lua vim.lsp.buf.definition()<CR>",     {silent = true})
+vim.nmap("gD", ":lua vim.lsp.buf.declaration()<CR>",    {silent = true})
+vim.nmap("gi", ":lua vim.lsp.buf.implementation()<CR>", {silent = true})
+vim.nmap("gr", ":lua vim.lsp.buf.references()<CR>",     {silent = true})
+vim.nmap("F",  ":lua vim.lsp.buf.formatting()<CR>",     {silent = true})
+vim.nmap("K",  ":lua vim.lsp.buf.hover()<CR>",          {silent = true})
 
 --- Plugins
 require("plugins")
