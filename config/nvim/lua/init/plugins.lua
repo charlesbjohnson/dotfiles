@@ -33,10 +33,10 @@ vim.nmap("<C-M-n>", ":TroubleToggle lsp_workspace_diagnostics<CR>", {silent = tr
 -- hrsh7th/nvim-compe
 require("compe").setup({
   source = {
-    buffer = true,
+    buffer   = true,
     nvim_lsp = true,
     nvim_lua = true,
-    path = true
+    path     = true
   }
 })
 
@@ -238,7 +238,7 @@ require("nvim-treesitter.configs").setup({
   incremental_selection = {
     enable = true,
     keymaps = {
-      init_selection = "gnn",
+      init_selection   = "gnn",
       node_incremental = "gnn",
       node_decremental = "gNN"
     }
