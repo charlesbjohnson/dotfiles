@@ -1,1 +1,4 @@
 dotfile::env::direnv
+
+dotfile::set_env GOPATH "$HOME/.go"
+dotfile::prepend_env PATH "$GOPATH/bin"
