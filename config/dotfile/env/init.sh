@@ -76,7 +76,3 @@ function dotfile::env::gnu() {
     fi
   done
 }
-
-function dotfile::env::ruby() {
-  dotfile::prepend_env PATH "$HOMEBREW_PREFIX/opt/ruby/bin"
-}

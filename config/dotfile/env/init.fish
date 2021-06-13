@@ -63,7 +63,3 @@ function dotfile::env::gnu
         eval "function $cmd; $prefixed_cmd \$argv; end"
     end
 end
-
-function dotfile::env::ruby
-    dotfile::prepend_env PATH $HOMEBREW_PREFIX/opt/ruby/bin
-end

@@ -2,4 +2,5 @@ dotfile::set_env CLICOLOR "YES"
 
 dotfile::env::brew "/usr/local"
 dotfile::env::gnu "g"
-dotfile::env::ruby
+
+dotfile::prepend_env PATH "$HOMEBREW_PREFIX/opt/ruby/bin"
