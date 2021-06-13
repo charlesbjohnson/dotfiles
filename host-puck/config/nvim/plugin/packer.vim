@@ -46,7 +46,7 @@ local function save_profiles(threshold)
   _G._packer.profile_output = results
 end
 
-time("Luarocks path setup", true)
+time([[Luarocks path setup]], true)
 local package_path_str = "/home/charlie/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/charlie/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/charlie/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/charlie/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
 local install_cpath_pattern = "/home/charlie/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
@@ -57,8 +57,8 @@ if not string.find(package.cpath, install_cpath_pattern, 1, true) then
   package.cpath = package.cpath .. ';' .. install_cpath_pattern
 end
 
-time("Luarocks path setup", false)
-time("try_loadstring definition", true)
+time([[Luarocks path setup]], false)
+time([[try_loadstring definition]], true)
 local function try_loadstring(s, component, name)
   local success, result = pcall(loadstring(s))
   if not success then
@@ -69,8 +69,8 @@ local function try_loadstring(s, component, name)
   return result
 end
 
-time("try_loadstring definition", false)
-time("Defining packer_plugins", true)
+time([[try_loadstring definition]], false)
+time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["barbar.nvim"] = {
     loaded = true,
@@ -262,23 +262,23 @@ _G.packer_plugins = {
   }
 }
 
-time("Defining packer_plugins", false)
+time([[Defining packer_plugins]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
-time("Defining lazy-load filetype autocommands", true)
-vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-markdown-folding'}, { ft = "markdown" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], true)
 vim.cmd [[au FileType gitconfig ++once lua require("packer.load")({'vim-git'}, { ft = "gitconfig" }, _G.packer_plugins)]]
 vim.cmd [[au FileType fish ++once lua require("packer.load")({'vim-fish'}, { ft = "fish" }, _G.packer_plugins)]]
-time("Defining lazy-load filetype autocommands", false)
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-markdown-folding'}, { ft = "markdown" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
-time("Sourcing ftdetect script at: /home/charlie/.local/share/nvim/site/pack/packer/opt/vim-git/ftdetect/git.vim", true)
-vim.cmd [[source /home/charlie/.local/share/nvim/site/pack/packer/opt/vim-git/ftdetect/git.vim]]
-time("Sourcing ftdetect script at: /home/charlie/.local/share/nvim/site/pack/packer/opt/vim-git/ftdetect/git.vim", false)
-time("Sourcing ftdetect script at: /home/charlie/.local/share/nvim/site/pack/packer/opt/vim-fish/ftdetect/fish.vim", true)
+time([[Sourcing ftdetect script at: /home/charlie/.local/share/nvim/site/pack/packer/opt/vim-fish/ftdetect/fish.vim]], true)
 vim.cmd [[source /home/charlie/.local/share/nvim/site/pack/packer/opt/vim-fish/ftdetect/fish.vim]]
-time("Sourcing ftdetect script at: /home/charlie/.local/share/nvim/site/pack/packer/opt/vim-fish/ftdetect/fish.vim", false)
+time([[Sourcing ftdetect script at: /home/charlie/.local/share/nvim/site/pack/packer/opt/vim-fish/ftdetect/fish.vim]], false)
+time([[Sourcing ftdetect script at: /home/charlie/.local/share/nvim/site/pack/packer/opt/vim-git/ftdetect/git.vim]], true)
+vim.cmd [[source /home/charlie/.local/share/nvim/site/pack/packer/opt/vim-git/ftdetect/git.vim]]
+time([[Sourcing ftdetect script at: /home/charlie/.local/share/nvim/site/pack/packer/opt/vim-git/ftdetect/git.vim]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end
 
