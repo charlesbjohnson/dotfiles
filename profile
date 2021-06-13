@@ -5,6 +5,7 @@ dotfile::append_env PATH "/usr/sbin"
 dotfile::append_env PATH "/bin"
 dotfile::append_env PATH "/sbin"
 
+dotfile::load "$HOME/.config/dotfile/profile.homebrew"
 dotfile::load_all "$HOME/.config/dotfile" "profile.*"
 
 dotfile::env::asdf
