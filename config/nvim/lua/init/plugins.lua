@@ -319,8 +319,9 @@ vim.nmap("mm", "dd")
 vim.nmap("M",  "D")
 
 -- wfxr/minimap.vim
-vim.g.minimap_highlight       = "CursorLine"
-vim.g.minimap_highlight_range = true
+vim.g.minimap_highlight        = "CursorLine"
+vim.g.minimap_highlight_range  = true
+vim.g.minimap_highlight_search = true
 
 vim.g.minimap_block_buftypes = {"nofile", "nowrite", "prompt", "quickfix", "terminal"}
 vim.g.minimap_close_buftypes = {}
