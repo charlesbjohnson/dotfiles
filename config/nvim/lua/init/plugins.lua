@@ -108,8 +108,6 @@ vim.nmap("g# g#", ":lua require('hlslens').start()<CR>")
 vim.g.nvim_tree_bindings = {
   ["<2-LeftMouse>"]  = "",
   ["<2-RightMouse>"] = "",
-  ["<C-t>"]          = "",
-  ["o"]              = "",
 
   ["<C-v>"]  = "",
   ["<C-\\>"] = require("nvim-tree.config").nvim_tree_callback("vsplit"),
