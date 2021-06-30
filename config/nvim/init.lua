@@ -60,8 +60,8 @@ vim.opt.writebackup = false
 vim.opt.smartcase   = true
 
 --- Key bindings
-vim.nmap("<Leader>q", ":q<CR>")
-vim.nmap("<Leader>w", ":w<CR>")
+vim.nmap("<Leader>q", "<Cmd>quit<CR>")
+vim.nmap("<Leader>w", "<Cmd>write<CR>")
 
 -- No confusing window
 vim.map("q:", "<NOP>")
@@ -74,7 +74,7 @@ vim.map("<F1>",  "<Esc>")
 vim.imap("<F1>", "<Esc>")
 
 -- Quickly clear highlighted search
-vim.nmap("<Leader><Leader>", ":nohlsearch<CR>", {silent = true})
+vim.nmap("<Leader><Leader>", "<Cmd>nohlsearch<CR>", {silent = true})
 
 -- Consistent indent/unindent across all modes
 vim.nmap("<C-d>", "<<")
@@ -105,15 +105,15 @@ vim.nmap("<M-l>", "$")
 vim.xmap("<M-l>", "$")
 
 -- Splits
-vim.nmap("<C-w>|", ":vsplit<CR>",             {silent = true})
-vim.nmap("<C-w>_", ":split<CR>",              {silent = true})
-vim.nmap("<C-w>h", ":vertical resize +5<CR>", {silent = true})
-vim.nmap("<C-w>j", ":resize -5<CR>",          {silent = true})
-vim.nmap("<C-w>k", ":resize +5<CR>",          {silent = true})
-vim.nmap("<C-w>l", ":vertical resize -5<CR>", {silent = true})
+vim.nmap("<C-w>|", "<Cmd>vsplit<CR>",             {silent = true})
+vim.nmap("<C-w>_", "<Cmd>split<CR>",              {silent = true})
+vim.nmap("<C-w>h", "<Cmd>vertical resize +5<CR>", {silent = true})
+vim.nmap("<C-w>j", "<Cmd>resize -5<CR>",          {silent = true})
+vim.nmap("<C-w>k", "<Cmd>resize +5<CR>",          {silent = true})
+vim.nmap("<C-w>l", "<Cmd>vertical resize -5<CR>", {silent = true})
 
 -- Ctag navigation
-vim.nmap("<Leader>[", ":pop<CR>", {silent = true})
+vim.nmap("<Leader>[", "<Cmd>pop<CR>", {silent = true})
 vim.nmap("<Leader>]", "<C-]>")
 
 -- Automatically jump to end of pasted text
@@ -127,12 +127,12 @@ vim.fn.sign_define("LspDiagnosticsSignHint",        {text = "", texthl = "Lsp
 vim.fn.sign_define("LspDiagnosticsSignInformation", {text = "", texthl = "LspDiagnosticsSignInformation"})
 vim.fn.sign_define("LspDiagnosticsSignWarning",     {text = "", texthl = "LspDiagnosticsSignWarning"})
 
-vim.nmap("gd", ":lua vim.lsp.buf.definition()<CR>",     {silent = true})
-vim.nmap("gD", ":lua vim.lsp.buf.declaration()<CR>",    {silent = true})
-vim.nmap("gi", ":lua vim.lsp.buf.implementation()<CR>", {silent = true})
-vim.nmap("gr", ":lua vim.lsp.buf.references()<CR>",     {silent = true})
-vim.nmap("F",  ":lua vim.lsp.buf.formatting()<CR>",     {silent = true})
-vim.nmap("K",  ":lua vim.lsp.buf.hover()<CR>",          {silent = true})
+vim.nmap("gd", "<Cmd>lua vim.lsp.buf.definition()<CR>",     {silent = true})
+vim.nmap("gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>",    {silent = true})
+vim.nmap("gi", "<Cmd>lua vim.lsp.buf.implementation()<CR>", {silent = true})
+vim.nmap("gr", "<Cmd>lua vim.lsp.buf.references()<CR>",     {silent = true})
+vim.nmap("F",  "<Cmd>lua vim.lsp.buf.formatting()<CR>",     {silent = true})
+vim.nmap("K",  "<Cmd>lua vim.lsp.buf.hover()<CR>",          {silent = true})
 
 -- Terminal
 vim.tmap("<Esc>", "<C-\\><C-n>")

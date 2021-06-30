@@ -33,8 +33,8 @@ require("init.plugins.statusline")
 -- folke/trouble.nvim
 require("trouble").setup()
 
-vim.nmap("<C-n>",   ":TroubleToggle lsp_document_diagnostics<CR>",  {silent = true})
-vim.nmap("<C-M-n>", ":TroubleToggle lsp_workspace_diagnostics<CR>", {silent = true})
+vim.nmap("<C-n>",   "<Cmd>TroubleToggle lsp_document_diagnostics<CR>",  {silent = true})
+vim.nmap("<C-M-n>", "<Cmd>TroubleToggle lsp_workspace_diagnostics<CR>", {silent = true})
 
 -- hrsh7th/nvim-compe
 require("compe").setup({
@@ -95,14 +95,14 @@ require("hlslens").setup({
   nearest_only = true
 })
 
-vim.nmap("n", ":execute('normal! ' . v:count1 . 'n')<CR>:lua require('hlslens').start()<CR>", {silent = true})
-vim.nmap("N", ":execute('normal! ' . v:count1 . 'N')<CR>:lua require('hlslens').start()<CR>", {silent = true})
+vim.nmap("n", "<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>", {silent = true})
+vim.nmap("N", "<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>", {silent = true})
 
-vim.nmap("* *", ":lua require('hlslens').start()<CR>")
-vim.nmap("# #", ":lua require('hlslens').start()<CR>")
+vim.nmap("* *", "<Cmd>lua require('hlslens').start()<CR>")
+vim.nmap("# #", "<Cmd>lua require('hlslens').start()<CR>")
 
-vim.nmap("g* g*", ":lua require('hlslens').start()<CR>")
-vim.nmap("g# g#", ":lua require('hlslens').start()<CR>")
+vim.nmap("g* g*", "<Cmd>lua require('hlslens').start()<CR>")
+vim.nmap("g# g#", "<Cmd>lua require('hlslens').start()<CR>")
 
 -- kyazdani42/nvim-tree.lua
 vim.g.nvim_tree_bindings = {
@@ -116,8 +116,8 @@ vim.g.nvim_tree_bindings = {
   ["<C-_>"] = require("nvim-tree.config").nvim_tree_callback("split")
 }
 
-vim.nmap("<C-b>",   ":NvimTreeToggle<CR>",  {silent = true})
-vim.nmap("<C-M-b>", ":NvimTreeRefresh<CR>", {silent = true})
+vim.nmap("<C-b>",   "<Cmd>NvimTreeToggle<CR>",  {silent = true})
+vim.nmap("<C-M-b>", "<Cmd>NvimTreeRefresh<CR>", {silent = true})
 
 -- lewis6991/gitsigns.nvim
 require("gitsigns").setup({
@@ -244,9 +244,9 @@ require("telescope").setup({
 
 require("telescope").load_extension("fzf")
 
-vim.nmap("<C-p>",   ":lua require('telescope.builtin').find_files({ hidden = true })<CR>", {silent = true})
-vim.nmap("<C-M-p>", ":lua require('telescope.builtin').commands()<CR>",                    {silent = true})
-vim.nmap("<C-_>",   ":lua require('telescope.builtin').live_grep()<CR>",                   {silent = true})
+vim.nmap("<C-p>",   "<Cmd>lua require('telescope.builtin').find_files({ hidden = true })<CR>", {silent = true})
+vim.nmap("<C-M-p>", "<Cmd>lua require('telescope.builtin').commands()<CR>",                    {silent = true})
+vim.nmap("<C-_>",   "<Cmd>lua require('telescope.builtin').live_grep()<CR>",                   {silent = true})
 
 -- nvim-treesitter/nvim-treesitter
 require("nvim-treesitter.configs").setup({
@@ -304,13 +304,13 @@ vim.hl("BufferInactiveSign",  {bg = colors.bg, fg = colors.fg})
 
 vim.hl("BufferTabpageFill", {bg = colors[0]})
 
-vim.nmap("<Leader>BB", ":BufferClose<CR>",              {silent = true})
-vim.nmap("<Leader>BD", ":BufferCloseAllButCurrent<CR>", {silent = true})
-vim.nmap("<Leader>H",  ":BufferMovePrevious<CR>",       {silent = true})
-vim.nmap("<Leader>L",  ":BufferMoveNext<CR>",           {silent = true})
-vim.nmap("<Leader>b",  ":enew<CR>",                     {silent = true})
-vim.nmap("<Leader>h",  ":BufferPrevious<CR>",           {silent = true})
-vim.nmap("<Leader>l",  ":BufferNext<CR>",               {silent = true})
+vim.nmap("<Leader>BB", "<Cmd>BufferClose<CR>",              {silent = true})
+vim.nmap("<Leader>BD", "<Cmd>BufferCloseAllButCurrent<CR>", {silent = true})
+vim.nmap("<Leader>H",  "<Cmd>BufferMovePrevious<CR>",       {silent = true})
+vim.nmap("<Leader>L",  "<Cmd>BufferMoveNext<CR>",           {silent = true})
+vim.nmap("<Leader>b",  "<Cmd>enew<CR>",                     {silent = true})
+vim.nmap("<Leader>h",  "<Cmd>BufferPrevious<CR>",           {silent = true})
+vim.nmap("<Leader>l",  "<Cmd>BufferNext<CR>",               {silent = true})
 
 -- svermeulen/vim-cutlass
 vim.nmap("m",  "d")
