@@ -186,7 +186,11 @@ for _, server in pairs(lspinstall.installed_servers()) do
             handler_opts = {border = "none"},
             hint_enable  = false
           })
-        end
+        end,
+
+        flags = {
+          debounce_text_changes = 100
+        }
       }
     )
   )
