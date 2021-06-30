@@ -1,12 +1,32 @@
 function dotfile::append_env
-    if not contains $argv[1] $argv[2]
-        set --append $argv[1] $argv[2]
+    set --local name $argv[1]
+    set --local values $argv[2]
+
+    if not set --query $name
+        dotfile::set_env $name $values
+        return
+    end
+
+    for value in (string split ":" $values)
+        if not contains $value $$name
+            set --append $name $value
+        end
     end
 end
 
 function dotfile::prepend_env
-    if not contains $argv[1] $argv[2]
-        set --prepend $argv[1] $argv[2]
+    set --local name $argv[1]
+    set --local values $argv[2]
+
+    if not set --query $name
+        dotfile::set_env $name $values
+        return
+    end
+
+    for value in (string split ":" $values)[-1..1]
+        if not contains $value $$name
+            set --prepend $name $value
+        end
     end
 end
 
