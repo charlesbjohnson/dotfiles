@@ -28,7 +28,7 @@ return require("packer").startup({
     use("vim-scripts/repmo.vim")
 
     -- Application Enhancements
-    use("christoomey/vim-tmux-navigator")
+    use("aserowy/tmux.nvim")
     use("editorconfig/editorconfig-vim")
     use("folke/trouble.nvim")
 

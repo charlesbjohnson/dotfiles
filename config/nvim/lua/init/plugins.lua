@@ -27,6 +27,14 @@ vim.g.nord_underline                     = 1
 
 vim.cmd("colorscheme nord")
 
+-- aserowy/tmux.nvim
+require("tmux").setup({
+  navigation = {
+    cycle_navigation           = false,
+    enable_default_keybindings = true
+  }
+})
+
 -- famiu/feline.nvim
 require("init.plugins.statusline")
 

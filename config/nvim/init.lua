@@ -105,12 +105,18 @@ vim.nmap("<M-l>", "$")
 vim.xmap("<M-l>", "$")
 
 -- Splits
-vim.nmap("<C-w>|", "<Cmd>vsplit<CR>",             {silent = true})
-vim.nmap("<C-w>_", "<Cmd>split<CR>",              {silent = true})
-vim.nmap("<C-w>h", "<Cmd>vertical resize +5<CR>", {silent = true})
-vim.nmap("<C-w>j", "<Cmd>resize -5<CR>",          {silent = true})
-vim.nmap("<C-w>k", "<Cmd>resize +5<CR>",          {silent = true})
-vim.nmap("<C-w>l", "<Cmd>vertical resize -5<CR>", {silent = true})
+vim.nmap("<C-w>|", "<Cmd>vsplit<CR>", { silent = true})
+vim.nmap("<C-w>_", "<Cmd>split<CR>",  { silent = true})
+
+vim.nmap("<C-w><C-h>", "<C-w>H", {silent = true})
+vim.nmap("<C-w><C-j>", "<C-w>J", {silent = true})
+vim.nmap("<C-w><C-k>", "<C-w>K", {silent = true})
+vim.nmap("<C-w><C-l>", "<C-w>L", {silent = true})
+
+vim.nmap("<C-w>H", "<Cmd>vertical resize +5<CR>", {silent = true})
+vim.nmap("<C-w>J", "<Cmd>resize -5<CR>",          {silent = true})
+vim.nmap("<C-w>K", "<Cmd>resize +5<CR>",          {silent = true})
+vim.nmap("<C-w>L", "<Cmd>vertical resize -5<CR>", {silent = true})
 
 -- Ctag navigation
 vim.nmap("<Leader>[", "<Cmd>pop<CR>", {silent = true})

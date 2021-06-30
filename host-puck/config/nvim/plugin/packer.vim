@@ -181,6 +181,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
+  ["tmux.nvim"] = {
+    loaded = true,
+    path = "/home/charlie/.local/share/nvim/site/pack/packer/start/tmux.nvim"
+  },
   ["trouble.nvim"] = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/trouble.nvim"
@@ -255,10 +259,6 @@ _G.packer_plugins = {
   ["vim-textobj-user"] = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/vim-textobj-user"
-  },
-  ["vim-tmux-navigator"] = {
-    loaded = true,
-    path = "/home/charlie/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator"
   }
 }
 
