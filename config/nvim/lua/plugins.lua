@@ -58,10 +58,10 @@ return require("packer").startup({
     use("kabouzeid/nvim-lspinstall")
     use("kevinhwang91/nvim-hlslens")
     use("lewis6991/gitsigns.nvim")
+    use("lukas-reineke/indent-blankline.nvim")
     use("neovim/nvim-lspconfig")
     use("nvim-treesitter/nvim-treesitter")
     use("ray-x/lsp_signature.nvim")
-    use({"lukas-reineke/indent-blankline.nvim", branch = "lua"})
 
     -- Editor Appearance
     use("arcticicestudio/nord-vim")
