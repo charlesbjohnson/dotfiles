@@ -113,15 +113,15 @@ vim.nmap("g* g*", "<Cmd>lua require('hlslens').start()<CR>")
 vim.nmap("g# g#", "<Cmd>lua require('hlslens').start()<CR>")
 
 -- kyazdani42/nvim-tree.lua
+vim.g.nvim_tree_disable_default_keybindings = true
 vim.g.nvim_tree_bindings = {
-  ["<2-LeftMouse>"]  = "",
-  ["<2-RightMouse>"] = "",
-
-  ["<C-v>"]  = "",
-  ["<C-\\>"] = require("nvim-tree.config").nvim_tree_callback("vsplit"),
-
-  ["<C-x>"] = "",
-  ["<C-_>"] = require("nvim-tree.config").nvim_tree_callback("split")
+  {key = "<CR>",   cb = require("nvim-tree.config").nvim_tree_callback("edit")},
+  {key = "<BS>",   cb = require("nvim-tree.config").nvim_tree_callback("close_node")},
+  {key = "<Tab>",  cb = require("nvim-tree.config").nvim_tree_callback("preview")},
+  {key = "<C-\\>", cb = require("nvim-tree.config").nvim_tree_callback("vsplit")},
+  {key = "<C-_>",  cb = require("nvim-tree.config").nvim_tree_callback("split")},
+  {key = "r",      cb = require("nvim-tree.config").nvim_tree_callback("rename")},
+  {key = "d",      cb = require("nvim-tree.config").nvim_tree_callback("remove")}
 }
 
 vim.nmap("<C-b>",   "<Cmd>NvimTreeToggle<CR>",  {silent = true})
