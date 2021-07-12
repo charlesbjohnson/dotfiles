@@ -14,9 +14,20 @@ return function(setup)
   setup.init_options.linters.eslint = {
     sourceName = "eslint",
 
-    command      = "npm",
-    args         = {"exec", "--yes", "--parseable", "--", "eslint_d", "--format", "json", "--stdin", "--stdin-filename", "%filepath"},
-    rootPatterns = {"package.json", ".git"},
+    command = "npm",
+    args = {
+      "exec",
+      "--yes",
+      "--parseable",
+      "--",
+      "eslint_d",
+      "--format",
+      "json",
+      "--stdin",
+      "--stdin-filename",
+      "%filepath",
+    },
+    rootPatterns = { "package.json", ".git" },
 
     debounce = 100,
 
@@ -26,16 +37,16 @@ return function(setup)
       message = "(${ruleId}) ${message}",
       security = "severity",
 
-      line      = "line",
-      endline   = "endLine",
-      column    = "column",
-      endColumn = "endColumn"
+      line = "line",
+      endline = "endLine",
+      column = "column",
+      endColumn = "endColumn",
     },
 
     securities = {
       ["1"] = "warning",
-      ["2"] = "error"
-    }
+      ["2"] = "error",
+    },
   }
 
   setup.init_options.formatFiletypes.javascript = "eslint"
@@ -45,8 +56,8 @@ return function(setup)
   setup.init_options.formatFiletypes.typescriptreact = "eslint"
 
   setup.init_options.formatters.eslint = {
-    command      = "sh",
-    args         = {"-c", "npm exec --yes --parseable -- eslint_d --stdin --stdin-filename '%filepath' --fix-to-stdout"},
-    rootPatterns = {"package.json", ".git"},
+    command = "sh",
+    args = { "-c", "npm exec --yes --parseable -- eslint_d --stdin --stdin-filename '%filepath' --fix-to-stdout" },
+    rootPatterns = { "package.json", ".git" },
   }
 end

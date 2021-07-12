@@ -3,8 +3,8 @@ return function()
     settings = {
       css = {
         lint = {}, -- Avoid null pointer error
-        validate = false
-      }
-    }
+        validate = false,
+      },
+    },
   }
 end

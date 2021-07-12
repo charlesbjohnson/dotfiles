@@ -6,30 +6,30 @@ return function(setup)
     sourceName = "shellcheck",
 
     command = "shellcheck",
-    args    = {"--format", "json", "-"},
+    args = { "--format", "json", "-" },
 
     debounce = 100,
 
     parseJson = {
-      message  = "(SC${code}) ${message}",
+      message = "(SC${code}) ${message}",
       security = "level",
 
-      line      = "line",
-      endLine   = "endLine",
-      column    = "column",
-      endColumn = "endColumn"
+      line = "line",
+      endLine = "endLine",
+      column = "column",
+      endColumn = "endColumn",
     },
 
     securities = {
-      error   = "error",
+      error = "error",
       warning = "warning",
-      info    = "info",
-      style   = "hint"
-    }
+      info = "info",
+      style = "hint",
+    },
   }
 
   setup.init_options.formatFiletypes.sh = "shfmt"
   setup.init_options.formatters.shfmt = {
-    command = "shfmt"
+    command = "shfmt",
   }
 end

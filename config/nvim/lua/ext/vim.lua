@@ -2,12 +2,7 @@ local M = {}
 
 function M.mapping(mode)
   return function(key, binding, options)
-    vim.api.nvim_set_keymap(
-      mode,
-      key,
-      binding,
-      vim.tbl_extend("force", {noremap = true}, options or {})
-    )
+    vim.api.nvim_set_keymap(mode, key, binding, vim.tbl_extend("force", { noremap = true }, options or {}))
   end
 end
 
@@ -30,23 +25,18 @@ function M.highlight(name, options)
   end
 
   for k, v in pairs(options or {}) do
-    table.insert(definitions, string.join({k, v}, "="))
+    table.insert(definitions, string.join({ k, v }, "="))
   end
 
-  vim.cmd(
-    string.join(
-      {
-        "highlight",
-        name,
-        string.join(definitions, " "),
-      },
-      " "
-    )
-  )
+  vim.cmd(string.join({
+    "highlight",
+    name,
+    string.join(definitions, " "),
+  }, " "))
 end
 
 function M.highlight_link(from, to)
-  vim.cmd(string.join({"highlight", "link", from, to}, " "))
+  vim.cmd(string.join({ "highlight", "link", from, to }, " "))
 end
 
 return M

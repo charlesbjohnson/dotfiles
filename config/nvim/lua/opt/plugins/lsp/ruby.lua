@@ -6,9 +6,9 @@ return function()
     capabilities = vim.tbl_extend("force", vim.lsp.protocol.make_client_capabilities(), {
       textDocument = {
         formatting = {
-          dynamicRegistration = true
-        }
-      }
+          dynamicRegistration = true,
+        },
+      },
     }),
 
     root_dir = function(fname)
@@ -17,8 +17,8 @@ return function()
 
     settings = {
       solargraph = {
-        formatting = false
-      }
-    }
+        formatting = false,
+      },
+    },
   }
 end

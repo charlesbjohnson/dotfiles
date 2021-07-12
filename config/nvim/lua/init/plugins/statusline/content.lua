@@ -1,7 +1,7 @@
 local file_formats = {
   unix = "LF",
-  dos  = "CRLF",
-  mac  = "CR"
+  dos = "CRLF",
+  mac = "CR",
 }
 
 return function(options)
@@ -9,14 +9,14 @@ return function(options)
     "NvimTree",
     "minimap",
     "packer",
-    "startify"
+    "startify",
   })
 
   local left = options.components.left
   local right = options.components.right
 
   left.active[1] = {
-    icon     = "",
+    icon = "",
     provider = "vi_mode",
   }
 
@@ -24,99 +24,99 @@ return function(options)
     provider = "",
     enabled = function()
       return not left.active[3].enabled()
-    end
+    end,
   }
 
   left.active[3] = {
-    icon     = " ",
+    icon = " ",
     provider = "git_branch",
-    enabled  = function()
+    enabled = function()
       return require("feline.providers.git").git_branch({}) ~= ""
-    end
+    end,
   }
 
   left.active[4] = {
     provider = "",
     enabled = function()
       return not left.active[5].enabled() and not left.active[6].enabled() and not left.active[7].enabled()
-    end
+    end,
   }
 
   left.active[5] = {
-    icon     = "+",
+    icon = "+",
     provider = "git_diff_added",
-    enabled  = function()
+    enabled = function()
       return require("feline.providers.git").git_diff_added({}) ~= ""
-    end
+    end,
   }
 
   left.active[6] = {
-    icon     = "~",
+    icon = "~",
     provider = "git_diff_changed",
-    enabled  = function()
+    enabled = function()
       return require("feline.providers.git").git_diff_changed({}) ~= ""
-    end
+    end,
   }
 
   left.active[7] = {
-    icon     = "-",
+    icon = "-",
     provider = "git_diff_removed",
-    enabled  = function()
+    enabled = function()
       return require("feline.providers.git").git_diff_removed({}) ~= ""
-    end
+    end,
   }
 
   right.active[1] = {
     icon = " ",
     provider = "diagnostic_errors",
-    enabled  = function()
+    enabled = function()
       return require("feline.providers.lsp").diagnostics_exist("Error")
-    end
+    end,
   }
 
   right.active[2] = {
     icon = " ",
     provider = "diagnostic_warnings",
-    enabled  = function()
+    enabled = function()
       return require("feline.providers.lsp").diagnostics_exist("Warning")
-    end
+    end,
   }
 
   right.active[3] = {
     icon = " ",
     provider = "diagnostic_hints",
-    enabled  = function()
+    enabled = function()
       return require("feline.providers.lsp").diagnostics_exist("Hint")
-    end
+    end,
   }
 
   right.active[4] = {
     icon = " ",
     provider = "diagnostic_info",
-    enabled  = function()
+    enabled = function()
       return require("feline.providers.lsp").diagnostics_exist("Information")
-    end
+    end,
   }
 
   right.active[5] = {
-    provider = "file_encoding"
+    provider = "file_encoding",
   }
 
   right.active[6] = {
     provider = function()
       return file_formats[vim.bo.fileformat]
-    end
+    end,
   }
 
   right.active[7] = {
     provider = function()
       local file_type = require("feline.providers.file").file_type()
       return file_type ~= "" and file_type or "TEXT"
-    end
+    end,
   }
 
   right.active[8] = {
-    provider = "position"
+    provider = "position",
   }
 
   left.inactive = vim.tbl_deep_extend("force", {}, left.active)

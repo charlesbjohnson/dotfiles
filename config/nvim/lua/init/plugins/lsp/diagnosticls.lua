@@ -9,8 +9,8 @@ return function()
       filetypes = {},
 
       formatters = {},
-      formatFiletypes = {}
-    }
+      formatFiletypes = {},
+    },
   }
 
   for _, provider in pairs(providers) do

@@ -1,18 +1,18 @@
 local fs = require("fs")
 local path = require("path")
 
-local packer_install_path = path.join({vim.fn.stdpath("data"), "site/pack/packer/opt/packer.nvim"})
-local packer_compile_path = path.join({vim.fn.stdpath("config"), "plugin/packer.vim"})
+local packer_install_path = path.join({ vim.fn.stdpath("data"), "site/pack/packer/opt/packer.nvim" })
+local packer_compile_path = path.join({ vim.fn.stdpath("config"), "plugin/packer.vim" })
 
 if not fs.exists(packer_install_path) then
-  vim.fn.system({"git", "clone", "https://github.com/wbthomason/packer.nvim", packer_install_path})
+  vim.fn.system({ "git", "clone", "https://github.com/wbthomason/packer.nvim", packer_install_path })
 end
 
 vim.cmd("packadd packer.nvim")
 
 return require("packer").startup({
   function(use)
-    use({"wbthomason/packer.nvim", opt = true})
+    use({ "wbthomason/packer.nvim", opt = true })
 
     -- Text Objects
     use("fvictorio/vim-textobj-backticks")
@@ -39,7 +39,7 @@ return require("packer").startup({
     use("nvim-telescope/telescope.nvim")
     use("romgrk/barbar.nvim")
     use("wfxr/minimap.vim")
-    use({"nvim-telescope/telescope-fzf-native.nvim", run = "make"})
+    use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 
     -- Editor Enhancements
     use("RRethy/vim-illuminate")
@@ -49,7 +49,7 @@ return require("packer").startup({
     use("psliwka/vim-smoothie")
     use("svermeulen/vim-cutlass")
     use("zirrostig/vim-schlepp")
-    use({"AndrewRadev/splitjoin.vim", branch = "main"})
+    use({ "AndrewRadev/splitjoin.vim", branch = "main" })
 
     -- Editor Features
     use("famiu/feline.nvim")
@@ -73,9 +73,9 @@ return require("packer").startup({
     use("nvim-lua/popup.nvim")
 
     -- Syntax & Language Enhancements
-    use({"dag/vim-fish",                  ft = "fish"})
-    use({"masukomi/vim-markdown-folding", ft = "markdown"})
-    use({"tpope/vim-git",                 ft = "gitconfig"})
+    use({ "dag/vim-fish", ft = "fish" })
+    use({ "masukomi/vim-markdown-folding", ft = "markdown" })
+    use({ "tpope/vim-git", ft = "gitconfig" })
 
     -- Overrides
     for _, register in pairs(require.tree("plugins")) do
@@ -88,7 +88,7 @@ return require("packer").startup({
   config = {
     compile_path = packer_compile_path,
     display = {
-      open_fn = require("packer.util").float
-    }
-  }
+      open_fn = require("packer.util").float,
+    },
+  },
 })

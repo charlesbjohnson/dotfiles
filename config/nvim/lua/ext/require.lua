@@ -7,11 +7,11 @@ local __cache = {}
 local M = setmetatable({}, {
   __call = function(_, mod)
     return __require(mod)
-  end
+  end,
 })
 
 local function to_file_path(require_path)
-  return path.resolve(path.join({path.dirname(M.main()), (require_path:gsub("%.", "/"))}))
+  return path.resolve(path.join({ path.dirname(M.main()), (require_path:gsub("%.", "/")) }))
 end
 
 local function to_require_path(file_path)
@@ -23,7 +23,7 @@ local function to_require_path(file_path)
 end
 
 function M.main()
-  return path.join({vim.fn.stdpath("config"), "lua", "init.lua"})
+  return path.join({ vim.fn.stdpath("config"), "lua", "init.lua" })
 end
 
 function M.tree(require_path)

@@ -5,21 +5,21 @@ return function(setup)
   setup.init_options.linters.golangci = {
     sourceName = "golangci",
 
-    command      = "golangci-lint",
-    args         = {"run", "--out-format", "json"},
-    rootPatterns = {"go.mod", ".git"},
+    command = "golangci-lint",
+    args = { "run", "--out-format", "json" },
+    rootPatterns = { "go.mod", ".git" },
 
     debounce = 100,
 
     parseJson = {
-      sourceName       = "Pos.Filename",
+      sourceName = "Pos.Filename",
       sourceNameFilter = true,
 
       errorsRoot = "Issues",
-      message    = "(${FromLinter}) ${Text}",
+      message = "(${FromLinter}) ${Text}",
 
-      line   = "Pos.Line",
-      column = "Pos.Column"
-    }
+      line = "Pos.Line",
+      column = "Pos.Column",
+    },
   }
 end

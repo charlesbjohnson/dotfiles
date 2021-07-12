@@ -3,7 +3,7 @@ require("ext.string")
 local M = {}
 
 function M.dirname(path)
-  return (vim.fn.system({"dirname", path})):trim()
+  return (vim.fn.system({ "dirname", path })):trim()
 end
 
 function M.join(paths, sep)
@@ -11,7 +11,7 @@ function M.join(paths, sep)
 end
 
 function M.resolve(path)
-  return (vim.fn.system({"realpath", path})):trim()
+  return (vim.fn.system({ "realpath", path })):trim()
 end
 
 return M
