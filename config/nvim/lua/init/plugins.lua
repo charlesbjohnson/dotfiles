@@ -1,4 +1,3 @@
-local colors = require("colors.nord").colors
 vim = _G.vim
 
 -- AndrewRadev/splitjoin.vim
@@ -298,6 +297,8 @@ vim.g.bufferline = {
   icons              = "both",
   tabpages           = false
 }
+
+local colors = require("colors")
 
 vim.hl("BufferCurrent",      {bg = colors[3], fg = colors[6]})
 vim.hl("BufferCurrentIndex", {bg = colors[3], fg = colors[6]})

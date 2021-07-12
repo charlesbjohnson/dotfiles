@@ -1,4 +1,4 @@
-local colors = require("colors.nord")
+local colors = require("colors")
 
 local vi_mode = {}
 

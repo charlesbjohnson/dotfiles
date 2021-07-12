@@ -1,26 +1,26 @@
-local colors = require("colors.nord")
+local colors = require("colors")
 
 local options = {
-  default_fg = colors.colors.fg,
-  default_bg = colors.colors.bg,
+  default_fg = colors.fg,
+  default_bg = colors.bg,
 
-  colors = colors.colors,
+  colors = colors,
 
   vi_mode_colors = {
-    NORMAL        = colors.colors[8],
-    OP            = colors.colors[6],
-    INSERT        = colors.colors[14],
-    VISUAL        = colors.colors[13],
-    BLOCK         = colors.colors[13],
-    REPLACE       = colors.colors[11],
-    ["V-REPLACE"] = colors.colors[11],
-    ENTER         = colors.colors[6],
-    MORE          = colors.colors[6],
-    SELECT        = colors.colors[6],
-    COMMAND       = colors.colors[6],
-    SHELL         = colors.colors[6],
-    TERM          = colors.colors[6],
-    NONE          = colors.colors[6]
+    NORMAL        = colors[8],
+    OP            = colors[6],
+    INSERT        = colors[14],
+    VISUAL        = colors[13],
+    BLOCK         = colors[13],
+    REPLACE       = colors[11],
+    ["V-REPLACE"] = colors[11],
+    ENTER         = colors[6],
+    MORE          = colors[6],
+    SELECT        = colors[6],
+    COMMAND       = colors[6],
+    SHELL         = colors[6],
+    TERM          = colors[6],
+    NONE          = colors[6]
   }
 }
 
