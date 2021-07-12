@@ -169,9 +169,9 @@ for _, server in pairs(lspinstall.installed_servers()) do
   end)
 
   lspconfig[server].setup(
-    vim.tbl_extend(
+    vim.tbl_deep_extend(
       "force",
-      ok and options(lspconfig[server]) or {},
+      ok and options() or {},
       {
         on_attach = function(client)
           -- RRethy/vim-illuminate")
