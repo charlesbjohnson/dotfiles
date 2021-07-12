@@ -1,1 +1,1 @@
-return require("plugins.lsp.ruby")
+return require("opt.plugins.lsp.ruby")

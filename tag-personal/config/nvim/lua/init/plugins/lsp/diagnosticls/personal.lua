@@ -1,13 +1,13 @@
 return function(setup)
-  require("plugins.lsp.diagnosticls.fish")(setup)
-  require("plugins.lsp.diagnosticls.sh")(setup)
+  require("opt.plugins.lsp.diagnosticls.fish")(setup)
+  require("opt.plugins.lsp.diagnosticls.sh")(setup)
 
-  require("plugins.lsp.diagnosticls.json")(setup)
-  require("plugins.lsp.diagnosticls.yaml")(setup)
+  require("opt.plugins.lsp.diagnosticls.json")(setup)
+  require("opt.plugins.lsp.diagnosticls.yaml")(setup)
 
-  require("plugins.lsp.diagnosticls.go")(setup)
-  require("plugins.lsp.diagnosticls.javascript")(setup)
-  require("plugins.lsp.diagnosticls.ruby")(setup)
+  require("opt.plugins.lsp.diagnosticls.go")(setup)
+  require("opt.plugins.lsp.diagnosticls.javascript")(setup)
+  require("opt.plugins.lsp.diagnosticls.ruby")(setup)
 
-  require("plugins.lsp.diagnosticls.css")(setup)
+  require("opt.plugins.lsp.diagnosticls.css")(setup)
 end
