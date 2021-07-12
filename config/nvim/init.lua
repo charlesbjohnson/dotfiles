@@ -1,7 +1,5 @@
 local ext = require("ext")
-
 require = ext.require
-vim     = _G.vim
 
 vim.map  = ext.vim.mapping("")
 vim.imap = ext.vim.mapping("i")

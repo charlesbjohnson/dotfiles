@@ -16,7 +16,7 @@ end
 
 local function to_require_path(file_path)
   file_path = file_path:gsub(path.dirname(M.main()), "")
-  file_path = file_path:gsub("/", "", 1):gsub(".lua", "")
+  file_path = file_path:gsub("/", "", 1):gsub(".lua$", "")
   file_path = file_path:gsub("/", ".")
 
   return file_path
