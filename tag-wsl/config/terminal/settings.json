@@ -66,13 +66,17 @@
     "defaults": {
       "bellStyle": "none",
       "colorScheme": "Nord",
-      "cursorShape": "filledBox",
-      "fontFace": "CaskaydiaCove NF"
+      "font": {
+        "face": "CaskaydiaCove NF",
+        "size": 12,
+        "weight": "normal"
+      }
     },
     "list": [
       {
         "commandline": "wsl.exe -d Debian",
         "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+        "hidden": false,
         "name": "Debian",
         "scrollbarState": "hidden",
         "source": "Windows.Terminal.Wsl",
@@ -105,5 +109,6 @@
       "yellow": "#EBCB8B"
     }
   ],
-  "showTabsInTitlebar": true
+  "showTabsInTitlebar": true,
+  "windowingBehavior": "useAnyExisting"
 }
