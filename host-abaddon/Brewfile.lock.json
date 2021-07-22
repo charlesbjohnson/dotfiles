@@ -1042,12 +1042,7 @@
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core"
         },
-        "options": {
-          "args": [
-            "HEAD"
-          ]
-        },
-        "version": "HEAD-93f15db_2"
+        "version": "0.5.0"
       },
       "node": {
         "bottle": {
