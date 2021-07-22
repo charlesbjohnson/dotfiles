@@ -1117,20 +1117,6 @@
           "root_url": "https://ghcr.io/v2/linuxbrew/core"
         },
         "version": "1.26.1"
-      },
-      "yarn": {
-        "bottle": {
-          "files": {
-            "x86_64_linux": {
-              "cellar": ":any_skip_relocation",
-              "sha256": "2e94245b589438a4f9dbce64edace8b237feb1ffadd0865bb21d6093a818d230",
-              "url": "https://ghcr.io/v2/linuxbrew/core/yarn/blobs/sha256:2e94245b589438a4f9dbce64edace8b237feb1ffadd0865bb21d6093a818d230"
-            }
-          },
-          "rebuild": 1,
-          "root_url": "https://ghcr.io/v2/linuxbrew/core"
-        },
-        "version": "1.22.10"
       }
     },
     "tap": {

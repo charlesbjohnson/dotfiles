@@ -1571,20 +1571,6 @@
           "root_url": "https://ghcr.io/v2/homebrew/core"
         },
         "version": "1.26.1"
-      },
-      "yarn": {
-        "bottle": {
-          "files": {
-            "all": {
-              "cellar": ":any_skip_relocation",
-              "sha256": "5c8f50922a573a4fc2f15b2b5b0fb457d93312474f85b1a23dd3af7d3e072650",
-              "url": "https://ghcr.io/v2/homebrew/core/yarn/blobs/sha256:5c8f50922a573a4fc2f15b2b5b0fb457d93312474f85b1a23dd3af7d3e072650"
-            }
-          },
-          "rebuild": 0,
-          "root_url": "https://ghcr.io/v2/homebrew/core"
-        },
-        "version": "1.22.10"
       }
     },
     "cask": {
