@@ -16,7 +16,7 @@ vim.hl_link = ext.vim.highlight_link
 --- General
 vim.g.mapleader = " "
 
-vim.opt.clipboard    = {"unnamedplus"}
+vim.opt.clipboard    = { "unnamedplus" }
 vim.opt.hidden       = true
 vim.opt.shell        = vim.fn.system("which bash"):trim() .. " --login"
 vim.opt.shellcmdflag = "-lc"
@@ -24,19 +24,19 @@ vim.opt.showmatch    = true
 vim.opt.splitbelow   = true
 vim.opt.splitright   = true
 vim.opt.updatetime   = 300
-vim.opt.wildmode     = vim.opt.wildmode ^ {"longest:full"}
+vim.opt.wildmode     = vim.opt.wildmode ^ { "longest:full" }
 
 vim.cmd("syntax on")
 
 --- Appearance
 vim.opt.cmdheight     = 1
-vim.opt.colorcolumn   = {0} -- https://github.com/lukas-reineke/indent-blankline.nvim/issues/59
-vim.opt.completeopt   = {"menuone", "noselect"}
+vim.opt.colorcolumn   = { 0 } -- https://github.com/lukas-reineke/indent-blankline.nvim/issues/59
+vim.opt.completeopt   = { "menuone", "noselect" }
 vim.opt.list          = true
-vim.opt.listchars     = {eol = "↵", tab = "⇥ ", trail = "·"}
+vim.opt.listchars     = { eol = "↵", tab = "⇥ ", trail = "·" }
 vim.opt.number        = true
 vim.opt.scrolloff     = 20
-vim.opt.shortmess     = vim.opt.shortmess + {c = true}
+vim.opt.shortmess     = vim.opt.shortmess + { c = true }
 vim.opt.showmode      = false
 vim.opt.showtabline   = 2
 vim.opt.signcolumn    = "yes"
@@ -72,7 +72,7 @@ vim.map("<F1>",  "<Esc>")
 vim.imap("<F1>", "<Esc>")
 
 -- Quickly clear highlighted search
-vim.nmap("<Leader><Leader>", "<Cmd>nohlsearch<CR>", {silent = true})
+vim.nmap("<Leader><Leader>", "<Cmd>nohlsearch<CR>", { silent = true })
 
 -- Consistent indent/unindent across all modes
 vim.nmap("<C-d>", "<<")
@@ -103,40 +103,40 @@ vim.nmap("<M-l>", "$")
 vim.xmap("<M-l>", "$")
 
 -- Splits
-vim.nmap("<C-w>|", "<Cmd>vsplit<CR>", { silent = true})
-vim.nmap("<C-w>_", "<Cmd>split<CR>",  { silent = true})
+vim.nmap("<C-w>|", "<Cmd>vsplit<CR>", { silent = true })
+vim.nmap("<C-w>_", "<Cmd>split<CR>",  { silent = true })
 
-vim.nmap("<C-w><C-h>", "<C-w>H", {silent = true})
-vim.nmap("<C-w><C-j>", "<C-w>J", {silent = true})
-vim.nmap("<C-w><C-k>", "<C-w>K", {silent = true})
-vim.nmap("<C-w><C-l>", "<C-w>L", {silent = true})
+vim.nmap("<C-w><C-h>", "<C-w>H", { silent = true })
+vim.nmap("<C-w><C-j>", "<C-w>J", { silent = true })
+vim.nmap("<C-w><C-k>", "<C-w>K", { silent = true })
+vim.nmap("<C-w><C-l>", "<C-w>L", { silent = true })
 
-vim.nmap("<C-w>H", "<Cmd>vertical resize +5<CR>", {silent = true})
-vim.nmap("<C-w>J", "<Cmd>resize -5<CR>",          {silent = true})
-vim.nmap("<C-w>K", "<Cmd>resize +5<CR>",          {silent = true})
-vim.nmap("<C-w>L", "<Cmd>vertical resize -5<CR>", {silent = true})
+vim.nmap("<C-w>H", "<Cmd>vertical resize +5<CR>", { silent = true })
+vim.nmap("<C-w>J", "<Cmd>resize -5<CR>",          { silent = true })
+vim.nmap("<C-w>K", "<Cmd>resize +5<CR>",          { silent = true })
+vim.nmap("<C-w>L", "<Cmd>vertical resize -5<CR>", { silent = true })
 
 -- Ctag navigation
-vim.nmap("<Leader>[", "<Cmd>pop<CR>", {silent = true})
+vim.nmap("<Leader>[", "<Cmd>pop<CR>", { silent = true })
 vim.nmap("<Leader>]", "<C-]>")
 
 -- Automatically jump to end of pasted text
-vim.nmap("p", "p`]", {silent = true})
-vim.xmap("p", "p`]", {silent = true})
-vim.xmap("y", "y`]", {silent = true})
+vim.nmap("p", "p`]", { silent = true })
+vim.xmap("p", "p`]", { silent = true })
+vim.xmap("y", "y`]", { silent = true })
 
 -- LSP
-vim.fn.sign_define("LspDiagnosticsSignError",       {text = "", texthl = "LspDiagnosticsSignError"})
-vim.fn.sign_define("LspDiagnosticsSignHint",        {text = "", texthl = "LspDiagnosticsSignHint"})
-vim.fn.sign_define("LspDiagnosticsSignInformation", {text = "", texthl = "LspDiagnosticsSignInformation"})
-vim.fn.sign_define("LspDiagnosticsSignWarning",     {text = "", texthl = "LspDiagnosticsSignWarning"})
+vim.fn.sign_define("LspDiagnosticsSignError",       { text = "", texthl = "LspDiagnosticsSignError" })
+vim.fn.sign_define("LspDiagnosticsSignHint",        { text = "", texthl = "LspDiagnosticsSignHint" })
+vim.fn.sign_define("LspDiagnosticsSignInformation", { text = "", texthl = "LspDiagnosticsSignInformation" })
+vim.fn.sign_define("LspDiagnosticsSignWarning",     { text = "", texthl = "LspDiagnosticsSignWarning" })
 
-vim.nmap("gd", "<Cmd>lua vim.lsp.buf.definition()<CR>",     {silent = true})
-vim.nmap("gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>",    {silent = true})
-vim.nmap("gi", "<Cmd>lua vim.lsp.buf.implementation()<CR>", {silent = true})
-vim.nmap("gr", "<Cmd>lua vim.lsp.buf.references()<CR>",     {silent = true})
-vim.nmap("F",  "<Cmd>lua vim.lsp.buf.formatting()<CR>",     {silent = true})
-vim.nmap("K",  "<Cmd>lua vim.lsp.buf.hover()<CR>",          {silent = true})
+vim.nmap("gd", "<Cmd>lua vim.lsp.buf.definition()<CR>",     { silent = true })
+vim.nmap("gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>",    { silent = true })
+vim.nmap("gi", "<Cmd>lua vim.lsp.buf.implementation()<CR>", { silent = true })
+vim.nmap("gr", "<Cmd>lua vim.lsp.buf.references()<CR>",     { silent = true })
+vim.nmap("F",  "<Cmd>lua vim.lsp.buf.formatting()<CR>",     { silent = true })
+vim.nmap("K",  "<Cmd>lua vim.lsp.buf.hover()<CR>",          { silent = true })
 
 -- Terminal
 vim.tmap("<Esc>", "<C-\\><C-n>")

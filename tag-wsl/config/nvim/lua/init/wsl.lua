@@ -1,11 +1,11 @@
 vim.g.clipboard = {
   name = "wsl",
   copy = {
-    ["+"] = {"pbcopy"},
-    ["*"] = {"pbcopy"}
+    ["+"] = { "pbcopy" },
+    ["*"] = { "pbcopy" },
   },
   paste = {
-    ["+"] = {"pbpaste"},
-    ["*"] = {"pbpaste"}
-  }
+    ["+"] = { "pbpaste" },
+    ["*"] = { "pbpaste" },
+  },
 }
