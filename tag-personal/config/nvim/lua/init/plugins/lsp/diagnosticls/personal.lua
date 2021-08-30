@@ -10,4 +10,5 @@ return function(setup)
   require("opt.plugins.lsp.diagnosticls.ruby")(setup)
 
   require("opt.plugins.lsp.diagnosticls.css")(setup)
+  require("opt.plugins.lsp.diagnosticls.html")(setup)
 end
