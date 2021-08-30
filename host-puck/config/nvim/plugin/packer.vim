@@ -72,6 +72,10 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["FixCursorHold.nvim"] = {
+    loaded = true,
+    path = "/home/charlie/.local/share/nvim/site/pack/packer/start/FixCursorHold.nvim"
+  },
   ["barbar.nvim"] = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/barbar.nvim"

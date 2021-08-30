@@ -44,6 +44,7 @@ return require("packer").startup({
     -- Editor Enhancements
     use("RRethy/vim-illuminate")
     use("andymass/vim-matchup")
+    use("antoinemadec/FixCursorHold.nvim")
     use("itmammoth/doorboy.vim")
     use("junegunn/vim-easy-align")
     use("psliwka/vim-smoothie")
