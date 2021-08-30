@@ -4,7 +4,7 @@ vim.g.splitjoin_quiet = 1
 vim.g.splitjoin_join_mapping = "cJ"
 vim.g.splitjoin_split_mapping = "cK"
 
--- akinsho/nvim-toggleterm.lua
+-- akinsho/toggleterm.nvim
 require("toggleterm").setup({
   open_mapping = "<C-x>",
   shade_terminals = false,
@@ -43,50 +43,50 @@ require("trouble").setup()
 vim.nmap("<C-n>", "<Cmd>TroubleToggle lsp_document_diagnostics<CR>", { silent = true })
 vim.nmap("<C-M-n>", "<Cmd>TroubleToggle lsp_workspace_diagnostics<CR>", { silent = true })
 
--- hrsh7th/nvim-compe
-require("compe").setup({
-  source = {
-    buffer = true,
-    nvim_lsp = true,
-    nvim_lua = true,
-    path = true,
+-- hrsh7th/nvim-cmp
+require("cmp").setup({
+  mapping = {
+    ["<CR>"] = require("cmp").mapping.confirm(),
+    ["<C-e>"] = require("cmp").mapping.abort(),
+
+    ["<C-b>"] = require("cmp").mapping.scroll_docs(-4),
+    ["<C-f>"] = require("cmp").mapping.scroll_docs(4),
+
+    ["<Tab>"] = function(fallback)
+      local col = vim.fn.col(".") - 1
+
+      if col == 0 or vim.fn.getline("."):sub(col, col):match("%s") then
+        vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<Tab>", true, true, true), "n")
+      elseif vim.fn.pumvisible() == 1 then
+        vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-n>", true, true, true), "n")
+      else
+        fallback()
+      end
+    end,
+    ["<S-Tab>"] = function(fallback)
+      local col = vim.fn.col(".") - 1
+
+      if col == 0 or vim.fn.getline("."):sub(col, col):match("%s") then
+        vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<S-Tab>", true, true, true), "n")
+      elseif vim.fn.pumvisible() == 1 then
+        vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-p>", true, true, true), "n")
+      else
+        fallback()
+      end
+    end,
+  },
+  snippet = {
+    expand = function(args)
+      vim.fn["vsnip#anonymous"](args.body)
+    end,
+  },
+  sources = {
+    { name = "buffer" },
+    { name = "path" },
+    { name = "nvim_lsp" },
+    { name = "nvim_lua" },
   },
 })
-
-vim.imap("<CR>", "compe#confirm(doorboy#map_cr())", { expr = true })
-vim.imap("<C-e>", "compe#close('<C-e>')", { expr = true })
-
-vim.imap("<Tab>", "v:lua.compe.tab()", { expr = true })
-vim.smap("<Tab>", "v:lua.compe.tab()", { expr = true })
-vim.imap("<S-Tab>", "v:lua.compe.s_tab()", { expr = true })
-vim.smap("<S-Tab>", "v:lua.compe.s_tab()", { expr = true })
-
-_G.compe = (function()
-  local function termcode(str)
-    return vim.api.nvim_replace_termcodes(str, true, true, true)
-  end
-
-  local function forward()
-    if vim.fn.pumvisible() == 1 then
-      return termcode("<C-n>")
-    end
-
-    return termcode("<Tab>")
-  end
-
-  local function backward()
-    if vim.fn.pumvisible() == 1 then
-      return termcode("<C-p>")
-    end
-
-    return termcode("<S-Tab>")
-  end
-
-  return {
-    tab = forward,
-    s_tab = backward,
-  }
-end)()
 
 -- junegunn/vim-easy-align
 vim.nmap("<Leader>a", "<Plug>(EasyAlign)", { noremap = false })

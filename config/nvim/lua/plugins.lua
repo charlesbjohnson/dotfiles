@@ -33,7 +33,7 @@ return require("packer").startup({
     use("folke/trouble.nvim")
 
     -- Application Features
-    use("akinsho/nvim-toggleterm.lua")
+    use("akinsho/toggleterm.nvim")
     use("kyazdani42/nvim-tree.lua")
     use("mhinz/vim-startify")
     use("nvim-telescope/telescope.nvim")
@@ -55,7 +55,12 @@ return require("packer").startup({
     -- Editor Features
     use("famiu/feline.nvim")
     use("folke/lsp-colors.nvim")
-    use("hrsh7th/nvim-compe")
+    use("hrsh7th/cmp-buffer")
+    use("hrsh7th/cmp-nvim-lsp")
+    use("hrsh7th/cmp-nvim-lua")
+    use("hrsh7th/cmp-path")
+    use("hrsh7th/nvim-cmp")
+    use("hrsh7th/vim-vsnip")
     use("kabouzeid/nvim-lspinstall")
     use("kevinhwang91/nvim-hlslens")
     use("lewis6991/gitsigns.nvim")
