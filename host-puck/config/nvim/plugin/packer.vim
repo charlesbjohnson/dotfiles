@@ -80,10 +80,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/barbar.nvim"
   },
-  ["doorboy.vim"] = {
-    loaded = true,
-    path = "/home/charlie/.local/share/nvim/site/pack/packer/start/doorboy.vim"
-  },
   ["editorconfig-vim"] = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/editorconfig-vim"
@@ -160,6 +156,10 @@ _G.packer_plugins = {
     loaded = false,
     needs_bufread = false,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/opt/packer.nvim"
+  },
+  ["pears.nvim"] = {
+    loaded = true,
+    path = "/home/charlie/.local/share/nvim/site/pack/packer/start/pears.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,

@@ -88,10 +88,6 @@ _G.compe = (function()
   }
 end)()
 
--- itmammoth/doorboy.vim
-vim.imap("<BS>", "doorboy#map_backspace()", { expr = true })
-vim.imap("<Space>", "doorboy#map_space()", { expr = true })
-
 -- junegunn/vim-easy-align
 vim.nmap("<Leader>a", "<Plug>(EasyAlign)", { noremap = false })
 vim.xmap("<CR>", "<Plug>(EasyAlign)", { noremap = false })
@@ -325,6 +321,11 @@ vim.nmap("<Leader>L", "<Cmd>BufferMoveNext<CR>", { silent = true })
 vim.nmap("<Leader>b", "<Cmd>enew<CR>", { silent = true })
 vim.nmap("<Leader>h", "<Cmd>BufferPrevious<CR>", { silent = true })
 vim.nmap("<Leader>l", "<Cmd>BufferNext<CR>", { silent = true })
+
+-- steelsojka/pears.nvim
+require("pears").setup(function(config)
+  config.preset("tag_matching")
+end)
 
 -- svermeulen/vim-cutlass
 vim.nmap("m", "d")
