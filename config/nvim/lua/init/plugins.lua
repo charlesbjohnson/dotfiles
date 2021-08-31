@@ -34,6 +34,11 @@ require("tmux").setup({
   },
 })
 
+-- blackCauldron7/surround.nvim
+require("surround").setup({
+  mappings_style = "surround",
+})
+
 -- famiu/feline.nvim
 require("init.plugins.statusline")
 
