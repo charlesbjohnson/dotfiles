@@ -7,13 +7,7 @@ return function()
     end,
 
     root_dir = function(fname)
-      return util.root_pattern("Gemfile", ".git")(fname) or util.path.dirname(fname)
+      return util.root_pattern("package.json", ".git")(fname) or util.path.dirname(fname)
     end,
-
-    settings = {
-      solargraph = {
-        formatting = false,
-      },
-    },
   }
 end
