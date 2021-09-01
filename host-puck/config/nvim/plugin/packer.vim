@@ -132,6 +132,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nord-vim"
   },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/home/charlie/.local/share/nvim/site/pack/packer/start/null-ls.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nvim-cmp"

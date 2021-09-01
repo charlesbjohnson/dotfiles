@@ -172,20 +172,28 @@ vim.g.startify_custom_header = vim.split(
   "\n"
 )
 
--- neovim/nvim-lspconfig & kabouzeid/nvim-lspinstall
+-- neovim/nvim-lspconfig
+-- jose-elias-alvarez/null-ls.nvim
+-- kabouzeid/nvim-lspinstall
 local lspconfig = require("lspconfig")
 local lspinstall = require("lspinstall")
+local lspnull = require("null-ls")
 
 lspinstall.setup()
+lspnull.config({ diagnostics_format = "[#{c}] #{m} (#{s})" })
 
-for _, server in pairs(lspinstall.installed_servers()) do
-  local ok, options = pcall(function()
-    return require(string.join({ "init", "plugins", "lsp", server }, "."))
-  end)
+for _, server in ipairs(vim.list_extend(lspinstall.installed_servers(), { "null-ls" })) do
+  local options = (require.try(string.join({ "init", "plugins", "lsp", server }, ".")) or function()
+    return {}
+  end)()
 
-  lspconfig[server].setup(vim.tbl_deep_extend("force", ok and options() or {}, {
+  lspconfig[server].setup(vim.tbl_deep_extend("force", {}, options, {
     on_attach = function(client)
-      -- RRethy/vim-illuminate")
+      if type(options.on_attach) == "function" then
+        options.on_attach(client)
+      end
+
+      -- RRethy/vim-illuminate
       require("illuminate").on_attach(client)
 
       -- ray-x/lsp_signature.nvim

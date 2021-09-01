@@ -61,6 +61,7 @@ return require("packer").startup({
     use("hrsh7th/cmp-path")
     use("hrsh7th/nvim-cmp")
     use("hrsh7th/vim-vsnip")
+    use("jose-elias-alvarez/null-ls.nvim")
     use("kabouzeid/nvim-lspinstall")
     use("kevinhwang91/nvim-hlslens")
     use("lewis6991/gitsigns.nvim")

@@ -47,4 +47,11 @@ function M.tree(require_path)
   return __cache[require_path]
 end
 
+function M.try(require_path)
+  local ok, result = pcall(require, require_path)
+  if ok then
+    return result
+  end
+end
+
 return M
