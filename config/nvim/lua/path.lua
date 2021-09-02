@@ -2,6 +2,10 @@ require("ext.string")
 
 local M = {}
 
+function M.cwd()
+  return vim.loop.cwd()
+end
+
 function M.dirname(path)
   return (vim.fn.system({ "dirname", path })):trim()
 end

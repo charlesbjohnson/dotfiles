@@ -20,4 +20,20 @@ function M.is_file(path)
   return vim.fn.findfile(path) ~= ""
 end
 
+function M.read_file_json(path)
+  local ok, result
+
+  ok, result = pcall(vim.fn.readfile, path)
+  if not ok then
+    return nil
+  end
+
+  ok, result = pcall(vim.fn.json_decode, result)
+  if not ok then
+    return nil
+  end
+
+  return result
+end
+
 return M
