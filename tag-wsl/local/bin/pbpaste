@@ -1,24 +1,6 @@
 #!/bin/sh
 
-main() {
-  # & $env:SYSTEMROOT\Microsoft.NET\Framework\v3.5\csc.exe /o paste.cs
-  #
-  # using System;
-  # using System.Windows.Forms;
-  #
-  # namespace Paste
-  # {
-  #     class Program
-  #     {
-  #         [STAThread]
-  #         static void Main()
-  #         {
-  #             Console.Write(Clipboard.GetText().Replace("\r\n", "\n"));
-  #         }
-  #     }
-  # }
+# Hacky compatibility layer for software where the clipboard provider is not easily changed,
+# ie. Fish (see https://github.com/fish-shell/fish-shell/blob/master/share/functions/fish_clipboard_paste.fish).
 
-  paste.exe
-}
-
-main "$@"
+exec "$(dirname "$0")/wslpaste" "$@"
