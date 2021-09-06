@@ -25,11 +25,11 @@
     },
     {
       "command": "unbound",
-      "keys": "ctrl+,"
+      "keys": "ctrl+comma"
     },
     {
       "command": "unbound",
-      "keys": "ctrl+alt+,"
+      "keys": "ctrl+alt+comma"
     },
     {
       "command": "unbound",
@@ -37,7 +37,7 @@
     },
     {
       "command": "unbound",
-      "keys": "ctrl+shift+,"
+      "keys": "ctrl+shift+comma"
     },
     {
       "command": "unbound",
@@ -81,6 +81,12 @@
         "scrollbarState": "hidden",
         "source": "Windows.Terminal.Wsl",
         "startingDirectory": "\\\\wsl$\\Debian\\home\\charlie"
+      },
+      {
+        "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+        "hidden": false,
+        "name": "PowerShell",
+        "source": "Windows.Terminal.PowershellCore"
       }
     ]
   },
