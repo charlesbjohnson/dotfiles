@@ -1,5 +1,5 @@
 # In Windows:
 # - WSLENV=WSL_PATH/l
-# - WSL_PATH=%SYSTEMROOT%\System32;%LOCALAPPDATA%\Programs\Microsoft VS Code\bin;
+# - WSL_PATH=%SYSTEMROOT%\System32;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0;%LOCALAPPDATA%\Programs\Microsoft VS Code\bin;
 
 dotfile::prepend_env PATH "$WSL_PATH"
