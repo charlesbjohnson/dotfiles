@@ -80,7 +80,7 @@
         "name": "Debian",
         "scrollbarState": "hidden",
         "source": "Windows.Terminal.Wsl",
-        "startingDirectory": "\\\\wsl$\\Debian\\home\\charlie"
+        "startingDirectory": "//wsl$/Debian/home/charlie"
       },
       {
         "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
