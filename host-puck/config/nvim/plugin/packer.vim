@@ -193,10 +193,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/splitjoin.vim"
   },
-  ["surround.nvim"] = {
-    loaded = true,
-    path = "/home/charlie/.local/share/nvim/site/pack/packer/start/surround.nvim"
-  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim"
@@ -267,6 +263,10 @@ _G.packer_plugins = {
   ["vim-startify"] = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/vim-startify"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/home/charlie/.local/share/nvim/site/pack/packer/start/vim-surround"
   },
   ["vim-textobj-backticks"] = {
     loaded = true,

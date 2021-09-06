@@ -39,11 +39,6 @@ require("kommentary.config").configure_language("default", {
   prefer_single_line_comments = true,
 })
 
--- blackCauldron7/surround.nvim
-require("surround").setup({
-  mappings_style = "surround",
-})
-
 -- famiu/feline.nvim
 require("init.plugins.statusline")
 

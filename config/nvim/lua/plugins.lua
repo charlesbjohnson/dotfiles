@@ -22,9 +22,9 @@ return require("packer").startup({
 
     -- Motions
     use("b3nj5m1n/kommentary")
-    use("blackCauldron7/surround.nvim")
     use("christoomey/vim-sort-motion")
     use("tpope/vim-repeat")
+    use("tpope/vim-surround")
     use("vim-scripts/repmo.vim")
 
     -- Application Enhancements
