@@ -3,4 +3,6 @@ dotfile::alias "cat" "bat"
 dotfile::alias "ls" "exa --group-directories-first --classify"
 dotfile::alias "lt" "exa --group-directories-first --classify --tree"
 
+dotfile::alias "brewup" "brew bundle --global install && brew upgrade && brew bundle --global cleanup -f && brew cleanup && bash -c 'jq . $HOME/.Brewfile.lock.json --sort-keys > $HOME/.dotfiles/host-\$(hostname)/Brewfile.lock.json'"
+
 dotfile::load_all "$HOME/.config/dotfile" "aliases.*"
