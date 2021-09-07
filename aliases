@@ -1,8 +1,11 @@
 dotfile::alias "PPATH" 'echo "$PATH" | tr --squeeze-repeats ":" "\n"'
+
 dotfile::alias "cat" "bat"
 dotfile::alias "ls" "exa --group-directories-first --classify"
 dotfile::alias "lt" "exa --group-directories-first --classify --tree"
 
-dotfile::alias "brewup" "brew bundle --global install && brew upgrade && brew bundle --global cleanup -f && brew cleanup && jq . $HOME/.Brewfile.lock.json --sort-keys > $HOME/.dotfiles/host-$HOSTNAME/Brewfile.lock.json"
+dotfile::alias "ungron" "gron --ungron"
+
+dotfile::alias "brewup" "brew bundle --global install && brew upgrade && brew bundle --global cleanup -f && brew cleanup && gron $HOME/.Brewfile.lock.json | sort | ungron > $HOME/.dotfiles/host-$HOSTNAME/Brewfile.lock.json"
 
 dotfile::load_all "$HOME/.config/dotfile" "aliases.*"
