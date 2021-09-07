@@ -1,7 +1,8 @@
 dotfile::set_env VISUAL "nvim"
 dotfile::set_env EDITOR "$VISUAL"
+dotfile::set_env TERM "xterm-256color"
 
-dotfile::shell::terminfo "xterm-256color" "https://invisible-island.net/datafiles/current/terminfo.src.gz"
+dotfile::shell::terminfo "https://invisible-island.net/datafiles/current/terminfo.src.gz"
 dotfile::shell::dircolors "https://raw.githubusercontent.com/arcticicestudio/nord-dircolors/develop/src/dir_colors"
 dotfile::shell::prompt
 

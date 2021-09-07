@@ -22,10 +22,8 @@ end
 
 function dotfile::shell::terminfo
     if not test -d "$HOME/.terminfo"
-        tic -x (curl --silent --location $argv[2] | gunzip | psub)
+        tic -x -o "$HOME/.terminfo" (curl --silent --location $argv[1] | gunzip | psub)
     end
-
-    dotfile::set_env TERM $argv[1]
 end
 
 function dotfile::shell::tmux

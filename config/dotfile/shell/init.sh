@@ -24,10 +24,10 @@ function dotfile::shell::ssh() {
 
 function dotfile::shell::terminfo() {
   if ! [[ -d "$HOME/.terminfo" ]]; then
-    tic -x <(curl --silent --location "$2" | gunzip)
+    local tmp="$(mktemp)"
+    curl --silent --location "$1" | gunzip >"$tmp"
+    tic -x -o "$HOME/.terminfo" "$tmp"
   fi
-
-  dotfile::set_env TERM "$1"
 }
 
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/tmux/init.zsh
