@@ -3,4 +3,4 @@
 set -euo pipefail
 
 # https://docs.brew.sh/Homebrew-on-Linux#debian-or-ubuntu
-apt upgrade --yes "build-essential" "procps" "curl" "wget" "file" "git" "python"
+apt install --yes "build-essential" "procps" "curl" "wget" "file" "git" "python"

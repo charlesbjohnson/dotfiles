@@ -1,1 +1,1 @@
-dotfile::alias "aptup" "sudo $HOME/.Aptfile"
+dotfile::alias "aptup" "sudo -E $HOME/.Aptfile"
