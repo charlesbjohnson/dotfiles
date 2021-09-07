@@ -4,13 +4,11 @@ set -euo pipefail
 
 apt update
 
-# https://docs.brew.sh/Homebrew-on-Linux#debian-or-ubuntu
-apt upgrade --yes "build-essential" "procps" "curl" "wget" "file" "git" "python"
-
 # https://unix.stackexchange.com/questions/90227/why-is-there-no-https-transport-for-debian-apt-tool
-apt upgrade --yes "apt-transport-https"
+apt upgrade --yes "apt-transport-https" "ca-certificates"
 
-# https://stackoverflow.com/questions/53343801/how-do-i-get-the-man-command
-apt upgrade --yes "man-db"
+for file in $(find -L "$(dirname "$0")" -maxdepth 1 -name "$(basename "$0").*" -type f); do
+  source "$file"
+done
 
 apt autoremove --yes
