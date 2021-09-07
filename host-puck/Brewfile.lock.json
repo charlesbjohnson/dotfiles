@@ -219,6 +219,35 @@
         },
         "version": "2.28.0"
       },
+      "dotnet": {
+        "bottle": {
+          "files": {
+            "big_sur": {
+              "cellar": ":any",
+              "sha256": "13d9201f595c6beb27a70d7ce390cb550e3fc7353c4db13b042a7318aea3b958",
+              "url": "https://ghcr.io/v2/linuxbrew/core/dotnet/blobs/sha256:13d9201f595c6beb27a70d7ce390cb550e3fc7353c4db13b042a7318aea3b958"
+            },
+            "catalina": {
+              "cellar": ":any",
+              "sha256": "c8aeb6eb53feb7d3d0ac9ed7c5fe9d7e30971852a980f4b226f43f1471bfe3e6",
+              "url": "https://ghcr.io/v2/linuxbrew/core/dotnet/blobs/sha256:c8aeb6eb53feb7d3d0ac9ed7c5fe9d7e30971852a980f4b226f43f1471bfe3e6"
+            },
+            "mojave": {
+              "cellar": ":any",
+              "sha256": "c8af8eb10f1ac1dc48e6f89325863b4a5beeb1c5463615f352035f88c3651262",
+              "url": "https://ghcr.io/v2/linuxbrew/core/dotnet/blobs/sha256:c8af8eb10f1ac1dc48e6f89325863b4a5beeb1c5463615f352035f88c3651262"
+            },
+            "x86_64_linux": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "546ded1941060d571cae4518829514f17f81349810bbbf7e96d684ba895a764b",
+              "url": "https://ghcr.io/v2/linuxbrew/core/dotnet/blobs/sha256:546ded1941060d571cae4518829514f17f81349810bbbf7e96d684ba895a764b"
+            }
+          },
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/linuxbrew/core"
+        },
+        "version": "5.0.206"
+      },
       "exa": {
         "bottle": {
           "files": {
