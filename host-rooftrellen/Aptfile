@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -euo pipefail
+
+apt update
+
+# https://unix.stackexchange.com/questions/90227/why-is-there-no-https-transport-for-debian-apt-tool
+apt upgrade --yes "apt-transport-https" "ca-certificates"
+
+for file in $(find -L "$(dirname "$0")" -maxdepth 1 -name "$(basename "$0").*" -type f); do
+  source "$file"
+done
+
+apt autoremove --yes
