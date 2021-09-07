@@ -80,3 +80,7 @@ function dotfile::env::gnu() {
     fi
   done
 }
+
+function dotfile::env::host() {
+  dotfile::set_env HOSTNAME "$(hostname)"
+}

@@ -67,3 +67,7 @@ function dotfile::env::gnu
         eval "function $cmd; $prefixed_cmd \$argv; end"
     end
 end
+
+function dotfile::env::host
+    dotfile::set_env HOSTNAME (hostname)
+end

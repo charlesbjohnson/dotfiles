@@ -1,3 +1,4 @@
+dotfile::env::host
 dotfile::set_env PATH
 
 dotfile::append_env PATH "/usr/bin"
