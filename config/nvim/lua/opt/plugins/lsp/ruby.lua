@@ -1,4 +1,4 @@
-local util = require("lspconfig.util")
+local lspconfig_u = require("lspconfig.util")
 
 return function()
   return {
@@ -7,7 +7,7 @@ return function()
     end,
 
     root_dir = function(fname)
-      return util.root_pattern("Gemfile", ".git")(fname) or util.path.dirname(fname)
+      return lspconfig_u.root_pattern("Gemfile", ".git")(fname) or lspconfig_u.path.dirname(fname)
     end,
 
     settings = {
