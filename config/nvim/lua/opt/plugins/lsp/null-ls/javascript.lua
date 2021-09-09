@@ -1,20 +1,24 @@
+local lspconfig_u = require("lspconfig.util")
+
 local lspnull = require("null-ls")
 local lspnull_h = require("null-ls.helpers")
 
 local fs = require("fs")
-local path = require("path")
+local config_patterns = lspconfig_u.root_pattern("package.json", ".eslintrc.*")
 
 local function use_eslint()
-  local root_dir = (vim.lsp.buf.list_workspace_folders() or {})[1] or path.cwd()
-
-  local pkg = string.parse_json(fs.read_file(path.join({ root_dir, "package.json" }))) or {}
-  if pkg.eslintConfig then
-    return true
+  local path = config_patterns(vim.api.nvim_buf_get_name(0))
+  if not path then
+    return false
   end
 
-  local configs = fs.glob(path.join({ root_dir, ".eslintrc.*" }))
-  if #configs > 0 then
+  if path:match("%.eslintrc%..+$") then
     return true
+  elseif vim.endswith(path, "package.json") then
+    local pkg = string.parse_json(fs.read_file(path))
+    if pkg and pkg.eslintConfig then
+      return true
+    end
   end
 
   return false
