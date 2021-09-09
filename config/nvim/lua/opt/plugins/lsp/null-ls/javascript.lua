@@ -7,7 +7,7 @@ local path = require("path")
 local function use_eslint()
   local root_dir = (vim.lsp.buf.list_workspace_folders() or {})[1] or path.cwd()
 
-  local pkg = fs.read_file_json(path.join({ root_dir, "package.json" })) or {}
+  local pkg = string.parse_json(fs.read_file(path.join({ root_dir, "package.json" }))) or {}
   if pkg.eslintConfig then
     return true
   end

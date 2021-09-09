@@ -12,6 +12,15 @@ function string.join(strs, sep)
   return result
 end
 
+function string.parse_json(str)
+  local ok, result = pcall(vim.fn.json_decode, str)
+  if not ok or result == vim.NIL then
+    return nil
+  end
+
+  return result
+end
+
 function string.split(str, sep)
   return vim.split(str, sep)
 end
