@@ -948,6 +948,40 @@
         },
         "version": "0.7.6_1"
       },
+      "selene": {
+        "bottle": {
+          "files": {
+            "arm64_big_sur": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "db9ad90c61edc0bdd85f36287a857c881ce85488df4a545c7f43623ba3306c06",
+              "url": "https://ghcr.io/v2/linuxbrew/core/selene/blobs/sha256:db9ad90c61edc0bdd85f36287a857c881ce85488df4a545c7f43623ba3306c06"
+            },
+            "big_sur": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "7f79d5199778de50445897b61ed796ba2f8ed8dc28ba94e3178566120eb5c53e",
+              "url": "https://ghcr.io/v2/linuxbrew/core/selene/blobs/sha256:7f79d5199778de50445897b61ed796ba2f8ed8dc28ba94e3178566120eb5c53e"
+            },
+            "catalina": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "f327afafa10d044c0b295e16741018c368251b79d65318bfdb9def511740fad5",
+              "url": "https://ghcr.io/v2/linuxbrew/core/selene/blobs/sha256:f327afafa10d044c0b295e16741018c368251b79d65318bfdb9def511740fad5"
+            },
+            "mojave": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "748941051771e799dd0afe0e853f007746cd07af86134fb8f912aa5c3c7a5dfe",
+              "url": "https://ghcr.io/v2/linuxbrew/core/selene/blobs/sha256:748941051771e799dd0afe0e853f007746cd07af86134fb8f912aa5c3c7a5dfe"
+            },
+            "x86_64_linux": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "e3061b7ea81453f2cca3b71aba7f1069b8de067b24267626e95a7fa891a12607",
+              "url": "https://ghcr.io/v2/linuxbrew/core/selene/blobs/sha256:e3061b7ea81453f2cca3b71aba7f1069b8de067b24267626e95a7fa891a12607"
+            }
+          },
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/linuxbrew/core"
+        },
+        "version": "0.14.0"
+      },
       "shellcheck": {
         "bottle": {
           "files": {
@@ -1049,6 +1083,35 @@
           "root_url": "https://ghcr.io/v2/linuxbrew/core"
         },
         "version": "0.57.0"
+      },
+      "stylua": {
+        "bottle": {
+          "files": {
+            "arm64_big_sur": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "f7796d48f5b77c1dd290b08edbca2b67b9639a358ab91517038d151ffce4159d",
+              "url": "https://ghcr.io/v2/linuxbrew/core/stylua/blobs/sha256:f7796d48f5b77c1dd290b08edbca2b67b9639a358ab91517038d151ffce4159d"
+            },
+            "big_sur": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "1186ebcd3b943a9f88291525818ed51563191b7c5267a96de6acdc461648f19f",
+              "url": "https://ghcr.io/v2/linuxbrew/core/stylua/blobs/sha256:1186ebcd3b943a9f88291525818ed51563191b7c5267a96de6acdc461648f19f"
+            },
+            "catalina": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "0477d5b24df2e95e38e411a4425ec5bc5cca022fb5776afa2a0303d06db311f1",
+              "url": "https://ghcr.io/v2/linuxbrew/core/stylua/blobs/sha256:0477d5b24df2e95e38e411a4425ec5bc5cca022fb5776afa2a0303d06db311f1"
+            },
+            "mojave": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "cccc5e26fbb5337499443e10d68f4a3548ec40a468c4ea56779c4e40342e81ee",
+              "url": "https://ghcr.io/v2/linuxbrew/core/stylua/blobs/sha256:cccc5e26fbb5337499443e10d68f4a3548ec40a468c4ea56779c4e40342e81ee"
+            }
+          },
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/linuxbrew/core"
+        },
+        "version": "0.10.1"
       },
       "tmux": {
         "bottle": {
@@ -1192,7 +1255,7 @@
         "revision": "244bfa18b23948404fc2ee4253eb232053034212"
       },
       "homebrew/core": {
-        "revision": "a4933a661f7e0633ea213b69cf24194f79d6f77f"
+        "revision": "8bbff5ef4cd0994711b4a26a0413fe3be64c6f70"
       }
     }
   },
@@ -1201,8 +1264,8 @@
       "Unknown": {
         "GCC": "10.2.1",
         "HOMEBREW_PREFIX": "/home/linuxbrew/.linuxbrew",
-        "HOMEBREW_VERSION": "3.2.10",
-        "Homebrew/linuxbrew-core": "a4933a661f7e0633ea213b69cf24194f79d6f77f"
+        "HOMEBREW_VERSION": "3.2.11-103-gbf95782",
+        "Homebrew/linuxbrew-core": "8bbff5ef4cd0994711b4a26a0413fe3be64c6f70"
       }
     }
   }
