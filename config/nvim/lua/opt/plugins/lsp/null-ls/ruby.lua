@@ -1,12 +1,16 @@
-local lspconfig_u = require("lspconfig.util")
-
 local lspnull = require("null-ls")
 local lspnull_h = require("null-ls.helpers")
 
-local config_patterns = lspconfig_u.root_pattern(".rubocopy.yml")
+local fs = require("fs")
+local path = require("path")
 
 local function use_rubocop()
-  return type((config_patterns(vim.api.nvim_buf_get_name(0)))) == "string"
+  local current = vim.api.nvim_buf_get_name(0)
+  if current == "" then
+    current = path.cwd()
+  end
+
+  return fs.find_closest(current, { ".rubocop.yml" })
 end
 
 return function(register)

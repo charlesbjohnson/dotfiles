@@ -4,6 +4,26 @@ function M.exists(path)
   return M.is_directory(path) or M.is_file(path)
 end
 
+function M.find_closest(path, patterns)
+  path = require("path").resolve(path)
+  if not path then
+    return nil
+  end
+
+  for _, v in ipairs(patterns) do
+    local matches = M.glob(path, v)
+    if #matches > 0 then
+      return matches[1]
+    end
+  end
+
+  if path == "/" then
+    return nil
+  else
+    return M.find_closest(require("path").dirname(path), patterns)
+  end
+end
+
 function M.glob(path, pattern)
   if not M.is_directory(path) then
     return {}

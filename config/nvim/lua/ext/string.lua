@@ -1,3 +1,7 @@
+function string.ends_with(str, sub)
+  return vim.endswith(str, sub)
+end
+
 function string.join(strs, sep)
   local result = ""
 
