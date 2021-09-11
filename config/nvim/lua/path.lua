@@ -15,7 +15,7 @@ function M.join(paths, sep)
 end
 
 function M.resolve(path)
-  return (vim.fn.system({ "realpath", path })):trim()
+  return vim.loop.fs_realpath(path)
 end
 
 return M
