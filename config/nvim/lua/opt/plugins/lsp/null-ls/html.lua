@@ -7,7 +7,7 @@ return function(register)
     filetypes = { "html" },
     generator = lspnull_h.formatter_factory({
       command = "npm",
-      args = vim.split("exec --yes --parseable -- @fsouza/prettierd $FILENAME", " "),
+      args = ("exec --yes --parseable -- @fsouza/prettierd $FILENAME"):split(" "),
       to_stdin = true,
       format = "raw",
     }),

@@ -150,8 +150,7 @@ require("indent_blankline").setup({
 vim.g.startify_change_to_dir = 1
 vim.g.startify_change_to_vcs_root = 1
 vim.g.startify_relative_path = 1
-vim.g.startify_custom_header = vim.split(
-  [[
+vim.g.startify_custom_header = ([[
 
 
           ::::    ::: :::::::::: ::::::::  :::     ::: :::::::::::   :::   :::
@@ -163,9 +162,7 @@ vim.g.startify_custom_header = vim.split(
     ###    #### ########## ########      ###     ########### ###       ###
     +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
     -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-]],
-  "\n"
-)
+]]):split("\n")
 
 -- neovim/nvim-lspconfig
 -- jose-elias-alvarez/null-ls.nvim

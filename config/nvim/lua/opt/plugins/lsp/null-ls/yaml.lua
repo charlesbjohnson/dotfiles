@@ -7,7 +7,7 @@ return function(register)
     filetypes = { "yaml" },
     generator = lspnull_h.generator_factory({
       command = "yamllint",
-      args = vim.split("--strict --format parsable -", " "),
+      args = ("--strict --format parsable -"):split(" "),
 
       to_stdin = true,
       check_exit_code = { 0, 1, 2 },
@@ -25,7 +25,7 @@ return function(register)
     filetypes = { "yaml" },
     generator = lspnull_h.formatter_factory({
       command = "npm",
-      args = vim.split("exec --yes --parseable -- @fsouza/prettierd $FILENAME", " "),
+      args = ("exec --yes --parseable -- @fsouza/prettierd $FILENAME"):split(" "),
       to_stdin = true,
       format = "raw",
     }),

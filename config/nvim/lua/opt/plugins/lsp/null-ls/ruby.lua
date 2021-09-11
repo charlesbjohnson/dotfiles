@@ -16,7 +16,7 @@ return function(register)
       filetypes = { "ruby" },
       generator = lspnull_h.generator_factory({
         command = "bundle",
-        args = vim.split("exec rubocop --stdin $FILENAME --stderr --force-exclusion --format json", " "),
+        args = ("exec rubocop --stdin $FILENAME --stderr --force-exclusion --format json"):split(" "),
 
         to_stdin = true,
         to_stderr = true,
@@ -56,7 +56,7 @@ return function(register)
       filetypes = { "ruby" },
       generator = lspnull_h.formatter_factory({
         command = "bundle",
-        args = vim.split("exec rubocop --stdin $FILENAME --stderr --force-exclusion --auto-correct", " "),
+        args = ("exec rubocop --stdin $FILENAME --stderr --force-exclusion --auto-correct"):split(" "),
         to_stdin = true,
         format = "raw",
       }),

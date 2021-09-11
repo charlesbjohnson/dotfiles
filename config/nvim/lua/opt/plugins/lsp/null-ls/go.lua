@@ -7,7 +7,7 @@ return function(register)
     filetypes = { "go" },
     generator = lspnull_h.generator_factory({
       command = "golangci-lint",
-      args = vim.split("run --out-format json", " "),
+      args = ("run --out-format json"):split(" "),
 
       check_exit_code = { 0, 1 },
 

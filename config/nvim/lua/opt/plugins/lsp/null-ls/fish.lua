@@ -7,7 +7,7 @@ return function(register)
     filetypes = { "fish" },
     generator = lspnull_h.generator_factory({
       command = "fish",
-      args = vim.split("--no-execute $FILENAME", " "),
+      args = ("--no-execute $FILENAME"):split(" "),
 
       to_stderr = true,
 

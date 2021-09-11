@@ -28,7 +28,7 @@ return function(register)
   if use_eslint() then
     register(lspnull.builtins.diagnostics.eslint_d.with({
       command = "npm",
-      args = vim.split("exec --yes --parseable -- eslint_d --stdin --stdin-filename $FILENAME --format json", " "),
+      args = ("exec --yes --parseable -- eslint_d --stdin --stdin-filename $FILENAME --format json"):split(" "),
       on_output = function(params)
         local items = params.output and params.output[1].messages or {}
         local parser = lspnull_h.diagnostics.from_json({
@@ -50,7 +50,7 @@ return function(register)
 
     register(lspnull.builtins.formatting.eslint_d.with({
       command = "npm",
-      args = vim.split("exec --yes --parseable -- eslint_d --stdin --stdin-filename $FILENAME --fix-to-stdout", " "),
+      args = ("exec --yes --parseable -- eslint_d --stdin --stdin-filename $FILENAME --fix-to-stdout"):split(" "),
     }))
 
     return
@@ -61,7 +61,7 @@ return function(register)
     filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
     generator = lspnull_h.formatter_factory({
       command = "npm",
-      args = vim.split("exec --yes --parseable -- @fsouza/prettierd $FILENAME", " "),
+      args = ("exec --yes --parseable -- @fsouza/prettierd $FILENAME"):split(" "),
       to_stdin = true,
       format = "raw",
     }),

@@ -33,7 +33,7 @@ return function(register)
       filetypes = { "css" },
       generator = lspnull_h.generator_factory({
         command = "npm",
-        args = vim.split("exec --yes --parseable -- stylelint --stdin --stdin-filename $FILENAME --formatter json", " "),
+        args = ("exec --yes --parseable -- stylelint --stdin --stdin-filename $FILENAME --formatter json"):split(" "),
 
         to_stdin = true,
         check_exit_code = { 0, 1, 2 },
@@ -64,7 +64,7 @@ return function(register)
       filetypes = { "css" },
       generator = lspnull_h.formatter_factory({
         command = "npm",
-        args = vim.split("exec --yes --parseable -- stylelint --stdin --stdin-filename $FILENAME --fix", " "),
+        args = ("exec --yes --parseable -- stylelint --stdin --stdin-filename $FILENAME --fix"):split(" "),
         to_stdin = true,
         format = "raw",
       }),
@@ -78,7 +78,7 @@ return function(register)
     filetypes = { "css" },
     generator = lspnull_h.formatter_factory({
       command = "npm",
-      args = vim.split("exec --yes --parseable -- @fsouza/prettierd $FILENAME", " "),
+      args = ("exec --yes --parseable -- @fsouza/prettierd $FILENAME"):split(" "),
       to_stdin = true,
       format = "raw",
     }),
