@@ -23,7 +23,7 @@ return function(register)
         args = ("exec rubocop --stdin $FILENAME --stderr --force-exclusion --format json"):split(" "),
 
         to_stdin = true,
-        to_stderr = true,
+        from_stderr = true,
         check_exit_code = { 0, 1 },
 
         format = "json",

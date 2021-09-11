@@ -9,7 +9,7 @@ return function(register)
       command = "fish",
       args = ("--no-execute $FILENAME"):split(" "),
 
-      to_stderr = true,
+      from_stderr = true,
 
       format = "line",
       on_output = lspnull_h.diagnostics.from_pattern([=[^.*%(line (%d+)%): (.*)$]=], { "row", "message" }),
