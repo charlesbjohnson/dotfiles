@@ -9,7 +9,12 @@ function M.glob(path, pattern)
     return {}
   end
 
-  return (vim.fn.globpath(path, (pattern or "*"))):split("\n")
+  local result = vim.fn.globpath(path, (pattern or "*"))
+  if result == "" then
+    return {}
+  end
+
+  return result:split("\n")
 end
 
 function M.is_directory(path)
