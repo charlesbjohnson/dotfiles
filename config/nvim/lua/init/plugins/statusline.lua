@@ -1,9 +1,6 @@
 local colors = require("colors")
 
 local options = {
-  default_fg = colors.fg,
-  default_bg = colors.bg,
-
   colors = colors,
 
   vi_mode_colors = {
@@ -24,23 +21,20 @@ local options = {
   },
 }
 
-options.properties = {
-  force_inactive = {
-    filetypes = {},
-    buftypes = {},
-    bufnames = {},
-  },
+options.force_inactive = {
+  filetypes = {},
+  buftypes = {},
+  bufnames = {},
 }
 
 options.components = {
-  left = {},
-  mid = {},
-  right = {},
+  active = {},
+  inactive = {},
 }
 
-for _, v in pairs(options.components) do
-  v.active = {}
-  v.inactive = v.active
+for i = 1, 3 do
+  table.insert(options.components.active, {})
+  table.insert(options.components.inactive, options.components.active[i])
 end
 
 require("init.plugins.statusline.content")(options)

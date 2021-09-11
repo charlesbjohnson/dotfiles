@@ -5,29 +5,22 @@ local file_formats = {
 }
 
 return function(options)
-  vim.list_extend(options.properties.force_inactive.filetypes, {
+  vim.list_extend(options.force_inactive.filetypes, {
     "NvimTree",
     "minimap",
     "packer",
     "startify",
   })
 
-  local left = options.components.left
-  local right = options.components.right
+  local active = options.components.active
+  local inactive = options.components.inactive
 
-  left.active[1] = {
+  active[1][1] = {
     icon = "",
     provider = "vi_mode",
   }
 
-  left.active[2] = {
-    provider = "",
-    enabled = function()
-      return not left.active[3].enabled()
-    end,
-  }
-
-  left.active[3] = {
+  active[1][2] = {
     icon = " ",
     provider = "git_branch",
     enabled = function()
@@ -35,14 +28,7 @@ return function(options)
     end,
   }
 
-  left.active[4] = {
-    provider = "",
-    enabled = function()
-      return not left.active[5].enabled() and not left.active[6].enabled() and not left.active[7].enabled()
-    end,
-  }
-
-  left.active[5] = {
+  active[1][3] = {
     icon = "+",
     provider = "git_diff_added",
     enabled = function()
@@ -50,7 +36,7 @@ return function(options)
     end,
   }
 
-  left.active[6] = {
+  active[1][4] = {
     icon = "~",
     provider = "git_diff_changed",
     enabled = function()
@@ -58,7 +44,7 @@ return function(options)
     end,
   }
 
-  left.active[7] = {
+  active[1][5] = {
     icon = "-",
     provider = "git_diff_removed",
     enabled = function()
@@ -66,7 +52,7 @@ return function(options)
     end,
   }
 
-  right.active[1] = {
+  active[3][1] = {
     icon = " ",
     provider = "diagnostic_errors",
     enabled = function()
@@ -74,7 +60,7 @@ return function(options)
     end,
   }
 
-  right.active[2] = {
+  active[3][2] = {
     icon = " ",
     provider = "diagnostic_warnings",
     enabled = function()
@@ -82,7 +68,7 @@ return function(options)
     end,
   }
 
-  right.active[3] = {
+  active[3][3] = {
     icon = " ",
     provider = "diagnostic_hints",
     enabled = function()
@@ -90,7 +76,7 @@ return function(options)
     end,
   }
 
-  right.active[4] = {
+  active[3][4] = {
     icon = " ",
     provider = "diagnostic_info",
     enabled = function()
@@ -98,34 +84,39 @@ return function(options)
     end,
   }
 
-  right.active[5] = {
+  active[3][5] = {
     provider = "file_encoding",
   }
 
-  right.active[6] = {
+  active[3][6] = {
     provider = function()
       return file_formats[vim.bo.fileformat]
     end,
   }
 
-  right.active[7] = {
+  active[3][7] = {
     provider = function()
       local file_type = require("feline.providers.file").file_type()
       return file_type ~= "" and file_type or "TEXT"
     end,
   }
 
-  right.active[8] = {
+  active[3][8] = {
     provider = "position",
   }
 
-  left.inactive = vim.tbl_deep_extend("force", {}, left.active)
-  for _, v in ipairs(left.inactive) do
+  inactive[1] = vim.tbl_deep_extend("force", {}, active[1])
+  for _, v in ipairs(inactive[1]) do
     v.enabled = false
   end
 
-  right.inactive = vim.tbl_deep_extend("force", {}, right.active)
-  for _, v in ipairs(right.inactive) do
+  inactive[2] = vim.tbl_deep_extend("force", {}, active[2])
+  for _, v in ipairs(inactive[2]) do
+    v.enabled = false
+  end
+
+  inactive[3] = vim.tbl_deep_extend("force", {}, active[3])
+  for _, v in ipairs(inactive[3]) do
     v.enabled = false
   end
 end
