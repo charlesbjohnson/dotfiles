@@ -1,36 +1,34 @@
 [alias]
-  a        = add
-  aa       = add --all
-  alias    = config --get-regexp '^alias.'
-  amend    = commit --amend --verbose
-  ap       = add --patch
-  br       = branch --verbose
-  bra      = branch --all --verbose
-  brd      = branch --delete
-  brmv     = branch --move
-  brrd     = push origin --delete
-  c        = commit
-  cleanall = clean --force -d
-  co       = checkout
-  df       = diff
-  dfsg     = diff --staged
-  dfsh     = stash show --patch
-  discard  = checkout --
-  fixup    = commit --fixup
-  l        = log --oneline --graph
-  la       = log --oneline --graph --all
-  ldf      = log --oneline --patch-with-stat --full-diff --decorate
-  ll       = log --stat --decorate --relative-date
-  pf       = push --force-with-lease
-  rba      = rebase --abort
-  rbc      = rebase --continue
-  rbi      = rebase --interactive
-  rmt      = remote --verbose
-  sha      = stash --include-untracked
-  shax     = stash --include-untracked --keep-index
-  st       = status --branch --short --untracked-files=all
-  undo     = reset HEAD~1
-  unstage  = reset HEAD --
+  a       = add
+  aa      = add --all
+  alias   = config --get-regexp '^alias.'
+  amend   = commit --amend --verbose
+  br      = branch --verbose
+  bra     = branch --all --verbose
+  brd     = branch --delete
+  brmv    = branch --move
+  brrd    = push origin --delete
+  c       = commit
+  cleanf  = clean --force -d
+  co      = checkout
+  df      = diff
+  dfsg    = diff --staged
+  dfsh    = stash show --patch
+  discard = checkout --
+  fixup   = commit --fixup
+  l       = log --all --graph --oneline
+  la      = log --all --graph --stat --relative-date
+  ldf     = log --oneline --patch-with-stat --full-diff
+  pf      = push --force-with-lease
+  rba     = rebase --abort
+  rbc     = rebase --continue
+  rbi     = rebase --interactive
+  rmt     = remote --verbose
+  sha     = stash --include-untracked
+  shax    = stash --include-untracked --keep-index
+  st      = status --branch --short --untracked-files=all
+  undo    = reset HEAD~1
+  unstage = reset HEAD --
 [color]
   ui = true
 [commit]
