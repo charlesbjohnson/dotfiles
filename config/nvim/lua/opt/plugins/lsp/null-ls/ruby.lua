@@ -70,4 +70,8 @@ function M.registration(register)
   end
 end
 
+function M.root_patterns()
+  return { "Gemfile" }
+end
+
 return M

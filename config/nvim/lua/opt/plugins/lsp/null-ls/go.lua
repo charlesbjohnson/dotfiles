@@ -40,4 +40,8 @@ function M.registration(register)
   })
 end
 
+function M.root_patterns()
+  return { "go.mod" }
+end
+
 return M

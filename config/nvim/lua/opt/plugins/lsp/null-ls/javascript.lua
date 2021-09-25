@@ -70,4 +70,8 @@ function M.registration(register)
   })
 end
 
+function M.root_patterns()
+  return { "package.json" }
+end
+
 return M
