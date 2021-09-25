@@ -103,8 +103,12 @@ require("hlslens").setup({
   nearest_only = true,
 })
 
-vim.nmap("n", "<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>", { silent = true })
-vim.nmap("N", "<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>", { silent = true })
+vim.nmap("n", "<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>", {
+  silent = true,
+})
+vim.nmap("N", "<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>", {
+  silent = true,
+})
 
 vim.nmap("* *", "<Cmd>lua require('hlslens').start()<CR>")
 vim.nmap("# #", "<Cmd>lua require('hlslens').start()<CR>")
