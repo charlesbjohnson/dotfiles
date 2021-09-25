@@ -13,7 +13,6 @@ return function(options)
   })
 
   local active = options.components.active
-  local inactive = options.components.inactive
 
   active[1][1] = {
     icon = "",
@@ -104,19 +103,4 @@ return function(options)
   active[3][8] = {
     provider = "position",
   }
-
-  inactive[1] = vim.tbl_deep_extend("force", {}, active[1])
-  for _, v in ipairs(inactive[1]) do
-    v.enabled = false
-  end
-
-  inactive[2] = vim.tbl_deep_extend("force", {}, active[2])
-  for _, v in ipairs(inactive[2]) do
-    v.enabled = false
-  end
-
-  inactive[3] = vim.tbl_deep_extend("force", {}, active[3])
-  for _, v in ipairs(inactive[3]) do
-    v.enabled = false
-  end
 end

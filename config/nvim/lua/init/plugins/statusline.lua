@@ -32,9 +32,9 @@ options.components = {
   inactive = {},
 }
 
-for i = 1, 3 do
+for _ = 1, 3 do
   table.insert(options.components.active, {})
-  table.insert(options.components.inactive, options.components.active[i])
+  table.insert(options.components.inactive, {})
 end
 
 require("init.plugins.statusline.content")(options)
