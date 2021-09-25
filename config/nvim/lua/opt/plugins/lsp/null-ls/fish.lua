@@ -1,7 +1,9 @@
 local lspnull = require("null-ls")
 local lspnull_h = require("null-ls.helpers")
 
-return function(register)
+local M = {}
+
+function M.registration(register)
   register({
     method = lspnull.methods.DIAGNOSTICS,
     filetypes = { "fish" },
@@ -19,3 +21,5 @@ return function(register)
 
   register(lspnull.builtins.formatting.fish_indent)
 end
+
+return M

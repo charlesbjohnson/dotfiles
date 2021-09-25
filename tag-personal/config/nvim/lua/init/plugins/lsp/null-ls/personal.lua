@@ -1,15 +1,19 @@
-return function(register)
-  require("opt.plugins.lsp.null-ls.fish")(register)
-  require("opt.plugins.lsp.null-ls.sh")(register)
+local M = {}
 
-  require("opt.plugins.lsp.null-ls.json")(register)
-  require("opt.plugins.lsp.null-ls.yaml")(register)
+function M.registration(register)
+  require("opt.plugins.lsp.null-ls.fish").registration(register)
+  require("opt.plugins.lsp.null-ls.sh").registration(register)
 
-  require("opt.plugins.lsp.null-ls.go")(register)
-  require("opt.plugins.lsp.null-ls.javascript")(register)
-  require("opt.plugins.lsp.null-ls.lua")(register)
-  require("opt.plugins.lsp.null-ls.ruby")(register)
+  require("opt.plugins.lsp.null-ls.json").registration(register)
+  require("opt.plugins.lsp.null-ls.yaml").registration(register)
 
-  require("opt.plugins.lsp.null-ls.css")(register)
-  require("opt.plugins.lsp.null-ls.html")(register)
+  require("opt.plugins.lsp.null-ls.go").registration(register)
+  require("opt.plugins.lsp.null-ls.javascript").registration(register)
+  require("opt.plugins.lsp.null-ls.lua").registration(register)
+  require("opt.plugins.lsp.null-ls.ruby").registration(register)
+
+  require("opt.plugins.lsp.null-ls.css").registration(register)
+  require("opt.plugins.lsp.null-ls.html").registration(register)
 end
+
+return M

@@ -4,6 +4,8 @@ local lspnull_h = require("null-ls.helpers")
 local fs = require("fs")
 local path = require("path")
 
+local M = {}
+
 local function use_stylelint()
   local current = vim.api.nvim_buf_get_name(0)
   if current == "" then
@@ -24,7 +26,7 @@ local function use_stylelint()
   return nil
 end
 
-return function(register)
+function M.registration(register)
   if use_stylelint() then
     register({
       method = lspnull.methods.DIAGNOSTICS,
@@ -82,3 +84,5 @@ return function(register)
     }),
   })
 end
+
+return M

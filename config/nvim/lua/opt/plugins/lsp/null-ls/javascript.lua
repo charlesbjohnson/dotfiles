@@ -4,6 +4,8 @@ local lspnull_h = require("null-ls.helpers")
 local fs = require("fs")
 local path = require("path")
 
+local M = {}
+
 local function use_eslint()
   local current = vim.api.nvim_buf_get_name(0)
   if current == "" then
@@ -24,7 +26,7 @@ local function use_eslint()
   return nil
 end
 
-return function(register)
+function M.registration(register)
   if use_eslint() then
     register(lspnull.builtins.diagnostics.eslint_d.with({
       command = "npm",
@@ -67,3 +69,5 @@ return function(register)
     }),
   })
 end
+
+return M

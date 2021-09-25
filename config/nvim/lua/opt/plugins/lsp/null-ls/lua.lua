@@ -3,6 +3,8 @@ local lspnull = require("null-ls")
 local fs = require("fs")
 local path = require("path")
 
+local M = {}
+
 local function use_selene()
   local current = vim.api.nvim_buf_get_name(0)
   if current == "" then
@@ -12,7 +14,7 @@ local function use_selene()
   return fs.find_closest(current, { ".selene.toml", "selene.toml" })
 end
 
-return function(register)
+function M.registration(register)
   local config = use_selene()
   if config then
     if string.ends_with(config, ".selene.toml") then
@@ -24,3 +26,5 @@ return function(register)
 
   register(lspnull.builtins.formatting.stylua)
 end
+
+return M

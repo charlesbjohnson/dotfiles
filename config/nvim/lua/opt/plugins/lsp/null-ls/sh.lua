@@ -1,8 +1,12 @@
 local lspnull = require("null-ls")
 
-return function(register)
+local M = {}
+
+function M.registration(register)
   register({
     lspnull.builtins.diagnostics.shellcheck,
     lspnull.builtins.formatting.shfmt,
   })
 end
+
+return M
