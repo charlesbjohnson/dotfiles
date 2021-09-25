@@ -117,6 +117,8 @@ vim.nmap("g* g*", "<Cmd>lua require('hlslens').start()<CR>")
 vim.nmap("g# g#", "<Cmd>lua require('hlslens').start()<CR>")
 
 -- kyazdani42/nvim-tree.lua
+require("nvim-tree").setup()
+
 vim.g.nvim_tree_disable_default_keybindings = true
 vim.g.nvim_tree_bindings = {
   { key = "<CR>", cb = require("nvim-tree.config").nvim_tree_callback("edit") },
