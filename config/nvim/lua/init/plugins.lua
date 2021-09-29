@@ -117,18 +117,22 @@ vim.nmap("g* g*", "<Cmd>lua require('hlslens').start()<CR>")
 vim.nmap("g# g#", "<Cmd>lua require('hlslens').start()<CR>")
 
 -- kyazdani42/nvim-tree.lua
-require("nvim-tree").setup()
-
-vim.g.nvim_tree_disable_default_keybindings = true
-vim.g.nvim_tree_bindings = {
-  { key = "<CR>", cb = require("nvim-tree.config").nvim_tree_callback("edit") },
-  { key = "<BS>", cb = require("nvim-tree.config").nvim_tree_callback("close_node") },
-  { key = "<Tab>", cb = require("nvim-tree.config").nvim_tree_callback("preview") },
-  { key = "<C-\\>", cb = require("nvim-tree.config").nvim_tree_callback("vsplit") },
-  { key = "<C-_>", cb = require("nvim-tree.config").nvim_tree_callback("split") },
-  { key = "r", cb = require("nvim-tree.config").nvim_tree_callback("rename") },
-  { key = "d", cb = require("nvim-tree.config").nvim_tree_callback("remove") },
-}
+require("nvim-tree").setup({
+  view = {
+    mappings = {
+      custom_only = true,
+      list = {
+        { key = "<CR>", cb = require("nvim-tree.config").nvim_tree_callback("edit") },
+        { key = "<BS>", cb = require("nvim-tree.config").nvim_tree_callback("close_node") },
+        { key = "<Tab>", cb = require("nvim-tree.config").nvim_tree_callback("preview") },
+        { key = "<C-\\>", cb = require("nvim-tree.config").nvim_tree_callback("vsplit") },
+        { key = "<C-_>", cb = require("nvim-tree.config").nvim_tree_callback("split") },
+        { key = "r", cb = require("nvim-tree.config").nvim_tree_callback("rename") },
+        { key = "d", cb = require("nvim-tree.config").nvim_tree_callback("remove") },
+      },
+    },
+  },
+})
 
 vim.nmap("<C-b>", "<Cmd>NvimTreeToggle<CR>", { silent = true })
 vim.nmap("<C-M-b>", "<Cmd>NvimTreeRefresh<CR>", { silent = true })
