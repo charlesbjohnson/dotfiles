@@ -21,7 +21,7 @@ function M.registration(register)
           warning = lspnull_h.diagnostics.severities["warning"],
         }
 
-        local items = params.output and params.output.Issues ~= vim.NIL and params.output.Issues or {}
+        local items = table.dig(params, { "output", "Issues" }) or {}
         for _, item in ipairs(items) do
           if vim.fn.fnamemodify(params.bufname, ":p:.") == item.Pos.Filename then
             table.insert(diagnostics, {

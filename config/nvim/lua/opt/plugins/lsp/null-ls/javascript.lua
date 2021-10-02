@@ -32,7 +32,7 @@ function M.registration(register)
       command = "npm",
       args = ("exec --yes --parseable -- eslint_d --stdin --stdin-filename $FILENAME --format json"):split(" "),
       on_output = function(params)
-        local items = params.output and params.output[1].messages or {}
+        local items = table.dig(params, { "output", "[1]", "messages" }) or {}
         local parser = lspnull_h.diagnostics.from_json({
           attributes = {
             severity = "severity",

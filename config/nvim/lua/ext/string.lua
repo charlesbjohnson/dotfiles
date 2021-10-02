@@ -1,3 +1,7 @@
+function string.starts_with(str, sub)
+  return vim.startswith(str, sub)
+end
+
 function string.ends_with(str, sub)
   return vim.endswith(str, sub)
 end

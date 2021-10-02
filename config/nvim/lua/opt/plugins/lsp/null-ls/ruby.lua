@@ -40,7 +40,7 @@ function M.registration(register)
             warning = lspnull_h.diagnostics.severities["warning"],
           }
 
-          local items = params.output and params.output.files[1].items or {}
+          local items = table.dig(params, { "output", "files", "[1]", "items" }) or {}
           for _, item in ipairs(items) do
             table.insert(diagnostics, {
               row = item.location.line,

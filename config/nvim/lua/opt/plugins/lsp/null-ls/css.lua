@@ -42,7 +42,7 @@ function M.registration(register)
         on_output = function(params)
           local diagnostics = {}
 
-          local items = params.output and params.output[1].warnings or {}
+          local items = table.dig(params, { "output", "[1]", "warnings" }) or {}
           for _, item in ipairs(items) do
             table.insert(diagnostics, {
               row = item.line,
