@@ -29,7 +29,6 @@ function M.registration(register)
       command = "npm",
       args = ("exec --yes --parseable -- @fsouza/prettierd $FILENAME"):split(" "),
       to_stdin = true,
-      format = "raw",
     }),
   })
 end

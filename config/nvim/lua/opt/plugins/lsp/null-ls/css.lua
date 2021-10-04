@@ -66,7 +66,6 @@ function M.registration(register)
         command = "npm",
         args = ("exec --yes --parseable -- stylelint --stdin --stdin-filename $FILENAME --fix"):split(" "),
         to_stdin = true,
-        format = "raw",
       }),
     })
 
@@ -80,7 +79,6 @@ function M.registration(register)
       command = "npm",
       args = ("exec --yes --parseable -- @fsouza/prettierd $FILENAME"):split(" "),
       to_stdin = true,
-      format = "raw",
     }),
   })
 end

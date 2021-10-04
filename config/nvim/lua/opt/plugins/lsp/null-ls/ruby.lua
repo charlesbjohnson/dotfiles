@@ -64,7 +64,6 @@ function M.registration(register)
         command = "bundle",
         args = ("exec rubocop --stdin $FILENAME --stderr --force-exclusion --auto-correct"):split(" "),
         to_stdin = true,
-        format = "raw",
       }),
     })
   end
