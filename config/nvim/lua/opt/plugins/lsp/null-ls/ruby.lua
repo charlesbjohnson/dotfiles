@@ -22,10 +22,9 @@ function M.registration(register)
       filetypes = { "ruby" },
       generator = lspnull_h.generator_factory({
         command = "bundle",
-        args = ("exec rubocop --stdin $FILENAME --stderr --force-exclusion --format json"):split(" "),
+        args = ("exec rubocop --stdin $FILENAME --force-exclusion --format json"):split(" "),
 
         to_stdin = true,
-        from_stderr = true,
         check_exit_code = { 0, 1 },
 
         format = "json",
@@ -40,7 +39,7 @@ function M.registration(register)
             warning = lspnull_h.diagnostics.severities["warning"],
           }
 
-          local items = table.dig(params, { "output", "files", "[1]", "items" }) or {}
+          local items = table.dig(params, { "output", "files", "[1]", "offenses" }) or {}
           for _, item in ipairs(items) do
             table.insert(diagnostics, {
               row = item.location.line,
@@ -62,8 +61,9 @@ function M.registration(register)
       filetypes = { "ruby" },
       generator = lspnull_h.formatter_factory({
         command = "bundle",
-        args = ("exec rubocop --stdin $FILENAME --stderr --force-exclusion --auto-correct"):split(" "),
+        args = ("exec rubocop --stdin $FILENAME --stderr --force-exclusion --format quiet --auto-correct"):split(" "),
         to_stdin = true,
+        ignore_stderr = true,
       }),
     })
   end
