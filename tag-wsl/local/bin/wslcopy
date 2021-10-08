@@ -1,7 +1,43 @@
 #!/bin/sh
 
 main() {
-  clip.exe <&0
+  # 1. Compile `copy.cs`:
+  # ```
+  # $ & $env:SYSTEMROOT\Microsoft.NET\Framework\v???\csc.exe /o copy.cs
+  # ```
+  #
+  # ```cs
+  # using System;
+  # using System.Windows.Forms;
+  #
+  # namespace Copy
+  # {
+  #     class Program
+  #     {
+  #         [STAThread]
+  #         static void Main()
+  #         {
+  #             var input = Console.In.ReadToEnd();
+  #             if (String.IsNullOrEmpty(input))
+  #             {
+  #                 Clipboard.Clear();
+  #             }
+  #             else
+  #             {
+  #                 Clipboard.SetText(input);
+  #             }
+  #         }
+  #     }
+  # }
+  # ```
+  #
+  # 2. Move output into `$env:SystemRoot\System32`
+
+  # Workaround for issue where reads from stdin are blocked
+  # when stdin is redirected from another program (ie. bat).
+  cat > /tmp/wslclip
+  copy.exe < /tmp/wslclip
+  rm /tmp/wslclip
 }
 
 main "$@"

@@ -3,7 +3,7 @@
 main() {
   # 1. Compile `paste.cs`:
   # ```
-  # $ & $env:SYSTEMROOT\Microsoft.NET\Framework\v3.5\csc.exe /o paste.cs
+  # $ & $env:SYSTEMROOT\Microsoft.NET\Framework\v???\csc.exe /o paste.cs
   # ```
   #
   # ```cs
