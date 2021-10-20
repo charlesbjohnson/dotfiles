@@ -136,6 +136,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/null-ls.nvim"
   },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nvim-cmp"
@@ -164,6 +168,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
@@ -172,10 +180,6 @@ _G.packer_plugins = {
     loaded = false,
     needs_bufread = false,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/opt/packer.nvim"
-  },
-  ["pears.nvim"] = {
-    loaded = true,
-    path = "/home/charlie/.local/share/nvim/site/pack/packer/start/pears.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,

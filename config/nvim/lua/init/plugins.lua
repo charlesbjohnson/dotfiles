@@ -258,6 +258,9 @@ vim.nmap("<C-_>", "<Cmd>lua require('telescope.builtin').live_grep()<CR>", { sil
 
 -- nvim-treesitter/nvim-treesitter
 require("nvim-treesitter.configs").setup({
+  autotag = {
+    enable = true,
+  },
   ensure_installed = "maintained",
   highlight = {
     enable = true,
@@ -325,11 +328,6 @@ vim.nmap("<Leader>b", "<Cmd>enew<CR>", { silent = true })
 vim.nmap("<Leader>h", "<Cmd>BufferPrevious<CR>", { silent = true })
 vim.nmap("<Leader>l", "<Cmd>BufferNext<CR>", { silent = true })
 
--- steelsojka/pears.nvim
-require("pears").setup(function(config)
-  config.preset("tag_matching")
-end)
-
 -- svermeulen/vim-cutlass
 vim.nmap("m", "d")
 vim.xmap("m", "d")
@@ -346,6 +344,11 @@ vim.g.minimap_close_buftypes = {}
 
 vim.g.minimap_block_filetypes = { "gitcommit", "packer", "startify" }
 vim.g.minimap_close_filetypes = vim.g.minimap_block_filetypes
+
+-- windwp/nvim-autopairs
+require("nvim-autopairs").setup({})
+require("nvim-autopairs.completion.cmp").setup({})
+require("nvim-autopairs").add_rules(require("nvim-autopairs.rules.endwise-lua"))
 
 -- zirrostig/vim-schlepp
 vim.xmap("<Leader>h", "<Plug>SchleppLeft", { noremap = false })

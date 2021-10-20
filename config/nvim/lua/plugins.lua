@@ -47,8 +47,9 @@ return require("packer").startup({
     use("antoinemadec/FixCursorHold.nvim")
     use("junegunn/vim-easy-align")
     use("psliwka/vim-smoothie")
-    use("steelsojka/pears.nvim")
     use("svermeulen/vim-cutlass")
+    use("windwp/nvim-autopairs")
+    use("windwp/nvim-ts-autotag")
     use("zirrostig/vim-schlepp")
     use({ "AndrewRadev/splitjoin.vim", branch = "main" })
 
