@@ -57,28 +57,8 @@ require("cmp").setup({
     ["<C-b>"] = require("cmp").mapping.scroll_docs(-4),
     ["<C-f>"] = require("cmp").mapping.scroll_docs(4),
 
-    ["<Tab>"] = function(fallback)
-      local col = vim.fn.col(".") - 1
-
-      if col == 0 or vim.fn.getline("."):sub(col, col):match("%s") then
-        vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<Tab>", true, true, true), "n")
-      elseif vim.fn.pumvisible() == 1 then
-        vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-n>", true, true, true), "n")
-      else
-        fallback()
-      end
-    end,
-    ["<S-Tab>"] = function(fallback)
-      local col = vim.fn.col(".") - 1
-
-      if col == 0 or vim.fn.getline("."):sub(col, col):match("%s") then
-        vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<S-Tab>", true, true, true), "n")
-      elseif vim.fn.pumvisible() == 1 then
-        vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-p>", true, true, true), "n")
-      else
-        fallback()
-      end
-    end,
+    ["<Tab>"] = require("cmp").mapping.select_next_item(),
+    ["<S-Tab>"] = require("cmp").mapping.select_prev_item(),
   },
   snippet = {
     expand = function(args)
