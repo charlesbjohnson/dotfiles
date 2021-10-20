@@ -4,23 +4,7 @@ local lspnull_h = require("null-ls.helpers")
 local M = {}
 
 function M.registration(register)
-  register({
-    method = lspnull.methods.DIAGNOSTICS,
-    filetypes = { "yaml" },
-    generator = lspnull_h.generator_factory({
-      command = "yamllint",
-      args = ("--strict --format parsable -"):split(" "),
-
-      to_stdin = true,
-      check_exit_code = { 0, 1, 2 },
-
-      format = "line",
-      on_output = lspnull_h.diagnostics.from_pattern(
-        [=[^.*:(%d+):(%d+): %[([^]]+)%] (.-) %(([^)]+)%)$]=],
-        { "row", "col", "severity", "message", "code" }
-      ),
-    }),
-  })
+  register(lspnull.builtins.diagnostics.yamllint)
 
   register({
     method = lspnull.methods.FORMATTING,
