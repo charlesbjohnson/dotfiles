@@ -16,8 +16,8 @@
   dfsh    = stash show --patch
   discard = checkout --
   fixup   = commit --fixup
-  l       = log --all --graph --oneline
-  la      = log --all --graph --stat --relative-date
+  l       = log --graph --oneline
+  la      = log --graph --stat --relative-date
   ldf     = log --oneline --patch-with-stat --full-diff
   pf      = push --force-with-lease
   rba     = rebase --abort
