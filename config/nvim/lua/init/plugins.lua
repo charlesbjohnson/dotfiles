@@ -170,6 +170,9 @@ for _, server in ipairs(vim.list_extend(lspinstall.installed_servers(), { "null-
   end)()
 
   lspconfig[server].setup(vim.tbl_deep_extend("force", {}, options, {
+    -- hrsh7th/cmp-nvim-lsp
+    capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+
     on_attach = function(client)
       if type(options.on_attach) == "function" then
         options.on_attach(client)
@@ -347,8 +350,8 @@ vim.g.minimap_close_filetypes = vim.g.minimap_block_filetypes
 
 -- windwp/nvim-autopairs
 require("nvim-autopairs").setup({})
-require("nvim-autopairs.completion.cmp").setup({})
 require("nvim-autopairs").add_rules(require("nvim-autopairs.rules.endwise-lua"))
+require("cmp").event:on("confirm_done", require("nvim-autopairs.completion.cmp").on_confirm_done())
 
 -- zirrostig/vim-schlepp
 vim.xmap("<Leader>h", "<Plug>SchleppLeft", { noremap = false })
