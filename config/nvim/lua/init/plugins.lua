@@ -73,6 +73,13 @@ require("cmp").setup({
   },
 })
 
+-- jose-elias-alvarez/null-ls.nvim
+local lspconfig = require("lspconfig")
+local lspnull = require("null-ls")
+
+lspnull.config({ diagnostics_format = "[#{c}] #{m} (#{s})" })
+lspconfig["null-ls"].setup(require("init.plugins.lsp.null-ls")())
+
 -- junegunn/vim-easy-align
 vim.nmap("<Leader>a", "<Plug>(EasyAlign)", { noremap = false })
 vim.xmap("<CR>", "<Plug>(EasyAlign)", { noremap = false })
@@ -154,22 +161,20 @@ vim.g.startify_custom_header = ([[
     -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 ]]):split("\n")
 
--- neovim/nvim-lspconfig
--- jose-elias-alvarez/null-ls.nvim
--- kabouzeid/nvim-lspinstall
-local lspconfig = require("lspconfig")
-local lspinstall = require("lspinstall")
-local lspnull = require("null-ls")
+-- williamboman/nvim-lsp-installer
+local lspinstaller = require("nvim-lsp-installer")
 
-lspinstall.setup()
-lspnull.config({ diagnostics_format = "[#{c}] #{m} (#{s})" })
+lspinstaller.on_server_ready(function(server)
+  local options = {}
 
-for _, server in ipairs(vim.list_extend(lspinstall.installed_servers(), { "null-ls" })) do
-  local options = (require.try(string.join({ "init", "plugins", "lsp", server }, ".")) or function()
-    return {}
-  end)()
+  for _, language in ipairs(server.languages) do
+    local optfn = require.try(string.join({ "init", "plugins", "lsp", language }, "."))
+    if optfn then
+      options = optfn()
+    end
+  end
 
-  lspconfig[server].setup(vim.tbl_deep_extend("force", {}, options, {
+  server:setup(vim.tbl_deep_extend("force", {}, options, {
     -- hrsh7th/cmp-nvim-lsp
     capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
 
@@ -193,7 +198,7 @@ for _, server in ipairs(vim.list_extend(lspinstall.installed_servers(), { "null-
       debounce_text_changes = 100,
     },
   }))
-end
+end)
 
 -- norcalli/nvim-colorizer.lua
 require("colorizer").setup()
