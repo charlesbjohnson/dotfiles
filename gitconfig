@@ -1,34 +1,33 @@
 [alias]
-  a       = add
-  aa      = add --all
-  alias   = config --get-regexp '^alias.'
-  amend   = commit --amend --verbose
-  br      = branch --verbose
-  bra     = branch --all --verbose
-  brd     = branch --delete
-  brmv    = branch --move
-  brrd    = push origin --delete
-  c       = commit
-  cleanf  = clean --force -d
-  co      = checkout
-  df      = diff
-  dfsg    = diff --staged
-  dfsh    = stash show --patch
-  discard = checkout --
-  fixup   = commit --fixup
-  l       = log --graph --oneline
-  la      = log --graph --stat --relative-date
-  ldf     = log --oneline --patch-with-stat --full-diff
-  pf      = push --force-with-lease
-  rba     = rebase --abort
-  rbc     = rebase --continue
-  rbi     = rebase --interactive
-  rmt     = remote --verbose
-  sha     = stash --include-untracked
-  shax    = stash --include-untracked --keep-index
-  st      = status --branch --short --untracked-files=all
-  undo    = reset HEAD~1
-  unstage = reset HEAD --
+  a        = add
+  aa       = add --all
+  alias    = config --get-regexp '^alias.'
+  amend    = commit --amend --verbose
+  br       = branch --verbose
+  bra      = branch --all --verbose
+  brd      = branch --delete
+  brmv     = branch --move
+  brrd     = push origin --delete
+  c        = commit
+  co       = checkout
+  df       = diff
+  dfsg     = diff --staged
+  dfsh     = stash show --patch
+  fixup    = commit --fixup
+  l        = log --graph --oneline
+  la       = log --graph --stat --relative-date
+  ldf      = log --oneline --patch-with-stat --full-diff
+  pf       = push --force-with-lease
+  rba      = rebase --abort
+  rbc      = rebase --continue
+  rbi      = rebase --interactive
+  rmt      = remote --verbose
+  sha      = stash --include-untracked
+  shax     = stash --include-untracked --keep-index
+  st       = status --branch --short --untracked-files=all
+  undo     = restore --
+  uncommit = reset HEAD~1
+  unstage  = restore --staged --
 [color]
   ui = true
 [commit]
