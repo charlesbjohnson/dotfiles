@@ -5,4 +5,7 @@ function fish_user_keybindings
 
     bind yy fish_clipboard_copy
     bind Y fish_clipboard_copy
+
+    bind \cZ fg
+    bind --mode insert \cZ fg
 end
