@@ -31,6 +31,11 @@ function M.registration(register)
     register(lspnull.builtins.diagnostics.eslint_d.with({
       command = "npm",
       args = ("exec --yes --parseable -- eslint_d --stdin --stdin-filename $FILENAME --format json"):split(" "),
+
+      to_stdin = true,
+      check_exit_code = { 0, 1 },
+
+      format = "json",
       on_output = function(params)
         local items = table.dig(params, { "output", "[1]", "messages" }) or {}
         local parser = lspnull_h.diagnostics.from_json({

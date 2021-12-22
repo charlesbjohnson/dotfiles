@@ -22,7 +22,7 @@ function M.registration(register)
       filetypes = { "ruby" },
       generator = lspnull_h.generator_factory({
         command = "bundle",
-        args = ("exec rubocop --stdin $FILENAME --force-exclusion --format json"):split(" "),
+        args = ("exec rubocop --stdin $FILENAME --format json --force-exclusion"):split(" "),
 
         to_stdin = true,
         check_exit_code = { 0, 1 },
@@ -61,9 +61,8 @@ function M.registration(register)
       filetypes = { "ruby" },
       generator = lspnull_h.formatter_factory({
         command = "bundle",
-        args = ("exec rubocop --stdin $FILENAME --stderr --force-exclusion --format quiet --auto-correct"):split(" "),
+        args = ("exec rubocop --stdin $FILENAME --stderr --format quiet --force-exclusion --auto-correct"):split(" "),
         to_stdin = true,
-        ignore_stderr = true,
       }),
     })
   end
