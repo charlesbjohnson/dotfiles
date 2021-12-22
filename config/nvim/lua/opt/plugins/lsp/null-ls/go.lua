@@ -9,9 +9,9 @@ function M.registration(register)
     filetypes = { "go" },
     generator = lspnull_h.generator_factory({
       command = "golangci-lint",
-      args = ("run --out-format json"):split(" "),
+      args = ("run --fix=false --out-format=json $DIRNAME --path-prefix $ROOT"):split(" "),
 
-      check_exit_code = { 0, 1 },
+      check_exit_code = { 0, 1, 2 },
 
       format = "json",
       on_output = function(params)
@@ -23,7 +23,7 @@ function M.registration(register)
 
         local items = table.dig(params, { "output", "Issues" }) or {}
         for _, item in ipairs(items) do
-          if vim.fn.fnamemodify(params.bufname, ":p:.") == item.Pos.Filename then
+          if params.bufname == item.Pos.Filename then
             table.insert(diagnostics, {
               row = item.Pos.Line,
               col = item.Pos.Column,
