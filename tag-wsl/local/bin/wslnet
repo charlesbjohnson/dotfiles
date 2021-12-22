@@ -1,0 +1,3 @@
+#!/bin/sh
+
+powershell.exe "$(wslpath -w "$(dirname "$0")/wslnet.ps1")" "$@"
