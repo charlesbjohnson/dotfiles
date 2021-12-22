@@ -74,11 +74,7 @@ require("cmp").setup({
 })
 
 -- jose-elias-alvarez/null-ls.nvim
-local lspconfig = require("lspconfig")
-local lspnull = require("null-ls")
-
-lspnull.config({ diagnostics_format = "[#{c}] #{m} (#{s})" })
-lspconfig["null-ls"].setup(require("init.plugins.lsp.null-ls")())
+require("init.plugins.lsp.null-ls")
 
 -- junegunn/vim-easy-align
 vim.nmap("<Leader>a", "<Plug>(EasyAlign)", { noremap = false })
