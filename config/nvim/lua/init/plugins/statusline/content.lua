@@ -63,7 +63,7 @@ return function(options)
     icon = " ",
     provider = "diagnostic_warnings",
     enabled = function()
-      return require("feline.providers.lsp").diagnostics_exist("Warning")
+      return require("feline.providers.lsp").diagnostics_exist("Warn")
     end,
   }
 
@@ -79,7 +79,7 @@ return function(options)
     icon = " ",
     provider = "diagnostic_info",
     enabled = function()
-      return require("feline.providers.lsp").diagnostics_exist("Information")
+      return require("feline.providers.lsp").diagnostics_exist("Info")
     end,
   }
 

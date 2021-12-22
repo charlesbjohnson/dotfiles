@@ -1,7 +1,7 @@
 local colors = require("colors")
 
 local options = {
-  colors = colors,
+  theme = colors,
 
   vi_mode_colors = {
     NORMAL = colors[8],
