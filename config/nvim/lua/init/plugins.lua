@@ -45,8 +45,8 @@ require("init.plugins.statusline")
 -- folke/trouble.nvim
 require("trouble").setup()
 
-vim.nmap("<C-n>", "<Cmd>TroubleToggle lsp_document_diagnostics<CR>", { silent = true })
-vim.nmap("<C-M-n>", "<Cmd>TroubleToggle lsp_workspace_diagnostics<CR>", { silent = true })
+vim.nmap("<C-n>", "<Cmd>TroubleToggle document_diagnostics<CR>", { silent = true })
+vim.nmap("<C-M-n>", "<Cmd>TroubleToggle workspace_diagnostics<CR>", { silent = true })
 
 -- hrsh7th/nvim-cmp
 require("cmp").setup({
