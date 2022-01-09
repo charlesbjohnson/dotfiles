@@ -285,6 +285,9 @@ require("nvim-treesitter.configs").setup({
   },
 })
 
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+
 -- psliwka/vim-smoothie
 vim.g.smoothie_no_default_mappings = 1
 
