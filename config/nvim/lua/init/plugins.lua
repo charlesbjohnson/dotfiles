@@ -249,6 +249,27 @@ require("nvim-treesitter.configs").setup({
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
+-- petertriho/nvim-scrollbar
+require("scrollbar").setup({
+  excluded_buftypes = { "nofile", "nowrite", "prompt", "quickfix", "terminal" },
+  excluded_filetypes = { "gitcommit", "packer", "startify" },
+  handle = {
+    color = require("colors")[3],
+  },
+  handlers = {
+    diagnostic = true,
+    search = true,
+  },
+  marks = {
+    Search = { color = require("colors")[8] },
+    Error = { color = require("colors")[11] },
+    Warn = { color = require("colors")[13] },
+    Info = { color = require("colors")[7] },
+    Hint = { color = require("colors")[9] },
+    Misc = { color = require("colors")[15] },
+  },
+})
+
 -- psliwka/vim-smoothie
 vim.g.smoothie_no_default_mappings = 1
 

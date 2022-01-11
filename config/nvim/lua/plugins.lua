@@ -37,6 +37,7 @@ return require("packer").startup({
     use("kyazdani42/nvim-tree.lua")
     use("mhinz/vim-startify")
     use("nvim-telescope/telescope.nvim")
+    use("petertriho/nvim-scrollbar")
     use("romgrk/barbar.nvim")
     use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 

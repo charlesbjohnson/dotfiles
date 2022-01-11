@@ -73,7 +73,7 @@ vim.map("<F1>", "<Esc>")
 vim.imap("<F1>", "<Esc>")
 
 -- Quickly clear highlighted search
-vim.nmap("<Leader><Leader>", "<Cmd>nohlsearch<CR>", { silent = true })
+vim.nmap("<Leader><Leader>", ":nohlsearch<CR>", { silent = true })
 
 -- Consistent indent/unindent across all modes
 vim.nmap("<C-d>", "<<")
