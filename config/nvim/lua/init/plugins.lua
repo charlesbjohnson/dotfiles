@@ -302,17 +302,6 @@ vim.xmap("m", "d")
 vim.nmap("mm", "dd")
 vim.nmap("M", "D")
 
--- wfxr/minimap.vim
-vim.g.minimap_highlight = "CursorLine"
-vim.g.minimap_highlight_range = true
-vim.g.minimap_highlight_search = true
-
-vim.g.minimap_block_buftypes = { "nofile", "nowrite", "prompt", "quickfix", "terminal" }
-vim.g.minimap_close_buftypes = {}
-
-vim.g.minimap_block_filetypes = { "gitcommit", "packer", "startify" }
-vim.g.minimap_close_filetypes = vim.g.minimap_block_filetypes
-
 -- windwp/nvim-autopairs
 require("nvim-autopairs").setup({})
 require("nvim-autopairs").add_rules(require("nvim-autopairs.rules.endwise-lua"))

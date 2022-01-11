@@ -38,7 +38,6 @@ return require("packer").startup({
     use("mhinz/vim-startify")
     use("nvim-telescope/telescope.nvim")
     use("romgrk/barbar.nvim")
-    use("wfxr/minimap.vim")
     use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 
     -- Editor Enhancements

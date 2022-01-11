@@ -137,11 +137,6 @@ _G.packer_plugins = {
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
     url = "https://github.com/ray-x/lsp_signature.nvim"
   },
-  ["minimap.vim"] = {
-    loaded = true,
-    path = "/home/charlie/.local/share/nvim/site/pack/packer/start/minimap.vim",
-    url = "https://github.com/wfxr/minimap.vim"
-  },
   ["nord-vim"] = {
     loaded = true,
     path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nord-vim",
