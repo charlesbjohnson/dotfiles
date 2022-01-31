@@ -121,9 +121,7 @@ vim.nmap("<C-b>", "<Cmd>NvimTreeToggle<CR>", { silent = true })
 vim.nmap("<C-M-b>", "<Cmd>NvimTreeRefresh<CR>", { silent = true })
 
 -- lewis6991/gitsigns.nvim
-require("gitsigns").setup({
-  keymaps = {},
-})
+require("gitsigns").setup()
 
 -- lukas-reineke/indent-blankline.nvim
 require("indent_blankline").setup({
