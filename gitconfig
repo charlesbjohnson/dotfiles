@@ -1,6 +1,5 @@
 [alias]
   a        = add
-  aa       = add --all
   alias    = config --get-regexp '^alias.'
   amend    = commit --amend --verbose
   br       = branch --verbose
@@ -9,25 +8,26 @@
   brmv     = branch --move
   brrd     = push origin --delete
   c        = commit
-  co       = checkout
   df       = diff
   dfsg     = diff --staged
-  dfsh     = stash show --patch
+  dfstsh   = stash show --patch
   fixup    = commit --fixup
   l        = log --graph --oneline
-  la       = log --graph --stat --relative-date
+  la       = log --graph --stat
   ldf      = log --oneline --patch-with-stat --full-diff
+  lfz      = ! git log --oneline | fzf | cut -f 1 -d ' '
   pf       = push --force-with-lease
   rba      = rebase --abort
   rbc      = rebase --continue
   rbi      = rebase --interactive
   rmt      = remote --verbose
-  sha      = stash --include-untracked
-  shax     = stash --include-untracked --keep-index
-  st       = status --branch --short --untracked-files=all
-  undo     = restore --
+  st       = status --short --branch
+  stsh     = stash --staged
+  stsha    = stash --include-untracked
+  sw       = switch
   uncommit = reset HEAD~1
-  unstage  = restore --staged --
+  undo     = restore
+  unstage  = restore --staged
 [color]
   ui = true
 [commit]
