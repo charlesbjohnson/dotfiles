@@ -65,12 +65,9 @@
   "disableAnimations": true,
   "profiles": {
     "defaults": {
-      "bellStyle": "none",
       "colorScheme": "Nord",
       "font": {
-        "face": "CaskaydiaCove NF",
-        "size": 12,
-        "weight": "normal"
+        "face": "CaskaydiaCove NF"
       }
     },
     "list": [
@@ -80,13 +77,15 @@
         "name": "Debian",
         "scrollbarState": "hidden",
         "source": "Windows.Terminal.Wsl",
-        "suppressApplicationTitle": true
+        "suppressApplicationTitle": true,
+        "tabColor": "#8D0037"
       },
       {
         "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
         "hidden": false,
         "name": "PowerShell",
-        "source": "Windows.Terminal.PowershellCore"
+        "source": "Windows.Terminal.PowershellCore",
+        "tabColor": "#1C4E88"
       }
     ]
   },
