@@ -1,13 +1,6 @@
-local file_formats = {
-  unix = "LF",
-  dos = "CRLF",
-  mac = "CR",
-}
-
 return function(options)
   vim.list_extend(options.force_inactive.filetypes, {
     "NvimTree",
-    "minimap",
     "packer",
     "startify",
   })
@@ -88,16 +81,17 @@ return function(options)
   }
 
   active[3][6] = {
-    provider = function()
-      return file_formats[vim.bo.fileformat]
-    end,
+    provider = "file_format",
   }
 
   active[3][7] = {
-    provider = function()
-      local file_type = require("feline.providers.file").file_type()
-      return file_type ~= "" and file_type or "TEXT"
-    end,
+    provider = {
+      name = "file_type",
+      opts = {
+        colored_icon = false,
+        filetype_icon = true,
+      },
+    },
   }
 
   active[3][8] = {
