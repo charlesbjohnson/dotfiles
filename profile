@@ -13,3 +13,4 @@ dotfile::env::asdf
 dotfile::env::fzf
 
 dotfile::prepend_env PATH "$HOME/.local/bin"
+dotfile::prepend_env PATH "bin"
