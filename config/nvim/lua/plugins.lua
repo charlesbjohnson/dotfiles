@@ -2,7 +2,7 @@ local fs = require("fs")
 local path = require("path")
 
 local packer_install_path = path.join({ vim.fn.stdpath("data"), "site/pack/packer/opt/packer.nvim" })
-local packer_compile_path = path.join({ vim.fn.stdpath("config"), "plugin/packer.vim" })
+local packer_compile_path = path.join({ vim.fn.stdpath("config"), "plugin/packer.lua" })
 
 if not fs.exists(packer_install_path) then
   vim.fn.system({ "git", "clone", "https://github.com/wbthomason/packer.nvim", packer_install_path })
