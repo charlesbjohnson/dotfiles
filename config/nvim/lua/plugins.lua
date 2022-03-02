@@ -3,6 +3,7 @@ local path = require("path")
 
 local packer_install_path = path.join({ vim.fn.stdpath("data"), "site/pack/packer/opt/packer.nvim" })
 local packer_compile_path = path.join({ vim.fn.stdpath("config"), "plugin/packer.lua" })
+local packer_snapshot_path = path.join({ vim.fn.stdpath("cache"), "packer.nvim" })
 
 if not fs.exists(packer_install_path) then
   vim.fn.system({ "git", "clone", "https://github.com/wbthomason/packer.nvim", packer_install_path })
@@ -95,6 +96,7 @@ return require("packer").startup({
 
   config = {
     compile_path = packer_compile_path,
+    snapshot_path = packer_snapshot_path,
     display = {
       open_fn = require("packer.util").float,
     },
