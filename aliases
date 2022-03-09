@@ -5,6 +5,7 @@ dotfile::alias "PPATH" 'echo "$PATH" | tr --squeeze-repeats ":" "\n"'
 dotfile::alias "cat" "bat"
 dotfile::alias "ls" "exa --group-directories-first --classify"
 dotfile::alias "lt" "exa --group-directories-first --classify --tree"
+dotfile::alias "vim" "nvim -u NONE"
 
 dotfile::alias "ungron" "gron --ungron"
 

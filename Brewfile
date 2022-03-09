@@ -26,7 +26,6 @@ brew "shfmt"
 brew "starship"
 brew "stylua"
 brew "tmux"
-brew "vim"
 brew "watchexec"
 
 Dir.glob(File.join(File.expand_path("~/.config/dotfile"), "Brewfile.*")) do |path|
