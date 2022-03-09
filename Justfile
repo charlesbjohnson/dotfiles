@@ -5,7 +5,7 @@ default:
 help: default
 
 # Run the formatters
-fmt: fmt-just fmt-json fmt-fish fmt-sh
+fmt: fmt-just fmt-json fmt-fish fmt-sh fmt-lua
 
 # Run the formatter for Just
 fmt-just *OPTS:
@@ -14,6 +14,10 @@ fmt-just *OPTS:
 # Run the formatter for JSON
 fmt-json *OPTS:
     @fd --strip-cwd-prefix --glob "**/*.json" | rargs bash -c 'echo "$(gron {} | sort | gron --ungron)" > {}'
+
+# Run the formatter for Lua
+fmt-lua *OPTS:
+    @fd --strip-cwd-prefix --glob "**/*.lua" | rargs stylua {{ OPTS }} {}
 
 # Run the formatter for Fish
 fmt-fish *OPTS:
