@@ -5,11 +5,15 @@ default:
 help: default
 
 # Run the formatters
-fmt: fmt-just fmt-fish fmt-sh
+fmt: fmt-just fmt-json fmt-fish fmt-sh
 
 # Run the formatter for Just
 fmt-just *OPTS:
     @just --unstable --fmt {{ OPTS }}
+
+# Run the formatter for JSON
+fmt-json *OPTS:
+    @fd --strip-cwd-prefix --glob "**/*.json" | rargs bash -c 'echo "$(gron {} | sort | gron --ungron)" > {}'
 
 # Run the formatter for Fish
 fmt-fish *OPTS:

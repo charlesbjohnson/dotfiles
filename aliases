@@ -9,6 +9,6 @@ dotfile::alias "vim" "nvim -u NONE"
 
 dotfile::alias "ungron" "gron --ungron"
 
-dotfile::alias "brewup" "brew bundle --global install && brew upgrade && brew bundle --global cleanup -f && brew cleanup && gron $HOME/.Brewfile.lock.json | sort | ungron > $HOME/.dotfiles/host-$HOSTNAME/Brewfile.lock.json"
+dotfile::alias "brewup" "brew bundle --global install && brew upgrade && brew bundle --global cleanup -f && brew cleanup && cp $HOME/.Brewfile.lock.json $HOME/.dotfiles/host-$HOSTNAME/Brewfile.lock.json"
 
 dotfile::load_all "$HOME/.config/dotfile" "aliases.*"
