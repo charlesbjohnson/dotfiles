@@ -35,8 +35,8 @@ main() {
 
   # Workaround for issue where reads from stdin are blocked
   # when stdin is redirected from another program (ie. bat).
-  cat > /tmp/wslclip
-  copy.exe < /tmp/wslclip
+  cat >/tmp/wslclip
+  copy.exe </tmp/wslclip
   rm /tmp/wslclip
 }
 

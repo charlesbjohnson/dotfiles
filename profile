@@ -1,3 +1,5 @@
+# fmt: shfmt
+
 dotfile::env::host
 dotfile::set_env PATH
 

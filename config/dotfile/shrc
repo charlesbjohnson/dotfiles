@@ -1,3 +1,5 @@
+# fmt: shfmt
+
 dotfile::set_env VISUAL "nvim"
 dotfile::set_env EDITOR "$VISUAL"
 dotfile::set_env TERM "xterm-256color"

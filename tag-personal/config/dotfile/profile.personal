@@ -1,3 +1,5 @@
+# fmt: shfmt
+
 dotfile::env::direnv
 
 dotfile::set_env GOPATH "$HOME/.go"

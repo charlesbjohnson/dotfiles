@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 shopt -s expand_aliases
 
 [[ -f "$HOME/.config/dotfile/init.sh" ]] && source "$HOME/.config/dotfile/init.sh"

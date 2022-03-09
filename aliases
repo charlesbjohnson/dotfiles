@@ -1,3 +1,5 @@
+# fmt: shfmt
+
 dotfile::alias "PPATH" 'echo "$PATH" | tr --squeeze-repeats ":" "\n"'
 
 dotfile::alias "cat" "bat"

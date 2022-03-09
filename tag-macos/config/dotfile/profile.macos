@@ -1,3 +1,5 @@
+# fmt: shfmt
+
 dotfile::set_env CLICOLOR "YES"
 dotfile::prepend_env PATH "$HOMEBREW_PREFIX/opt/ruby/bin"
 

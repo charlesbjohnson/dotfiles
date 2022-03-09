@@ -7,14 +7,14 @@ FORCE=false
 NAME=$(basename "$0")
 
 function invalid() {
-	cat <<EOF
+  cat <<EOF
 $NAME: unrecognized option '$1'
 Try '$NAME --help' for more information.
 EOF
 }
 
 function usage() {
-	cat <<EOF
+  cat <<EOF
 Usage: $NAME [OPTION]... [FILE]...
 
   Restore FILEs by restoring the previously bak'd copy.
@@ -31,81 +31,81 @@ EOF
 }
 
 function unbackup() {
-	local file="$1"
-	local dry="$2"
-	local extension="$3"
-	local force="$4"
+  local file="$1"
+  local dry="$2"
+  local extension="$3"
+  local force="$4"
 
-	local error
-	local bakfile="$file.$extension"
-	error=$(stat "$bakfile" 2>&1 >/dev/null)
-	if [[ -n "$error" ]]; then
-		error="${error##*stat: }"
-		echo "$NAME: $bakfile: $error"
-		EXIT_CODE=1
-		return
-	fi
+  local error
+  local bakfile="$file.$extension"
+  error=$(stat "$bakfile" 2>&1 >/dev/null)
+  if [[ -n "$error" ]]; then
+    error="${error##*stat: }"
+    echo "$NAME: $bakfile: $error"
+    EXIT_CODE=1
+    return
+  fi
 
-	if [[ "$force" == false ]]; then
-		if stat "$file" &>/dev/null; then
-			echo "$NAME: $file: Source file exists, overwrite it with --force"
-			EXIT_CODE=1
-			return
-		fi
-	fi
+  if [[ "$force" == false ]]; then
+    if stat "$file" &>/dev/null; then
+      echo "$NAME: $file: Source file exists, overwrite it with --force"
+      EXIT_CODE=1
+      return
+    fi
+  fi
 
-	if [[ "$dry" == true ]]; then
-		echo "mv $bakfile $file"
-		return
-	fi
+  if [[ "$dry" == true ]]; then
+    echo "mv $bakfile $file"
+    return
+  fi
 
-	mv "$bakfile" "$file"
+  mv "$bakfile" "$file"
 }
 
 function main() {
-	if [[ -z "$*" ]]; then
-		usage
-		exit 1
-	fi
+  if [[ -z "$*" ]]; then
+    usage
+    exit 1
+  fi
 
-	for arg in "$@"; do
-		unbackup "$arg" "$DRY_RUN" "$EXTENSION" "$FORCE"
-	done
+  for arg in "$@"; do
+    unbackup "$arg" "$DRY_RUN" "$EXTENSION" "$FORCE"
+  done
 
-	exit "$EXIT_CODE"
+  exit "$EXIT_CODE"
 }
 
 if ! OPTS=$(getopt --options hne:f --long help,dry-run,extension:,force --name "$NAME" -- "$@" 2>/dev/null); then
-	invalid "$1"
-	exit 1
+  invalid "$1"
+  exit 1
 fi
 
 eval set -- "$OPTS"
 
 while true; do
-	case "$1" in
-	-h | --help)
-		usage
-		exit 0
-		;;
-	-n | --dry-run)
-		DRY_RUN=true
-		shift
-		;;
-	-e | --extension)
-		EXTENSION="$2"
-		shift 2
-		;;
-	-f | --force)
-		FORCE=true
-		shift
-		;;
-	--)
-		shift
-		break
-		;;
-	*) break ;;
-	esac
+  case "$1" in
+  -h | --help)
+    usage
+    exit 0
+    ;;
+  -n | --dry-run)
+    DRY_RUN=true
+    shift
+    ;;
+  -e | --extension)
+    EXTENSION="$2"
+    shift 2
+    ;;
+  -f | --force)
+    FORCE=true
+    shift
+    ;;
+  --)
+    shift
+    break
+    ;;
+  *) break ;;
+  esac
 done
 
 main "$@"
