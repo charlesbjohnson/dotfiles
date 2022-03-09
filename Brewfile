@@ -27,6 +27,7 @@ brew "starship"
 brew "stylua"
 brew "tmux"
 brew "watchexec"
+brew "yq"
 
 Dir.glob(File.join(File.expand_path("~/.config/dotfile"), "Brewfile.*")) do |path|
   instance_eval(File.read(path))
