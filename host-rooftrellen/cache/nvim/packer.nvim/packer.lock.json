@@ -2,6 +2,9 @@
   "FixCursorHold.nvim": {
     "commit": "1bfb32e"
   },
+  "alpha-nvim": {
+    "commit": "14be0ac"
+  },
   "barbar.nvim": {
     "commit": "be65945"
   },
@@ -139,9 +142,6 @@
   },
   "vim-sort-motion": {
     "commit": "c8782be"
-  },
-  "vim-startify": {
-    "commit": "81e36c3"
   },
   "vim-surround": {
     "commit": "baf89ad"

@@ -80,6 +80,11 @@ local no_errors, error_msg = pcall(function()
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/FixCursorHold.nvim",
       url = "https://github.com/antoinemadec/FixCursorHold.nvim",
     },
+    ["alpha-nvim"] = {
+      loaded = true,
+      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+      url = "https://github.com/goolord/alpha-nvim",
+    },
     ["barbar.nvim"] = {
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/barbar.nvim",
@@ -316,11 +321,6 @@ local no_errors, error_msg = pcall(function()
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/vim-sort-motion",
       url = "https://github.com/christoomey/vim-sort-motion",
-    },
-    ["vim-startify"] = {
-      loaded = true,
-      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/vim-startify",
-      url = "https://github.com/mhinz/vim-startify",
     },
     ["vim-surround"] = {
       loaded = true,

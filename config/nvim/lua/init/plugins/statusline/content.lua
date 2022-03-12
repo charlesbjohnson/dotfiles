@@ -2,7 +2,7 @@ return function(options)
   vim.list_extend(options.force_inactive.filetypes, {
     "NvimTree",
     "packer",
-    "startify",
+    "alpha",
   })
 
   local active = options.components.active

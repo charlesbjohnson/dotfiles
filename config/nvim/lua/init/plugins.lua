@@ -47,6 +47,9 @@ require("trouble").setup()
 vim.nmap("<C-n>", "<Cmd>TroubleToggle document_diagnostics<CR>", { silent = true })
 vim.nmap("<C-M-n>", "<Cmd>TroubleToggle workspace_diagnostics<CR>", { silent = true })
 
+-- goolord/alpha-nvim
+require("alpha").setup(require("alpha.themes.startify").config)
+
 -- hrsh7th/nvim-cmp
 require("cmp").setup({
   mapping = {
@@ -127,7 +130,7 @@ require("indent_blankline").setup({
   char_list = { "|", "¦", "┆", "┊" },
 
   buftype_exclude = { "terminal" },
-  filetype_exclude = { "help", "startify" },
+  filetype_exclude = { "help", "alpha" },
 
   use_treesitter = true,
 
@@ -135,24 +138,6 @@ require("indent_blankline").setup({
   show_first_indent_level = false,
   show_trailing_blankline_indent = false,
 })
-
--- mhinz/vim-startify
-vim.g.startify_change_to_dir = 1
-vim.g.startify_change_to_vcs_root = 1
-vim.g.startify_relative_path = 1
-vim.g.startify_custom_header = ([[
-
-
-          ::::    ::: :::::::::: ::::::::  :::     ::: :::::::::::   :::   :::
-         :+:+:   :+: :+:       :+:    :+: :+:     :+:     :+:      :+:+: :+:+:
-        :+:+:+  +:+ +:+       +:+    +:+ +:+     +:+     +:+     +:+ +:+:+ +:+
-       +#+ +:+ +#+ +#++:++#  +#+    +:+ +#+     +:+     +#+     +#+  +:+  +#+
-      +#+  +#+#+# +#+       +#+    +#+  +#+   +#+      +#+     +#+       +#+
-     #+#   #+#+# #+#       #+#    #+#   #+#+#+#       #+#     #+#       #+#
-    ###    #### ########## ########      ###     ########### ###       ###
-    +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
-    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-]]):split("\n")
 
 -- norcalli/nvim-colorizer.lua
 require("colorizer").setup()
@@ -249,7 +234,7 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 -- petertriho/nvim-scrollbar
 require("scrollbar").setup({
   excluded_buftypes = { "nofile", "nowrite", "prompt", "quickfix", "terminal" },
-  excluded_filetypes = { "gitcommit", "packer", "startify" },
+  excluded_filetypes = { "gitcommit", "packer", "alpha" },
   handle = {
     color = require("colors")[3],
   },
