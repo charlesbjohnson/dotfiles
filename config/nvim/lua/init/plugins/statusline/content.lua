@@ -16,7 +16,7 @@ return function(options)
     icon = " ",
     provider = "git_branch",
     enabled = function()
-      return require("feline.providers.git").git_branch({}) ~= ""
+      return require("feline.providers.git").git_branch() ~= ""
     end,
   }
 
@@ -24,7 +24,7 @@ return function(options)
     icon = "+",
     provider = "git_diff_added",
     enabled = function()
-      return require("feline.providers.git").git_diff_added({}) ~= ""
+      return require("feline.providers.git").git_diff_added() ~= ""
     end,
   }
 
@@ -32,7 +32,7 @@ return function(options)
     icon = "~",
     provider = "git_diff_changed",
     enabled = function()
-      return require("feline.providers.git").git_diff_changed({}) ~= ""
+      return require("feline.providers.git").git_diff_changed() ~= ""
     end,
   }
 
@@ -40,7 +40,7 @@ return function(options)
     icon = "-",
     provider = "git_diff_removed",
     enabled = function()
-      return require("feline.providers.git").git_diff_removed({}) ~= ""
+      return require("feline.providers.git").git_diff_removed() ~= ""
     end,
   }
 
