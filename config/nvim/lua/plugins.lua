@@ -47,7 +47,7 @@ return require("packer").startup({
     use("andymass/vim-matchup")
     use("antoinemadec/FixCursorHold.nvim")
     use("junegunn/vim-easy-align")
-    use("psliwka/vim-smoothie")
+    use("karb94/neoscroll.nvim")
     use("svermeulen/vim-cutlass")
     use("windwp/nvim-autopairs")
     use("windwp/nvim-ts-autotag")

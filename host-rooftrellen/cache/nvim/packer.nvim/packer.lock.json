@@ -41,6 +41,9 @@
   "lsp_signature.nvim": {
     "commit": "e4f7dad"
   },
+  "neoscroll.nvim": {
+    "commit": "07242b9"
+  },
   "nord-vim": {
     "commit": "a825678"
   },
@@ -136,9 +139,6 @@
   },
   "vim-schlepp": {
     "commit": "dfe67ad"
-  },
-  "vim-smoothie": {
-    "commit": "10fd0aa"
   },
   "vim-sort-motion": {
     "commit": "c8782be"

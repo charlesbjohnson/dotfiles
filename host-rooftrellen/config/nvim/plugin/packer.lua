@@ -145,6 +145,11 @@ local no_errors, error_msg = pcall(function()
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
       url = "https://github.com/ray-x/lsp_signature.nvim",
     },
+    ["neoscroll.nvim"] = {
+      loaded = true,
+      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
+      url = "https://github.com/karb94/neoscroll.nvim",
+    },
     ["nord-vim"] = {
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nord-vim",
@@ -311,11 +316,6 @@ local no_errors, error_msg = pcall(function()
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/vim-schlepp",
       url = "https://github.com/zirrostig/vim-schlepp",
-    },
-    ["vim-smoothie"] = {
-      loaded = true,
-      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/vim-smoothie",
-      url = "https://github.com/psliwka/vim-smoothie",
     },
     ["vim-sort-motion"] = {
       loaded = true,

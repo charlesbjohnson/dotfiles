@@ -82,6 +82,17 @@ require("init.plugins.lsp.null-ls")
 vim.nmap("<Leader>a", "<Plug>(EasyAlign)", { noremap = false })
 vim.xmap("<CR>", "<Plug>(EasyAlign)", { noremap = false })
 
+-- karb94/neoscroll.nvim
+require("neoscroll").setup({
+  mappings = {},
+  easing_function = "circular",
+})
+
+require("neoscroll.config").set_mappings({
+  ["<C-M-j>"] = { "scroll", { "0.7", "true", "300" } },
+  ["<C-M-k>"] = { "scroll", { "-0.7", "true", "300" } },
+})
+
 -- kevinhwang91/nvim-hlslens
 require("hlslens").setup({
   calm_down = true,
@@ -251,15 +262,6 @@ require("scrollbar").setup({
     Misc = { color = require("colors")[15] },
   },
 })
-
--- psliwka/vim-smoothie
-vim.g.smoothie_no_default_mappings = 1
-
-vim.nmap("<C-M-j>", "<Plug>(SmoothieForwards)", { noremap = false })
-vim.xmap("<C-M-j>", "<Plug>(SmoothieForwards)", { noremap = false })
-
-vim.nmap("<C-M-k>", "<Plug>(SmoothieBackwards)", { noremap = false })
-vim.xmap("<C-M-k>", "<Plug>(SmoothieBackwards)", { noremap = false })
 
 -- romgrk/barbar.nvim
 vim.g.bufferline = {
