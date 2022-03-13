@@ -8,16 +8,16 @@ function dotfile::env::brew
     dotfile::unset_env HOMEBREW_SHELLENV_PREFIX
 
     if not string match --quiet "*brew*" $PATH
-        eval ($argv[1]/bin/brew shellenv)
+        eval "$($argv[1]/bin/brew shellenv)"
     end
 end
 
 function dotfile::env::direnv
-    direnv hook fish | source
+    eval "$(direnv hook "$(basename "$SHELL")")"
 end
 
 function dotfile::env::fzf
-    source $HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.fish && fzf_key_bindings
+    source "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.$(basename "$SHELL")"
 end
 
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/gnu-utility/init.zsh
@@ -60,7 +60,7 @@ function dotfile::env::gnu
             continue
         end
 
-        if command --search --quiet $cmd && test builtin = (type --type $cmd)
+        if command --search --quiet $cmd && test builtin = "$(type --type $cmd)"
             continue
         end
 
@@ -69,5 +69,5 @@ function dotfile::env::gnu
 end
 
 function dotfile::env::host
-    dotfile::set_env HOSTNAME (hostname)
+    dotfile::set_env HOSTNAME "$(hostname)"
 end

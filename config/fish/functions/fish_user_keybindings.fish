@@ -1,5 +1,6 @@
 function fish_user_keybindings
     fish_vi_key_bindings
+    fzf_key_bindings
 
     bind p fish_clipboard_paste
 

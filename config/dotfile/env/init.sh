@@ -15,11 +15,11 @@ function dotfile::env::brew() {
 }
 
 function dotfile::env::direnv() {
-  eval "$(direnv hook bash)"
+  eval "$(direnv hook "$(basename "$SHELL")")"
 }
 
 function dotfile::env::fzf() {
-  source "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.bash"
+  source "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.$(basename "$SHELL")"
 }
 
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/gnu-utility/init.zsh

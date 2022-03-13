@@ -14,7 +14,7 @@ function dotfile::shell::gpg() {
 }
 
 function dotfile::shell::prompt() {
-  eval "$(starship init bash)"
+  eval "$(starship init "$(basename "$SHELL")")"
 }
 
 function dotfile::shell::ssh() {

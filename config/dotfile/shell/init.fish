@@ -3,26 +3,26 @@ function dotfile::shell::dircolors
         curl --silent --location --output $HOME/.dir_colors $argv[1]
     end
 
-    eval (dircolors --csh $HOME/.dir_colors)
+    eval "$(dircolors --csh $HOME/.dir_colors)"
 end
 
 function dotfile::shell::gpg
-    dotfile::set_env GPG_TTY (tty)
+    dotfile::set_env GPG_TTY "$(tty)"
     gpg-agent --daemon 2>/dev/null
 end
 
 function dotfile::shell::prompt
-    starship init fish | source
+    eval "$(starship init "$(basename "$SHELL")")"
 end
 
 function dotfile::shell::ssh
-    dotfile::set_env SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
+    dotfile::set_env SSH_AUTH_SOCK "$(gpgconf --list-dirs agent-ssh-socket)"
     dotfile::unset_env SSH_AGENT_PID
 end
 
 function dotfile::shell::terminfo
     if not test -d "$HOME/.terminfo"
-        tic -x -o "$HOME/.terminfo" (curl --silent --location $argv[1] | gunzip | psub)
+        tic -x -o "$HOME/.terminfo" "$(curl --silent --location $argv[1] | gunzip | psub)"
     end
 end
 

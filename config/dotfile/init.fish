@@ -7,7 +7,7 @@ function dotfile::append_env
         return
     end
 
-    for value in (string split ":" $values)
+    for value in $(string split ":" $values)
         if not contains $value $$name
             set --append $name $value
         end
@@ -23,7 +23,7 @@ function dotfile::prepend_env
         return
     end
 
-    for value in (string split ":" $values)[-1..1]
+    for value in $(string split ":" $values)[-1..1]
         if not contains $value $$name
             set --prepend $name $value
         end
@@ -45,7 +45,7 @@ function dotfile::load
 end
 
 function dotfile::load_all
-    for file in (find -L $argv[1] -name $argv[2] -type f)
+    for file in $(find -L $argv[1] -name $argv[2] -type f)
         source $file
     end
 end
