@@ -82,7 +82,6 @@ return require("packer").startup({
     use("nvim-lua/popup.nvim")
 
     -- Syntax & Language Enhancements
-    use({ "dag/vim-fish", ft = "fish" })
     use({ "masukomi/vim-markdown-folding", ft = "markdown" })
     use({ "tpope/vim-git", ft = "gitconfig" })
 

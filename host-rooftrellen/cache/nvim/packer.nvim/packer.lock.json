@@ -119,9 +119,6 @@
   "vim-easy-align": {
     "commit": "12dd631"
   },
-  "vim-fish": {
-    "commit": "50b95cb"
-  },
   "vim-git": {
     "commit": "60b6fc7"
   },
