@@ -6,23 +6,18 @@ dotfile::set_env TERM "xterm-256color"
 
 dotfile::shell::terminfo "https://invisible-island.net/datafiles/current/terminfo.src.gz"
 dotfile::shell::dircolors "https://raw.githubusercontent.com/arcticicestudio/nord-dircolors/develop/src/dir_colors"
-dotfile::shell::prompt
 
 dotfile::shell::tmux "default"
-dotfile::shell::gpg
-dotfile::shell::ssh
+
+# prompt
+eval "$(starship init "$(basename "$SHELL")")"
+
+# gpg
+dotfile::set_env GPG_TTY "$(tty)"
+gpg-agent --daemon 2>/dev/null
+
+# ssh
+dotfile::set_env SSH_AUTH_SOCK "$(gpgconf --list-dirs agent-ssh-socket)"
+dotfile::unset_env SSH_AGENT_PID
 
 dotfile::load_all "$HOME/.config/dotfile" "shrc.*"
-
-dotfile::set_env FZF_DEFAULT_COMMAND "fd --type f --hidden --follow"
-dotfile::set_env FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
-dotfile::set_env FZF_DEFAULT_OPTS "                       \
-  --bind 'alt-j:down,alt-k:up'                            \
-  --color 'fg:#E5E9F0,bg:#3B4252,hl:#88C0D0'              \
-  --color 'fg+:#ECEFF4,bg+:#4C566A,hl+:#88C0D0'           \
-  --color 'gutter:#3B4252,spinner:#B48DAC'                \
-  --color 'prompt:#BF6069,pointer:#B48DAC,marker:#A3BE8B' \
-  --info hidden                                           \
-  --margin 0,2                                            \
-  --pointer '|' --prompt '| '                             \
-"

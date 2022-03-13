@@ -8,20 +8,6 @@ function dotfile::shell::dircolors() {
   eval "$(dircolors --sh "$HOME/.dir_colors")"
 }
 
-function dotfile::shell::gpg() {
-  dotfile::set_env GPG_TTY "$(tty)"
-  gpg-agent --daemon 2>/dev/null
-}
-
-function dotfile::shell::prompt() {
-  eval "$(starship init "$(basename "$SHELL")")"
-}
-
-function dotfile::shell::ssh() {
-  dotfile::set_env SSH_AUTH_SOCK "$(gpgconf --list-dirs agent-ssh-socket)"
-  dotfile::unset_env SSH_AGENT_PID
-}
-
 function dotfile::shell::terminfo() {
   if ! [[ -d "$HOME/.terminfo" ]]; then
     local tmp="$(mktemp)"

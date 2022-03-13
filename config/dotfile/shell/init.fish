@@ -6,20 +6,6 @@ function dotfile::shell::dircolors
     eval "$(dircolors --csh $HOME/.dir_colors)"
 end
 
-function dotfile::shell::gpg
-    dotfile::set_env GPG_TTY "$(tty)"
-    gpg-agent --daemon 2>/dev/null
-end
-
-function dotfile::shell::prompt
-    eval "$(starship init "$(basename "$SHELL")")"
-end
-
-function dotfile::shell::ssh
-    dotfile::set_env SSH_AUTH_SOCK "$(gpgconf --list-dirs agent-ssh-socket)"
-    dotfile::unset_env SSH_AGENT_PID
-end
-
 function dotfile::shell::terminfo
     if not test -d "$HOME/.terminfo"
         tic -x -o "$HOME/.terminfo" "$(curl --silent --location $argv[1] | gunzip | psub)"

@@ -14,14 +14,6 @@ function dotfile::env::brew() {
   fi
 }
 
-function dotfile::env::direnv() {
-  eval "$(direnv hook "$(basename "$SHELL")")"
-}
-
-function dotfile::env::fzf() {
-  source "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.$(basename "$SHELL")"
-}
-
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/gnu-utility/init.zsh
 function dotfile::env::gnu() {
   if [[ "$(type whoami)" =~ gwhoami ]]; then
@@ -79,8 +71,4 @@ function dotfile::env::gnu() {
       export -f "$cmd"
     fi
   done
-}
-
-function dotfile::env::host() {
-  dotfile::set_env HOSTNAME "$(hostname)"
 }

@@ -12,14 +12,6 @@ function dotfile::env::brew
     end
 end
 
-function dotfile::env::direnv
-    eval "$(direnv hook "$(basename "$SHELL")")"
-end
-
-function dotfile::env::fzf
-    source "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.$(basename "$SHELL")"
-end
-
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/gnu-utility/init.zsh
 function dotfile::env::gnu
     if not command --search --quiet gwhoami
@@ -66,8 +58,4 @@ function dotfile::env::gnu
 
         eval "function $cmd; $prefixed_cmd \$argv; end"
     end
-end
-
-function dotfile::env::host
-    dotfile::set_env HOSTNAME "$(hostname)"
 end

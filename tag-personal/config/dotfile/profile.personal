@@ -1,6 +1,7 @@
 # fmt: shfmt
 
-dotfile::env::direnv
+# direnv
+eval "$(direnv hook "$(basename "$SHELL")")"
 
 dotfile::set_env GOPATH "$HOME/.go"
 dotfile::prepend_env PATH "$GOPATH/bin"
