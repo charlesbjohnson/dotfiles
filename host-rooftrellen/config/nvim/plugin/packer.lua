@@ -281,13 +281,6 @@ local no_errors, error_msg = pcall(function()
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/vim-easy-align",
       url = "https://github.com/junegunn/vim-easy-align",
     },
-    ["vim-git"] = {
-      loaded = false,
-      needs_bufread = true,
-      only_cond = false,
-      path = "/home/charlie/.local/share/nvim/site/pack/packer/opt/vim-git",
-      url = "https://github.com/tpope/vim-git",
-    },
     ["vim-illuminate"] = {
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/vim-illuminate",
@@ -357,20 +350,8 @@ local no_errors, error_msg = pcall(function()
   vim.cmd([[au!]])
   -- Filetype lazy-loads
   time([[Defining lazy-load filetype autocommands]], true)
-  vim.cmd([[au FileType gitconfig ++once lua require("packer.load")({'vim-git'}, { ft = "gitconfig" }, _G.packer_plugins)]])
   vim.cmd([[au FileType markdown ++once lua require("packer.load")({'vim-markdown-folding'}, { ft = "markdown" }, _G.packer_plugins)]])
   time([[Defining lazy-load filetype autocommands]], false)
-  vim.cmd("augroup END")
-  vim.cmd([[augroup filetypedetect]])
-  time(
-    [[Sourcing ftdetect script at: /home/charlie/.local/share/nvim/site/pack/packer/opt/vim-git/ftdetect/git.vim]],
-    true
-  )
-  vim.cmd([[source /home/charlie/.local/share/nvim/site/pack/packer/opt/vim-git/ftdetect/git.vim]])
-  time(
-    [[Sourcing ftdetect script at: /home/charlie/.local/share/nvim/site/pack/packer/opt/vim-git/ftdetect/git.vim]],
-    false
-  )
   vim.cmd("augroup END")
   if should_profile then
     save_profiles()

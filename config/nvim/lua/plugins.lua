@@ -84,7 +84,6 @@ return require("packer").startup({
 
     -- Syntax & Language Enhancements
     use({ "masukomi/vim-markdown-folding", ft = "markdown" })
-    use({ "tpope/vim-git", ft = "gitconfig" })
 
     -- Overrides
     for _, register in pairs(require.tree("plugins")) do

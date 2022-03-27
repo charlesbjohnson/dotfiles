@@ -122,9 +122,6 @@
   "vim-easy-align": {
     "commit": "12dd631"
   },
-  "vim-git": {
-    "commit": "60b6fc7"
-  },
   "vim-illuminate": {
     "commit": "487563d"
   },
