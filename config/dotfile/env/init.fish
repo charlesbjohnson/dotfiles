@@ -59,3 +59,7 @@ function dotfile::env::gnu
         eval "function $cmd; $prefixed_cmd \$argv; end"
     end
 end
+
+function dotfile::env::shell
+    dotfile::set_env SHELL "$(which "$(ps --pid %self -o "comm=")")"
+end

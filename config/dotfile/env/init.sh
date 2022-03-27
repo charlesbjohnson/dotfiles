@@ -72,3 +72,7 @@ function dotfile::env::gnu() {
     fi
   done
 }
+
+function dotfile::env::shell() {
+  dotfile::set_env SHELL "$(which "$(ps --pid "$$" -o "comm=")")"
+}

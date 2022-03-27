@@ -1,5 +1,7 @@
 # fmt: shfmt
 
+dotfile::env::shell
+
 dotfile::set_env HOSTNAME "$(hostname)"
 dotfile::set_env PATH
 
