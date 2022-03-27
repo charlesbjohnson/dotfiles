@@ -162,7 +162,6 @@ vim.nmap("<C-b>", "<Cmd>Neotree toggle<CR>", { silent = true })
 -- nvim-telescope/telescope.nvim
 require("telescope").setup({
   defaults = {
-    color_devicons = false,
     mappings = {
       i = {
         ["<C-n>"] = false,
