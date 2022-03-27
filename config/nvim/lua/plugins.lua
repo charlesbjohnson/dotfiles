@@ -36,7 +36,7 @@ return require("packer").startup({
     -- Application Features
     use("akinsho/toggleterm.nvim")
     use("goolord/alpha-nvim")
-    use("kyazdani42/nvim-tree.lua")
+    use({ "nvim-neo-tree/neo-tree.nvim", branch = "v2.x" })
     use("nvim-telescope/telescope.nvim")
     use("petertriho/nvim-scrollbar")
     use("romgrk/barbar.nvim")
@@ -78,6 +78,7 @@ return require("packer").startup({
     use("norcalli/nvim-colorizer.lua")
 
     -- Supporting Libraries
+    use("MunifTanjim/nui.nvim")
     use("nvim-lua/plenary.nvim")
     use("nvim-lua/popup.nvim")
 

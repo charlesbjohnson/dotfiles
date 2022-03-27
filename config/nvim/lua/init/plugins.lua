@@ -112,27 +112,6 @@ vim.nmap("# #", "<Cmd>lua require('hlslens').start()<CR>")
 vim.nmap("g* g*", "<Cmd>lua require('hlslens').start()<CR>")
 vim.nmap("g# g#", "<Cmd>lua require('hlslens').start()<CR>")
 
--- kyazdani42/nvim-tree.lua
-require("nvim-tree").setup({
-  view = {
-    mappings = {
-      custom_only = true,
-      list = {
-        { key = "<CR>", cb = require("nvim-tree.config").nvim_tree_callback("edit") },
-        { key = "<BS>", cb = require("nvim-tree.config").nvim_tree_callback("close_node") },
-        { key = "<Tab>", cb = require("nvim-tree.config").nvim_tree_callback("preview") },
-        { key = "<C-\\>", cb = require("nvim-tree.config").nvim_tree_callback("vsplit") },
-        { key = "<C-_>", cb = require("nvim-tree.config").nvim_tree_callback("split") },
-        { key = "r", cb = require("nvim-tree.config").nvim_tree_callback("rename") },
-        { key = "d", cb = require("nvim-tree.config").nvim_tree_callback("remove") },
-      },
-    },
-  },
-})
-
-vim.nmap("<C-b>", "<Cmd>NvimTreeToggle<CR>", { silent = true })
-vim.nmap("<C-M-b>", "<Cmd>NvimTreeRefresh<CR>", { silent = true })
-
 -- lewis6991/gitsigns.nvim
 require("gitsigns").setup()
 
@@ -152,6 +131,33 @@ require("indent_blankline").setup({
 
 -- norcalli/nvim-colorizer.lua
 require("colorizer").setup()
+
+-- nvim-neo-tree/neo-tree.nvim
+require("neo-tree").setup({
+  close_if_last_window = true,
+  window = {
+    position = "right",
+    mappings = {
+      ["<BS>"] = "close_node",
+      ["C"] = "",
+
+      ["<C-\\>"] = "open_vsplit",
+      ["s"] = "",
+
+      ["<C-_>"] = "open_split",
+      ["S"] = "",
+
+      ["<ESC>"] = "clear_filter",
+      ["<c-x>"] = "",
+
+      ["p"] = "",
+      ["x"] = "",
+      ["y"] = "",
+    },
+  },
+})
+
+vim.nmap("<C-b>", "<Cmd>Neotree toggle<CR>", { silent = true })
 
 -- nvim-telescope/telescope.nvim
 require("telescope").setup({

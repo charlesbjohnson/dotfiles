@@ -1,6 +1,6 @@
 return function(options)
   vim.list_extend(options.force_inactive.filetypes, {
-    "NvimTree",
+    "neo%-tree",
     "packer",
     "alpha",
   })

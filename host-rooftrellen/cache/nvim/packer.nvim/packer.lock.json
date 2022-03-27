@@ -41,11 +41,17 @@
   "lsp_signature.nvim": {
     "commit": "e4f7dad"
   },
+  "neo-tree.nvim": {
+    "commit": "b500daa"
+  },
   "neoscroll.nvim": {
     "commit": "07242b9"
   },
   "nord-vim": {
     "commit": "a825678"
+  },
+  "nui.nvim": {
+    "commit": "513ff9b"
   },
   "null-ls.nvim": {
     "commit": "4cbdc9f"
@@ -70,9 +76,6 @@
   },
   "nvim-scrollbar": {
     "commit": "b10ece8"
-  },
-  "nvim-tree.lua": {
-    "commit": "d93a93c"
   },
   "nvim-treesitter": {
     "commit": "2d76916"

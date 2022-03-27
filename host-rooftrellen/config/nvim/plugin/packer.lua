@@ -145,6 +145,11 @@ local no_errors, error_msg = pcall(function()
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
       url = "https://github.com/ray-x/lsp_signature.nvim",
     },
+    ["neo-tree.nvim"] = {
+      loaded = true,
+      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
+      url = "https://github.com/nvim-neo-tree/neo-tree.nvim",
+    },
     ["neoscroll.nvim"] = {
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
@@ -154,6 +159,11 @@ local no_errors, error_msg = pcall(function()
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nord-vim",
       url = "https://github.com/arcticicestudio/nord-vim",
+    },
+    ["nui.nvim"] = {
+      loaded = true,
+      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nui.nvim",
+      url = "https://github.com/MunifTanjim/nui.nvim",
     },
     ["null-ls.nvim"] = {
       loaded = true,
@@ -194,11 +204,6 @@ local no_errors, error_msg = pcall(function()
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nvim-scrollbar",
       url = "https://github.com/petertriho/nvim-scrollbar",
-    },
-    ["nvim-tree.lua"] = {
-      loaded = true,
-      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
-      url = "https://github.com/kyazdani42/nvim-tree.lua",
     },
     ["nvim-treesitter"] = {
       loaded = true,
