@@ -3,7 +3,7 @@
     "commit": "1bfb32e"
   },
   "alpha-nvim": {
-    "commit": "14be0ac"
+    "commit": "8a1477d"
   },
   "barbar.nvim": {
     "commit": "be65945"
@@ -24,13 +24,13 @@
     "commit": "a8e3e66"
   },
   "feline.nvim": {
-    "commit": "d8093d2"
+    "commit": "290bea8"
   },
   "gitsigns.nvim": {
-    "commit": "7de9533"
+    "commit": "2a10723"
   },
   "indent-blankline.nvim": {
-    "commit": "9915d46"
+    "commit": "ebedbed"
   },
   "kommentary": {
     "commit": "12ecde4"
@@ -54,43 +54,43 @@
     "commit": "513ff9b"
   },
   "null-ls.nvim": {
-    "commit": "4cbdc9f"
+    "commit": "7253974"
   },
   "nvim-autopairs": {
-    "commit": "d2cde7c"
+    "commit": "f3ebca3"
   },
   "nvim-cmp": {
-    "commit": "1001683"
+    "commit": "272cbdc"
   },
   "nvim-colorizer.lua": {
     "commit": "36c610a"
   },
   "nvim-hlslens": {
-    "commit": "6c6dcf5"
+    "commit": "22f7df7"
   },
   "nvim-lsp-installer": {
-    "commit": "19aa854"
+    "commit": "e79f0a5"
   },
   "nvim-lspconfig": {
-    "commit": "686a00f"
+    "commit": "7d5a6dc"
   },
   "nvim-scrollbar": {
     "commit": "b10ece8"
   },
   "nvim-treesitter": {
-    "commit": "2d76916"
+    "commit": "9769194"
   },
   "nvim-ts-autotag": {
     "commit": "57035b5"
   },
   "nvim-web-devicons": {
-    "commit": "4415d1a"
+    "commit": "09e6231"
   },
   "packer.nvim": {
-    "commit": "c576ab3"
+    "commit": "4dedd3b"
   },
   "plenary.nvim": {
-    "commit": "14dfb40"
+    "commit": "0d66015"
   },
   "popup.nvim": {
     "commit": "b7404d3"
@@ -99,22 +99,22 @@
     "commit": "9bf02ed"
   },
   "splitjoin.vim": {
-    "commit": "a9d55ff"
+    "commit": "bbc9fe6"
   },
   "telescope-fzf-native.nvim": {
     "commit": "8ec164b"
   },
   "telescope.nvim": {
-    "commit": "df303e1"
+    "commit": "cf2d6d3"
   },
   "tmux.nvim": {
     "commit": "8bb089e"
   },
   "toggleterm.nvim": {
-    "commit": "e97d0c1"
+    "commit": "9f969e7"
   },
   "trouble.nvim": {
-    "commit": "20469be"
+    "commit": "691d490"
   },
   "vim-cutlass": {
     "commit": "7afd649"
@@ -141,7 +141,7 @@
     "commit": "c8782be"
   },
   "vim-surround": {
-    "commit": "baf89ad"
+    "commit": "9857a87"
   },
   "vim-textobj-backticks": {
     "commit": "88cad8a"
