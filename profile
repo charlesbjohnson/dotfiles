@@ -1,7 +1,5 @@
 # fmt: shfmt
 
-dotfile::env::shell
-
 dotfile::set_env HOSTNAME "$(hostname)"
 dotfile::set_env PATH
 
@@ -11,8 +9,9 @@ dotfile::append_env PATH "/bin"
 dotfile::append_env PATH "/sbin"
 
 dotfile::load "$HOME/.config/dotfile/profile.homebrew"
-dotfile::load_all "$HOME/.config/dotfile" "profile.*"
+dotfile::env::shell
 
+dotfile::load_all "$HOME/.config/dotfile" "profile.*"
 dotfile::env::asdf
 
 # fzf
