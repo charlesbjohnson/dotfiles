@@ -1,5 +1,4 @@
 local lspnull = require("null-ls")
-local lspnull_h = require("null-ls.helpers")
 
 local fs = require("fs")
 local path = require("path")
@@ -31,28 +30,6 @@ function M.registration(register)
     register(lspnull.builtins.diagnostics.eslint_d.with({
       command = "npm",
       args = ("exec --yes --parseable -- eslint_d --stdin --stdin-filename $FILENAME --format json"):split(" "),
-
-      to_stdin = true,
-      check_exit_code = { 0, 1 },
-
-      format = "json",
-      on_output = function(params)
-        local items = table.dig(params, { "output", "[1]", "messages" }) or {}
-        local parser = lspnull_h.diagnostics.from_json({
-          attributes = {
-            severity = "severity",
-          },
-          diagnostic = {
-            source = "eslint",
-          },
-          severities = {
-            lspnull_h.diagnostics.severities["warning"],
-            lspnull_h.diagnostics.severities["error"],
-          },
-        })
-
-        return parser({ output = items })
-      end,
     }))
 
     register(lspnull.builtins.formatting.eslint_d.with({
@@ -63,15 +40,11 @@ function M.registration(register)
     return
   end
 
-  register({
-    method = lspnull.methods.FORMATTING,
+  register(lspnull.builtins.formatting.prettierd.with({
     filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
-    generator = lspnull_h.formatter_factory({
-      command = "npm",
-      args = ("exec --yes --parseable -- @fsouza/prettierd $FILENAME"):split(" "),
-      to_stdin = true,
-    }),
-  })
+    command = "npm",
+    args = ("exec --yes --parseable -- @fsouza/prettierd $FILENAME"):split(" "),
+  }))
 end
 
 function M.root_patterns()

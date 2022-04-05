@@ -1,23 +1,11 @@
 local lspnull = require("null-ls")
-local lspnull_h = require("null-ls.helpers")
 
 local M = {}
 
 function M.registration(register)
-  register({
-    method = lspnull.methods.DIAGNOSTICS,
-    filetypes = { "fish" },
-    generator = lspnull_h.generator_factory({
-      command = "fish",
-      args = ("--no-execute $FILENAME"):split(" "),
-
-      from_stderr = true,
-
-      format = "line",
-      on_output = lspnull_h.diagnostics.from_pattern([=[^.*%(line (%d+)%): (.*)$]=], { "row", "message" }),
-      diagnostics_format = "#{m} (#{s})",
-    }),
-  })
+  register(lspnull.builtins.diagnostics.fish.with({
+    diagnostics_format = "#{m} (#{s})",
+  }))
 
   register(lspnull.builtins.formatting.fish_indent)
 end

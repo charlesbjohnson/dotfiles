@@ -1,5 +1,4 @@
 local lspnull = require("null-ls")
-local lspnull_h = require("null-ls.helpers")
 
 local fs = require("fs")
 local path = require("path")
@@ -28,59 +27,31 @@ end
 
 function M.registration(register)
   if use_stylelint() then
-    register({
-      method = lspnull.methods.DIAGNOSTICS,
-      filetypes = { "css" },
-      generator = lspnull_h.generator_factory({
-        command = "npm",
-        args = ("exec --yes --parseable -- stylelint --stdin --stdin-filename $FILENAME --formatter json"):split(" "),
+    register(lspnull.builtins.diagnostics.stylelint.with({
+      command = "npm",
+      args = ("exec --yes --parseable -- stylelint --stdin --stdin-filename $FILENAME --formatter json"):split(" "),
 
-        to_stdin = true,
-        check_exit_code = { 0, 1, 2 },
+      diagnostics_postprocess = function(diagnostic)
+        diagnostic.code = diagnostic.message:match("^.*%((.+)%)$")
+        diagnostic.message = diagnostic.message:gsub(" %(" .. diagnostic.code:gsub("%-", "%%-") .. "%)", "")
+        diagnostic.message = "[" .. diagnostic.code .. "] " .. diagnostic.message
+        diagnostic.message = diagnostic.message .. " (" .. diagnostic.source .. ")"
+      end,
+    }))
 
-        format = "json",
-        on_output = function(params)
-          local diagnostics = {}
-
-          local items = table.dig(params, { "output", "[1]", "warnings" }) or {}
-          for _, item in ipairs(items) do
-            table.insert(diagnostics, {
-              row = item.line,
-              col = item.column,
-              message = (item.text:gsub("%s*%(" .. (item.rule):gsub("%-", "%%-") .. "%)$", "")),
-              code = item.rule,
-              severity = lspnull_h.diagnostics.severities[item.severity],
-              source = "stylelint",
-            })
-          end
-
-          return diagnostics
-        end,
-      }),
-    })
-
-    register({
-      method = lspnull.methods.FORMATTING,
-      filetypes = { "css" },
-      generator = lspnull_h.formatter_factory({
-        command = "npm",
-        args = ("exec --yes --parseable -- stylelint --stdin --stdin-filename $FILENAME --fix"):split(" "),
-        to_stdin = true,
-      }),
-    })
+    register(lspnull.builtins.formatting.stylelint.with({
+      command = "npm",
+      args = ("exec --yes --parseable -- stylelint --stdin --stdin-filename $FILENAME --fix"):split(" "),
+    }))
 
     return
   end
 
-  register({
-    method = lspnull.methods.FORMATTING,
+  register(lspnull.builtins.formatting.prettierd.with({
     filetypes = { "css" },
-    generator = lspnull_h.formatter_factory({
-      command = "npm",
-      args = ("exec --yes --parseable -- @fsouza/prettierd $FILENAME"):split(" "),
-      to_stdin = true,
-    }),
-  })
+    command = "npm",
+    args = ("exec --yes --parseable -- @fsouza/prettierd $FILENAME"):split(" "),
+  }))
 end
 
 return M
