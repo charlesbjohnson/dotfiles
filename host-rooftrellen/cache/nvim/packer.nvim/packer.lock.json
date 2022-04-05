@@ -3,7 +3,7 @@
     "commit": "1bfb32e"
   },
   "alpha-nvim": {
-    "commit": "8a1477d"
+    "commit": "534a86b"
   },
   "barbar.nvim": {
     "commit": "be65945"
@@ -27,10 +27,10 @@
     "commit": "290bea8"
   },
   "gitsigns.nvim": {
-    "commit": "2a10723"
+    "commit": "83ab3ca"
   },
   "indent-blankline.nvim": {
-    "commit": "ebedbed"
+    "commit": "9920ceb"
   },
   "kommentary": {
     "commit": "12ecde4"
@@ -42,7 +42,7 @@
     "commit": "e4f7dad"
   },
   "neo-tree.nvim": {
-    "commit": "b500daa"
+    "commit": "32c2017"
   },
   "neoscroll.nvim": {
     "commit": "07242b9"
@@ -54,31 +54,31 @@
     "commit": "513ff9b"
   },
   "null-ls.nvim": {
-    "commit": "7253974"
+    "commit": "f3107c3"
   },
   "nvim-autopairs": {
-    "commit": "f3ebca3"
+    "commit": "06535b1"
   },
   "nvim-cmp": {
-    "commit": "272cbdc"
+    "commit": "7dbe34e"
   },
   "nvim-colorizer.lua": {
     "commit": "36c610a"
   },
   "nvim-hlslens": {
-    "commit": "22f7df7"
+    "commit": "1944094"
   },
   "nvim-lsp-installer": {
-    "commit": "e79f0a5"
+    "commit": "4653462"
   },
   "nvim-lspconfig": {
-    "commit": "7d5a6dc"
+    "commit": "3d1baa8"
   },
   "nvim-scrollbar": {
-    "commit": "b10ece8"
+    "commit": "3097240"
   },
   "nvim-treesitter": {
-    "commit": "9769194"
+    "commit": "ce6c1d3"
   },
   "nvim-ts-autotag": {
     "commit": "57035b5"
@@ -90,7 +90,7 @@
     "commit": "4dedd3b"
   },
   "plenary.nvim": {
-    "commit": "0d66015"
+    "commit": "f9c65cd"
   },
   "popup.nvim": {
     "commit": "b7404d3"
@@ -99,19 +99,19 @@
     "commit": "9bf02ed"
   },
   "splitjoin.vim": {
-    "commit": "bbc9fe6"
+    "commit": "dbcd306"
   },
   "telescope-fzf-native.nvim": {
     "commit": "8ec164b"
   },
   "telescope.nvim": {
-    "commit": "cf2d6d3"
+    "commit": "6e7ee38"
   },
   "tmux.nvim": {
-    "commit": "8bb089e"
+    "commit": "746cb2a"
   },
   "toggleterm.nvim": {
-    "commit": "9f969e7"
+    "commit": "5733b24"
   },
   "trouble.nvim": {
     "commit": "691d490"
@@ -123,7 +123,7 @@
     "commit": "12dd631"
   },
   "vim-illuminate": {
-    "commit": "487563d"
+    "commit": "3b9b648"
   },
   "vim-markdown-folding": {
     "commit": "3f35acf"

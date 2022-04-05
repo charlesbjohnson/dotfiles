@@ -350,7 +350,9 @@ local no_errors, error_msg = pcall(function()
   vim.cmd([[au!]])
   -- Filetype lazy-loads
   time([[Defining lazy-load filetype autocommands]], true)
-  vim.cmd([[au FileType markdown ++once lua require("packer.load")({'vim-markdown-folding'}, { ft = "markdown" }, _G.packer_plugins)]])
+  vim.cmd(
+    [[au FileType markdown ++once lua require("packer.load")({'vim-markdown-folding'}, { ft = "markdown" }, _G.packer_plugins)]]
+  )
   time([[Defining lazy-load filetype autocommands]], false)
   vim.cmd("augroup END")
   if should_profile then
