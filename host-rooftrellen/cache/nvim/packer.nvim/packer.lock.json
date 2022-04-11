@@ -3,7 +3,7 @@
     "commit": "1bfb32e"
   },
   "alpha-nvim": {
-    "commit": "534a86b"
+    "commit": "6655228"
   },
   "barbar.nvim": {
     "commit": "be65945"
@@ -24,13 +24,13 @@
     "commit": "a8e3e66"
   },
   "feline.nvim": {
-    "commit": "290bea8"
+    "commit": "79f5e9e"
   },
   "gitsigns.nvim": {
-    "commit": "83ab3ca"
+    "commit": "ac5ba87"
   },
   "indent-blankline.nvim": {
-    "commit": "9920ceb"
+    "commit": "db7d3ad"
   },
   "kommentary": {
     "commit": "12ecde4"
@@ -39,28 +39,28 @@
     "commit": "517fe3a"
   },
   "lsp_signature.nvim": {
-    "commit": "e4f7dad"
+    "commit": "48e5fb8"
   },
   "neo-tree.nvim": {
-    "commit": "32c2017"
+    "commit": "cf81908"
   },
   "neoscroll.nvim": {
     "commit": "07242b9"
   },
   "nord-vim": {
-    "commit": "a825678"
+    "commit": "e2555c1"
   },
   "nui.nvim": {
-    "commit": "513ff9b"
+    "commit": "42552b3"
   },
   "null-ls.nvim": {
-    "commit": "f3107c3"
+    "commit": "82be4bf"
   },
   "nvim-autopairs": {
-    "commit": "06535b1"
+    "commit": "6fb0479"
   },
   "nvim-cmp": {
-    "commit": "7dbe34e"
+    "commit": "3192a0c"
   },
   "nvim-colorizer.lua": {
     "commit": "36c610a"
@@ -69,16 +69,16 @@
     "commit": "1944094"
   },
   "nvim-lsp-installer": {
-    "commit": "4653462"
+    "commit": "88f590c"
   },
   "nvim-lspconfig": {
-    "commit": "3d1baa8"
+    "commit": "fd7843a"
   },
   "nvim-scrollbar": {
     "commit": "3097240"
   },
   "nvim-treesitter": {
-    "commit": "ce6c1d3"
+    "commit": "d0fc684"
   },
   "nvim-ts-autotag": {
     "commit": "57035b5"
@@ -90,7 +90,7 @@
     "commit": "4dedd3b"
   },
   "plenary.nvim": {
-    "commit": "f9c65cd"
+    "commit": "13f9959"
   },
   "popup.nvim": {
     "commit": "b7404d3"
@@ -105,13 +105,13 @@
     "commit": "8ec164b"
   },
   "telescope.nvim": {
-    "commit": "6e7ee38"
+    "commit": "b7ae91c"
   },
   "tmux.nvim": {
-    "commit": "746cb2a"
+    "commit": "94a5b18"
   },
   "toggleterm.nvim": {
-    "commit": "5733b24"
+    "commit": "1a608cc"
   },
   "trouble.nvim": {
     "commit": "691d490"
@@ -123,7 +123,7 @@
     "commit": "12dd631"
   },
   "vim-illuminate": {
-    "commit": "3b9b648"
+    "commit": "c82e6d0"
   },
   "vim-markdown-folding": {
     "commit": "3f35acf"
@@ -141,7 +141,7 @@
     "commit": "c8782be"
   },
   "vim-surround": {
-    "commit": "9857a87"
+    "commit": "81fc0ec"
   },
   "vim-textobj-backticks": {
     "commit": "88cad8a"
