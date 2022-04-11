@@ -1,7 +1,17 @@
 #!/bin/sh
 
-if [ -d "$1" ] || [ -f "$1" ]; then
-  powershell.exe "Invoke-Item" "$(wslpath -w "$1")"
+main() {
+  if [ -d "$1" ] || [ -f "$1" ]; then
+    powershell.exe "Invoke-Item" "$(wslpath -w "$1")" &
+  else
+    powershell.exe "Start-Process" "$1" &
+  fi
+}
+
+if [ -t 0 ]; then
+  main "$@"
 else
-  powershell.exe "Start-Process" "$1"
+  while read -r line; do
+    main "$line"
+  done <&0
 fi
