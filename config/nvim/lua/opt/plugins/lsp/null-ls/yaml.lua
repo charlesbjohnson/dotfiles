@@ -1,15 +1,18 @@
 local lspnull = require("null-ls")
+local lspnull_h = require("null-ls.helpers")
 
 local M = {}
 
 function M.registration(register)
   register(lspnull.builtins.diagnostics.yamllint)
-
-  register(lspnull.builtins.formatting.prettierd.with({
+  register({
     filetypes = { "yaml" },
-    command = "npm",
-    args = ("exec --yes --parseable -- @fsouza/prettierd $FILENAME"):split(" "),
-  }))
+    method = lspnull.methods.FORMATTING,
+    generator = lspnull_h.formatter_factory({
+      command = "yq",
+      args = ("--prettyPrint $FILENAME"):split(" "),
+    }),
+  })
 end
 
 return M
