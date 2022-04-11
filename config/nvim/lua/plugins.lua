@@ -36,10 +36,10 @@ return require("packer").startup({
     -- Application Features
     use("akinsho/toggleterm.nvim")
     use("goolord/alpha-nvim")
-    use({ "nvim-neo-tree/neo-tree.nvim", branch = "v2.x" })
     use("nvim-telescope/telescope.nvim")
     use("petertriho/nvim-scrollbar")
     use("romgrk/barbar.nvim")
+    use({ "nvim-neo-tree/neo-tree.nvim", branch = "v2.x" })
     use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 
     -- Editor Enhancements
