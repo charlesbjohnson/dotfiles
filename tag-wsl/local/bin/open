@@ -1,3 +1,7 @@
 #!/bin/sh
 
-powershell.exe "Invoke-Item" "$(wslpath -w "$1")"
+if [ -d "$1" ] || [ -f "$1" ]; then
+  powershell.exe "Invoke-Item" "$(wslpath -w "$1")"
+else
+  powershell.exe "Start-Process" "$1"
+fi
