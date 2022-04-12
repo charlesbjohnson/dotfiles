@@ -73,7 +73,7 @@ return require("packer").startup({
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 
     -- Editor Appearance
-    use("arcticicestudio/nord-vim")
+    use("andersevenrud/nordic.nvim")
     use("kyazdani42/nvim-web-devicons")
     use("norcalli/nvim-colorizer.lua")
 

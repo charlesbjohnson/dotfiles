@@ -155,10 +155,10 @@ local no_errors, error_msg = pcall(function()
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
       url = "https://github.com/karb94/neoscroll.nvim",
     },
-    ["nord-vim"] = {
+    ["nord.nvim"] = {
       loaded = true,
-      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nord-vim",
-      url = "https://github.com/arcticicestudio/nord-vim",
+      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nord.nvim",
+      url = "https://github.com/shaunsingh/nord.nvim",
     },
     ["nui.nvim"] = {
       loaded = true,

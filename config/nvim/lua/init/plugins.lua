@@ -1,3 +1,5 @@
+local colors = require("colors")
+
 -- AndrewRadev/splitjoin.vim
 vim.g.splitjoin_quiet = 1
 
@@ -10,17 +12,16 @@ require("toggleterm").setup({
   shade_terminals = false,
 })
 
+-- andersevenrud/nordic.nvim
+require("nordic").colorscheme({
+  alternate_backgrounds = true,
+  italic = false,
+})
+
 -- andymass/vim-matchup
 vim.g.matchup_matchparen_deferred = 1
 vim.g.matchup_matchparen_offscreen = { method = "popup" }
 vim.g.matchup_surround_enabled = 1
-
--- arcticicestudio/nord-vim
-vim.g.nord_cursor_line_number_background = 1
-vim.g.nord_italic = 1
-vim.g.nord_underline = 1
-
-vim.cmd("colorscheme nord")
 
 -- aserowy/tmux.nvim
 require("tmux").setup({
@@ -251,19 +252,19 @@ require("scrollbar").setup({
   excluded_buftypes = { "nofile", "nowrite", "prompt", "quickfix", "terminal" },
   excluded_filetypes = { "gitcommit", "packer", "alpha" },
   handle = {
-    color = require("colors")[3],
+    color = colors[3],
   },
   handlers = {
     diagnostic = true,
     search = true,
   },
   marks = {
-    Search = { color = require("colors")[8] },
-    Error = { color = require("colors")[11] },
-    Warn = { color = require("colors")[13] },
-    Info = { color = require("colors")[7] },
-    Hint = { color = require("colors")[9] },
-    Misc = { color = require("colors")[15] },
+    Error = { color = colors[11] },
+    Hint = { color = colors[9] },
+    Info = { color = colors[7] },
+    Misc = { color = colors[15] },
+    Search = { color = colors[8] },
+    Warn = { color = colors[13] },
   },
 })
 
@@ -277,8 +278,6 @@ vim.g.bufferline = {
   icons = "both",
   tabpages = false,
 }
-
-local colors = require("colors")
 
 vim.hl("BufferCurrent", { bg = colors[3], fg = colors[6] })
 vim.hl("BufferCurrentIndex", { bg = colors[3], fg = colors[6] })

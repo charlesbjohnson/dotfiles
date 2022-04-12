@@ -47,8 +47,8 @@
   "neoscroll.nvim": {
     "commit": "07242b9"
   },
-  "nord-vim": {
-    "commit": "e2555c1"
+  "nordic.nvim": {
+    "commit": "fd9bfa2"
   },
   "nui.nvim": {
     "commit": "42552b3"
