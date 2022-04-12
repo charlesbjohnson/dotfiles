@@ -88,7 +88,6 @@ return function(options)
     provider = {
       name = "file_type",
       opts = {
-        colored_icon = false,
         filetype_icon = true,
       },
     },

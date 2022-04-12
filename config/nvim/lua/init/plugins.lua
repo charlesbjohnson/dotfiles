@@ -257,8 +257,7 @@ vim.g.bufferline = {
   clickable = false,
   closable = true,
   icon_close_tab = "",
-  icon_custom_colors = "BufferCurrent",
-  icons = "both",
+  icons = true,
   tabpages = false,
 }
 
