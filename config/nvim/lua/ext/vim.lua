@@ -19,6 +19,11 @@ function M.highlight(name, options)
     options.fg = nil
   end
 
+  if options.sp then
+    options.guisp = options.sp
+    options.sp = nil
+  end
+
   if options.style then
     options.gui = options.style
     options.style = nil

@@ -73,9 +73,9 @@ return require("packer").startup({
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 
     -- Editor Appearance
-    use("andersevenrud/nordic.nvim")
     use("kyazdani42/nvim-web-devicons")
     use("norcalli/nvim-colorizer.lua")
+    use("shaunsingh/nord.nvim")
 
     -- Supporting Libraries
     use("MunifTanjim/nui.nvim")

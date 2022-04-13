@@ -1,22 +1,22 @@
-local nord = require("nordic.palette")
+local nord = require("nord.colors")
 
 local colors = {
-  [0] = nord.dark_black,
-  [1] = nord.black,
-  [2] = nord.bright_black,
-  [3] = nord.gray,
-  [4] = nord.dark_white,
-  [5] = nord.white,
-  [6] = nord.bright_white,
-  [7] = nord.cyan,
-  [8] = nord.bright_cyan,
-  [9] = nord.blue,
-  [10] = nord.intense_blue,
-  [11] = nord.red,
-  [12] = nord.orange,
-  [13] = nord.yellow,
-  [14] = nord.green,
-  [15] = nord.purple,
+  [0] = nord.nord0_gui,
+  [1] = nord.nord1_gui,
+  [2] = nord.nord2_gui,
+  [3] = nord.nord3_gui,
+  [4] = nord.nord4_gui,
+  [5] = nord.nord5_gui,
+  [6] = nord.nord6_gui,
+  [7] = nord.nord7_gui,
+  [8] = nord.nord8_gui,
+  [9] = nord.nord9_gui,
+  [10] = nord.nord10_gui,
+  [11] = nord.nord11_gui,
+  [12] = nord.nord12_gui,
+  [13] = nord.nord13_gui,
+  [14] = nord.nord14_gui,
+  [15] = nord.nord15_gui,
 }
 
 colors.bg = colors[1]

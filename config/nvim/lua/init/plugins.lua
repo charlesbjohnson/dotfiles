@@ -12,12 +12,6 @@ require("toggleterm").setup({
   shade_terminals = false,
 })
 
--- andersevenrud/nordic.nvim
-require("nordic").colorscheme({
-  alternate_backgrounds = true,
-  italic = false,
-})
-
 -- andymass/vim-matchup
 vim.g.matchup_matchparen_deferred = 1
 vim.g.matchup_matchparen_offscreen = { method = "popup" }
@@ -251,20 +245,9 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 require("scrollbar").setup({
   excluded_buftypes = { "nofile", "nowrite", "prompt", "quickfix", "terminal" },
   excluded_filetypes = { "gitcommit", "packer", "alpha" },
-  handle = {
-    color = colors[3],
-  },
   handlers = {
     diagnostic = true,
     search = true,
-  },
-  marks = {
-    Error = { color = colors[11] },
-    Hint = { color = colors[9] },
-    Info = { color = colors[7] },
-    Misc = { color = colors[15] },
-    Search = { color = colors[8] },
-    Warn = { color = colors[13] },
   },
 })
 
@@ -279,23 +262,6 @@ vim.g.bufferline = {
   tabpages = false,
 }
 
-vim.hl("BufferCurrent", { bg = colors[3], fg = colors[6] })
-vim.hl("BufferCurrentIndex", { bg = colors[3], fg = colors[6] })
-vim.hl("BufferCurrentMod", { bg = colors[3], fg = colors[6] })
-vim.hl("BufferCurrentSign", { bg = colors[3], fg = colors[6] })
-
-vim.hl_link("BufferVisible", "BufferCurrent")
-vim.hl_link("BufferVisibleIndex", "BufferCurrentIndex")
-vim.hl_link("BufferVisibleMod", "BufferCurrentMod")
-vim.hl_link("BufferVisibleSign", "BufferCurrentSign")
-
-vim.hl("BufferInactive", { bg = colors.bg, fg = colors.fg })
-vim.hl("BufferInactiveIndex", { bg = colors.bg, fg = colors.fg })
-vim.hl("BufferInactiveMod", { bg = colors.bg, fg = colors.fg })
-vim.hl("BufferInactiveSign", { bg = colors.bg, fg = colors.fg })
-
-vim.hl("BufferTabpageFill", { bg = colors[0] })
-
 vim.nmap("<Leader>BB", "<Cmd>BufferClose<CR>", { silent = true })
 vim.nmap("<Leader>BD", "<Cmd>BufferCloseAllButCurrent<CR>", { silent = true })
 vim.nmap("<Leader>H", "<Cmd>BufferMovePrevious<CR>", { silent = true })
@@ -303,6 +269,32 @@ vim.nmap("<Leader>L", "<Cmd>BufferMoveNext<CR>", { silent = true })
 vim.nmap("<Leader>b", "<Cmd>enew<CR>", { silent = true })
 vim.nmap("<Leader>h", "<Cmd>BufferPrevious<CR>", { silent = true })
 vim.nmap("<Leader>l", "<Cmd>BufferNext<CR>", { silent = true })
+
+-- shaunsingh/nord.nvim
+vim.g.nord_borders = true
+vim.g.nord_contrast = true
+vim.g.nord_italic = false
+
+require("nord").set()
+
+vim.hl("DiffChange", { fg = colors[13] })
+
+vim.hl("GitSignsChange", { fg = colors[13] })
+vim.hl("GitSignsChangeLn", { fg = colors[13] })
+vim.hl("GitSignsChangeNr", { fg = colors[13] })
+
+vim.hl("LspDiagnosticsDefaultWarning", { fg = colors[13] })
+vim.hl("LspDiagnosticsFloatingWarning", { fg = colors[13] })
+vim.hl("LspDiagnosticsSignWarning", { fg = colors[13] })
+vim.hl("LspDiagnosticsUnderlineWarning", { sp = colors[13] })
+vim.hl("LspDiagnosticsVirtualTextWarning", { fg = colors[13] })
+
+vim.hl("NeoTreeGitModified", { fg = colors[13] })
+
+vim.hl("WarningMsg", { fg = colors[13] })
+vim.hl("Warnings", { fg = colors[13] })
+
+vim.hl("healthWarning", { fg = colors[13] })
 
 -- svermeulen/vim-cutlass
 vim.nmap("m", "d")
