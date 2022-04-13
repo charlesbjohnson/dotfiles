@@ -91,6 +91,9 @@ return function(options)
         filetype_icon = true,
       },
     },
+    enabled = function()
+      return vim.bo.filetype ~= ""
+    end,
   }
 
   active[3][8] = {

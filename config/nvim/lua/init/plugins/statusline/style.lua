@@ -56,9 +56,9 @@ return function(options)
 
   active[3][6].hl = { bg = 3 }
   active[3][6].left_sep = { str = " ", hl = { bg = 3 } }
+  active[3][6].right_sep = { str = " ", hl = { bg = 3 } }
 
   active[3][7].hl = { bg = 3 }
-  active[3][7].left_sep = { str = " ", hl = { bg = 3 } }
   active[3][7].right_sep = { str = " ", hl = { bg = 3 } }
 
   active[3][8].hl = active[1][1].hl
