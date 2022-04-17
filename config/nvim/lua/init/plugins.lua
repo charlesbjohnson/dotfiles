@@ -39,8 +39,13 @@ require("init.plugins.statusline")
 -- folke/trouble.nvim
 require("trouble").setup()
 
-vim.nmap("<C-n>", "<Cmd>TroubleToggle document_diagnostics<CR>", { silent = true })
-vim.nmap("<C-M-n>", "<Cmd>TroubleToggle workspace_diagnostics<CR>", { silent = true })
+vim.keymap.set("n", "<C-n>", function()
+  require("trouble").toggle("document_diagnostics")
+end, { silent = true })
+
+vim.keymap.set("n", "<C-M-n>", function()
+  require("trouble").toggle("workspace_diagnostics")
+end, { silent = true })
 
 -- goolord/alpha-nvim
 require("alpha").setup(require("alpha.themes.startify").config)
@@ -74,8 +79,8 @@ require("cmp").setup({
 require("init.plugins.lsp.null-ls")
 
 -- junegunn/vim-easy-align
-vim.nmap("<Leader>a", "<Plug>(EasyAlign)", { noremap = false })
-vim.xmap("<CR>", "<Plug>(EasyAlign)", { noremap = false })
+vim.keymap.set("n", "<Leader>a", "<Plug>(EasyAlign)")
+vim.keymap.set("x", "<CR>", "<Plug>(EasyAlign)")
 
 -- karb94/neoscroll.nvim
 require("neoscroll").setup({
@@ -94,18 +99,21 @@ require("hlslens").setup({
   nearest_only = true,
 })
 
-vim.nmap("n", "<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>", {
-  silent = true,
-})
-vim.nmap("N", "<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>", {
-  silent = true,
-})
+vim.keymap.set("n", "n", function()
+  pcall(vim.cmd, "normal! " .. vim.v.count1 .. "n")
+  require("hlslens").start()
+end, { silent = true })
 
-vim.nmap("* *", "<Cmd>lua require('hlslens').start()<CR>")
-vim.nmap("# #", "<Cmd>lua require('hlslens').start()<CR>")
+vim.keymap.set("n", "N", function()
+  pcall(vim.cmd, "normal! " .. vim.v.count1 .. "N")
+  require("hlslens").start()
+end, { silent = true })
 
-vim.nmap("g* g*", "<Cmd>lua require('hlslens').start()<CR>")
-vim.nmap("g# g#", "<Cmd>lua require('hlslens').start()<CR>")
+vim.keymap.set("n", "* *", require("hlslens").start)
+vim.keymap.set("n", "# #", require("hlslens").start)
+
+vim.keymap.set("n", "g* g*", require("hlslens").start)
+vim.keymap.set("n", "g# g#", require("hlslens").start)
 
 -- lewis6991/gitsigns.nvim
 require("gitsigns").setup()
@@ -152,7 +160,9 @@ require("neo-tree").setup({
   },
 })
 
-vim.nmap("<C-b>", "<Cmd>Neotree toggle<CR>", { silent = true })
+vim.keymap.set("n", "<C-b>", function()
+  require("neo-tree").show("", true)
+end, { silent = true })
 
 -- nvim-telescope/telescope.nvim
 require("telescope").setup({
@@ -210,9 +220,12 @@ require("telescope").setup({
 
 require("telescope").load_extension("fzf")
 
-vim.nmap("<C-p>", "<Cmd>lua require('telescope.builtin').find_files({ hidden = true })<CR>", { silent = true })
-vim.nmap("<C-M-p>", "<Cmd>lua require('telescope.builtin').commands()<CR>", { silent = true })
-vim.nmap("<C-_>", "<Cmd>lua require('telescope.builtin').live_grep()<CR>", { silent = true })
+vim.keymap.set("n", "<C-p>", function()
+  require("telescope.builtin").find_files({ hidden = true })
+end, { silent = true })
+
+vim.keymap.set("n", "<C-M-p>", require("telescope.builtin").commands, { silent = true })
+vim.keymap.set("n", "<C-_>", require("telescope.builtin").live_grep, { silent = true })
 
 -- nvim-treesitter/nvim-treesitter
 require("nvim-treesitter.configs").setup({
@@ -261,13 +274,13 @@ vim.g.bufferline = {
   tabpages = false,
 }
 
-vim.nmap("<Leader>BB", "<Cmd>BufferClose<CR>", { silent = true })
-vim.nmap("<Leader>BD", "<Cmd>BufferCloseAllButCurrent<CR>", { silent = true })
-vim.nmap("<Leader>H", "<Cmd>BufferMovePrevious<CR>", { silent = true })
-vim.nmap("<Leader>L", "<Cmd>BufferMoveNext<CR>", { silent = true })
-vim.nmap("<Leader>b", "<Cmd>enew<CR>", { silent = true })
-vim.nmap("<Leader>h", "<Cmd>BufferPrevious<CR>", { silent = true })
-vim.nmap("<Leader>l", "<Cmd>BufferNext<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>BB", "<Cmd>BufferClose<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>BD", "<Cmd>BufferCloseAllButCurrent<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>H", "<Cmd>BufferMovePrevious<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>L", "<Cmd>BufferMoveNext<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>b", "<Cmd>enew<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>h", "<Cmd>BufferPrevious<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>l", "<Cmd>BufferNext<CR>", { silent = true })
 
 -- shaunsingh/nord.nvim
 vim.g.nord_borders = true
@@ -296,10 +309,10 @@ vim.hl("Warnings", { fg = colors[13] })
 vim.hl("healthWarning", { fg = colors[13] })
 
 -- svermeulen/vim-cutlass
-vim.nmap("m", "d")
-vim.xmap("m", "d")
-vim.nmap("mm", "dd")
-vim.nmap("M", "D")
+vim.keymap.set("n", "m", "d")
+vim.keymap.set("x", "m", "d")
+vim.keymap.set("n", "mm", "dd")
+vim.keymap.set("n", "M", "D")
 
 -- windwp/nvim-autopairs
 require("nvim-autopairs").setup({})
@@ -346,7 +359,7 @@ lspinstaller.on_server_ready(function(server)
 end)
 
 -- zirrostig/vim-schlepp
-vim.xmap("<Leader>h", "<Plug>SchleppLeft", { noremap = false })
-vim.xmap("<Leader>j", "<Plug>SchleppDown", { noremap = false })
-vim.xmap("<Leader>k", "<Plug>SchleppUp", { noremap = false })
-vim.xmap("<Leader>l", "<Plug>SchleppRight", { noremap = false })
+vim.keymap.set("x", "<Leader>h", "<Plug>SchleppLeft")
+vim.keymap.set("x", "<Leader>j", "<Plug>SchleppDown")
+vim.keymap.set("x", "<Leader>k", "<Plug>SchleppUp")
+vim.keymap.set("x", "<Leader>l", "<Plug>SchleppRight")

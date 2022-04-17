@@ -1,15 +1,6 @@
 local ext = require("ext")
 require = ext.require
 
-vim.map = ext.vim.mapping("")
-vim.imap = ext.vim.mapping("i")
-vim.nmap = ext.vim.mapping("n")
-vim.omap = ext.vim.mapping("o")
-vim.smap = ext.vim.mapping("s")
-vim.tmap = ext.vim.mapping("t")
-vim.vmap = ext.vim.mapping("v")
-vim.xmap = ext.vim.mapping("x")
-
 vim.hl = ext.vim.highlight
 vim.hl_link = ext.vim.highlight_link
 
@@ -59,72 +50,72 @@ vim.opt.writebackup = false
 vim.opt.smartcase = true
 
 --- Key bindings
-vim.nmap("<Leader>q", "<Cmd>quit<CR>")
-vim.nmap("<Leader>w", "<Cmd>write<CR>")
+vim.keymap.set("n", "<Leader>q", "<Cmd>quit<CR>")
+vim.keymap.set("n", "<Leader>w", "<Cmd>write<CR>")
 
 -- No confusing window
-vim.map("q:", "<NOP>")
+vim.keymap.set("", "q:", "<NOP>")
 
 -- No Ex mode
-vim.map("Q", "<NOP>")
+vim.keymap.set("", "Q", "<NOP>")
 
 -- No help window
-vim.map("<F1>", "<Esc>")
-vim.imap("<F1>", "<Esc>")
+vim.keymap.set("", "<F1>", "<Esc>")
+vim.keymap.set("i", "<F1>", "<Esc>")
 
 -- Quickly clear highlighted search
-vim.nmap("<Leader><Leader>", ":nohlsearch<CR>", { silent = true })
+vim.keymap.set("n", "<Leader><Leader>", ":nohlsearch<CR>", { silent = true })
 
 -- Consistent indent/unindent across all modes
-vim.nmap("<C-d>", "<<")
-vim.nmap("<C-t>", ">>")
-vim.xmap("<C-d>", "<gv")
-vim.xmap("<C-t>", ">gv")
+vim.keymap.set("n", "<C-d>", "<<")
+vim.keymap.set("n", "<C-t>", ">>")
+vim.keymap.set("x", "<C-d>", "<gv")
+vim.keymap.set("x", "<C-t>", ">gv")
 
 -- Move around more quickly
-vim.nmap("<C-b>", "<NOP>")
-vim.xmap("<C-b>", "<NOP>")
+vim.keymap.set("n", "<C-b>", "<NOP>")
+vim.keymap.set("x", "<C-b>", "<NOP>")
 
-vim.nmap("<C-f>", "<NOP>")
-vim.xmap("<C-f>", "<NOP>")
+vim.keymap.set("n", "<C-f>", "<NOP>")
+vim.keymap.set("x", "<C-f>", "<NOP>")
 
-vim.nmap("<C-n>", "<NOP>")
-vim.xmap("<C-n>", "<NOP>")
+vim.keymap.set("n", "<C-n>", "<NOP>")
+vim.keymap.set("x", "<C-n>", "<NOP>")
 
-vim.nmap("<C-u>", "<NOP>")
-vim.xmap("<C-u>", "<NOP>")
+vim.keymap.set("n", "<C-u>", "<NOP>")
+vim.keymap.set("x", "<C-u>", "<NOP>")
 
-vim.nmap("<M-k>", "{")
-vim.xmap("<M-k>", "{")
-vim.nmap("<M-j>", "}")
-vim.xmap("<M-j>", "}")
-vim.nmap("<M-h>", "0")
-vim.xmap("<M-h>", "0")
-vim.nmap("<M-l>", "$")
-vim.xmap("<M-l>", "$")
+vim.keymap.set("n", "<M-k>", "{")
+vim.keymap.set("x", "<M-k>", "{")
+vim.keymap.set("n", "<M-j>", "}")
+vim.keymap.set("x", "<M-j>", "}")
+vim.keymap.set("n", "<M-h>", "0")
+vim.keymap.set("x", "<M-h>", "0")
+vim.keymap.set("n", "<M-l>", "$")
+vim.keymap.set("x", "<M-l>", "$")
 
 -- Splits
-vim.nmap("<C-w>|", "<Cmd>vsplit<CR>", { silent = true })
-vim.nmap("<C-w>_", "<Cmd>split<CR>", { silent = true })
+vim.keymap.set("n", "<C-w>|", "<Cmd>vsplit<CR>", { silent = true })
+vim.keymap.set("n", "<C-w>_", "<Cmd>split<CR>", { silent = true })
 
-vim.nmap("<C-w><C-h>", "<C-w>H", { silent = true })
-vim.nmap("<C-w><C-j>", "<C-w>J", { silent = true })
-vim.nmap("<C-w><C-k>", "<C-w>K", { silent = true })
-vim.nmap("<C-w><C-l>", "<C-w>L", { silent = true })
+vim.keymap.set("n", "<C-w><C-h>", "<C-w>H", { silent = true })
+vim.keymap.set("n", "<C-w><C-j>", "<C-w>J", { silent = true })
+vim.keymap.set("n", "<C-w><C-k>", "<C-w>K", { silent = true })
+vim.keymap.set("n", "<C-w><C-l>", "<C-w>L", { silent = true })
 
-vim.nmap("<C-w>H", "<Cmd>vertical resize +5<CR>", { silent = true })
-vim.nmap("<C-w>J", "<Cmd>resize -5<CR>", { silent = true })
-vim.nmap("<C-w>K", "<Cmd>resize +5<CR>", { silent = true })
-vim.nmap("<C-w>L", "<Cmd>vertical resize -5<CR>", { silent = true })
+vim.keymap.set("n", "<C-w>H", "<Cmd>vertical resize +5<CR>", { silent = true })
+vim.keymap.set("n", "<C-w>J", "<Cmd>resize -5<CR>", { silent = true })
+vim.keymap.set("n", "<C-w>K", "<Cmd>resize +5<CR>", { silent = true })
+vim.keymap.set("n", "<C-w>L", "<Cmd>vertical resize -5<CR>", { silent = true })
 
 -- Ctag navigation
-vim.nmap("<Leader>[", "<Cmd>pop<CR>", { silent = true })
-vim.nmap("<Leader>]", "<C-]>")
+vim.keymap.set("n", "<Leader>[", "<Cmd>pop<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>]", "<C-]>")
 
 -- Automatically jump to end of pasted text
-vim.nmap("p", "p`]", { silent = true })
-vim.xmap("p", "p`]", { silent = true })
-vim.xmap("y", "y`]", { silent = true })
+vim.keymap.set("n", "p", "p`]", { silent = true })
+vim.keymap.set("x", "p", "p`]", { silent = true })
+vim.keymap.set("x", "y", "y`]", { silent = true })
 
 -- LSP
 vim.fn.sign_define("DiagnosticSignError", { text = "", texthl = "DiagnosticSignError" })
@@ -132,20 +123,20 @@ vim.fn.sign_define("DiagnosticSignHint", { text = "", texthl = "DiagnosticSig
 vim.fn.sign_define("DiagnosticSignInfo", { text = "", texthl = "DiagnosticSignInfo" })
 vim.fn.sign_define("DiagnosticSignWarn", { text = "", texthl = "DiagnosticSignWarn" })
 
-vim.nmap("gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", { silent = true })
-vim.nmap("gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", { silent = true })
-vim.nmap("gi", "<Cmd>lua vim.lsp.buf.implementation()<CR>", { silent = true })
-vim.nmap("gr", "<Cmd>lua vim.lsp.buf.references()<CR>", { silent = true })
-vim.nmap("F", "<Cmd>lua vim.lsp.buf.formatting()<CR>", { silent = true })
-vim.nmap("K", "<Cmd>lua vim.lsp.buf.hover()<CR>", { silent = true })
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, { silent = true })
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { silent = true })
+vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { silent = true })
+vim.keymap.set("n", "gr", vim.lsp.buf.references, { silent = true })
+vim.keymap.set("n", "F", vim.lsp.buf.formatting, { silent = true })
+vim.keymap.set("n", "K", vim.lsp.buf.hover, { silent = true })
 
 -- Terminal
-vim.tmap("<Esc>", "<C-\\><C-n>")
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
-vim.tmap("<C-h>", "<C-\\><C-n><C-w>h")
-vim.tmap("<C-j>", "<C-\\><C-n><C-w>j")
-vim.tmap("<C-k>", "<C-\\><C-n><C-w>k")
-vim.tmap("<C-l>", "<C-\\><C-n><C-w>l")
+vim.keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h")
+vim.keymap.set("t", "<C-j>", "<C-\\><C-n><C-w>j")
+vim.keymap.set("t", "<C-k>", "<C-\\><C-n><C-w>k")
+vim.keymap.set("t", "<C-l>", "<C-\\><C-n><C-w>l")
 
 --- Plugins
 require("plugins")

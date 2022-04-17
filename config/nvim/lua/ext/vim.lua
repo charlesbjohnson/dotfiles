@@ -1,11 +1,5 @@
 local M = {}
 
-function M.mapping(mode)
-  return function(key, binding, options)
-    vim.api.nvim_set_keymap(mode, key, binding, vim.tbl_extend("force", { noremap = true }, options or {}))
-  end
-end
-
 function M.highlight(name, options)
   local definitions = {}
 
