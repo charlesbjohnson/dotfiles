@@ -1,9 +1,6 @@
 local ext = require("ext")
 require = ext.require
 
-vim.hl = ext.vim.highlight
-vim.hl_link = ext.vim.highlight_link
-
 --- General
 vim.g.mapleader = " "
 
