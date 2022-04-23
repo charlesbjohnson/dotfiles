@@ -3,7 +3,7 @@
     "commit": "1bfb32e"
   },
   "alpha-nvim": {
-    "commit": "6655228"
+    "commit": "4781fcf"
   },
   "barbar.nvim": {
     "commit": "be65945"
@@ -27,7 +27,7 @@
     "commit": "3f332a4"
   },
   "gitsigns.nvim": {
-    "commit": "eb7d40f"
+    "commit": "3461ffa"
   },
   "indent-blankline.nvim": {
     "commit": "045d958"
@@ -39,10 +39,10 @@
     "commit": "517fe3a"
   },
   "lsp_signature.nvim": {
-    "commit": "a351509"
+    "commit": "a9bcfa8"
   },
   "neo-tree.nvim": {
-    "commit": "ada6a3d"
+    "commit": "116ffb0"
   },
   "neoscroll.nvim": {
     "commit": "07242b9"
@@ -54,13 +54,13 @@
     "commit": "42552b3"
   },
   "null-ls.nvim": {
-    "commit": "a887bd6"
+    "commit": "c832a0e"
   },
   "nvim-autopairs": {
-    "commit": "38d486a"
+    "commit": "3d7b552"
   },
   "nvim-cmp": {
-    "commit": "b5433f9"
+    "commit": "433af3d"
   },
   "nvim-colorizer.lua": {
     "commit": "36c610a"
@@ -69,7 +69,7 @@
     "commit": "1944094"
   },
   "nvim-lsp-installer": {
-    "commit": "90996e5"
+    "commit": "d2c0efd"
   },
   "nvim-lspconfig": {
     "commit": "99596a8"
@@ -78,13 +78,13 @@
     "commit": "3097240"
   },
   "nvim-treesitter": {
-    "commit": "4542402"
+    "commit": "b1e8b61"
   },
   "nvim-ts-autotag": {
-    "commit": "57035b5"
+    "commit": "044a05c"
   },
   "nvim-web-devicons": {
-    "commit": "09e6231"
+    "commit": "2033e8e"
   },
   "packer.nvim": {
     "commit": "4dedd3b"
@@ -105,13 +105,13 @@
     "commit": "8ec164b"
   },
   "telescope.nvim": {
-    "commit": "66c3e2a"
+    "commit": "8b02088"
   },
   "tmux.nvim": {
     "commit": "94a5b18"
   },
   "toggleterm.nvim": {
-    "commit": "ed812c8"
+    "commit": "6c7f5db"
   },
   "trouble.nvim": {
     "commit": "691d490"
@@ -129,7 +129,7 @@
     "commit": "3f35acf"
   },
   "vim-matchup": {
-    "commit": "7fd8806"
+    "commit": "1cb069f"
   },
   "vim-repeat": {
     "commit": "24afe92"
@@ -141,7 +141,7 @@
     "commit": "c8782be"
   },
   "vim-surround": {
-    "commit": "81fc0ec"
+    "commit": "bf3480d"
   },
   "vim-textobj-backticks": {
     "commit": "88cad8a"
@@ -156,6 +156,6 @@
     "commit": "41a675d"
   },
   "vim-vsnip": {
-    "commit": "70a1131"
+    "commit": "8f199ef"
   }
 }
