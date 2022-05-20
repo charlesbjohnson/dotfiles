@@ -1,5 +1,11 @@
 local lspnull = require("null-ls")
-local lspconfig_u = require("lspconfig.util")
+
+require("opt.plugins.lsp.null-ls.fish").registration(lspnull.register)
+require("opt.plugins.lsp.null-ls.sh").registration(lspnull.register)
+
+require("opt.plugins.lsp.null-ls.json").registration(lspnull.register)
+
+require("opt.plugins.lsp.null-ls.lua").registration(lspnull.register)
 
 local sources = require.tree("init.plugins.lsp.null-ls")
 local root_patterns = { ".null-ls-root", ".git" }
@@ -20,5 +26,5 @@ end
 
 lspnull.setup({
   diagnostics_format = "[#{c}] #{m} (#{s})",
-  root_dir = lspconfig_u.root_pattern(root_patterns),
+  root_dir = require("lspconfig.util").root_pattern(root_patterns),
 })
