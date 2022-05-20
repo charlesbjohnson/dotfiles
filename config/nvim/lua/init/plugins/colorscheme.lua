@@ -2,10 +2,12 @@ local colors = require("colors")
 
 -- shaunsingh/nord.nvim
 vim.g.nord_borders = true
-vim.g.nord_contrast = true
 vim.g.nord_italic = false
 
 require("nord").set()
+
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = colors[1] })
+vim.api.nvim_set_hl(0, "FloatBorder", { bg = colors[1] })
 
 -- TODO: submit fix for yellow
 vim.api.nvim_set_hl(0, "BufferCurrentMod", { fg = colors[13] })

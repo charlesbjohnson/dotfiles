@@ -14,6 +14,9 @@
   "cmp-nvim-lsp": {
     "commit": "ebdfc20"
   },
+  "cmp-nvim-lsp-signature-help": {
+    "commit": "8014f6d"
+  },
   "cmp-nvim-lua": {
     "commit": "d276254"
   },
@@ -37,9 +40,6 @@
   },
   "lsp-colors.nvim": {
     "commit": "517fe3a"
-  },
-  "lsp_signature.nvim": {
-    "commit": "a9bcfa8"
   },
   "neo-tree.nvim": {
     "commit": "116ffb0"

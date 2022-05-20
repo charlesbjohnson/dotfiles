@@ -68,9 +68,18 @@ require("cmp").setup({
   },
   sources = {
     { name = "buffer" },
-    { name = "path" },
     { name = "nvim_lsp" },
+    { name = "nvim_lsp_signature_help" },
     { name = "nvim_lua" },
+    { name = "path" },
+  },
+  window = {
+    completion = {
+      border = "shadow",
+    },
+    documentation = {
+      border = "shadow",
+    },
   },
 })
 

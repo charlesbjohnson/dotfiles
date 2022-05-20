@@ -59,6 +59,7 @@ return require("packer").startup({
     use("folke/lsp-colors.nvim")
     use("hrsh7th/cmp-buffer")
     use("hrsh7th/cmp-nvim-lsp")
+    use("hrsh7th/cmp-nvim-lsp-signature-help")
     use("hrsh7th/cmp-nvim-lua")
     use("hrsh7th/cmp-path")
     use("hrsh7th/nvim-cmp")
@@ -68,7 +69,6 @@ return require("packer").startup({
     use("lewis6991/gitsigns.nvim")
     use("lukas-reineke/indent-blankline.nvim")
     use("neovim/nvim-lspconfig")
-    use("ray-x/lsp_signature.nvim")
     use("williamboman/nvim-lsp-installer")
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 

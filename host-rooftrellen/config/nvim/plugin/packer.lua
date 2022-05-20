@@ -100,6 +100,11 @@ local no_errors, error_msg = pcall(function()
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
       url = "https://github.com/hrsh7th/cmp-nvim-lsp",
     },
+    ["cmp-nvim-lsp-signature-help"] = {
+      loaded = true,
+      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp-signature-help",
+      url = "https://github.com/hrsh7th/cmp-nvim-lsp-signature-help",
+    },
     ["cmp-nvim-lua"] = {
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
@@ -139,11 +144,6 @@ local no_errors, error_msg = pcall(function()
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
       url = "https://github.com/folke/lsp-colors.nvim",
-    },
-    ["lsp_signature.nvim"] = {
-      loaded = true,
-      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
-      url = "https://github.com/ray-x/lsp_signature.nvim",
     },
     ["neo-tree.nvim"] = {
       loaded = true,
