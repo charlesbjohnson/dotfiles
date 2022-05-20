@@ -40,4 +40,5 @@ end
 require("init.plugins.statusline.content")(options)
 require("init.plugins.statusline.style")(options)
 
+-- famiu/feline.nvim
 require("feline").setup(options)
