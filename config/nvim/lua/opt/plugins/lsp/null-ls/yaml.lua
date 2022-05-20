@@ -1,5 +1,4 @@
 local lspnull = require("null-ls")
-local lspnull_h = require("null-ls.helpers")
 
 local M = {}
 
@@ -8,7 +7,7 @@ function M.registration(register)
   register({
     filetypes = { "yaml" },
     method = lspnull.methods.FORMATTING,
-    generator = lspnull_h.formatter_factory({
+    generator = require("null-ls.helpers").formatter_factory({
       command = "yq",
       args = ("--prettyPrint $FILENAME"):split(" "),
     }),

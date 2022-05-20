@@ -1,10 +1,7 @@
 local lspnull = require("null-ls")
 
-require("opt.plugins.lsp.null-ls.fish").registration(lspnull.register)
-require("opt.plugins.lsp.null-ls.sh").registration(lspnull.register)
-
 require("opt.plugins.lsp.null-ls.json").registration(lspnull.register)
-
+require("opt.plugins.lsp.null-ls.shell").registration(lspnull.register)
 require("opt.plugins.lsp.null-ls.lua").registration(lspnull.register)
 
 local sources = require.tree("init.plugins.lsp.null-ls")

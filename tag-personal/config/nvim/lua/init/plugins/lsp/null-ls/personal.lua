@@ -3,12 +3,12 @@ local M = {}
 function M.registration(register)
   require("opt.plugins.lsp.null-ls.yaml").registration(register)
 
+  require("opt.plugins.lsp.null-ls.css").registration(register)
+  require("opt.plugins.lsp.null-ls.html").registration(register)
+
   require("opt.plugins.lsp.null-ls.go").registration(register)
   require("opt.plugins.lsp.null-ls.javascript").registration(register)
   require("opt.plugins.lsp.null-ls.ruby").registration(register)
-
-  require("opt.plugins.lsp.null-ls.css").registration(register)
-  require("opt.plugins.lsp.null-ls.html").registration(register)
 end
 
 function M.root_patterns()
