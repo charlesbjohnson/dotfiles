@@ -125,6 +125,11 @@ local no_errors, error_msg = pcall(function()
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/feline.nvim",
       url = "https://github.com/famiu/feline.nvim",
     },
+    ["fzf-lua"] = {
+      loaded = true,
+      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/fzf-lua",
+      url = "https://github.com/ibhagwan/fzf-lua",
+    },
     ["gitsigns.nvim"] = {
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -245,16 +250,6 @@ local no_errors, error_msg = pcall(function()
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/splitjoin.vim",
       url = "https://github.com/AndrewRadev/splitjoin.vim",
-    },
-    ["telescope-fzf-native.nvim"] = {
-      loaded = true,
-      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
-      url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim",
-    },
-    ["telescope.nvim"] = {
-      loaded = true,
-      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/telescope.nvim",
-      url = "https://github.com/nvim-telescope/telescope.nvim",
     },
     ["tmux.nvim"] = {
       loaded = true,

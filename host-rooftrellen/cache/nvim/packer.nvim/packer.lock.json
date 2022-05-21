@@ -29,6 +29,9 @@
   "feline.nvim": {
     "commit": "3f332a4"
   },
+  "fzf-lua": {
+    "commit": "eb3d2d1"
+  },
   "gitsigns.nvim": {
     "commit": "3461ffa"
   },
@@ -100,12 +103,6 @@
   },
   "splitjoin.vim": {
     "commit": "dbcd306"
-  },
-  "telescope-fzf-native.nvim": {
-    "commit": "8ec164b"
-  },
-  "telescope.nvim": {
-    "commit": "8b02088"
   },
   "tmux.nvim": {
     "commit": "94a5b18"

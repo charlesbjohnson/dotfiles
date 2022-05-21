@@ -83,6 +83,30 @@ require("cmp").setup({
   },
 })
 
+-- ibhagwan/fzf-lua
+require("fzf-lua").setup({
+  actions = {
+    files = {
+      ["default"] = require("fzf-lua.actions").file_edit,
+    },
+  },
+  file_icon_padding = " ",
+  keymap = {
+    builtin = {},
+    fzf = {},
+  },
+  winopts = {
+    fullscreen = true,
+    preview = {
+      default = "bat",
+    },
+  },
+})
+
+vim.keymap.set("n", "<C-p>", require("fzf-lua").files, { silent = true })
+vim.keymap.set("n", "<C-M-p>", require("fzf-lua").commands, { silent = true })
+vim.keymap.set("n", "<C-_>", require("fzf-lua").live_grep_native, { silent = true })
+
 -- junegunn/vim-easy-align
 vim.keymap.set("n", "<Leader>a", "<Plug>(EasyAlign)")
 vim.keymap.set("x", "<CR>", "<Plug>(EasyAlign)")
@@ -168,69 +192,6 @@ require("neo-tree").setup({
 vim.keymap.set("n", "<C-b>", function()
   require("neo-tree").show("", true)
 end, { silent = true })
-
--- nvim-telescope/telescope.nvim
-require("telescope").setup({
-  defaults = {
-    mappings = {
-      i = {
-        ["<C-n>"] = false,
-        ["<C-j>"] = require("telescope.actions").move_selection_next,
-        ["<M-j>"] = require("telescope.actions").move_selection_next,
-
-        ["<C-p>"] = false,
-        ["<C-k>"] = require("telescope.actions").move_selection_previous,
-        ["<M-k>"] = require("telescope.actions").move_selection_previous,
-
-        ["<C-u>"] = require("telescope.actions").preview_scrolling_up,
-        ["<C-d>"] = require("telescope.actions").preview_scrolling_down,
-
-        ["<C-v>"] = false,
-        ["<M-\\>"] = require("telescope.actions").select_vertical,
-        ["<C-\\>"] = require("telescope.actions").select_vertical,
-
-        ["<C-x>"] = false,
-        ["<C-_>"] = require("telescope.actions").select_horizontal,
-        ["<M-_>"] = require("telescope.actions").select_horizontal,
-
-        ["<C-t>"] = false,
-        ["<C-c>"] = require("telescope.actions").close,
-      },
-      n = {
-        ["<C-n>"] = false,
-        ["<C-j>"] = require("telescope.actions").move_selection_next,
-        ["<M-j>"] = require("telescope.actions").move_selection_next,
-
-        ["<C-p>"] = false,
-        ["<C-k>"] = require("telescope.actions").move_selection_previous,
-        ["<M-k>"] = require("telescope.actions").move_selection_previous,
-
-        ["<C-u>"] = require("telescope.actions").preview_scrolling_up,
-        ["<C-d>"] = require("telescope.actions").preview_scrolling_down,
-
-        ["<C-v>"] = false,
-        ["<M-\\>"] = require("telescope.actions").select_vertical,
-        ["<C-\\>"] = require("telescope.actions").select_vertical,
-
-        ["<C-x>"] = false,
-        ["<C-_>"] = require("telescope.actions").select_horizontal,
-        ["<M-_>"] = require("telescope.actions").select_horizontal,
-
-        ["<C-t>"] = false,
-        ["<C-c>"] = require("telescope.actions").close,
-      },
-    },
-  },
-})
-
-require("telescope").load_extension("fzf")
-
-vim.keymap.set("n", "<C-p>", function()
-  require("telescope.builtin").find_files({ hidden = true })
-end, { silent = true })
-
-vim.keymap.set("n", "<C-M-p>", require("telescope.builtin").commands, { silent = true })
-vim.keymap.set("n", "<C-_>", require("telescope.builtin").live_grep, { silent = true })
 
 -- nvim-treesitter/nvim-treesitter
 require("nvim-treesitter.configs").setup({

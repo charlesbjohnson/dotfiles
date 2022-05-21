@@ -20,14 +20,16 @@ source "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.$(basename "$SHELL")"
 dotfile::set_env FZF_DEFAULT_COMMAND "fd --type f --hidden --follow"
 dotfile::set_env FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
 dotfile::set_env FZF_DEFAULT_OPTS "
-  --bind 'alt-j:down,alt-k:up'
-  --color 'fg:#E5E9F0,bg:#3B4252,hl:#88C0D0'
-  --color 'fg+:#ECEFF4,bg+:#4C566A,hl+:#88C0D0'
-  --color 'gutter:#3B4252,spinner:#B48DAC'
-  --color 'prompt:#BF6069,pointer:#B48DAC,marker:#A3BE8B'
-  --info hidden
-  --margin 0,2
-  --pointer '|' --prompt '| '
+  --bind 'ctrl-h:unbind(ctrl-h),ctrl-j:unbind(ctrl-j),ctrl-k:unbind(ctrl-k),ctrl-l:unbind(ctrl-l)'
+  --bind 'alt-h:beginning-of-line,alt-l:end-of-line'
+  --bind 'alt-j:down,alt-k:up,ctrl-alt-j:half-page-down,ctrl-alt-k:half-page-up'
+  --bind 'ctrl-f:preview-page-down,ctrl-b:preview-page-up'
+  --color 'fg:white,bg:-1,hl:cyan'
+  --color 'fg+:bright-white,bg+:bright-black,hl+:bright-cyan'
+  --color 'gutter:-1,spinner:magenta'
+  --color 'prompt:red,pointer:magenta,marker:green'
+  --border
+  --reverse
 "
 
 dotfile::prepend_env PATH "$HOME/.local/bin"

@@ -15,7 +15,7 @@
   l        = log --graph --oneline
   la       = log --graph --stat
   ldf      = log --oneline --patch-with-stat --full-diff
-  lfz      = ! git log --oneline | fzf | cut -f 1 -d ' '
+  lfz      = ! git log --oneline | fzf --preview 'git show --color=always "$(echo {} | cut -f 1 -d \" \")"' | cut -f 1 -d ' '
   pf       = push --force-with-lease
   rba      = rebase --abort
   rbc      = rebase --continue
