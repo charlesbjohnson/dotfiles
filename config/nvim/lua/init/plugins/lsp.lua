@@ -1,3 +1,37 @@
+-- hrsh7th/nvim-cmp
+require("cmp").setup({
+  mapping = {
+    ["<CR>"] = require("cmp").mapping.confirm(),
+    ["<C-e>"] = require("cmp").mapping.abort(),
+
+    ["<C-b>"] = require("cmp").mapping.scroll_docs(-4),
+    ["<C-f>"] = require("cmp").mapping.scroll_docs(4),
+
+    ["<Tab>"] = require("cmp").mapping.select_next_item(),
+    ["<S-Tab>"] = require("cmp").mapping.select_prev_item(),
+  },
+  snippet = {
+    expand = function(args)
+      vim.fn["vsnip#anonymous"](args.body)
+    end,
+  },
+  sources = {
+    { name = "buffer" },
+    { name = "nvim_lsp" },
+    { name = "nvim_lsp_signature_help" },
+    { name = "nvim_lua" },
+    { name = "path" },
+  },
+  window = {
+    completion = {
+      border = "shadow",
+    },
+    documentation = {
+      border = "shadow",
+    },
+  },
+})
+
 -- jose-elias-alvarez/null-ls.nvim
 require("init.plugins.lsp.null-ls")
 
