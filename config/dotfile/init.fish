@@ -3,7 +3,7 @@ function dotfile::append_env
     set --local values $argv[2]
 
     if not set --query $name
-        dotfile::set_env $name $values
+        export $name=$values
         return
     end
 
@@ -19,7 +19,7 @@ function dotfile::prepend_env
     set --local values $argv[2]
 
     if not set --query $name
-        dotfile::set_env $name $values
+        export $name=$values
         return
     end
 
@@ -28,10 +28,6 @@ function dotfile::prepend_env
             set --prepend $name $value
         end
     end
-end
-
-function dotfile::set_env
-    set --export --global $argv[1] $argv[2]
 end
 
 function unset

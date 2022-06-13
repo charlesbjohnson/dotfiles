@@ -61,5 +61,5 @@ function dotfile::env::gnu
 end
 
 function dotfile::env::shell
-    dotfile::set_env SHELL "$(which "$(ps --pid %self -o "comm=")")"
+    export SHELL="$(which "$(ps --pid %self -o "comm=")")"
 end

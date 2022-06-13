@@ -3,8 +3,10 @@
 # direnv
 eval "$(direnv hook "$(basename "$SHELL")")"
 
-dotfile::set_env GOPATH "$HOME/.go"
+# go
+export GOPATH="$HOME/.go"
 dotfile::prepend_env PATH "$GOPATH/bin"
 
-dotfile::set_env CARGO_HOME "$HOME/.cargo"
+# rust
+export CARGO_HOME="$HOME/.cargo"
 dotfile::prepend_env PATH "$CARGO_HOME/bin"

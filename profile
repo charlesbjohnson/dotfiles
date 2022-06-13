@@ -1,7 +1,7 @@
 # fmt: shfmt
 
-dotfile::set_env HOSTNAME "$(hostname)"
-dotfile::set_env PATH
+export HOSTNAME="$(hostname)"
+export PATH
 
 dotfile::append_env PATH "/usr/bin"
 dotfile::append_env PATH "/usr/sbin"
@@ -17,9 +17,9 @@ dotfile::env::asdf
 # fzf
 source "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.$(basename "$SHELL")"
 
-dotfile::set_env FZF_DEFAULT_COMMAND "fd --type f --hidden --follow"
-dotfile::set_env FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
-dotfile::set_env FZF_DEFAULT_OPTS "
+export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_DEFAULT_OPTS="
   --bind 'ctrl-h:unbind(ctrl-h),ctrl-j:unbind(ctrl-j),ctrl-k:unbind(ctrl-k),ctrl-l:unbind(ctrl-l)'
   --bind 'alt-h:beginning-of-line,alt-l:end-of-line'
   --bind 'alt-j:down,alt-k:up,ctrl-alt-j:half-page-down,ctrl-alt-k:half-page-up'

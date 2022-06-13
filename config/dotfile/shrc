@@ -1,8 +1,8 @@
 # fmt: shfmt
 
-dotfile::set_env VISUAL "nvim"
-dotfile::set_env EDITOR "$VISUAL"
-dotfile::set_env TERM "xterm-256color"
+export VISUAL="nvim"
+export EDITOR="$VISUAL"
+export TERM="xterm-256color"
 
 dotfile::shell::terminfo "https://invisible-island.net/datafiles/current/terminfo.src.gz"
 dotfile::shell::dircolors "https://raw.githubusercontent.com/arcticicestudio/nord-dircolors/develop/src/dir_colors"
@@ -13,11 +13,11 @@ dotfile::shell::tmux "default"
 eval "$(starship init "$(basename "$SHELL")")"
 
 # gpg
-dotfile::set_env GPG_TTY "$(tty)"
+export GPG_TTY="$(tty)"
 gpg-agent --daemon 2>/dev/null
 
 # ssh
-dotfile::set_env SSH_AUTH_SOCK "$(gpgconf --list-dirs agent-ssh-socket)"
+export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 unset SSH_AGENT_PID
 
 dotfile::load_all "$HOME/.config/dotfile" "shrc.*"

@@ -1,6 +1,6 @@
 # fmt: shfmt
 
-dotfile::set_env CLICOLOR "YES"
+export CLICOLOR="YES"
 dotfile::prepend_env PATH "$HOMEBREW_PREFIX/opt/ruby/bin"
 
 dotfile::env::gnu "g"
