@@ -3,10 +3,10 @@
 export HOSTNAME="$(hostname)"
 export PATH
 
-dotfile::append_env PATH "/usr/bin"
-dotfile::append_env PATH "/usr/sbin"
-dotfile::append_env PATH "/bin"
-dotfile::append_env PATH "/sbin"
+dotfile::append_path "/usr/bin"
+dotfile::append_path "/usr/sbin"
+dotfile::append_path "/bin"
+dotfile::append_path "/sbin"
 
 dotfile::load "$HOME/.config/dotfile/profile.homebrew"
 dotfile::env::shell
@@ -32,5 +32,5 @@ export FZF_DEFAULT_OPTS="
   --reverse
 "
 
-dotfile::prepend_env PATH "$HOME/.local/bin"
-dotfile::prepend_env PATH "bin"
+dotfile::prepend_path "$HOME/.local/bin"
+dotfile::prepend_path "bin"

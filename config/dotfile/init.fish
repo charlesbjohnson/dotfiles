@@ -1,32 +1,16 @@
-function dotfile::append_env
-    set --local name $argv[1]
-    set --local values $argv[2]
-
-    if not set --query $name
-        export $name=$values
-        return
-    end
-
-    for value in $(string split ":" $values)
-        if not contains $value $$name
-            set --append $name $value
-        end
+function dotfile::append_path
+    if test -z "$PATH"
+        export PATH=$argv[1]
+    else if not contains $argv[1] $PATH
+        export PATH="$PATH:$argv[1]"
     end
 end
 
-function dotfile::prepend_env
-    set --local name $argv[1]
-    set --local values $argv[2]
-
-    if not set --query $name
-        export $name=$values
-        return
-    end
-
-    for value in $(string split ":" $values)[-1..1]
-        if not contains $value $$name
-            set --prepend $name $value
-        end
+function dotfile::prepend_path
+    if test -z "$PATH"
+        export PATH=$argv[1]
+    else if not contains $argv[1] $PATH
+        export PATH="$argv[1]:$PATH"
     end
 end
 

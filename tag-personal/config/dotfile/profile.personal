@@ -5,8 +5,8 @@ eval "$(direnv hook "$(basename "$SHELL")")"
 
 # go
 export GOPATH="$HOME/.go"
-dotfile::prepend_env PATH "$GOPATH/bin"
+dotfile::prepend_path "$GOPATH/bin"
 
 # rust
 export CARGO_HOME="$HOME/.cargo"
-dotfile::prepend_env PATH "$CARGO_HOME/bin"
+dotfile::prepend_path "$CARGO_HOME/bin"
