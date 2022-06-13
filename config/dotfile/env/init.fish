@@ -5,7 +5,7 @@ function dotfile::env::asdf
 end
 
 function dotfile::env::brew
-    dotfile::unset_env HOMEBREW_SHELLENV_PREFIX
+    unset HOMEBREW_SHELLENV_PREFIX
 
     if not string match --quiet "*brew*" $PATH
         eval "$($argv[1]/bin/brew shellenv)"

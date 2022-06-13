@@ -18,6 +18,6 @@ gpg-agent --daemon 2>/dev/null
 
 # ssh
 dotfile::set_env SSH_AUTH_SOCK "$(gpgconf --list-dirs agent-ssh-socket)"
-dotfile::unset_env SSH_AGENT_PID
+unset SSH_AGENT_PID
 
 dotfile::load_all "$HOME/.config/dotfile" "shrc.*"

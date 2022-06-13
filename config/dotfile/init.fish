@@ -34,7 +34,7 @@ function dotfile::set_env
     set --export --global $argv[1] $argv[2]
 end
 
-function dotfile::unset_env
+function unset
     set --erase $argv[1]
 end
 

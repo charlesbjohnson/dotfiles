@@ -7,7 +7,7 @@ function dotfile::env::asdf() {
 }
 
 function dotfile::env::brew() {
-  dotfile::unset_env HOMEBREW_SHELLENV_PREFIX
+  unset HOMEBREW_SHELLENV_PREFIX
 
   if ! [[ "$PATH" =~ brew ]]; then
     eval "$("$1/bin/brew" shellenv)"
