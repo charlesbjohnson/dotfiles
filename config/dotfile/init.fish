@@ -29,7 +29,3 @@ function dotfile::load_all
         source $file
     end
 end
-
-function dotfile::alias
-    alias $argv[1] $argv[2]
-end

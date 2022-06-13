@@ -27,7 +27,3 @@ function dotfile::load_all() {
     source "$file"
   done
 }
-
-function dotfile::alias() {
-  alias "$1=$2"
-}
