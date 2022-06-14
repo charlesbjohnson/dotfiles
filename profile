@@ -3,6 +3,8 @@
 export HOSTNAME="$(hostname)"
 export PATH
 
+dotfile::append_path "/usr/local/bin"
+dotfile::append_path "/usr/local/sbin"
 dotfile::append_path "/usr/bin"
 dotfile::append_path "/usr/sbin"
 dotfile::append_path "/bin"

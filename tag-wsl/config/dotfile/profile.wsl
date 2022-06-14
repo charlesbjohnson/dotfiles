@@ -1,7 +1,0 @@
-# fmt: shfmt
-
-# In Windows:
-# - WSLENV=WSL_PATH/l
-# - WSL_PATH=%SYSTEMROOT%\System32;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0;%LOCALAPPDATA%\Programs\Microsoft VS Code\bin;
-
-dotfile::prepend_path "$WSL_PATH"
