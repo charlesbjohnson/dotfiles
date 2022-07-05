@@ -45,7 +45,8 @@
   navigate              = true
   syntax-theme          = Nord
 [diff]
-  tool = nvimdiff
+  tool       = nvimdiff
+  colorMoved = default
 [difftool]
   prompt = false
 [difftool "nvimdiff"]
@@ -54,9 +55,12 @@
   prune = true
 [interactive]
   diffFilter = delta --color-only
+[add.interactive]
+  useBuiltin = false
 [merge]
-  ff   = only
-  tool = nvimdiff
+  ff            = only
+  tool          = nvimdiff
+  conflictstyle = diff3
 [mergetool]
   prompt = false
 [mergetool "nvimdiff"]
