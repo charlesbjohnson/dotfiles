@@ -8,10 +8,6 @@ export DOTNET_ROOT="$(realpath $(brew --prefix dotnet))/libexec"
 export DOTNET_HOME="$HOME/.dotnet"
 dotfile::prepend_path "$DOTNET_HOME/tools"
 
-# go
-export GOPATH="$HOME/.go"
-dotfile::prepend_path "$GOPATH/bin"
-
 # rust
 export CARGO_HOME="$HOME/.cargo"
 dotfile::prepend_path "$CARGO_HOME/bin"
