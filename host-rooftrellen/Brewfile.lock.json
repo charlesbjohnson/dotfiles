@@ -1435,7 +1435,7 @@
         "revision": "4756e4c4cf95485c5ea4da27375946c1dac2c71d"
       },
       "homebrew/core": {
-        "revision": "bbe2deae0ab7bf20cafe1019094f3ae56e671f1f"
+        "revision": "03fbf3a604dd766c96e56ae80d15399acbd2b489"
       }
     }
   },
@@ -1444,8 +1444,8 @@
       "Unknown": {
         "GCC": "10.2.1",
         "HOMEBREW_PREFIX": "/home/linuxbrew/.linuxbrew",
-        "HOMEBREW_VERSION": "3.5.6-63-g72880de",
-        "Homebrew/linuxbrew-core": "bbe2deae0ab7bf20cafe1019094f3ae56e671f1f"
+        "HOMEBREW_VERSION": "3.5.6-73-ge217fd3",
+        "Homebrew/linuxbrew-core": "03fbf3a604dd766c96e56ae80d15399acbd2b489"
       }
     }
   }

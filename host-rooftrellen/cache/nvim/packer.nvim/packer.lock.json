@@ -30,7 +30,7 @@
     "commit": "2962c8c"
   },
   "fzf-lua": {
-    "commit": "c3b23be"
+    "commit": "bb73779"
   },
   "gitsigns.nvim": {
     "commit": "8b817e7"
@@ -45,7 +45,7 @@
     "commit": "517fe3a"
   },
   "neo-tree.nvim": {
-    "commit": "3f8997e"
+    "commit": "a922c3a"
   },
   "neoscroll.nvim": {
     "commit": "54c5c41"
@@ -54,10 +54,10 @@
     "commit": "baf9ab5"
   },
   "nui.nvim": {
-    "commit": "d85e598"
+    "commit": "6e872b3"
   },
   "null-ls.nvim": {
-    "commit": "47c0499"
+    "commit": "9b66c33"
   },
   "nvim-autopairs": {
     "commit": "972a797"
@@ -72,7 +72,7 @@
     "commit": "75b20ce"
   },
   "nvim-lsp-installer": {
-    "commit": "b8c168c"
+    "commit": "27178b6"
   },
   "nvim-lspconfig": {
     "commit": "99596a8"
@@ -81,7 +81,7 @@
     "commit": "ce0df69"
   },
   "nvim-treesitter": {
-    "commit": "6289410"
+    "commit": "2282461"
   },
   "nvim-ts-autotag": {
     "commit": "044a05c"
@@ -90,7 +90,7 @@
     "commit": "2d02a56"
   },
   "packer.nvim": {
-    "commit": "de10915"
+    "commit": "213ed03"
   },
   "plenary.nvim": {
     "commit": "986ad71"
@@ -102,7 +102,7 @@
     "commit": "9bf02ed"
   },
   "splitjoin.vim": {
-    "commit": "1f7d584"
+    "commit": "119882a"
   },
   "tmux.nvim": {
     "commit": "3b6a1ee"
