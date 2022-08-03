@@ -74,5 +74,5 @@ function dotfile::env::gnu() {
 }
 
 function dotfile::env::shell() {
-  export SHELL="$(which "$(ps --pid "$$" -o "comm=")")"
+  export SHELL="$(which "$(ps -p "$$" -o "comm=" | sed "s/-//")")"
 }

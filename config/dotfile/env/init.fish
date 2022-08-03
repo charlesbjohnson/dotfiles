@@ -61,5 +61,5 @@ function dotfile::env::gnu
 end
 
 function dotfile::env::shell
-    export SHELL="$(which "$(ps --pid %self -o "comm=")")"
+    export SHELL="$(which "$(ps -p %self -o "comm=" | sed "s/-//")")"
 end
