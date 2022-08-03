@@ -2,17 +2,17 @@
 
 function dotfile::append_path() {
   if [[ -z "$PATH" ]]; then
-    export PATH="$2"
-  elif [[ ":$PATH:" != *":$2:"* ]]; then
-    export PATH="$PATH:$2"
+    export PATH="$1"
+  elif [[ ":$PATH:" != *":$1:"* ]]; then
+    export PATH="$PATH:$1"
   fi
 }
 
 function dotfile::prepend_path() {
   if [[ -z "$PATH" ]]; then
-    export PATH="$2"
-  elif [[ ":$PATH:" != *":$2:"* ]]; then
-    export PATH="$2:$PATH"
+    export PATH="$1"
+  elif [[ ":$PATH:" != *":$1:"* ]]; then
+    export PATH="$1:$PATH"
   fi
 }
 
