@@ -13,7 +13,7 @@ fmt-just *OPTS:
 
 # Run the formatter for JSON
 fmt-json *OPTS:
-    @fd --strip-cwd-prefix --glob "**/*.json" | rargs bash -c 'echo "$(gron {} | sort | gron --ungron)" > {}'
+    @fd --strip-cwd-prefix --glob "**/*.json" | rargs bash -c 'echo "$(gron "{}" | sort | gron --ungron)" > "{}"'
 
 # Run the formatter for Lua
 fmt-lua *OPTS:
