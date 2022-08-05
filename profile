@@ -1,7 +1,7 @@
 # fmt: shfmt
 
 export HOSTNAME="$(hostname)"
-export PATH
+export PATH=
 
 dotfile::append_path "/usr/local/bin"
 dotfile::append_path "/usr/local/sbin"
