@@ -1,5 +1,5 @@
 function dotfile::append_path
-    if test -z "$PATH"
+    if test "$PATH" = "."
         export PATH=$argv[1]
     else if not contains $argv[1] $PATH
         export PATH="$PATH:$argv[1]"
@@ -7,7 +7,7 @@ function dotfile::append_path
 end
 
 function dotfile::prepend_path
-    if test -z "$PATH"
+    if test "$PATH" = "."
         export PATH=$argv[1]
     else if not contains $argv[1] $PATH
         export PATH="$argv[1]:$PATH"
