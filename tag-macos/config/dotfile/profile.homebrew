@@ -1,3 +1,3 @@
 # fmt: shfmt
 
-dotfile::env::brew "/usr/local"
+dotfile::env::brew "/opt/homebrew"
