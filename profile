@@ -1,6 +1,8 @@
 # fmt: shfmt
 
 export HOSTNAME="$(hostname)"
+
+export PATH_OLD="$PATH"
 export PATH=
 
 dotfile::append_path "/usr/local/bin"
@@ -14,6 +16,8 @@ dotfile::load "$HOME/.config/dotfile/profile.homebrew"
 dotfile::env::shell
 
 dotfile::load_all "$HOME/.config/dotfile" "profile.*"
+
+# asdf
 dotfile::env::asdf
 
 # fzf
