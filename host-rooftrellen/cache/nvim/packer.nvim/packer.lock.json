@@ -44,6 +44,12 @@
   "lsp-colors.nvim": {
     "commit": "517fe3a"
   },
+  "mason-lspconfig.nvim": {
+    "commit": "3cbd87f"
+  },
+  "mason.nvim": {
+    "commit": "8e2dad6"
+  },
   "neo-tree.nvim": {
     "commit": "a922c3a"
   },
@@ -70,9 +76,6 @@
   },
   "nvim-hlslens": {
     "commit": "75b20ce"
-  },
-  "nvim-lsp-installer": {
-    "commit": "27178b6"
   },
   "nvim-lspconfig": {
     "commit": "99596a8"

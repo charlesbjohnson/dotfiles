@@ -35,8 +35,11 @@ require("cmp").setup({
 -- jose-elias-alvarez/null-ls.nvim
 require("init.plugins.lsp.null-ls")
 
--- williamboman/nvim-lsp-installer
-require("nvim-lsp-installer").setup({
+-- williamboman/mason.nvim
+require("mason").setup()
+
+-- williamboman/mason-lspconfig.nvim
+require("mason-lspconfig").setup({
   automatic_installation = true,
 })
 

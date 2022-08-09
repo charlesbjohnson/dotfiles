@@ -68,7 +68,8 @@ return require("packer").startup({
     use("lewis6991/gitsigns.nvim")
     use("lukas-reineke/indent-blankline.nvim")
     use("neovim/nvim-lspconfig")
-    use("williamboman/nvim-lsp-installer")
+    use("williamboman/mason-lspconfig.nvim")
+    use("williamboman/mason.nvim")
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 
     -- Editor Appearance

@@ -150,6 +150,16 @@ local no_errors, error_msg = pcall(function()
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
       url = "https://github.com/folke/lsp-colors.nvim",
     },
+    ["mason-lspconfig.nvim"] = {
+      loaded = true,
+      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+      url = "https://github.com/williamboman/mason-lspconfig.nvim",
+    },
+    ["mason.nvim"] = {
+      loaded = true,
+      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/mason.nvim",
+      url = "https://github.com/williamboman/mason.nvim",
+    },
     ["neo-tree.nvim"] = {
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
@@ -194,11 +204,6 @@ local no_errors, error_msg = pcall(function()
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nvim-hlslens",
       url = "https://github.com/kevinhwang91/nvim-hlslens",
-    },
-    ["nvim-lsp-installer"] = {
-      loaded = true,
-      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
-      url = "https://github.com/williamboman/nvim-lsp-installer",
     },
     ["nvim-lspconfig"] = {
       loaded = true,
