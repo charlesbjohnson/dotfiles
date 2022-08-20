@@ -1,0 +1,4 @@
+EXCLUDES="*.example Justfile LICENSE README.md"
+HOSTNAME="heb"
+TAGS="macos"
+UNDOTTED="Library"

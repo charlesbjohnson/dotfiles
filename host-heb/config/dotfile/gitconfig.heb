@@ -1,0 +1,5 @@
+[alias]
+  lrls = "!f() { git log --pretty='%h|%an|%s' $@ | column -t -s '|'; }; f"
+[user]
+  email = johnson.charlie@heb.com
+  name  = Charlie Johnson

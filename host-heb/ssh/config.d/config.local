@@ -1,0 +1,18 @@
+Host work-gh
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/heb.pub
+  IdentitiesOnly yes
+
+Host work-gl
+  HostName gitlab.com
+  User git
+  IdentityFile ~/.ssh/heb.pub
+  IdentitiesOnly yes
+
+Host aws.*.*.i-*
+  User ec2-user
+  IdentityFile ~/.ssh/heb.pub
+  IdentitiesOnly yes
+  ProxyCommand sh -c "~/.ssh/aws-ssm.sh %h %p %r ~/.ssh/heb.pub"
+  ForwardAgent yes
