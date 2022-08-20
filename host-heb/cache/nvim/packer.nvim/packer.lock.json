@@ -1,0 +1,164 @@
+{
+  "FixCursorHold.nvim": {
+    "commit": "1900f89"
+  },
+  "alpha-nvim": {
+    "commit": "7a6b948"
+  },
+  "barbar.nvim": {
+    "commit": "8cca17e"
+  },
+  "cmp-buffer": {
+    "commit": "3022dbc"
+  },
+  "cmp-nvim-lsp": {
+    "commit": "44b16d1"
+  },
+  "cmp-nvim-lsp-signature-help": {
+    "commit": "3d8912e"
+  },
+  "cmp-nvim-lua": {
+    "commit": "f12408b"
+  },
+  "cmp-path": {
+    "commit": "91ff86c"
+  },
+  "feline.nvim": {
+    "commit": "c32c2ff"
+  },
+  "fzf-lua": {
+    "commit": "fe649a0"
+  },
+  "gitsigns.nvim": {
+    "commit": "749267a"
+  },
+  "indent-blankline.nvim": {
+    "commit": "9637670"
+  },
+  "kommentary": {
+    "commit": "3a80117"
+  },
+  "lsp-colors.nvim": {
+    "commit": "2bbe754"
+  },
+  "lspkind.nvim": {
+    "commit": "57610d5"
+  },
+  "mason-lspconfig.nvim": {
+    "commit": "2997f46"
+  },
+  "mason.nvim": {
+    "commit": "a51c2d0"
+  },
+  "neo-tree.nvim": {
+    "commit": "e62babc"
+  },
+  "neoscroll.nvim": {
+    "commit": "4bc0212"
+  },
+  "noice.nvim": {
+    "commit": "894db25"
+  },
+  "nord.nvim": {
+    "commit": "fab04b2"
+  },
+  "nui.nvim": {
+    "commit": "9e3916e"
+  },
+  "null-ls.nvim": {
+    "commit": "0010ea9"
+  },
+  "nvim-autopairs": {
+    "commit": "ae5b41c"
+  },
+  "nvim-cmp": {
+    "commit": "51f1e11"
+  },
+  "nvim-colorizer.lua": {
+    "commit": "dde3084"
+  },
+  "nvim-lspconfig": {
+    "commit": "93c6826"
+  },
+  "nvim-notify": {
+    "commit": "ea9c8ce"
+  },
+  "nvim-scrollbar": {
+    "commit": "35f99d5"
+  },
+  "nvim-treesitter": {
+    "commit": "2ee71c1"
+  },
+  "nvim-ts-autotag": {
+    "commit": "6be1192"
+  },
+  "nvim-web-devicons": {
+    "commit": "cfc8824"
+  },
+  "packer.nvim": {
+    "commit": "90f794d"
+  },
+  "plenary.nvim": {
+    "commit": "267282a"
+  },
+  "popup.nvim": {
+    "commit": "b7404d3"
+  },
+  "repmo.vim": {
+    "commit": "9bf02ed"
+  },
+  "sort.nvim": {
+    "commit": "c789da6"
+  },
+  "tmux.nvim": {
+    "commit": "03e28fd"
+  },
+  "toggleterm.nvim": {
+    "commit": "12cba0a"
+  },
+  "treesj": {
+    "commit": "7ee1250"
+  },
+  "trouble.nvim": {
+    "commit": "40aad00"
+  },
+  "vim-cutlass": {
+    "commit": "7afd649"
+  },
+  "vim-easy-align": {
+    "commit": "12dd631"
+  },
+  "vim-illuminate": {
+    "commit": "76f28e8"
+  },
+  "vim-markdown-folding": {
+    "commit": "5d0a746"
+  },
+  "vim-matchup": {
+    "commit": "582cbc8"
+  },
+  "vim-repeat": {
+    "commit": "24afe92"
+  },
+  "vim-schlepp": {
+    "commit": "dfe67ad"
+  },
+  "vim-surround": {
+    "commit": "3d188ed"
+  },
+  "vim-textobj-backticks": {
+    "commit": "88cad8a"
+  },
+  "vim-textobj-indent": {
+    "commit": "deb7686"
+  },
+  "vim-textobj-line": {
+    "commit": "1a6780d"
+  },
+  "vim-textobj-user": {
+    "commit": "41a675d"
+  },
+  "vim-vsnip": {
+    "commit": "7753ba9"
+  }
+}

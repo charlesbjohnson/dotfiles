@@ -1,0 +1,5 @@
+# fmt: shfmt
+
+# java
+export JAVA_HOME="$(realpath $(brew --prefix openjdk))"
+dotfile::prepend_path "$JAVA_HOME/bin"

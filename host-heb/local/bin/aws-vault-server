@@ -1,0 +1,102 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+function main() {
+  COMMAND=$1
+  shift
+
+  case $COMMAND in
+  export)
+    require_aws_profile
+    SERVER_PID=$(require_server_status "started")
+
+    SHELL_PID=$(ps -e -o ppid,pid | grep -E "^$SERVER_PID" | cut -d ' ' -f 2)
+    SHELL_ENV=$(
+      ps -E -ww -p "$SHELL_PID" -o command | tr ' ' '\n' | grep AWS_CONTAINER_ &&
+        echo "AWS_CONTAINER_CREDENTIALS_RELATIVE_URI=/" &&
+        echo "AWS_METADATA_URL=/"
+    )
+
+    echo "$SHELL_ENV" | xargs -I {} echo export {} | tee >(pbcopy)
+    ;;
+
+  ssh)
+    require_aws_profile
+
+    REMOTE_HOST=$1
+    if [ -z "$REMOTE_HOST" ]; then
+      fatal "a remote host is required"
+    fi
+
+    if [[ $REMOTE_HOST = "i-"* ]]; then
+      REMOTE_HOST="aws.$AWS_PROFILE.$REMOTE_HOST"
+    fi
+
+    SERVER_PID=$(require_server_status "started")
+    SERVER_PORT=$(lsof -p "$SERVER_PID" | grep LISTEN | awk '{ print $9 }' | cut -d : -f 2)
+
+    ssh -R "$SERVER_PORT:localhost:$SERVER_PORT" "$REMOTE_HOST"
+    ;;
+
+  status)
+    pgrep -l -f "^aws-vault.*--server" | grep -E -o -- '--server.*' | cut -d ' ' -f 2
+    ;;
+
+  start)
+    require_aws_profile
+    require_server_status "stopped"
+    aws-vault --debug exec --server "$AWS_PROFILE" -- "$SHELL" --login
+    ;;
+
+  stop)
+    require_aws_profile
+    SERVER_PID=$(require_server_status "started")
+    kill "$SERVER_PID"
+    ;;
+
+  *)
+    fatal "command not recognized: '$COMMAND'"
+    ;;
+  esac
+}
+
+function require_aws_profile() {
+  if [ -z "$AWS_PROFILE" ]; then
+    fatal "AWS_PROFILE is required"
+  fi
+}
+
+function require_server_status() {
+  local status=$1
+  local pid
+
+  set +e
+  pid=$(pgrep -f "^aws-vault.*--server.*$AWS_PROFILE")
+  set -e
+
+  case $status in
+  started)
+    if [ -z "$pid" ]; then
+      fatal "server is not running for '$AWS_PROFILE'"
+    fi
+    ;;
+  stopped)
+    if [ -n "$pid" ]; then
+      fatal "server is already running for '$AWS_PROFILE'"
+    fi
+    ;;
+  esac
+
+  echo "$pid"
+}
+
+function error() {
+  echo "$@" >&2
+}
+
+function fatal() {
+  error "$@"
+  exit 1
+}
+
+main "$@"
