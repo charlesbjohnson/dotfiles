@@ -64,9 +64,4 @@ require("init.plugins.lsp.lspconfig")({
     ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "shadow" }),
     ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "shadow" }),
   },
-
-  on_attach = function(client)
-    -- RRethy/vim-illuminate
-    require("illuminate").on_attach(client)
-  end,
 })

@@ -8,6 +8,14 @@ vim.g.splitjoin_quiet = 1
 vim.g.splitjoin_join_mapping = "cJ"
 vim.g.splitjoin_split_mapping = "cK"
 
+-- RRethy/vim-illuminate
+require("illuminate").configure({
+  filetypes_denylist = {
+    "Trouble",
+    "toggleterm",
+  },
+})
+
 -- akinsho/toggleterm.nvim
 require("toggleterm").setup({
   open_mapping = "<C-x>",
