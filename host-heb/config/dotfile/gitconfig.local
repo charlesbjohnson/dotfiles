@@ -1,0 +1,11 @@
+[includeIf "gitdir:~/Projects/Work/HEB/"]
+  path = ~/.config/dotfile/gitconfig.heb
+
+[url "work-gh:HEB"]
+  insteadOf = git@github.com:HEB
+
+[url "work-gl:heb-engineering"]
+  insteadOf = git@gitlab.com:heb-engineering
+
+[url "work-gl:heb-engineering"]
+  insteadOf = https://gitlab.com/heb-engineering

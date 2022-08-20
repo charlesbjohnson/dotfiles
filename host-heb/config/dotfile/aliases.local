@@ -1,0 +1,3 @@
+# fmt: shfmt
+
+alias brewup='brew bundle --global install && brew upgrade && brew bundle --global cleanup -f && brew cleanup && cp "$HOME/.Brewfile.lock.json" "$HOME/.dotfiles/host-heb/Brewfile.lock.json"'

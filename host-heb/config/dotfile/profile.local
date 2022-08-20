@@ -1,0 +1,11 @@
+# fmt: shfmt
+
+# docker
+export DOCKER_HOST="unix://$HOME/.docker/run/docker.sock"
+
+# java
+export JAVA_HOME="$(realpath $(brew --prefix openjdk))"
+dotfile::prepend_path "$JAVA_HOME/bin"
+
+# lm studio
+dotfile::prepend_path "$HOME/.lmstudio/bin"

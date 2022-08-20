@@ -1,0 +1,42 @@
+[toplevel]
+console =
+  ! f() {
+    open \
+      --new -a "Microsoft Edge" \
+      --args \
+      --new-window \
+      --inprivate \
+      --profile-directory="HEBProfile-${AWS_PROFILE:-default}" \
+      "$(aws console-url)"
+  }; f
+
+console-url =
+  ! f() {
+    url="https://signin.aws.amazon.com/federation"
+    region="${AWS_REGION:-$AWS_DEFAULT_REGION}"
+    destination="https://$region.console.aws.amazon.com/console/home?region=$region"
+
+    session_credentials="$(
+      op plugin run -- aws exec -- \
+        jq --null-input "
+          env
+          | {
+            sessionId: .AWS_ACCESS_KEY_ID,
+            sessionKey: .AWS_SECRET_ACCESS_KEY,
+            sessionToken: .AWS_SESSION_TOKEN,
+          }
+        "
+    )"
+
+    signin_token="$(
+      curl "$url" \
+        --silent \
+        --url-query "Action=getSigninToken" \
+        --url-query "Session=$session_credentials" \
+      | jq --raw-output ".SigninToken"
+    )"
+
+    echo "$url?Action=login&Issuer=1password-cli&Destination=$destination&SigninToken=$signin_token"
+  }; f
+
+exec = ! $@
