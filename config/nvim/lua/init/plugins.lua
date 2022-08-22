@@ -46,6 +46,22 @@ require("kommentary.config").configure_language("default", {
 -- folke/trouble.nvim
 require("trouble").setup()
 
+vim.keymap.set("n", "gd", function()
+  require("trouble").toggle("lsp_definitions")
+end, { silent = true })
+
+vim.keymap.set("n", "gi", function()
+  require("trouble").toggle("lsp_implementations")
+end, { silent = true })
+
+vim.keymap.set("n", "gr", function()
+  require("trouble").toggle("lsp_references")
+end, { silent = true })
+
+vim.keymap.set("n", "gt", function()
+  require("trouble").toggle("lsp_type_definitions")
+end, { silent = true })
+
 vim.keymap.set("n", "<C-n>", function()
   require("trouble").toggle("document_diagnostics")
 end, { silent = true })
