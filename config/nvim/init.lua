@@ -21,6 +21,7 @@ vim.opt.cmdheight = 1
 vim.opt.completeopt = { "menuone", "noselect" }
 vim.opt.cursorline = true
 vim.opt.foldlevel = 99
+vim.opt.laststatus = 3
 vim.opt.list = true
 vim.opt.listchars = { eol = "↵", tab = "⇥ ", trail = "·" }
 vim.opt.number = true
