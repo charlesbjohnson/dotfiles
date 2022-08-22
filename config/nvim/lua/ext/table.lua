@@ -4,8 +4,8 @@ function table.dig(tbl, path)
   end
 
   for _, segment in ipairs(path) do
-    if string.starts_with(segment, "[") and string.ends_with(segment, "]") then
-      segment = tonumber(string.sub(segment, 2, -2))
+    if segment:starts_with("[") and segment:ends_with("]") then
+      segment = tonumber(segment:sub(2, -2))
     end
 
     if tbl[segment] == nil or tbl[segment] == vim.NIL then

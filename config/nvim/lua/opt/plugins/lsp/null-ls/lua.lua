@@ -17,7 +17,7 @@ end
 function M.registration(register)
   local config = use_selene()
   if config then
-    if string.ends_with(config, ".selene.toml") then
+    if config:ends_with(".selene.toml") then
       register(lspnull.builtins.diagnostics.selene.with({ extra_args = { "--config", config } }))
     else
       register(lspnull.builtins.diagnostics.selene)
