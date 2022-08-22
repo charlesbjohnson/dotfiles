@@ -120,12 +120,15 @@ vim.fn.sign_define("DiagnosticSignHint", { text = "", texthl = "DiagnosticSig
 vim.fn.sign_define("DiagnosticSignInfo", { text = "", texthl = "DiagnosticSignInfo" })
 vim.fn.sign_define("DiagnosticSignWarn", { text = "", texthl = "DiagnosticSignWarn" })
 
+vim.keymap.set("n", "ga", vim.lsp.buf.code_action, { silent = true })
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { silent = true })
+vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, { silent = true })
 vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { silent = true })
 vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { silent = true })
 vim.keymap.set("n", "gr", vim.lsp.buf.references, { silent = true })
-vim.keymap.set("n", "F", vim.lsp.buf.formatting, { silent = true })
 vim.keymap.set("n", "K", vim.lsp.buf.hover, { silent = true })
+vim.keymap.set("n", "<Leader>f", vim.lsp.buf.formatting, { silent = true })
+vim.keymap.set("n", "<Leader>r", vim.lsp.buf.rename, { silent = true })
 
 -- Terminal
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
