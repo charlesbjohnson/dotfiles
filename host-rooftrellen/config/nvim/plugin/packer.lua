@@ -115,6 +115,11 @@ local no_errors, error_msg = pcall(function()
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/cmp-path",
       url = "https://github.com/hrsh7th/cmp-path",
     },
+    ["csharpls-extended-lsp.nvim"] = {
+      loaded = true,
+      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/csharpls-extended-lsp.nvim",
+      url = "https://github.com/Decodetalkers/csharpls-extended-lsp.nvim",
+    },
     ["editorconfig-vim"] = {
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/editorconfig-vim",

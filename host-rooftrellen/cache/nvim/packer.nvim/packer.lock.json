@@ -23,6 +23,9 @@
   "cmp-path": {
     "commit": "447c87c"
   },
+  "csharpls-extended-lsp.nvim": {
+    "commit": "865ace7"
+  },
   "editorconfig-vim": {
     "commit": "d354117"
   },
