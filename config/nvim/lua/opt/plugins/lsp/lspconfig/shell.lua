@@ -1,3 +1,3 @@
 return function(options)
-  return require("lspconfig").bashls.setup(options)
+  require("lspconfig").bashls.setup(options)
 end

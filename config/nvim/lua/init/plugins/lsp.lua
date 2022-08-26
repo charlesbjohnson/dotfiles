@@ -44,7 +44,7 @@ require("mason-lspconfig").setup({
 })
 
 -- neovim/nvim-lspconfig
-require("init.plugins.lsp.lspconfig")({
+require("init.plugins.lsp.lspconfig")(vim.tbl_deep_extend("force", {}, require("lspconfig").util.default_config, {
   -- hrsh7th/cmp-nvim-lsp
   capabilities = vim.tbl_deep_extend(
     "force",
@@ -63,5 +63,17 @@ require("init.plugins.lsp.lspconfig")({
   handlers = {
     ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "shadow" }),
     ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "shadow" }),
+
+    ["window/logMessage"] = function(err, result, ctx, config)
+      if result and result.type <= vim.lsp.protocol.MessageType.Log then
+        vim.lsp.handlers["window/logMessage"](err, result, ctx, config)
+      end
+    end,
+
+    ["window/showMessage"] = function(err, result, ctx, config)
+      if result and result.type <= vim.lsp.protocol.MessageType.Warning then
+        vim.lsp.handlers["window/showMessage"](err, result, ctx, config)
+      end
+    end,
   },
-})
+}))
