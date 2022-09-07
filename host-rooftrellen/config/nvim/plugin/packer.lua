@@ -8,6 +8,9 @@ end
 vim.api.nvim_command("packadd packer.nvim")
 
 local no_errors, error_msg = pcall(function()
+  _G._packer = _G._packer or {}
+  _G._packer.inside_compile = true
+
   local time
   local profile_info
   local should_profile = false
@@ -39,8 +42,10 @@ local no_errors, error_msg = pcall(function()
         results[i] = elem[1] .. " took " .. elem[2] .. "ms"
       end
     end
+    if threshold then
+      table.insert(results, "(Only showing plugins that took longer than " .. threshold .. " ms " .. "to load)")
+    end
 
-    _G._packer = _G._packer or {}
     _G._packer.profile_output = results
   end
 
@@ -360,6 +365,13 @@ local no_errors, error_msg = pcall(function()
   )
   time([[Defining lazy-load filetype autocommands]], false)
   vim.cmd("augroup END")
+
+  _G._packer.inside_compile = false
+  if _G._packer.needs_bufread == true then
+    vim.cmd("doautocmd BufRead")
+  end
+  _G._packer.needs_bufread = false
+
   if should_profile then
     save_profiles()
   end
