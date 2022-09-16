@@ -3,7 +3,7 @@
     "commit": "5aa5ff1"
   },
   "alpha-nvim": {
-    "commit": "09e5374"
+    "commit": "0bb6fc0"
   },
   "barbar.nvim": {
     "commit": "c41ad6e"
@@ -30,13 +30,13 @@
     "commit": "d354117"
   },
   "feline.nvim": {
-    "commit": "331a794"
+    "commit": "b17ff80"
   },
   "fzf-lua": {
-    "commit": "0944e1e"
+    "commit": "4def482"
   },
   "gitsigns.nvim": {
-    "commit": "d7e0bcb"
+    "commit": "231fa92"
   },
   "indent-blankline.nvim": {
     "commit": "db7cbcb"
@@ -48,46 +48,46 @@
     "commit": "4e6da19"
   },
   "mason-lspconfig.nvim": {
-    "commit": "980f836"
+    "commit": "b70deda"
   },
   "mason.nvim": {
-    "commit": "2fa0fd4"
+    "commit": "815a374"
   },
   "neo-tree.nvim": {
-    "commit": "a7d6f05"
+    "commit": "b13425d"
   },
   "neoscroll.nvim": {
     "commit": "54c5c41"
   },
   "nord.nvim": {
-    "commit": "6bfb0f7"
+    "commit": "209e9b3"
   },
   "nui.nvim": {
-    "commit": "62facd3"
+    "commit": "e9889bb"
   },
   "null-ls.nvim": {
-    "commit": "1569ad4"
+    "commit": "c84f069"
   },
   "nvim-autopairs": {
-    "commit": "0a18e10"
+    "commit": "5fe2441"
   },
   "nvim-cmp": {
-    "commit": "b16e5bc"
+    "commit": "913eb85"
   },
   "nvim-colorizer.lua": {
     "commit": "36c610a"
   },
   "nvim-hlslens": {
-    "commit": "9955998"
+    "commit": "00a8728"
   },
   "nvim-lspconfig": {
-    "commit": "79d4cb9"
+    "commit": "51775b1"
   },
   "nvim-scrollbar": {
     "commit": "ce0df69"
   },
   "nvim-treesitter": {
-    "commit": "2a63ea5"
+    "commit": "ba752ce"
   },
   "nvim-ts-autotag": {
     "commit": "fdefe46"
@@ -96,7 +96,7 @@
     "commit": "2d02a56"
   },
   "packer.nvim": {
-    "commit": "50aeb90"
+    "commit": "6afb674"
   },
   "plenary.nvim": {
     "commit": "4b66054"
@@ -111,10 +111,10 @@
     "commit": "956d67c"
   },
   "tmux.nvim": {
-    "commit": "f3af091"
+    "commit": "a37ecd7"
   },
   "toggleterm.nvim": {
-    "commit": "5e393e5"
+    "commit": "1be9b5a"
   },
   "trouble.nvim": {
     "commit": "929315e"
@@ -132,7 +132,7 @@
     "commit": "526cffd"
   },
   "vim-matchup": {
-    "commit": "9aa08cd"
+    "commit": "ab8575d"
   },
   "vim-repeat": {
     "commit": "24afe92"
