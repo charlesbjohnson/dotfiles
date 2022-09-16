@@ -1,8 +1,6 @@
 local M = {}
 
 function M.registration(register)
-  require("opt.plugins.lsp.null-ls.yaml").registration(register)
-
   require("opt.plugins.lsp.null-ls.css").registration(register)
   require("opt.plugins.lsp.null-ls.html").registration(register)
 

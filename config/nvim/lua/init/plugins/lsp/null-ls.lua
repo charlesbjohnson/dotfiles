@@ -1,8 +1,10 @@
 local lspnull = require("null-ls")
 
 require("opt.plugins.lsp.null-ls.json").registration(lspnull.register)
-require("opt.plugins.lsp.null-ls.shell").registration(lspnull.register)
+require("opt.plugins.lsp.null-ls.yaml").registration(lspnull.register)
+
 require("opt.plugins.lsp.null-ls.lua").registration(lspnull.register)
+require("opt.plugins.lsp.null-ls.shell").registration(lspnull.register)
 
 local sources = require.tree("init.plugins.lsp.null-ls")
 local root_patterns = { ".null-ls-root", ".git" }
