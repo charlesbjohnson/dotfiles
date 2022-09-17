@@ -1,7 +1,7 @@
 {
   "editor.dragAndDrop": false,
   "editor.emptySelectionClipboard": false,
-  "editor.fontFamily": "'CaskaydiaCove Nerd Font', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "'Cascadia Code', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.quickSuggestions": {
