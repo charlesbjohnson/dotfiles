@@ -23,7 +23,6 @@ return require("packer").startup({
 
     -- Motions
     use("b3nj5m1n/kommentary")
-    use("christoomey/vim-sort-motion")
     use("tpope/vim-repeat")
     use("tpope/vim-surround")
     use("vim-scripts/repmo.vim")
@@ -47,6 +46,7 @@ return require("packer").startup({
     use("antoinemadec/FixCursorHold.nvim")
     use("junegunn/vim-easy-align")
     use("karb94/neoscroll.nvim")
+    use("sQVe/sort.nvim")
     use("svermeulen/vim-cutlass")
     use("windwp/nvim-autopairs")
     use("windwp/nvim-ts-autotag")

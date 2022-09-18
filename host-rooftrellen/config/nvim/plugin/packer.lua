@@ -261,6 +261,11 @@ local no_errors, error_msg = pcall(function()
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/repmo.vim",
       url = "https://github.com/vim-scripts/repmo.vim",
     },
+    ["sort.nvim"] = {
+      loaded = true,
+      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/sort.nvim",
+      url = "https://github.com/sQVe/sort.nvim",
+    },
     ["splitjoin.vim"] = {
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/splitjoin.vim",
@@ -317,11 +322,6 @@ local no_errors, error_msg = pcall(function()
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/vim-schlepp",
       url = "https://github.com/zirrostig/vim-schlepp",
-    },
-    ["vim-sort-motion"] = {
-      loaded = true,
-      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/vim-sort-motion",
-      url = "https://github.com/christoomey/vim-sort-motion",
     },
     ["vim-surround"] = {
       loaded = true,

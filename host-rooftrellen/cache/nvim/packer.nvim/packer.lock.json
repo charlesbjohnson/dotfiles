@@ -107,6 +107,9 @@
   "repmo.vim": {
     "commit": "9bf02ed"
   },
+  "sort.nvim": {
+    "commit": "9e40656"
+  },
   "splitjoin.vim": {
     "commit": "956d67c"
   },
@@ -139,9 +142,6 @@
   },
   "vim-schlepp": {
     "commit": "dfe67ad"
-  },
-  "vim-sort-motion": {
-    "commit": "c8782be"
   },
   "vim-surround": {
     "commit": "bf3480d"
