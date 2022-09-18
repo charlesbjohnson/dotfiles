@@ -30,8 +30,8 @@ return require("packer").startup({
 
     -- Application Enhancements
     use("aserowy/tmux.nvim")
-    use("editorconfig/editorconfig-vim")
     use("folke/trouble.nvim")
+    use("gpanders/editorconfig.nvim")
 
     -- Application Features
     use("akinsho/toggleterm.nvim")
