@@ -139,8 +139,14 @@ require("indent_blankline").setup({
   show_trailing_blankline_indent = false,
 })
 
--- norcalli/nvim-colorizer.lua
-require("colorizer").setup()
+-- NvChad/nvim-colorizer.lua
+require("colorizer").setup({
+  user_default_options = {
+    css = true,
+    mode = "virtualtext",
+    sass = { enable = true },
+  },
+})
 
 -- nvim-neo-tree/neo-tree.nvim
 require("neo-tree").setup({

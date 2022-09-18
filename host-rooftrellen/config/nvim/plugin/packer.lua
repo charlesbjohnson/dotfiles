@@ -208,7 +208,7 @@ local no_errors, error_msg = pcall(function()
     ["nvim-colorizer.lua"] = {
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
-      url = "https://github.com/norcalli/nvim-colorizer.lua",
+      url = "https://github.com/NvChad/nvim-colorizer.lua",
     },
     ["nvim-hlslens"] = {
       loaded = true,

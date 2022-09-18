@@ -73,8 +73,8 @@ return require("packer").startup({
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 
     -- Editor Appearance
+    use("NvChad/nvim-colorizer.lua")
     use("kyazdani42/nvim-web-devicons")
-    use("norcalli/nvim-colorizer.lua")
     use("shaunsingh/nord.nvim")
 
     -- Supporting Libraries
