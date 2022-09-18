@@ -47,6 +47,9 @@
   "lsp-colors.nvim": {
     "commit": "4e6da19"
   },
+  "lspkind.nvim": {
+    "commit": "f46e3b5"
+  },
   "mason-lspconfig.nvim": {
     "commit": "b70deda"
   },

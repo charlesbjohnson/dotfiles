@@ -160,6 +160,11 @@ local no_errors, error_msg = pcall(function()
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
       url = "https://github.com/folke/lsp-colors.nvim",
     },
+    ["lspkind.nvim"] = {
+      loaded = true,
+      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
+      url = "https://github.com/onsails/lspkind.nvim",
+    },
     ["mason-lspconfig.nvim"] = {
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",

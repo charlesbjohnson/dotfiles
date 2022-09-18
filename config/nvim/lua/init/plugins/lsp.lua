@@ -1,5 +1,11 @@
 -- hrsh7th/nvim-cmp
 require("cmp").setup({
+  formatting = {
+    -- onsails/lspkind.nvim
+    format = require("lspkind").cmp_format({
+      preset = "codicons",
+    }),
+  },
   mapping = {
     ["<CR>"] = require("cmp").mapping.confirm(),
     ["<C-e>"] = require("cmp").mapping.abort(),

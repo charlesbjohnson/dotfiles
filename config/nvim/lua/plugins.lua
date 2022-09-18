@@ -75,6 +75,7 @@ return require("packer").startup({
     -- Editor Appearance
     use("NvChad/nvim-colorizer.lua")
     use("kyazdani42/nvim-web-devicons")
+    use("onsails/lspkind.nvim")
     use("shaunsingh/nord.nvim")
 
     -- Supporting Libraries
