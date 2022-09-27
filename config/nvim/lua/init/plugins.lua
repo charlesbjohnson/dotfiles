@@ -36,6 +36,9 @@ require("tmux").setup({
     cycle_navigation = false,
     enable_default_keybindings = true,
   },
+  resize = {
+    enable_default_keybindings = false,
+  },
 })
 
 -- b3nj5m1n/kommentary
