@@ -1,6 +1,6 @@
 local colors = require("colors")
 
-local options = {
+local statusline = {
   theme = colors,
 
   vi_mode_colors = {
@@ -19,26 +19,48 @@ local options = {
     TERM = colors[6],
     NONE = colors[6],
   },
+
+  force_inactive = {
+    filetypes = {},
+    buftypes = {},
+    bufnames = {},
+  },
+
+  components = {
+    active = {},
+    inactive = {},
+  },
 }
 
-options.force_inactive = {
-  filetypes = {},
-  buftypes = {},
-  bufnames = {},
-}
+local winbar = {
+  theme = colors,
 
-options.components = {
-  active = {},
-  inactive = {},
+  force_inactive = {
+    filetypes = {},
+    buftypes = {},
+    bufnames = {},
+  },
+
+  components = {
+    active = {},
+    inactive = {},
+  },
 }
 
 for _ = 1, 3 do
-  table.insert(options.components.active, {})
-  table.insert(options.components.inactive, {})
+  table.insert(statusline.components.active, {})
+  table.insert(statusline.components.inactive, {})
+
+  table.insert(winbar.components.active, {})
+  table.insert(winbar.components.inactive, {})
 end
 
-require("init.plugins.statusline.content")(options)
-require("init.plugins.statusline.style")(options)
+require("init.plugins.statusline.content")(statusline)
+require("init.plugins.statusline.style")(statusline)
+
+require("init.plugins.statusline.winbar.content")(winbar)
+require("init.plugins.statusline.winbar.style")(winbar)
 
 -- famiu/feline.nvim
-require("feline").setup(options)
+require("feline").setup(statusline)
+require("feline").winbar.setup(winbar)
