@@ -110,12 +110,20 @@ require("hlslens").setup({
 })
 
 vim.keymap.set("n", "n", function()
-  pcall(vim.cmd, "normal! " .. vim.v.count1 .. "n")
+  pcall(vim.api.nvim_cmd, {
+    cmd = "normal",
+    bang = true,
+    args = { vim.v.count1 .. "n" },
+  }, {})
   require("hlslens").start()
 end, { silent = true })
 
 vim.keymap.set("n", "N", function()
-  pcall(vim.cmd, "normal! " .. vim.v.count1 .. "N")
+  pcall(vim.api.nvim_cmd, {
+    cmd = "normal",
+    bang = true,
+    args = { vim.v.count1 .. "N" },
+  }, {})
   require("hlslens").start()
 end, { silent = true })
 

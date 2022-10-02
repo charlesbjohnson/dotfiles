@@ -9,7 +9,7 @@ if not fs.exists(packer_install_path) then
   vim.fn.system({ "git", "clone", "https://github.com/wbthomason/packer.nvim", packer_install_path })
 end
 
-vim.cmd("packadd packer.nvim")
+vim.api.nvim_cmd({ cmd = "packadd", args = { "packer.nvim" } }, {})
 
 return require("packer").startup({
   function(use)
