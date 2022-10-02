@@ -3,16 +3,15 @@ return function(options)
     enable_roslyn_analyzers = true,
     enable_import_completion = true,
 
-    on_attach = function(client)
-      -- TODO: https://old.reddit.com/r/neovim/comments/u5si2w/breaking_changes_inbound_next_few_weeks_for/
-      client.resolved_capabilities.declaration = false
-      client.resolved_capabilities.definition = false
-      client.resolved_capabilities.document_formatting = false
-      client.resolved_capabilities.document_range_formatting = false
-      client.resolved_capabilities.type_definition = false
+    on_attach = function(client, ...)
+      client.server_capabilities.declarationProvider = false
+      client.server_capabilities.definitionProvider = false
+      client.server_capabilities.documentFormattingProvider = false
+      client.server_capabilities.documentRangeFormattingProvider = false
+      client.server_capabilities.typeDefinitionProvider = false
 
       if options.on_attach then
-        options.on_attach(client)
+        options.on_attach(client, ...)
       end
     end,
   }))
@@ -22,18 +21,17 @@ return function(options)
       ["textDocument/definition"] = require("csharpls_extended").handler,
     },
 
-    on_attach = function(client)
-      -- TODO: https://old.reddit.com/r/neovim/comments/u5si2w/breaking_changes_inbound_next_few_weeks_for/
-      client.resolved_capabilities.code_action = false
-      client.resolved_capabilities.completion = false
-      client.resolved_capabilities.document_formatting = false
-      client.resolved_capabilities.document_range_formatting = false
-      client.resolved_capabilities.hover = false
-      client.resolved_capabilities.rename = false
-      client.resolved_capabilities.signature_help = false
+    on_attach = function(client, ...)
+      client.server_capabilities.codeActionProvider = false
+      client.server_capabilities.completionProvider = false
+      client.server_capabilities.documentFormattingProvider = false
+      client.server_capabilities.documentRangeFormattingProvider = false
+      client.server_capabilities.hoverProvider = false
+      client.server_capabilities.renameProvider = false
+      client.server_capabilities.signatureHelpProvider = false
 
       if options.on_attach then
-        options.on_attach(client)
+        options.on_attach(client, ...)
       end
     end,
   }))
