@@ -14,8 +14,6 @@ vim.opt.splitright = true
 vim.opt.updatetime = 300
 vim.opt.wildmode = vim.opt.wildmode ^ { "longest:full" }
 
-vim.cmd("syntax on")
-
 --- Appearance
 vim.opt.cmdheight = 1
 vim.opt.completeopt = { "menuone", "noselect" }

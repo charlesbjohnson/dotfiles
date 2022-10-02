@@ -218,7 +218,6 @@ require("scrollbar").setup({
   excluded_buftypes = { "nofile", "nowrite", "prompt", "quickfix", "terminal" },
   excluded_filetypes = { "gitcommit", "packer", "alpha" },
   handlers = {
-    diagnostic = true,
     search = true,
   },
 })
