@@ -405,6 +405,20 @@
         },
         "version": "0.34.0"
       },
+      "gcc@5": {
+        "bottle": {
+          "files": {
+            "x86_64_linux": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "a3e52eeea5f2dc3fa99e021ee2e06034efd5ad27ccc331e751cf7f92110c7434",
+              "url": "https://ghcr.io/v2/homebrew/core/gcc/5/blobs/sha256:a3e52eeea5f2dc3fa99e021ee2e06034efd5ad27ccc331e751cf7f92110c7434"
+            }
+          },
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        },
+        "version": "5.5.0_8"
+      },
       "git": {
         "bottle": {
           "files": {
@@ -1421,7 +1435,7 @@
         "revision": "73b77351709591cadc3f4a918b3276ee82cafbad"
       },
       "homebrew/core": {
-        "revision": "adac72554bcfae235866193063edc523c46f1aaf"
+        "revision": "99b1d77bee64249ba7e1b95c557397937fa98db7"
       }
     }
   },
@@ -1431,7 +1445,7 @@
         "GCC": "10.2.1",
         "HOMEBREW_PREFIX": "/home/linuxbrew/.linuxbrew",
         "HOMEBREW_VERSION": "3.6.3-181-g639e8eb",
-        "Homebrew/linuxbrew-core": "adac72554bcfae235866193063edc523c46f1aaf"
+        "Homebrew/linuxbrew-core": "99b1d77bee64249ba7e1b95c557397937fa98db7"
       }
     }
   }
