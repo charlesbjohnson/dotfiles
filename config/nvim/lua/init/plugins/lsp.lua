@@ -52,19 +52,15 @@ require("mason-lspconfig").setup({
 -- neovim/nvim-lspconfig
 require("init.plugins.lsp.lspconfig")(vim.tbl_deep_extend("force", {}, require("lspconfig").util.default_config, {
   -- hrsh7th/cmp-nvim-lsp
-  capabilities = vim.tbl_deep_extend(
-    "force",
-    require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
-    {
-      textDocument = {
-        completion = {
-          completionItem = {
-            snippetSupport = true,
-          },
+  capabilities = vim.tbl_deep_extend("force", require("cmp_nvim_lsp").default_capabilities(), {
+    textDocument = {
+      completion = {
+        completionItem = {
+          snippetSupport = true,
         },
       },
-    }
-  ),
+    },
+  }),
 
   handlers = {
     ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "shadow" }),
