@@ -120,7 +120,9 @@ vim.fn.sign_define("DiagnosticSignInfo", { text = "", texthl = "DiagnosticSig
 vim.fn.sign_define("DiagnosticSignWarn", { text = "", texthl = "DiagnosticSignWarn" })
 
 vim.keymap.set("n", "<Leader>c", vim.lsp.buf.code_action, { silent = true })
-vim.keymap.set("n", "<Leader>f", vim.lsp.buf.format, { silent = true })
+vim.keymap.set("n", "<Leader>f", function()
+  vim.lsp.buf.format({ async = true })
+end, { silent = true })
 vim.keymap.set("n", "<Leader>r", vim.lsp.buf.rename, { silent = true })
 
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { silent = true })
