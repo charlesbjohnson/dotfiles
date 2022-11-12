@@ -46,6 +46,103 @@ require("kommentary.config").configure_language("default", {
   prefer_single_line_comments = true,
 })
 
+-- folke/noice.nvim
+require("noice").setup({
+  lsp = {
+    hover = {
+      enabled = false,
+    },
+    signature = {
+      enabled = false,
+    },
+  },
+  routes = {
+    {
+      view = "notify",
+      filter = {
+        event = "msg_showmode",
+      },
+    },
+    {
+      filter = {
+        event = "msg_show",
+        find = "written",
+      },
+      opts = { skip = true },
+    },
+    {
+      filter = {
+        event = "msg_show",
+        find = "yanked",
+      },
+      opts = { skip = true },
+    },
+    {
+      filter = {
+        event = "msg_show",
+        find = "fewer lines",
+      },
+      opts = { skip = true },
+    },
+    {
+      filter = {
+        event = "msg_show",
+        find = "line less",
+      },
+      opts = { skip = true },
+    },
+    {
+      filter = {
+        event = "msg_show",
+        find = "more lines",
+      },
+      opts = { skip = true },
+    },
+    {
+      filter = {
+        event = "msg_show",
+        find = "at oldest",
+      },
+      opts = { skip = true },
+    },
+    {
+      filter = {
+        event = "msg_show",
+        find = "at newest",
+      },
+      opts = { skip = true },
+    },
+    {
+      filter = {
+        event = "msg_show",
+        find = "; before",
+      },
+      opts = { skip = true },
+    },
+    {
+      filter = {
+        event = "msg_show",
+        find = "; after",
+      },
+      opts = { skip = true },
+    },
+    {
+      filter = {
+        event = "msg_show",
+        find = "search hit",
+      },
+      opts = { skip = true },
+    },
+    {
+      filter = {
+        event = "msg_show",
+        find = "Pattern not found",
+      },
+      opts = { skip = true },
+    },
+  },
+})
+
 -- folke/trouble.nvim
 require("trouble").setup()
 
@@ -145,6 +242,7 @@ require("indent_blankline").setup({
   filetype_exclude = {
     "alpha",
     "help",
+    "noice",
   },
   show_current_context = true,
   show_first_indent_level = false,

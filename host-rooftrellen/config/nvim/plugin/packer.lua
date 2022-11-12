@@ -185,6 +185,11 @@ local no_errors, error_msg = pcall(function()
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
       url = "https://github.com/karb94/neoscroll.nvim",
     },
+    ["noice.nvim"] = {
+      loaded = true,
+      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/noice.nvim",
+      url = "https://github.com/folke/noice.nvim",
+    },
     ["nord.nvim"] = {
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nord.nvim",
@@ -224,6 +229,11 @@ local no_errors, error_msg = pcall(function()
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
       url = "https://github.com/neovim/nvim-lspconfig",
+    },
+    ["nvim-notify"] = {
+      loaded = true,
+      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nvim-notify",
+      url = "https://github.com/rcarriga/nvim-notify",
     },
     ["nvim-scrollbar"] = {
       loaded = true,

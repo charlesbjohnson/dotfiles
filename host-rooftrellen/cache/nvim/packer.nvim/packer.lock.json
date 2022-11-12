@@ -62,6 +62,9 @@
   "neoscroll.nvim": {
     "commit": "54c5c41"
   },
+  "noice.nvim": {
+    "commit": "3489e57"
+  },
   "nord.nvim": {
     "commit": "78f5f00"
   },
@@ -85,6 +88,9 @@
   },
   "nvim-lspconfig": {
     "commit": "f11fdff"
+  },
+  "nvim-notify": {
+    "commit": "43c54ae"
   },
   "nvim-scrollbar": {
     "commit": "ce0df69"

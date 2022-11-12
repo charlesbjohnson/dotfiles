@@ -74,6 +74,7 @@ return require("packer").startup({
 
     -- Editor Appearance
     use("NvChad/nvim-colorizer.lua")
+    use("folke/noice.nvim")
     use("kyazdani42/nvim-web-devicons")
     use("onsails/lspkind.nvim")
     use("shaunsingh/nord.nvim")
@@ -82,6 +83,7 @@ return require("packer").startup({
     use("MunifTanjim/nui.nvim")
     use("nvim-lua/plenary.nvim")
     use("nvim-lua/popup.nvim")
+    use("rcarriga/nvim-notify")
 
     -- Syntax & Language Enhancements
     use({ "masukomi/vim-markdown-folding", ft = "markdown" })
