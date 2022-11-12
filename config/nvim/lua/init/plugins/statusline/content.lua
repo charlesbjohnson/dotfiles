@@ -1,8 +1,9 @@
 return function(options)
   vim.list_extend(options.force_inactive.filetypes, {
-    "neo%-tree",
-    "packer",
-    "alpha",
+    "^alpha$",
+    "^help$",
+    "^neo%-tree$",
+    "^packer$",
   })
 
   local active = options.components.active

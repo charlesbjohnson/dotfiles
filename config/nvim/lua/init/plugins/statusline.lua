@@ -20,6 +20,12 @@ local statusline = {
     NONE = colors[6],
   },
 
+  disable = {
+    filetypes = {},
+    buftypes = {},
+    bufnames = {},
+  },
+
   force_inactive = {
     filetypes = {},
     buftypes = {},
@@ -34,6 +40,12 @@ local statusline = {
 
 local winbar = {
   theme = colors,
+
+  disable = {
+    filetypes = {},
+    buftypes = {},
+    bufnames = {},
+  },
 
   force_inactive = {
     filetypes = {},

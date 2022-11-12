@@ -139,15 +139,17 @@ require("gitsigns").setup()
 -- lukas-reineke/indent-blankline.nvim
 require("indent_blankline").setup({
   char_list = { "|", "¦", "┆", "┊" },
-
-  buftype_exclude = { "terminal" },
-  filetype_exclude = { "help", "alpha" },
-
-  use_treesitter = true,
-
+  buftype_exclude = {
+    "terminal",
+  },
+  filetype_exclude = {
+    "alpha",
+    "help",
+  },
   show_current_context = true,
   show_first_indent_level = false,
   show_trailing_blankline_indent = false,
+  use_treesitter = true,
 })
 
 -- NvChad/nvim-colorizer.lua
@@ -223,8 +225,18 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- petertriho/nvim-scrollbar
 require("scrollbar").setup({
-  excluded_buftypes = { "nofile", "nowrite", "prompt", "quickfix", "terminal" },
-  excluded_filetypes = { "gitcommit", "packer", "alpha" },
+  excluded_buftypes = {
+    "nofile",
+    "nowrite",
+    "prompt",
+    "quickfix",
+    "terminal",
+  },
+  excluded_filetypes = {
+    "alpha",
+    "gitcommit",
+    "packer",
+  },
   handlers = {
     search = true,
   },
