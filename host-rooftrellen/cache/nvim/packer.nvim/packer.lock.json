@@ -83,9 +83,6 @@
   "nvim-colorizer.lua": {
     "commit": "9dd7ecd"
   },
-  "nvim-hlslens": {
-    "commit": "5e6ea33"
-  },
   "nvim-lspconfig": {
     "commit": "f11fdff"
   },

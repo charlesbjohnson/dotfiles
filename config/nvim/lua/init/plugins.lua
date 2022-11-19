@@ -200,36 +200,6 @@ require("neoscroll.config").set_mappings({
   ["<C-M-k>"] = { "scroll", { "-0.7", "true", "300" } },
 })
 
--- kevinhwang91/nvim-hlslens
-require("hlslens").setup({
-  calm_down = true,
-  nearest_only = true,
-})
-
-vim.keymap.set("n", "n", function()
-  pcall(vim.api.nvim_cmd, {
-    cmd = "normal",
-    bang = true,
-    args = { vim.v.count1 .. "n" },
-  }, {})
-  require("hlslens").start()
-end, { silent = true })
-
-vim.keymap.set("n", "N", function()
-  pcall(vim.api.nvim_cmd, {
-    cmd = "normal",
-    bang = true,
-    args = { vim.v.count1 .. "N" },
-  }, {})
-  require("hlslens").start()
-end, { silent = true })
-
-vim.keymap.set("n", "* *", require("hlslens").start)
-vim.keymap.set("n", "# #", require("hlslens").start)
-
-vim.keymap.set("n", "g* g*", require("hlslens").start)
-vim.keymap.set("n", "g# g#", require("hlslens").start)
-
 -- lewis6991/gitsigns.nvim
 require("gitsigns").setup()
 
@@ -336,7 +306,6 @@ require("scrollbar").setup({
     "packer",
   },
   handlers = {
-    search = true,
     gitsigns = true,
   },
 })

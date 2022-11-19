@@ -220,11 +220,6 @@ local no_errors, error_msg = pcall(function()
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
       url = "https://github.com/NvChad/nvim-colorizer.lua",
     },
-    ["nvim-hlslens"] = {
-      loaded = true,
-      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nvim-hlslens",
-      url = "https://github.com/kevinhwang91/nvim-hlslens",
-    },
     ["nvim-lspconfig"] = {
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",

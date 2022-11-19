@@ -64,7 +64,6 @@ return require("packer").startup({
     use("hrsh7th/nvim-cmp")
     use("hrsh7th/vim-vsnip")
     use("jose-elias-alvarez/null-ls.nvim")
-    use("kevinhwang91/nvim-hlslens")
     use("lewis6991/gitsigns.nvim")
     use("lukas-reineke/indent-blankline.nvim")
     use("neovim/nvim-lspconfig")
