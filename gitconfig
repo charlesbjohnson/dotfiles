@@ -53,6 +53,8 @@
   cmd = nvim -d $LOCAL $REMOTE
 [fetch]
   prune = true
+[init]
+  defaultBranch = master
 [interactive]
   diffFilter = delta --color-only
 [add.interactive]
