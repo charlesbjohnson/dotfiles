@@ -1,9 +1,3 @@
-function dotfile::env::asdf
-    if not string match --quiet "*asdf*" $PATH
-        source $HOMEBREW_PREFIX/opt/asdf/asdf.fish
-    end
-end
-
 function dotfile::env::brew
     unset HOMEBREW_SHELLENV_PREFIX
 

@@ -17,9 +17,6 @@ dotfile::env::shell
 
 dotfile::load_all "$HOME/.config/dotfile" "profile.*"
 
-# asdf
-dotfile::env::asdf
-
 # fzf
 source "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.$(basename "$SHELL")"
 

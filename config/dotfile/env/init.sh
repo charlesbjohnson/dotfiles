@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 
-function dotfile::env::asdf() {
-  if ! [[ "$PATH" =~ asdf ]]; then
-    source "$HOMEBREW_PREFIX/opt/asdf/asdf.sh"
-  fi
-}
-
 function dotfile::env::brew() {
   unset HOMEBREW_SHELLENV_PREFIX
 
