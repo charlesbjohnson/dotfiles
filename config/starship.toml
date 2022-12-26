@@ -1,19 +1,43 @@
 [aws]
 disabled = true
 
+[azure]
+disabled = true
+
+[battery]
+disabled = true
+
+[buf]
+disabled = true
+
+[bun]
+disabled = true
+
+[c]
+disabled = true
+
 [cmake]
+disabled = true
+
+[cobol]
 disabled = true
 
 [conda]
 disabled = true
 
+[container]
+disabled = true
+
 [crystal]
+disabled = true
+
+[daml]
 disabled = true
 
 [dart]
 disabled = true
 
-[docker_context]
+[deno]
 disabled = true
 
 [dotnet]
@@ -34,10 +58,16 @@ disabled = true
 [golang]
 disabled = true
 
-[helm]
+[guix_shell]
 disabled = true
 
-[hg_branch]
+[haskell]
+disabled = true
+
+[haxe]
+disabled = true
+
+[helm]
 disabled = true
 
 [java]
@@ -55,6 +85,9 @@ disabled = true
 [lua]
 disabled = true
 
+[meson]
+disabled = true
+
 [nim]
 disabled = true
 
@@ -67,10 +100,10 @@ disabled = true
 [ocaml]
 disabled = true
 
-[openstack]
+[opa]
 disabled = true
 
-[package]
+[openstack]
 disabled = true
 
 [perl]
@@ -79,16 +112,37 @@ disabled = true
 [php]
 disabled = true
 
+[pulumi]
+disabled = true
+
 [purescript]
 disabled = true
 
 [python]
 disabled = true
 
+[raku]
+disabled = true
+
+[red]
+disabled = true
+
+[rlang]
+disabled = true
+
 [ruby]
 disabled = true
 
 [rust]
+disabled = true
+
+[scala]
+disabled = true
+
+[singularity]
+disabled = true
+
+[spack]
 disabled = true
 
 [swift]
@@ -98,6 +152,12 @@ disabled = true
 disabled = true
 
 [vagrant]
+disabled = true
+
+[vcsh]
+disabled = true
+
+[vlang]
 disabled = true
 
 [zig]
