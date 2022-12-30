@@ -48,14 +48,6 @@ require("kommentary.config").configure_language("default", {
 
 -- folke/noice.nvim
 require("noice").setup({
-  lsp = {
-    hover = {
-      enabled = false,
-    },
-    signature = {
-      enabled = false,
-    },
-  },
   routes = {
     {
       view = "notify",

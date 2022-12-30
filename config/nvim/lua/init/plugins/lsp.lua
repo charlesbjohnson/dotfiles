@@ -63,9 +63,6 @@ require("init.plugins.lsp.lspconfig")(vim.tbl_deep_extend("force", {}, require("
   }),
 
   handlers = {
-    ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "shadow" }),
-    ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "shadow" }),
-
     ["window/logMessage"] = function(err, result, ctx, config)
       if result and result.type <= vim.lsp.protocol.MessageType.Log then
         vim.lsp.handlers["window/logMessage"](err, result, ctx, config)
