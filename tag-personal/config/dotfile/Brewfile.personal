@@ -1,5 +1,4 @@
 brew "comby"
-brew "direnv"
 brew "dotnet"
 brew "lefthook"
 brew "node"

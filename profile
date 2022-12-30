@@ -17,6 +17,9 @@ dotfile::env::shell
 
 dotfile::load_all "$HOME/.config/dotfile" "profile.*"
 
+# direnv
+eval "$(direnv hook "$(basename "$SHELL")")"
+
 # fzf
 source "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.$(basename "$SHELL")"
 

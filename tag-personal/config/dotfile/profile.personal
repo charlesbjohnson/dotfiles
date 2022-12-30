@@ -1,8 +1,5 @@
 # fmt: shfmt
 
-# direnv
-eval "$(direnv hook "$(basename "$SHELL")")"
-
 # dotnet
 export DOTNET_ROOT="$(realpath $(brew --prefix dotnet))/libexec"
 export DOTNET_HOME="$HOME/.dotnet"
