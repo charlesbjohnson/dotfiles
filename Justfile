@@ -9,7 +9,7 @@ fmt: fmt-just fmt-json fmt-fish fmt-sh fmt-lua
 
 # Run the formatter for Just
 fmt-just *OPTS:
-    @just --unstable --fmt {{ OPTS }}
+    @just --unstable --fmt --quiet {{ OPTS }}
 
 # Run the formatter for JSON
 fmt-json *OPTS:
