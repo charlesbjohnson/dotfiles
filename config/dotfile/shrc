@@ -7,8 +7,6 @@ export TERM="xterm-256color"
 dotfile::shell::terminfo "https://invisible-island.net/datafiles/current/terminfo.src.gz"
 dotfile::shell::dircolors "https://raw.githubusercontent.com/arcticicestudio/nord-dircolors/develop/src/dir_colors"
 
-dotfile::shell::tmux "default"
-
 # prompt
 eval "$(starship init "$(basename "$SHELL")")"
 
@@ -42,3 +40,5 @@ export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 unset SSH_AGENT_PID
 
 dotfile::load_all "$HOME/.config/dotfile" "shrc.*"
+
+dotfile::shell::tmux "default"
