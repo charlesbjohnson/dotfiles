@@ -43,7 +43,7 @@
   syntax-theme          = Nord
 [diff]
   tool       = nvimdiff
-  colorMoved = default
+  colormoved = default
 [difftool]
   prompt = false
 [difftool "nvimdiff"]
@@ -52,9 +52,9 @@
   prune     = true
   prunetags = true
 [init]
-  defaultBranch = master
+  defaultbranch = master
 [interactive]
-  diffFilter = delta --color-only
+  difffilter = delta --color-only
 [merge]
   ff            = only
   tool          = nvimdiff
@@ -72,7 +72,7 @@
 [user]
   email      = mail@cbjohnson.io
   name       = Charles B Johnson
-  signingKey = 390184033B3454E3
+  signingkey = 390184033B3454E3
 [include]
   path = ~/.config/dotfile/gitconfig.local
 [include]
