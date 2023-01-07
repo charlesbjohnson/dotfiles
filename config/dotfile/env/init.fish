@@ -62,12 +62,12 @@ function dotfile::env::gnu
     end
 end
 
-function dotfile::env::shell
-    export SHELL="$(which "$(ps -p %self -o "comm=" | sed "s/-//")")"
-end
-
-function dotfile::env::windows
-    for path in $(PATH="$PATH_OLD" powershell.exe "\$env:PATH -split ';'" | xargs -d "\n" -I "{}" wslpath "{}" | tr -d "\r")
+function dotfile::env::path_old
+    for path in $(echo "$PATH_OLD" | tr ":" "\n")
         dotfile::append_path "$path"
     end
+end
+
+function dotfile::env::shell
+    export SHELL="$(which "$(ps -p %self -o "comm=" | sed "s/-//")")"
 end

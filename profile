@@ -40,3 +40,5 @@ export FZF_DEFAULT_OPTS="
 
 dotfile::prepend_path "$HOME/.local/bin"
 dotfile::prepend_path "bin"
+
+dotfile::env::path_old

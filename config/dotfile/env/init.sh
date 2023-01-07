@@ -75,12 +75,12 @@ function dotfile::env::gnu() {
   done
 }
 
-function dotfile::env::shell() {
-  export SHELL="$(which "$(ps -p "$$" -o "comm=" | sed "s/-//")")"
-}
-
-function dotfile::env::windows() {
+function dotfile::env::path_old() {
   while read -r path; do
     dotfile::append_path "$path"
-  done < <(env PATH="$PATH_OLD" powershell.exe "\$env:PATH -split ';'" | xargs -d "\n" -I "{}" wslpath "{}" | tr -d "\r")
+  done < <(echo "$PATH_OLD" | tr ":" "\n")
+}
+
+function dotfile::env::shell() {
+  export SHELL="$(which "$(ps -p "$$" -o "comm=" | sed "s/-//")")"
 }
