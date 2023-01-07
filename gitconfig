@@ -28,15 +28,12 @@
   uncommit = reset HEAD~1
   undo     = restore
   unstage  = restore --staged
-[color]
-  ui = true
 [commit]
   template = ~/.gitmessage
   gpgsign  = true
 [core]
-  autocrlf     = input
-  excludesfile = ~/.gitignore
-  pager        = delta
+  autocrlf = input
+  pager    = delta
 [delta]
   file-decoration-style = yellow box
   file-style            = yellow
@@ -52,13 +49,12 @@
 [difftool "nvimdiff"]
   cmd = nvim -d $LOCAL $REMOTE
 [fetch]
-  prune = true
+  prune     = true
+  prunetags = true
 [init]
   defaultBranch = master
 [interactive]
   diffFilter = delta --color-only
-[add.interactive]
-  useBuiltin = false
 [merge]
   ff            = only
   tool          = nvimdiff
