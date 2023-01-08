@@ -10,7 +10,7 @@ dotfile::load "$HOME/.aliases"
 
 if status --is-interactive
     dotfile::load "$HOME/.config/dotfile/shrc"
-    dotfile::load "$HOME/.config/dotfile/config/fish/config.local.fish"
+    dotfile::load_all "$HOME/.config/dotfile" "config.fish.*"
 
     set -g fish_greeting
     fish_user_colors
