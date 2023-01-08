@@ -3,4 +3,5 @@
 # Hacky compatibility layer for software where the clipboard provider is not easily changed,
 # ie. Fish (see https://github.com/fish-shell/fish-shell/blob/master/share/functions/fish_clipboard_paste.fish).
 
-exec "$(dirname "$0")/wslpaste" "$@"
+powershell.exe Get-Clipboard | sed 's/\r$//' | sed -z '$ s/\n$//'
+exit 0

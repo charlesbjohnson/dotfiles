@@ -3,4 +3,5 @@
 # Hacky compatibility layer for software where the clipboard provider is not easily changed,
 # ie. Fish (see https://github.com/fish-shell/fish-shell/blob/master/share/functions/fish_clipboard_copy.fish).
 
-exec "$(dirname "$0")/wslcopy" "$@"
+tee <&0 | clip.exe
+exit 0
