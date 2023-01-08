@@ -26,8 +26,6 @@ function dotfile::shell::tmux
         $HOME/.config/tmux/plugins/tpm/bin/install_plugins
     end
 
-    tmux start-server
-
     if not tmux has-session 2>/dev/null
         tmux new-session -d -s $argv[1]
         tmux set-option -t $argv[1] destroy-unattached off &>/dev/null
