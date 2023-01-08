@@ -31,14 +31,6 @@ export FZF_DEFAULT_OPTS="
   --reverse
 "
 
-# gpg
-export GPG_TTY="$(tty)"
-gpg-agent --daemon 2>/dev/null
-
-# ssh
-export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
-unset SSH_AGENT_PID
-
 dotfile::load_all "$HOME/.config/dotfile" "shrc.*"
 
 dotfile::shell::tmux "default"

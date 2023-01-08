@@ -70,9 +70,8 @@
 [rebase]
   autosquash = true
 [user]
-  email      = mail@cbjohnson.io
-  name       = Charles B Johnson
-  signingkey = 390184033B3454E3
+  email = mail@cbjohnson.io
+  name  = Charles B Johnson
 [include]
   path = ~/.config/dotfile/gitconfig.local
 [include]
