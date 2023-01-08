@@ -1,0 +1,4 @@
+[include]
+  path = ~/.config/dotfile/gitconfig.personal
+[gpg "ssh"]
+  program = /mnt/c/Users/Charlie/AppData/Local/1Password/app/8/op-ssh-sign.exe

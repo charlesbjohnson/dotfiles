@@ -1,5 +1,5 @@
-Host *
-  AddKeysToAgent ask
-  IdentityFile ~/.ssh/id_rsa
+Host github.com
+  IdentityFile ~/.ssh/personal.pub
+  IdentitiesOnly yes
 
 Include ~/.ssh/config.d/*

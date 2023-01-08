@@ -30,7 +30,6 @@
   unstage  = restore --staged
 [commit]
   template = ~/.gitmessage
-  gpgsign  = true
 [core]
   autocrlf = input
   pager    = delta
