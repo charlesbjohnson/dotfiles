@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+# fmt=shfmt
+# shellcheck shell=bash
 
 function dotfile::append_path() {
   if [[ -z "$PATH" ]]; then

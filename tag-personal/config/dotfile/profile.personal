@@ -1,4 +1,4 @@
-# fmt: shfmt
+# fmt=shfmt
 
 # dotnet
 export DOTNET_ROOT="$(realpath $(brew --prefix dotnet))/libexec"

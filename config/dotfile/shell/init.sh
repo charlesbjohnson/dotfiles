@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+# fmt=shfmt
+# shellcheck shell=bash
 
 function dotfile::shell::dircolors() {
   if ! [[ -f "$HOME/.dir_colors" ]]; then

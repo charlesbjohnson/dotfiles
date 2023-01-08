@@ -1,4 +1,4 @@
-# fmt: shfmt
+# fmt=shfmt
 
 alias PPATH='echo "$PATH" | tr --squeeze-repeats ':' "\n"'
 

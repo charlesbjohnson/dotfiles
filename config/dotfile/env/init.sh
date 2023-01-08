@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+# fmt=shfmt
+# shellcheck shell=bash
 
 function dotfile::env::brew() {
   unset HOMEBREW_SHELLENV_PREFIX

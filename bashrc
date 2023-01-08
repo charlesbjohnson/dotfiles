@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+# fmt=shfmt
+# shellcheck shell=bash
 
 if shopt -q login_shell; then
   dotfile::load "$HOME/.config/dotfile/shrc"

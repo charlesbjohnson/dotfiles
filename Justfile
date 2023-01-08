@@ -27,6 +27,6 @@ fmt-fish *OPTS:
 fmt-sh *OPTS:
     #!/usr/bin/env bash
     sort --unique \
-      <(rg --glob "!Justfile" --files-with-matches "(#!/bin/sh|#!/usr/bin/env bash|# fmt:.*shfmt.*)") \
+      <(rg --glob "!Justfile" --files-with-matches "(#!/bin/sh|#!/usr/bin/env bash|# fmt=shfmt)") \
       <(fd --strip-cwd-prefix --glob "**/*.sh") \
     | rargs shfmt -w {{ OPTS }} {}

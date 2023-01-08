@@ -1,4 +1,4 @@
-# fmt: shfmt
+# fmt=shfmt
 
 export CLICOLOR="YES"
 

@@ -1,6 +1,5 @@
-#!/usr/bin/env bash
-
-set -euo pipefail
+# fmt=shfmt
+# shellcheck shell=bash
 
 # https://docs.brew.sh/Homebrew-on-Linux#debian-or-ubuntu
 apt install --yes "build-essential" "procps" "curl" "wget" "file" "git" "python"
