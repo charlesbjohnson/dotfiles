@@ -106,6 +106,9 @@ disabled = true
 [openstack]
 disabled = true
 
+[package]
+disabled = true
+
 [perl]
 disabled = true
 
