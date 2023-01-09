@@ -1,5 +1,5 @@
+Include ~/.ssh/config.d/*
+
 Host github.com
   IdentityFile ~/.ssh/personal.pub
   IdentitiesOnly yes
-
-Include ~/.ssh/config.d/*

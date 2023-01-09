@@ -31,6 +31,9 @@ export FZF_DEFAULT_OPTS="
   --reverse
 "
 
+# ssh
+export SSH_AUTH_SOCK="$HOME/.ssh/agent.sock"
+
 dotfile::load_all "$HOME/.config/dotfile" "shrc.*"
 
 dotfile::shell::tmux "default"

@@ -35,8 +35,6 @@ function dotfile::shell::tmux
 end
 
 function dotfile::shell::win::ssh
-    export SSH_AUTH_SOCK="$HOME/.ssh/agent.sock"
-
     if ! pgrep -f "[o]penssh-ssh-agent" >/dev/null
         if test -S "$SSH_AUTH_SOCK"
             rm "$SSH_AUTH_SOCK"
