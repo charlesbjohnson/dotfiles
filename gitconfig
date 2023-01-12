@@ -31,8 +31,9 @@
 [commit]
   template = ~/.gitmessage
 [core]
-  autocrlf = input
-  pager    = delta
+  autocrlf     = input
+  excludesfile = ~/.gitignore
+  pager        = delta
 [delta]
   file-decoration-style = yellow box
   file-style            = yellow
