@@ -12,6 +12,9 @@ if status --is-interactive
     dotfile::load "$HOME/.config/dotfile/shrc"
     dotfile::load_all "$HOME/.config/dotfile" "config.fish.*"
 
+    # asdf
+    source "$HOMEBREW_PREFIX/opt/asdf/libexec/asdf.fish"
+
     set -g fish_greeting
     fish_user_colors
     fish_user_keybindings
