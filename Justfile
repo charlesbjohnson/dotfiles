@@ -6,7 +6,12 @@
 @help: default
 
 # Run the formatters
-@fmt: fmt-just fmt-json fmt-fish fmt-sh fmt-lua
+@fmt: fmt-fish fmt-just fmt-json fmt-lua fmt-sh
+
+# Run the formatter for Fish
+[private]
+@fmt-fish *OPTS:
+    fd --strip-cwd-prefix --glob "**/*.fish" | rargs fish_indent --write {{ OPTS }} {}
 
 # Run the formatter for Just
 [private]
@@ -22,11 +27,6 @@
 [private]
 @fmt-lua *OPTS:
     fd --strip-cwd-prefix --glob "**/*.lua" | rargs stylua {{ OPTS }} {}
-
-# Run the formatter for Fish
-[private]
-@fmt-fish *OPTS:
-    fd --strip-cwd-prefix --glob "**/*.fish" | rargs fish_indent --write {{ OPTS }} {}
 
 # Run the formatter for Shell
 [private]
