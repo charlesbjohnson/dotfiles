@@ -61,13 +61,14 @@
   "alwaysShowTabs": false,
   "copyFormatting": "none",
   "copyOnSelect": false,
-  "defaultProfile": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+  "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
   "disableAnimations": true,
   "profiles": {
     "defaults": {
       "colorScheme": "Nord",
       "font": {
-        "face": "CaskaydiaCove NF"
+        "face": "CaskaydiaCove NF",
+        "size": 13
       }
     },
     "list": [
@@ -115,5 +116,7 @@
     }
   ],
   "showTabsInTitlebar": true,
+  "theme": "system",
+  "themes": [],
   "windowingBehavior": "useAnyExisting"
 }
