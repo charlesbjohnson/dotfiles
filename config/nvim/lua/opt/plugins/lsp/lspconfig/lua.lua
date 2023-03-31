@@ -1,5 +1,5 @@
 return function(options)
-  require("lspconfig").sumneko_lua.setup(vim.tbl_deep_extend("force", {}, options, {
+  require("lspconfig").lua_ls.setup(vim.tbl_deep_extend("force", {}, options, {
     on_attach = function(client, ...)
       client.server_capabilities.documentFormattingProvider = false
       client.server_capabilities.documentRangeFormattingProvider = false
