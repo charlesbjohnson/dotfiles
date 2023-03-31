@@ -54,8 +54,8 @@ return require("packer").startup({
     use({ "AndrewRadev/splitjoin.vim", branch = "main" })
 
     -- Editor Features
-    use("famiu/feline.nvim")
     use("folke/lsp-colors.nvim")
+    use("freddiehaddad/feline.nvim")
     use("hrsh7th/cmp-buffer")
     use("hrsh7th/cmp-nvim-lsp")
     use("hrsh7th/cmp-nvim-lsp-signature-help")
