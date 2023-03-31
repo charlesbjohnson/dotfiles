@@ -303,14 +303,18 @@ require("scrollbar").setup({
 })
 
 -- romgrk/barbar.nvim
-vim.g.bufferline = {
+require("barbar").setup({
   animation = false,
   clickable = false,
   closable = true,
-  icon_close_tab = "",
-  icons = true,
+  icons = {
+    button = "",
+    filetype = {
+      enabled = true,
+    },
+  },
   tabpages = false,
-}
+})
 
 vim.keymap.set("n", "<Leader>BB", "<Cmd>BufferClose<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>BD", "<Cmd>BufferCloseAllButCurrent<CR>", { silent = true })
