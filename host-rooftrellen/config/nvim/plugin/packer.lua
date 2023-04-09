@@ -271,11 +271,6 @@ local no_errors, error_msg = pcall(function()
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/sort.nvim",
       url = "https://github.com/sQVe/sort.nvim",
     },
-    ["splitjoin.vim"] = {
-      loaded = true,
-      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/splitjoin.vim",
-      url = "https://github.com/AndrewRadev/splitjoin.vim",
-    },
     ["tmux.nvim"] = {
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/tmux.nvim",
@@ -285,6 +280,11 @@ local no_errors, error_msg = pcall(function()
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
       url = "https://github.com/akinsho/toggleterm.nvim",
+    },
+    treesj = {
+      loaded = true,
+      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/treesj",
+      url = "https://github.com/Wansmer/treesj",
     },
     ["trouble.nvim"] = {
       loaded = true,

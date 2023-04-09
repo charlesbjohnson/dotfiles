@@ -41,6 +41,7 @@ return require("packer").startup({
 
     -- Editor Enhancements
     use("RRethy/vim-illuminate")
+    use("Wansmer/treesj")
     use("andymass/vim-matchup")
     use("antoinemadec/FixCursorHold.nvim")
     use("junegunn/vim-easy-align")
@@ -50,7 +51,6 @@ return require("packer").startup({
     use("windwp/nvim-autopairs")
     use("windwp/nvim-ts-autotag")
     use("zirrostig/vim-schlepp")
-    use({ "AndrewRadev/splitjoin.vim", branch = "main" })
 
     -- Editor Features
     use("folke/lsp-colors.nvim")

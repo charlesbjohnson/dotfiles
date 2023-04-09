@@ -113,14 +113,14 @@
   "sort.nvim": {
     "commit": "9e40656"
   },
-  "splitjoin.vim": {
-    "commit": "2c8cd19"
-  },
   "tmux.nvim": {
     "commit": "9ba03cc"
   },
   "toggleterm.nvim": {
     "commit": "ed6c92d"
+  },
+  "treesj": {
+    "commit": "12fc407"
   },
   "trouble.nvim": {
     "commit": "2ae7237"

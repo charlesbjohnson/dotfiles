@@ -2,12 +2,6 @@ require("init.plugins.colorscheme")
 require("init.plugins.lsp")
 require("init.plugins.statusline")
 
--- AndrewRadev/splitjoin.vim
-vim.g.splitjoin_quiet = 1
-
-vim.g.splitjoin_join_mapping = "cJ"
-vim.g.splitjoin_split_mapping = "cK"
-
 -- RRethy/vim-illuminate
 require("illuminate").configure({
   filetypes_denylist = {
@@ -15,6 +9,19 @@ require("illuminate").configure({
     "toggleterm",
   },
 })
+
+-- Wansmer/treesj
+require("treesj").setup({
+  use_default_keymaps = false,
+})
+
+vim.keymap.set("n", "cJ", function()
+  require("treesj").join()
+end, { silent = true })
+
+vim.keymap.set("n", "cK", function()
+  require("treesj").split()
+end, { silent = true })
 
 -- akinsho/toggleterm.nvim
 require("toggleterm").setup({
