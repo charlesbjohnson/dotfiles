@@ -125,11 +125,6 @@ local no_errors, error_msg = pcall(function()
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/csharpls-extended-lsp.nvim",
       url = "https://github.com/Decodetalkers/csharpls-extended-lsp.nvim",
     },
-    ["editorconfig.nvim"] = {
-      loaded = true,
-      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/editorconfig.nvim",
-      url = "https://github.com/gpanders/editorconfig.nvim",
-    },
     ["feline.nvim"] = {
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/feline.nvim",

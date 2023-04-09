@@ -26,9 +26,6 @@
   "csharpls-extended-lsp.nvim": {
     "commit": "865ace7"
   },
-  "editorconfig.nvim": {
-    "commit": "5b9e303"
-  },
   "feline.nvim": {
     "commit": "a02bcdd"
   },
