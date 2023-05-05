@@ -29,13 +29,13 @@ function M.registration(register)
   if use_eslint() then
     register(lspnull.builtins.diagnostics.eslint_d.with({
       dynamic_command = function()
-        return { "npx", "eslint_d" }
+        return { "npx", "--quiet", "eslint_d" }
       end,
     }))
 
     register(lspnull.builtins.formatting.eslint_d.with({
       dynamic_command = function()
-        return { "npx", "eslint_d" }
+        return { "npx", "--quiet", "eslint_d" }
       end,
     }))
 
@@ -45,7 +45,7 @@ function M.registration(register)
   register(lspnull.builtins.formatting.prettierd.with({
     filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
     dynamic_command = function()
-      return { "npx", "@fsouza/prettierd" }
+      return { "npx", "--quiet", "@fsouza/prettierd" }
     end,
   }))
 end

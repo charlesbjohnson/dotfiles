@@ -29,7 +29,7 @@ function M.registration(register)
   if use_stylelint() then
     register(lspnull.builtins.diagnostics.stylelint.with({
       dynamic_command = function()
-        return { "npx", "stylelint" }
+        return { "npx", "--quiet", "stylelint" }
       end,
 
       diagnostics_postprocess = function(diagnostic)
@@ -42,7 +42,7 @@ function M.registration(register)
 
     register(lspnull.builtins.formatting.stylelint.with({
       dynamic_command = function()
-        return { "npx", "stylelint" }
+        return { "npx", "--quiet", "stylelint" }
       end,
     }))
 
@@ -52,7 +52,7 @@ function M.registration(register)
   register(lspnull.builtins.formatting.prettierd.with({
     filetypes = { "css" },
     dynamic_command = function()
-      return { "npx", "@fsouza/prettierd" }
+      return { "npx", "--quiet", "@fsouza/prettierd" }
     end,
   }))
 end
