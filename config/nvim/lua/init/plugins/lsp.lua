@@ -1,3 +1,5 @@
+vim.lsp.set_log_level("off")
+
 -- hrsh7th/nvim-cmp
 require("cmp").setup({
   formatting = {
