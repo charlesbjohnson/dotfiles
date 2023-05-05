@@ -4,11 +4,11 @@ function dotfile::env::brew
     if not string match --quiet "*brew*" $PATH
         eval "$($argv[1]/bin/brew shellenv)"
 
-        if test -d "$HOMEBREW_PREFIX/share/fish/completions"
+        if test -d "$HOMEBREW_PREFIX/share/fish/completions" && not contains "$HOMEBREW_PREFIX/share/fish/completions" $fish_complete_path
             set --global --export fish_complete_path $fish_complete_path "$HOMEBREW_PREFIX/share/fish/completions"
         end
 
-        if test -d "$HOMEBREW_PREFIX/share/fish/vendor_completions.d"
+        if test -d "$HOMEBREW_PREFIX/share/fish/vendor_completions.d" && not contains "$HOMEBREW_PREFIX/share/fish/vendor_completions.d" $fish_complete_path
             set --global --export fish_complete_path $fish_complete_path "$HOMEBREW_PREFIX/share/fish/vendor_completions.d"
         end
     end
