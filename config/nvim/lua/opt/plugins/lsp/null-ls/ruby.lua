@@ -16,9 +16,34 @@ end
 
 function M.registration(register)
   if use_rubocop() then
-    register(lspnull.builtins.diagnostics.rubocop)
-    register(lspnull.builtins.formatting.rubocop)
+    register(lspnull.builtins.diagnostics.rubocop.with({
+      prefer_local = true,
+      dynamic_command = function()
+        return { "bundle", "exec", "rubocop" }
+      end,
+    }))
+
+    register(lspnull.builtins.formatting.rubocop.with({
+      prefer_local = true,
+      dynamic_command = function()
+        return { "bundle", "exec", "rubocop" }
+      end,
+    }))
+
+    return
   end
+
+  register(lspnull.builtins.diagnostics.standardrb.with({
+    dynamic_command = function()
+      return { "gem", "exec", "--silent", "standardrb" }
+    end,
+  }))
+
+  register(lspnull.builtins.formatting.standardrb.with({
+    dynamic_command = function()
+      return { "gem", "exec", "--silent", "standardrb" }
+    end,
+  }))
 end
 
 function M.root_patterns()
