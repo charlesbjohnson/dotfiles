@@ -28,8 +28,9 @@ end
 function M.registration(register)
   if use_stylelint() then
     register(lspnull.builtins.diagnostics.stylelint.with({
-      command = "npm",
-      args = ("exec --yes --parseable -- stylelint --stdin --stdin-filename $FILENAME --formatter json"):split(" "),
+      dynamic_command = function()
+        return { "npx", "stylelint" }
+      end,
 
       diagnostics_postprocess = function(diagnostic)
         diagnostic.code = diagnostic.message:match("^.*%((.+)%)$")
@@ -40,8 +41,9 @@ function M.registration(register)
     }))
 
     register(lspnull.builtins.formatting.stylelint.with({
-      command = "npm",
-      args = ("exec --yes --parseable -- stylelint --stdin --stdin-filename $FILENAME --fix"):split(" "),
+      dynamic_command = function()
+        return { "npx", "stylelint" }
+      end,
     }))
 
     return
@@ -49,8 +51,9 @@ function M.registration(register)
 
   register(lspnull.builtins.formatting.prettierd.with({
     filetypes = { "css" },
-    command = "npm",
-    args = ("exec --yes --parseable -- @fsouza/prettierd $FILENAME"):split(" "),
+    dynamic_command = function()
+      return { "npx", "@fsouza/prettierd" }
+    end,
   }))
 end
 

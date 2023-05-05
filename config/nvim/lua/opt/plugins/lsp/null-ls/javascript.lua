@@ -28,13 +28,15 @@ end
 function M.registration(register)
   if use_eslint() then
     register(lspnull.builtins.diagnostics.eslint_d.with({
-      command = "npm",
-      args = ("exec --yes --parseable -- eslint_d --stdin --stdin-filename $FILENAME --format json"):split(" "),
+      dynamic_command = function()
+        return { "npx", "eslint_d" }
+      end,
     }))
 
     register(lspnull.builtins.formatting.eslint_d.with({
-      command = "npm",
-      args = ("exec --yes --parseable -- eslint_d --stdin --stdin-filename $FILENAME --fix-to-stdout"):split(" "),
+      dynamic_command = function()
+        return { "npx", "eslint_d" }
+      end,
     }))
 
     return
@@ -42,8 +44,9 @@ function M.registration(register)
 
   register(lspnull.builtins.formatting.prettierd.with({
     filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
-    command = "npm",
-    args = ("exec --yes --parseable -- @fsouza/prettierd $FILENAME"):split(" "),
+    dynamic_command = function()
+      return { "npx", "@fsouza/prettierd" }
+    end,
   }))
 end
 

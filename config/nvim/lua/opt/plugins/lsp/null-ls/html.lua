@@ -5,8 +5,9 @@ local M = {}
 function M.registration(register)
   register(lspnull.builtins.formatting.prettierd.with({
     filetypes = { "html" },
-    command = "npm",
-    args = ("exec --yes --parseable -- @fsouza/prettierd $FILENAME"):split(" "),
+    dynamic_command = function()
+      return { "npx", "@fsouza/prettierd" }
+    end,
   }))
 end
 
