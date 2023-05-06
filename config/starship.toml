@@ -40,6 +40,9 @@ disabled = true
 [deno]
 disabled = true
 
+[docker_context]
+disabled = true
+
 [dotnet]
 disabled = true
 
@@ -52,6 +55,12 @@ disabled = true
 [erlang]
 disabled = true
 
+[fennel]
+disabled = true
+
+[fossil_branch]
+disabled = true
+
 [gcloud]
 disabled = true
 
@@ -59,6 +68,9 @@ disabled = true
 disabled = true
 
 [guix_shell]
+disabled = true
+
+[gradle]
 disabled = true
 
 [haskell]
@@ -115,6 +127,9 @@ disabled = true
 [php]
 disabled = true
 
+[pijul_channel]
+disabled = true
+
 [pulumi]
 disabled = true
 
@@ -140,6 +155,9 @@ disabled = true
 disabled = true
 
 [scala]
+disabled = true
+
+[shell]
 disabled = true
 
 [singularity]
