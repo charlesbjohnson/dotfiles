@@ -18,6 +18,8 @@ if status --is-interactive
     set -g fish_greeting
     fish_user_colors
     fish_user_keybindings
+
+    dotfile::load_all "$HOME/.config/fish/completions" "*.fish"
 end
 
 dotfile::load_all "$HOME/.config/dotfile" "cleanup.fish"
