@@ -3,6 +3,8 @@
 alias PPATH='echo "$PATH" | tr --squeeze-repeats ':' "\n"'
 
 alias cat="bat"
+alias cut="hck --delim-is-literal"
+alias du="dust"
 alias la="exa --group-directories-first --all --long"
 alias ls="exa --group-directories-first --classify"
 alias lt="exa --group-directories-first --classify --tree"
