@@ -21,6 +21,8 @@
       }
     ]
   },
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
   "security.workspace.trust.untrustedFiles": "open",
   "workbench.colorTheme": "Nord",
