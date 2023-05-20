@@ -67,7 +67,7 @@
     "defaults": {
       "colorScheme": "Nord",
       "font": {
-        "face": "CaskaydiaCove NF",
+        "face": "CaskaydiaCove Nerd Font",
         "size": 13
       }
     },
