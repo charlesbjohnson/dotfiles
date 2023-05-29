@@ -8,6 +8,7 @@
   brmv     = branch --move
   brrd     = push origin --delete
   c        = commit
+  co       = checkout
   df       = diff
   dfsg     = diff --staged
   dfstsh   = stash show --patch
