@@ -17,6 +17,7 @@ brew "make"
 brew "openssh"
 brew "pinentry-mac"
 brew "proctools"
+brew "watch"
 
 cask "qlcolorcode"
 cask "qlimagesize"
