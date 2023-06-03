@@ -36,12 +36,12 @@
   excludesfile = ~/.gitignore
   pager        = delta
 [delta]
-  file-decoration-style = yellow box
-  file-style            = yellow
-  hunk-header-style     = omit
-  line-numbers          = true
-  navigate              = true
-  syntax-theme          = Nord
+  line-numbers = true
+  navigate     = true
+  syntax-theme = Nord
+[delta "interactive"]
+  color-only              = true
+  keep-plus-minus-markers = false
 [diff]
   tool       = nvimdiff
   colormoved = default
@@ -55,7 +55,7 @@
 [init]
   defaultbranch = master
 [interactive]
-  difffilter = delta --color-only
+  difffilter = delta --features=interactive
 [merge]
   ff            = only
   tool          = nvimdiff
