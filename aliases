@@ -8,6 +8,7 @@ alias du="dust"
 alias la="exa --group-directories-first --all --long"
 alias ls="exa --group-directories-first --classify"
 alias lt="exa --group-directories-first --classify --tree"
+alias less="less -R"
 alias vim="nvim -u NONE"
 
 alias brewup='brew bundle --global install && brew upgrade && brew bundle --global cleanup -f && brew cleanup && cp "$HOME/.Brewfile.lock.json" "$HOME/.dotfiles/host-$HOSTNAME/Brewfile.lock.json"'
