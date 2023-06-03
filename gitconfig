@@ -13,10 +13,18 @@
   dfsg     = diff --staged
   dfstsh   = stash show --patch
   fixup    = commit --fixup
-  l        = log --graph --oneline
-  la       = log --graph --stat
-  ldf      = log --oneline --patch-with-stat --full-diff
-  lfz      = ! git log --oneline | fzf --preview 'git show --color=always "$(echo {} | cut -f 1 -d \" \")"' | cut -f 1 -d ' '
+  l        = log --date=short --format='%C(auto,yellow)%h%C(reset) %C(auto,brightblue)%cd%C(reset) %s %C(auto)%d'
+  ll       = log --stat
+  lfz      = "! f() { \
+                  git l --color=always \
+                  | fzf \
+                      --ansi \
+                      --preview='git show --color=always {1} | delta' \
+                      --bind='enter:execute(git show {1})' \
+                      --bind='ctrl-y:execute-silent(echo {1} | pbcopy)+abort' \
+                  ; \
+                }; f \
+           "
   pf       = push --force-with-lease
   rba      = rebase --abort
   rbc      = rebase --continue
