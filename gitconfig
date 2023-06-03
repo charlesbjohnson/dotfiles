@@ -30,6 +30,21 @@
   rbc      = rebase --continue
   rbi      = rebase --interactive
   rmt      = remote --verbose
+  s        = "! f() { rg --json "$@" | delta; }; f"
+  sfz      = "! f() { \
+                  RG_PREFIX='rg --color=always --column --no-heading --line-number --smart-case'; \
+                  : | fzf \
+                        --ansi --disabled \
+                        --query=${*:-} \
+                        --delimiter=: --nth=1,2 --with-nth=1,2 \
+                        --preview='bat --color=always --highlight-line={2} {1}' \
+                        --preview-window='+{2}-/2' \
+                        --bind=\"start:reload:$RG_PREFIX {q}\" \
+                        --bind=\"change:reload:$RG_PREFIX {q} || true\" \
+                        --bind='enter:become(nvim {1} +{2})' \
+                  ; \
+                }; f \
+           "
   st       = status --short --branch
   stsh     = stash --staged
   stsha    = stash --include-untracked
@@ -44,9 +59,10 @@
   excludesfile = ~/.gitignore
   pager        = delta
 [delta]
-  line-numbers = true
-  navigate     = true
-  syntax-theme = Nord
+  grep-output-type = ripgrep
+  line-numbers     = true
+  navigate         = true
+  syntax-theme     = Nord
 [delta "interactive"]
   color-only              = true
   keep-plus-minus-markers = false
