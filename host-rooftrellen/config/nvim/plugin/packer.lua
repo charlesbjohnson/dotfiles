@@ -281,6 +281,11 @@ local no_errors, error_msg = pcall(function()
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
       url = "https://github.com/akinsho/toggleterm.nvim",
     },
+    ["tree-sitter-just"] = {
+      loaded = true,
+      path = "/home/charlie/.local/share/nvim/site/pack/packer/start/tree-sitter-just",
+      url = "https://github.com/IndianBoy42/tree-sitter-just",
+    },
     treesj = {
       loaded = true,
       path = "/home/charlie/.local/share/nvim/site/pack/packer/start/treesj",
