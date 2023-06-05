@@ -78,6 +78,7 @@
   prunetags = true
 [init]
   defaultbranch = master
+  templatedir = ~/.config/git/templates
 [interactive]
   difffilter = delta --features=interactive
 [merge]

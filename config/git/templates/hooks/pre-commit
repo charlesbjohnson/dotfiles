@@ -1,0 +1,15 @@
+#!/bin/sh
+
+for hook in "$(git rev-parse --git-dir)/hooks/pre-commit.d/"*; do
+  if [ -x "$hook" ]; then
+    "$hook"
+
+    RESULT=$?
+
+    if [ $RESULT -ne 0 ]; then
+      exit $RESULT
+    fi
+  fi
+done
+
+exit 0
