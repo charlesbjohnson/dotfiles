@@ -24,7 +24,7 @@ function dotfile::load() {
 }
 
 function dotfile::load_all() {
-  for file in $(find -L "$1" -name "$2" -type f); do
+  while IFS= read -r -d '' file; do
     source "$file"
-  done
+  done < <(find -L "$1" -name "$2" -type f -print0)
 }

@@ -25,7 +25,7 @@ function dotfile::load
 end
 
 function dotfile::load_all
-    for file in $(find -L $argv[1] -name $argv[2] -type f)
+    while read --null --local file
         source $file
-    end
+    end <$(find -L $argv[1] -name $argv[2] -type f -print0 | psub)
 end
