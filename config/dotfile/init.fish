@@ -1,16 +1,24 @@
 function dotfile::append_path
-    if test "$PATH" = "."
-        export PATH=$argv[1]
-    else if not contains $argv[1] $PATH
-        export PATH="$PATH:$argv[1]"
+    set --local paths $(string split ":" $argv[1])
+
+    for path in $paths
+        if test "$PATH" = "."
+            export PATH=$path
+        else if not contains $path $PATH
+            export PATH="$PATH:$path"
+        end
     end
 end
 
 function dotfile::prepend_path
-    if test "$PATH" = "."
-        export PATH=$argv[1]
-    else if not contains $argv[1] $PATH
-        export PATH="$argv[1]:$PATH"
+    set --local paths $(string split ":" $argv[1])
+
+    for path in $paths[-1..1]
+        if test "$PATH" = "."
+            export PATH=$path
+        else if not contains $path $PATH
+            export PATH="$path:$PATH"
+        end
     end
 end
 

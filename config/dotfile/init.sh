@@ -2,19 +2,29 @@
 # shellcheck shell=bash
 
 function dotfile::append_path() {
-  if [[ -z "$PATH" ]]; then
-    export PATH="$1"
-  elif [[ ":$PATH:" != *":$1:"* ]]; then
-    export PATH="$PATH:$1"
-  fi
+  IFS=':' read -ra paths <<<"$1"
+
+  for path in "${paths[@]}"; do
+    if [[ -z "$PATH" ]]; then
+      export PATH="$path"
+    elif [[ ":$PATH:" != *":$path:"* ]]; then
+      export PATH="$PATH:$path"
+    fi
+  done
 }
 
 function dotfile::prepend_path() {
-  if [[ -z "$PATH" ]]; then
-    export PATH="$1"
-  elif [[ ":$PATH:" != *":$1:"* ]]; then
-    export PATH="$1:$PATH"
-  fi
+  IFS=':' read -ra paths <<<"$1"
+
+  for ((i = ${#paths[@]} - 1; i >= 0; i--)); do
+    path="${paths[i]}"
+
+    if [[ -z "$PATH" ]]; then
+      export PATH="$path"
+    elif [[ ":$PATH:" != *":$path:"* ]]; then
+      export PATH="$path:$PATH"
+    fi
+  done
 }
 
 function dotfile::load() {
