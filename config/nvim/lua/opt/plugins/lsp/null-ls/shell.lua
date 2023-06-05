@@ -9,6 +9,8 @@ function M.registration(register)
 
   -- sh
   register(lspnull.builtins.diagnostics.shellcheck)
+  register(lspnull.builtins.code_actions.shellcheck)
+
   register(lspnull.builtins.formatting.shfmt)
 end
 
