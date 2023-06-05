@@ -53,10 +53,10 @@
   undo     = restore
   unstage  = restore --staged
 [commit]
-  template = ~/.gitmessage
+  template = ~/.config/git/commit
 [core]
   autocrlf     = input
-  excludesfile = ~/.gitignore
+  excludesfile = ~/.config/git/ignore
   pager        = delta
 [delta]
   grep-output-type = ripgrep
