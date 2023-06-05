@@ -27,9 +27,9 @@ function dotfile::shell::tmux() {
     return
   fi
 
-  if ! [[ -d "$HOME/.tmux/plugins/tpm" ]]; then
-    git clone "https://github.com/tmux-plugins/tpm" "$HOME/.tmux/plugins/tpm"
-    "$HOME/.tmux/plugins/tpm/bin/install_plugins"
+  if ! [[ -d "$HOME/.local/share/tmux/plugins/tpm" ]]; then
+    git clone "https://github.com/tmux-plugins/tpm" "$HOME/.local/share/tmux/plugins/tpm"
+    "$HOME/.local/share/tmux/plugins/tpm/bin/install_plugins"
   fi
 
   tmux start-server

@@ -21,9 +21,9 @@ function dotfile::shell::tmux
         return
     end
 
-    if not test -d "$HOME/.config/tmux/plugins/tpm"
-        git clone "https://github.com/tmux-plugins/tpm" "$HOME/.config/tmux/plugins/tpm"
-        $HOME/.config/tmux/plugins/tpm/bin/install_plugins
+    if not test -d "$HOME/.local/share/tmux/plugins/tpm"
+        git clone "https://github.com/tmux-plugins/tpm" "$HOME/.local/share/tmux/plugins/tpm"
+        $HOME/.local/share/tmux/plugins/tpm/bin/install_plugins
     end
 
     if not tmux has-session 2>/dev/null
