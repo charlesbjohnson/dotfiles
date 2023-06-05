@@ -1,0 +1,17 @@
+{
+  "$schema": "https://aka.ms/winget-settings.schema.json",
+  "experimentalFeatures": {
+    "configuration": true,
+    "experimentalMSStore": true,
+    "import": true,
+    "list": true,
+    "uninstall": true,
+    "upgrade": true
+  },
+  "source": {
+    "autoUpdateIntervalInMinutes": 5
+  },
+  "visual": {
+    "progressBar": "accent"
+  }
+}
