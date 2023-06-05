@@ -20,4 +20,4 @@ dotfile::load_all "$HOME/.config/dotfile" "profile.*"
 dotfile::prepend_path "$HOME/.local/bin"
 dotfile::prepend_path "bin"
 
-dotfile::env::path_old
+dotfile::append_path "$PATH_OLD"

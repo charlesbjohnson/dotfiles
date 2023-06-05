@@ -76,12 +76,6 @@ function dotfile::env::gnu() {
   done
 }
 
-function dotfile::env::path_old() {
-  while read -r path; do
-    dotfile::append_path "$path"
-  done < <(echo "$PATH_OLD" | tr ":" "\n")
-}
-
 function dotfile::env::shell() {
   export SHELL="$(which "$(ps -p "$$" -o "comm=" | sed "s/-//")")"
 }
