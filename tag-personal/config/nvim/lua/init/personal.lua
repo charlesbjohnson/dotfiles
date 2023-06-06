@@ -3,5 +3,6 @@ vim.filetype.add({
     [".*%.css%.erb"] = "eruby.css",
     [".*%.html%.erb"] = "eruby.html",
     [".*%.js%.erb"] = "javascript",
+    [".*%.md%.erb"] = "eruby.markdown",
   },
 })
