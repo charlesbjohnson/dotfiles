@@ -39,6 +39,12 @@ function M.registration(register)
       end,
     }))
 
+    register(lspnull.builtins.code_actions.eslint_d.with({
+      dynamic_command = function()
+        return { "npx", "--quiet", "eslint_d" }
+      end,
+    }))
+
     return
   end
 
