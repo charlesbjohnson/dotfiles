@@ -21,8 +21,18 @@ end
 
 function M.registration(register)
   if use_vale() then
-    register(lspnull.builtins.diagnostics.vale)
+    register(lspnull.builtins.diagnostics.vale.with({
+      extra_filetypes = { "eruby.markdown" },
+    }))
   end
+
+  register(lspnull.builtins.formatting.prettierd.with({
+    dynamic_command = function()
+      return { "npx", "--quiet", "@fsouza/prettierd" }
+    end,
+
+    filetypes = { "markdown", "eruby.markdown" },
+  }))
 end
 
 function M.root_patterns()

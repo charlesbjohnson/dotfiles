@@ -38,22 +38,27 @@ function M.registration(register)
         diagnostic.message = "[" .. diagnostic.code .. "] " .. diagnostic.message
         diagnostic.message = diagnostic.message .. " (" .. diagnostic.source .. ")"
       end,
+
+      extra_filetypes = { "eruby.css" },
     }))
 
     register(lspnull.builtins.formatting.stylelint.with({
       dynamic_command = function()
         return { "npx", "--quiet", "stylelint" }
       end,
+
+      extra_filetypes = { "eruby.css" },
     }))
 
     return
   end
 
   register(lspnull.builtins.formatting.prettierd.with({
-    filetypes = { "css" },
     dynamic_command = function()
       return { "npx", "--quiet", "@fsouza/prettierd" }
     end,
+
+    filetypes = { "css", "eruby.css" },
   }))
 end
 

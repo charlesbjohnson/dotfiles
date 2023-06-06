@@ -31,28 +31,41 @@ function M.registration(register)
       dynamic_command = function()
         return { "npx", "--quiet", "eslint_d" }
       end,
+
+      extra_filetypes = { "eruby.javascript" },
     }))
 
     register(lspnull.builtins.formatting.eslint_d.with({
       dynamic_command = function()
         return { "npx", "--quiet", "eslint_d" }
       end,
+
+      extra_filetypes = { "eruby.javascript" },
     }))
 
     register(lspnull.builtins.code_actions.eslint_d.with({
       dynamic_command = function()
         return { "npx", "--quiet", "eslint_d" }
       end,
+
+      extra_filetypes = { "eruby.javascript" },
     }))
 
     return
   end
 
   register(lspnull.builtins.formatting.prettierd.with({
-    filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
     dynamic_command = function()
       return { "npx", "--quiet", "@fsouza/prettierd" }
     end,
+
+    filetypes = {
+      "javascript",
+      "typescript",
+      "javascriptreact",
+      "typescriptreact",
+      "eruby.javascript",
+    },
   }))
 end
 
