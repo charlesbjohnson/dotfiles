@@ -16,7 +16,7 @@
   l        = log --date=short --format='%C(auto,yellow)%h%C(reset) %C(auto,brightblue)%cd%C(reset) %s %C(auto)%d'
   ll       = log --stat
   lfz      = "! f() { \
-                  git l --color=always \
+                  git l --color=always "$@" \
                   | fzf \
                       --ansi \
                       --preview='git show --color=always {1} | delta' \
