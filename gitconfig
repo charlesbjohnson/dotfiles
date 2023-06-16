@@ -30,7 +30,7 @@
   rbc      = rebase --continue
   rbi      = rebase --interactive
   rmt      = remote --verbose
-  s        = "! f() { rg --hidden --smart-case --json "$@" | delta; }; f"
+  s        = "! f() { rg --hidden --smart-case --json "\"$@\"" | delta; }; f"
   sfz      = "! f() { \
                   RG_PREFIX='rg --color=always --column --no-heading --line-number --hidden --smart-case'; \
                   : | fzf \
