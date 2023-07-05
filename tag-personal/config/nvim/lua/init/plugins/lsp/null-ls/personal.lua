@@ -7,7 +7,6 @@ function M.registration(register)
   require("opt.plugins.lsp.null-ls.html").registration(register)
   require("opt.plugins.lsp.null-ls.markdown").registration(register)
 
-  require("opt.plugins.lsp.null-ls.csharp").registration(register)
   require("opt.plugins.lsp.null-ls.javascript").registration(register)
   require("opt.plugins.lsp.null-ls.ruby").registration(register)
 end

@@ -23,9 +23,6 @@
   "cmp-path": {
     "commit": "91ff86c"
   },
-  "csharpls-extended-lsp.nvim": {
-    "commit": "865ace7"
-  },
   "feline.nvim": {
     "commit": "c63983d"
   },
