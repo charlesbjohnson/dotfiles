@@ -37,7 +37,7 @@ return require("packer").startup({
     use("ibhagwan/fzf-lua")
     use("petertriho/nvim-scrollbar")
     use("romgrk/barbar.nvim")
-    use({ "nvim-neo-tree/neo-tree.nvim", branch = "v2.x" })
+    use({ "nvim-neo-tree/neo-tree.nvim", branch = "v3.x" })
 
     -- Editor Enhancements
     use("RRethy/vim-illuminate")

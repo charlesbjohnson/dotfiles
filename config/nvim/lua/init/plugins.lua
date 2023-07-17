@@ -259,7 +259,7 @@ require("neo-tree").setup({
 })
 
 vim.keymap.set("n", "<C-b>", function()
-  require("neo-tree").show("", true)
+  require("neo-tree.command").execute({ toggle = true })
 end, { silent = true })
 
 -- nvim-treesitter/nvim-treesitter
