@@ -25,6 +25,9 @@
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
   "security.workspace.trust.untrustedFiles": "open",
+  "window.autoDetectColorScheme": true,
   "workbench.colorTheme": "Nord",
-  "workbench.list.openMode": "doubleClick"
+  "workbench.list.openMode": "doubleClick",
+  "workbench.preferredDarkColorTheme": "Nord",
+  "workbench.preferredLightColorTheme": "Nord Light"
 }
