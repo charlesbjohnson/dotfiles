@@ -3,10 +3,10 @@
 FILES=()
 
 while IFS= read -r -d '' file; do
-  if grep --quiet --fixed-strings "@nocheckin" "$file"; then
+  if git grep --cached --quiet --fixed-strings "@nocheckin" "$file"; then
     FILES+=("$file")
   fi
-done < <(git diff --staged --diff-filter=d --name-only -z)
+done < <(git diff --cached --diff-filter=d --name-only -z)
 
 if [ ${#FILES[@]} -ne 0 ]; then
   echo "pre-commit/nocheckin: found in ${#FILES[@]} file(s), aborting commit"
