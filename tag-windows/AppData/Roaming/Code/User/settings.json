@@ -25,6 +25,7 @@
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
   "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font', 'Cascadia Code', Consolas, 'Courier New', monospace",
   "window.autoDetectColorScheme": true,
   "workbench.colorTheme": "Nord",
   "workbench.list.openMode": "doubleClick",
