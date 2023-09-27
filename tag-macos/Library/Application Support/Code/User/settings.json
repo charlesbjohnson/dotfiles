@@ -1,9 +1,6 @@
 {
-  "editor.dragAndDrop": false,
-  "editor.emptySelectionClipboard": false,
   "editor.fontFamily": "'Cascadia Code', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
-  "editor.multiCursorModifier": "ctrlCmd",
   "editor.quickSuggestions": {
     "comments": true,
     "other": true,
@@ -24,11 +21,17 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
+  "search.showLineNumbers": true,
+  "search.smartCase": true,
+  "search.useGlobalIgnoreFiles": true,
+  "search.useParentIgnoreFiles": true,
   "security.workspace.trust.untrustedFiles": "open",
   "terminal.integrated.fontFamily": "'CaskaydiaCove NF', 'Cascadia Code', Menlo, Monaco, 'Courier New', monospace",
   "window.autoDetectColorScheme": true,
   "workbench.colorTheme": "Nord",
+  "workbench.editor.highlightModifiedTabs": true,
   "workbench.list.openMode": "doubleClick",
+  "workbench.localHistory.enabled": false,
   "workbench.preferredDarkColorTheme": "Nord",
   "workbench.preferredLightColorTheme": "Nord Light"
 }
