@@ -1,5 +1,4 @@
 brew "comby"
-brew "lefthook"
 brew "node"
 brew "ruby"
 brew "vale"
