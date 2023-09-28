@@ -1,1 +1,1 @@
-brew "gcc@5"
+brew "gcc@11"
