@@ -6,5 +6,4 @@ return function(options)
 
   require("opt.plugins.lsp.lspconfig.javascript")(options)
   require("opt.plugins.lsp.lspconfig.ruby")(options)
-  require("opt.plugins.lsp.lspconfig.rust")(options)
 end
