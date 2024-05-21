@@ -203,20 +203,16 @@ require("neoscroll.config").set_mappings({
 require("gitsigns").setup()
 
 -- lukas-reineke/indent-blankline.nvim
-require("indent_blankline").setup({
-  char_list = { "|", "¦", "┆", "┊" },
-  buftype_exclude = {
-    "terminal",
+require("ibl").setup({
+  exclude = {
+    filetypes = {
+      "alpha",
+      "noice",
+    },
   },
-  filetype_exclude = {
-    "alpha",
-    "help",
-    "noice",
+  indent = {
+    char = { "|", "¦", "┆", "┊" },
   },
-  show_current_context = true,
-  show_first_indent_level = false,
-  show_trailing_blankline_indent = false,
-  use_treesitter = true,
 })
 
 -- NvChad/nvim-colorizer.lua
