@@ -1,5 +1,31 @@
 local colors = require("colors")
 
+local statuscolumn = {
+  theme = colors,
+
+  disable = {
+    filetypes = {},
+    buftypes = {},
+    bufnames = {},
+  },
+
+  force_inactive = {
+    filetypes = {},
+    buftypes = {},
+    bufnames = {},
+  },
+
+  conditional_components = {
+    active = {},
+    inactive = {},
+  },
+
+  components = {
+    active = {},
+    inactive = {},
+  },
+}
+
 local statusline = {
   theme = colors,
 
@@ -32,6 +58,11 @@ local statusline = {
     bufnames = {},
   },
 
+  conditional_components = {
+    active = {},
+    inactive = {},
+  },
+
   components = {
     active = {},
     inactive = {},
@@ -53,6 +84,11 @@ local winbar = {
     bufnames = {},
   },
 
+  conditional_components = {
+    active = {},
+    inactive = {},
+  },
+
   components = {
     active = {},
     inactive = {},
@@ -62,17 +98,21 @@ local winbar = {
 for _ = 1, 3 do
   table.insert(statusline.components.active, {})
   table.insert(statusline.components.inactive, {})
-
-  table.insert(winbar.components.active, {})
-  table.insert(winbar.components.inactive, {})
 end
 
 require("init.plugins.statusline.content")(statusline)
 require("init.plugins.statusline.style")(statusline)
 
+require("init.plugins.statusline.statuscolumn.content")(statuscolumn)
+require("init.plugins.statusline.statuscolumn.style")(statuscolumn)
+
 require("init.plugins.statusline.winbar.content")(winbar)
 require("init.plugins.statusline.winbar.style")(winbar)
 
--- famiu/feline.nvim
+-- freddiehaddad/feline.nvim
 require("feline").setup(statusline)
+require("feline").statuscolumn.setup(statuscolumn)
 require("feline").winbar.setup(winbar)
+
+vim.opt.winbar = ""
+vim.opt.statuscolumn = ""
