@@ -17,6 +17,7 @@ dotfile::env::shell
 
 dotfile::load_all "$HOME/.config/dotfile" "profile.*"
 
+dotfile::prepend_path "$HOME/.asdf/shims"
 dotfile::prepend_path "$HOME/.local/bin"
 dotfile::prepend_path "bin"
 
